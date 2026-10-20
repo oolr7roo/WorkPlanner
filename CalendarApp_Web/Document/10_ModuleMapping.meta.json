@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-10_ModuleMapping",
+  "document_number": 10,
+  "document_type": "project-plan-10",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/10_ModuleMapping.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-001",
+    "FR-002",
+    "FR-003",
+    "FR-004",
+    "FR-005",
+    "FR-006",
+    "FR-007",
+    "FR-008"
+  ],
+  "owned_ids": [
+    "EventManagement",
+    "BrowserEventStore"
+  ],
+  "related_documents": [
+    "DOC-Document-8_SoftwareRequirementsSpecification"
+  ],
+  "source_fingerprint": {
+    "byte_size": 1977,
+    "sha256": "cb8ec94cf6885d94abb3e7b10b18e0d917bff2e9fe8eea50ee86e14cee5dc8b7"
+  },
+  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.936331+00:00"
+}

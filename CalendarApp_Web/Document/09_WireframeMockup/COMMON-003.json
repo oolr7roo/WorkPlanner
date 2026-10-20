@@ -1,0 +1,183 @@
+{
+  "schema_version": 3,
+  "screen": {
+    "id": "COMMON-003",
+    "name": "브라우저 저장 피드백",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "unit": "%"
+  },
+  "derivation": {
+    "mode": "implementation-derived",
+    "sources": [
+      "src/App.tsx",
+      "src/styles.css",
+      "node_modules/trud-calendar/dist/index.js",
+      "Document/Evidence/ViewSplit/runtime.json"
+    ],
+    "unverified": [
+      "공용 WireFrame 렌더러의 시각 충실도는 미검증이다.",
+      "390×844 반응형은 Runtime 캡처로 확인하며 기준 좌표는 1440×1000이다."
+    ]
+  },
+  "frame": {
+    "id": "FRAME-COMMON-003",
+    "name": "브라우저 저장 피드백",
+    "width": "100%",
+    "height": "100%",
+    "unit": "%",
+    "layout_unit": "percent",
+    "base_width": 1440,
+    "base_height": 1000
+  },
+  "components": [
+    {
+      "id": "storage-note",
+      "type": "text",
+      "name": "storage-note",
+      "visible": true,
+      "rect": {
+        "x": 1.805556,
+        "y": 91.9,
+        "w": 96.388889,
+        "h": 1.95
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:storage-note",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(104, 117, 141)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(104, 117, 141)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "text": "일정은 이 브라우저에 저장됩니다.",
+      "events": {
+        "on": "display",
+        "intent": "사용자에게 현재 일정 보존 범위를 알린다.",
+        "bindings": {
+          "modules": [
+            "BrowserEventStore"
+          ],
+          "data": [
+            "DATA-001"
+          ],
+          "apis": [
+            "API-001"
+          ],
+          "requirements": [
+            "FR-007"
+          ]
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "month",
+          "dom_index": 211
+        }
+      }
+    },
+    {
+      "id": "storage-error",
+      "type": "text",
+      "name": "storage-error",
+      "visible": false,
+      "rect": {
+        "x": 1.666667,
+        "y": 93.85,
+        "w": 96.666667,
+        "h": 1.95
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:storage-error",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(180, 35, 52)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(180, 35, 52)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "text": "브라우저 저장소에 일정을 저장할 수 없습니다.",
+      "events": {
+        "on": "display",
+        "intent": "일정 저장 실패를 사용자에게 알린다.",
+        "bindings": {
+          "modules": [
+            "BrowserEventStore"
+          ],
+          "data": [
+            "DATA-003"
+          ],
+          "apis": [
+            "API-001"
+          ],
+          "requirements": [
+            "FR-008"
+          ]
+        }
+      },
+      "states": {
+        "default": {
+          "visible": false
+        },
+        "error": {
+          "visible": true
+        }
+      },
+      "properties": {
+        "role": "alert",
+        "geometry_evidence": "storage-error capture",
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "storage-error",
+          "dom_index": 212
+        },
+        "state_input": "storageError"
+      }
+    }
+  ],
+  "verification": {
+    "schema": "valid",
+    "source_alignment": "measured-desktop-dom",
+    "render_fidelity": "unverified",
+    "complete": false
+  },
+  "type": "common_area",
+  "id": "COMMON-003",
+  "name": "브라우저 저장 피드백",
+  "description": "브라우저 저장 피드백의 공유 의미·계층·동작을 소유하며 배치와 현재 상태는 화면이 공급한다.",
+  "applies_to": [
+    "SCR-001",
+    "SCR-002",
+    "SCR-003",
+    "SCR-004",
+    "SCR-005"
+  ]
+}

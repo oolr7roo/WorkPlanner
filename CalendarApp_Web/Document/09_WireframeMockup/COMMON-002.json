@@ -1,0 +1,704 @@
+{
+  "schema_version": 3,
+  "screen": {
+    "id": "COMMON-002",
+    "name": "달력 탐색 툴바",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "unit": "%"
+  },
+  "derivation": {
+    "mode": "mixed",
+    "sources": [
+      "src/App.tsx",
+      "src/styles.css",
+      "node_modules/trud-calendar/dist/index.js",
+      "Document/Evidence/ViewSplit/runtime.json"
+    ],
+    "unverified": [
+      "모든 단말·공용 뷰어 시각 검증은 미완료이다."
+    ],
+    "design_basis": {
+      "date": "2026-10-21",
+      "source": "2026-10-08 사용자 요청",
+      "scope": "view-priority, view-gantt 추가 및 다섯 보기 툴바 배치",
+      "implementation_status": "runtime-implemented-review"
+    }
+  },
+  "frame": {
+    "id": "FRAME-COMMON-002",
+    "name": "달력 탐색 툴바",
+    "width": "100%",
+    "height": "100%",
+    "unit": "%",
+    "layout_unit": "percent",
+    "base_width": 1440,
+    "base_height": 1000
+  },
+  "components": [
+    {
+      "id": "toolbar",
+      "type": "toolbar",
+      "name": "toolbar",
+      "visible": true,
+      "rect": {
+        "x": 1.736111,
+        "y": 10.8,
+        "w": 96.527778,
+        "h": 6.1
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:calendar-toolbar",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10) rgb(10, 10, 10) rgb(230, 233, 240)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "month",
+          "dom_index": 11
+        }
+      }
+    },
+    {
+      "id": "date-controls",
+      "type": "toolbar",
+      "name": "date-controls",
+      "visible": true,
+      "rect": {
+        "x": 1.151079,
+        "y": 21.311475,
+        "w": 17.583183,
+        "h": 55.737705
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:date-controls",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "toolbar",
+      "scope": "parent",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "month",
+          "dom_index": 12
+        }
+      }
+    },
+    {
+      "id": "view-controls",
+      "type": "toolbar",
+      "name": "view-controls",
+      "visible": true,
+      "rect": {
+        "x": 78,
+        "y": 17,
+        "w": 20.8,
+        "h": 72
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:view-controls",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "toolbar",
+      "scope": "parent",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "month",
+          "dom_index": 17
+        }
+      }
+    },
+    {
+      "id": "today",
+      "type": "button",
+      "name": "today",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 21.9665,
+        "h": 100.0
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:onToday",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(35, 48, 74)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(220, 225, 235)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "date-controls",
+      "scope": "parent",
+      "text": "오늘",
+      "events": {
+        "on": "click",
+        "intent": "현재 날짜의 기간으로 이동한다.",
+        "bindings": {
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-001"
+          ]
+        }
+      },
+      "test": "today",
+      "properties": {
+        "accessible_name": "오늘",
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "month",
+          "dom_index": 13
+        }
+      }
+    },
+    {
+      "id": "prev",
+      "type": "button",
+      "name": "prev",
+      "visible": true,
+      "rect": {
+        "x": 24.012275,
+        "y": 0.0,
+        "w": 15.138729,
+        "h": 100.0
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:onPrev",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(35, 48, 74)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(220, 225, 235)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "date-controls",
+      "scope": "parent",
+      "text": "‹",
+      "events": {
+        "on": "click",
+        "intent": "이전 표시 기간으로 이동한다.",
+        "bindings": {
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-001"
+          ]
+        }
+      },
+      "test": "prev",
+      "properties": {
+        "accessible_name": "이전 기간",
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "month",
+          "dom_index": 14
+        }
+      }
+    },
+    {
+      "id": "next",
+      "type": "button",
+      "name": "next",
+      "visible": true,
+      "rect": {
+        "x": 41.196778,
+        "y": 0.0,
+        "w": 15.138729,
+        "h": 100.0
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:onNext",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(35, 48, 74)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(220, 225, 235)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "date-controls",
+      "scope": "parent",
+      "text": "›",
+      "events": {
+        "on": "click",
+        "intent": "다음 표시 기간으로 이동한다.",
+        "bindings": {
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-001"
+          ]
+        }
+      },
+      "test": "next",
+      "properties": {
+        "accessible_name": "다음 기간",
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "month",
+          "dom_index": 15
+        }
+      }
+    },
+    {
+      "id": "formatted-date",
+      "type": "text",
+      "name": "formatted-date",
+      "visible": true,
+      "rect": {
+        "x": 63.291139,
+        "y": 12.5,
+        "w": 36.708861,
+        "h": 75.0
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:formattedDate",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 17,
+          "weight": "700"
+        }
+      },
+      "parent": "date-controls",
+      "scope": "parent",
+      "text": "2026년 10월",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "month",
+          "dom_index": 16
+        },
+        "state_input": "formattedDate"
+      }
+    },
+    {
+      "id": "view-priority",
+      "type": "button",
+      "name": "view-priority",
+      "text": "⚑",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 0,
+        "w": 18,
+        "h": 100
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 19,
+          "weight": "400"
+        }
+      },
+      "parent": "view-controls",
+      "scope": "parent",
+      "test": "view-priority",
+      "events": {
+        "on": "click",
+        "intent": "우선순위 일정 리스트 보기로 이동한다.",
+        "result": "SCR-005"
+      },
+      "states": {
+        "default": {
+          "visible": true,
+          "enabled": true,
+          "selected": false
+        }
+      },
+      "properties": {
+        "accessible_name": "우선순위 보기",
+        "tooltip": "우선순위",
+        "state_input": "view",
+        "design_status": "implemented-review"
+      },
+      "asset_ref": {
+        "kind": "icon",
+        "source": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M6%2021V3m0%201h12l-3%204%203%204H6%22/%3E%3C/svg%3E",
+        "fit": "contain",
+        "alt": "우선순위 보기"
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/components/CalendarToolbar.tsx",
+        "locator": "text:priority"
+      }
+    },
+    {
+      "id": "view-gantt",
+      "type": "button",
+      "name": "view-gantt",
+      "text": "▰",
+      "visible": true,
+      "rect": {
+        "x": 20.5,
+        "y": 0,
+        "w": 18,
+        "h": 100
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 19,
+          "weight": "400"
+        }
+      },
+      "parent": "view-controls",
+      "scope": "parent",
+      "test": "view-gantt",
+      "events": {
+        "on": "click",
+        "intent": "일정별 간트차트 보기로 이동한다.",
+        "result": "SCR-004"
+      },
+      "states": {
+        "default": {
+          "visible": true,
+          "enabled": true,
+          "selected": false
+        }
+      },
+      "properties": {
+        "accessible_name": "간트차트 보기",
+        "tooltip": "간트차트",
+        "state_input": "view",
+        "design_status": "implemented-review"
+      },
+      "asset_ref": {
+        "kind": "icon",
+        "source": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2212%22%20height%3D%224%22%20rx%3D%221%22/%3E%3Crect%20x%3D%228%22%20y%3D%2210%22%20width%3D%2213%22%20height%3D%224%22%20rx%3D%221%22/%3E%3Crect%20x%3D%225%22%20y%3D%2216%22%20width%3D%2210%22%20height%3D%224%22%20rx%3D%221%22/%3E%3C/svg%3E",
+        "fit": "contain",
+        "alt": "간트차트 보기"
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/components/CalendarToolbar.tsx",
+        "locator": "text:gantt"
+      }
+    },
+    {
+      "id": "view-month",
+      "type": "button",
+      "name": "view-month",
+      "visible": true,
+      "rect": {
+        "x": 41.0,
+        "y": 0,
+        "w": 18,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:onViewChange",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(28, 74, 181)",
+        "background_color": "rgb(242, 245, 252)",
+        "border": {
+          "color": "rgb(139, 168, 241)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "800"
+        }
+      },
+      "parent": "view-controls",
+      "scope": "parent",
+      "text": "월",
+      "events": {
+        "on": "click",
+        "intent": "월 보기로 변경한다.",
+        "bindings": {
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-001"
+          ]
+        },
+        "result": "SCR-001"
+      },
+      "test": "view-month",
+      "states": {
+        "default": {
+          "visible": true,
+          "enabled": true,
+          "selected": true
+        }
+      },
+      "properties": {
+        "state_input": "view"
+      }
+    },
+    {
+      "id": "view-week",
+      "type": "button",
+      "name": "view-week",
+      "visible": true,
+      "rect": {
+        "x": 61.5,
+        "y": 0,
+        "w": 18,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:onViewChange",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(35, 48, 74)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(220, 225, 235)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "view-controls",
+      "scope": "parent",
+      "text": "주",
+      "events": {
+        "on": "click",
+        "intent": "주 보기로 변경한다.",
+        "bindings": {
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-001"
+          ]
+        },
+        "result": "SCR-002"
+      },
+      "test": "view-week",
+      "states": {
+        "default": {
+          "visible": true,
+          "enabled": true,
+          "selected": false
+        }
+      },
+      "properties": {
+        "state_input": "view"
+      }
+    },
+    {
+      "id": "view-day",
+      "type": "button",
+      "name": "view-day",
+      "visible": true,
+      "rect": {
+        "x": 82.0,
+        "y": 0,
+        "w": 18,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:onViewChange",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(35, 48, 74)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(220, 225, 235)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "view-controls",
+      "scope": "parent",
+      "text": "일",
+      "events": {
+        "on": "click",
+        "intent": "일 보기로 변경한다.",
+        "bindings": {
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-001"
+          ]
+        },
+        "result": "SCR-003"
+      },
+      "test": "view-day",
+      "states": {
+        "default": {
+          "visible": true,
+          "enabled": true,
+          "selected": false
+        }
+      },
+      "properties": {
+        "state_input": "view"
+      }
+    }
+  ],
+  "verification": {
+    "schema": "pending",
+    "source_alignment": "existing-source-preserved; new design not implemented",
+    "render_fidelity": "pending",
+    "complete": false
+  },
+  "type": "common_area",
+  "id": "COMMON-002",
+  "name": "달력 탐색 툴바",
+  "description": "달력 탐색 툴바의 공유 의미·계층·동작을 소유하며 배치와 현재 상태는 화면이 공급한다.",
+  "applies_to": [
+    "SCR-001",
+    "SCR-002",
+    "SCR-003",
+    "SCR-004",
+    "SCR-005"
+  ],
+  "behaviors": [
+    {
+      "id": "view-navigation",
+      "description": "왼쪽부터 우선순위(SCR-005), 간트차트(SCR-004), 월(SCR-001), 주(SCR-002), 일(SCR-003). 선택한 보기만 활성 표시하며 동일 일정 집합과 기준 날짜를 유지한다."
+    },
+    {
+      "id": "new-periods",
+      "description": "간트차트는 2주 기간을 탐색한다. 우선순위는 전체 일정 목록이며 날짜 이동 버튼은 숨기고 전체 일정이라는 범위를 표시한다. 월·주·일의 기존 기간 탐색은 유지한다."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-11_data_spec-DATA-001_Events",
+  "document_number": 11,
+  "document_type": "project-plan-11",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/11_data_spec/DATA-001_Events.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-11_DataRequirements",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "DATA-001"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-11_DataRequirements",
+    "DOC-CalendarApp_Web-Document-12_api_spec-API-001_LocalStorage"
+  ],
+  "source_fingerprint": {
+    "byte_size": 1278,
+    "sha256": "508c6ef642ee3e0d5fe83366e489e873f18b231bf10b6367a4ccaa007f6243e9"
+  },
+  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.937667+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-12_api_spec-API-003_CalendarSDK",
+  "document_number": 12,
+  "document_type": "api-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/12_api_spec/API-003_CalendarSDK.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-12_APISpecification",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "API-003"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-11_DataRequirements",
+    "DOC-CalendarApp_Web-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T11:20:12.076027Z",
+    "mtime_ns": 1791199212076027072,
+    "byte_size": 1777,
+    "sha256": "44d7cf5c8a2651d12df25140e46eb1d21f4ee149c389a026eadf9993ee3f1ab3"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T11:28:22.470398Z"
+}

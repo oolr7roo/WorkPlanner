@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-6_FunctionalRequirements",
+  "document_number": 6,
+  "document_type": "project-plan-6",
+  "scope": "workspace",
+  "implementation_domain_id": null,
+  "markdown_path": "Document/6_FunctionalRequirements.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "UF-001",
+    "UF-002",
+    "UF-003",
+    "UF-004",
+    "UF-005",
+    "UF-006",
+    "UF-007",
+    "UF-008"
+  ],
+  "owned_ids": [
+    "FR-001",
+    "FR-002",
+    "FR-003",
+    "FR-004",
+    "FR-005",
+    "FR-006",
+    "FR-007",
+    "FR-008",
+    "FR-009",
+    "FR-010",
+    "FR-011",
+    "FR-012",
+    "NFR-001",
+    "NFR-002",
+    "NFR-003",
+    "NFR-004",
+    "NFR-005"
+  ],
+  "related_documents": [],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:46.642639Z",
+    "mtime_ns": 1791173206642638684,
+    "byte_size": 4100,
+    "sha256": "4a7c8cf1e1cc0e761ebf3a85dda1bd9d1bd8300c8b50832c8cc58fe7f800f102"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

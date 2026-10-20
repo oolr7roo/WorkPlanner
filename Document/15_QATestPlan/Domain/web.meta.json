@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-15_QATestPlan-Domain-web",
+  "document_number": 15,
+  "document_type": "qa-detail",
+  "scope": "hybrid",
+  "implementation_domain_id": "web",
+  "markdown_path": "Document/15_QATestPlan/Domain/web.md",
+  "parent_document_id": "DOC-Document-15_QATestPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-001",
+    "FR-002",
+    "FR-003",
+    "FR-004",
+    "FR-005",
+    "FR-006",
+    "FR-007",
+    "FR-008",
+    "DATA-001",
+    "SCR-001, MOD-001"
+  ],
+  "owned_ids": [
+    "TC-001",
+    "TC-002",
+    "TC-003",
+    "TC-004",
+    "TC-005",
+    "TC-006",
+    "TC-007",
+    "TC-008",
+    "TC-009",
+    "TC-016"
+  ],
+  "related_documents": [
+    "DOC-Document-15_QATestPlan"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T11:18:47.401890Z",
+    "mtime_ns": 1791199127401889958,
+    "byte_size": 6785,
+    "sha256": "210ec8819aa7485323892c64d2e7ea50e246be6ea50a1f43dbfe02d9cd01b6e3"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T11:28:22.470398Z"
+}

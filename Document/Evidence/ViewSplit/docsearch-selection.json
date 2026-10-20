@@ -1,0 +1,55 @@
+{
+  "transport": "local DocSearch CLI v1 fallback",
+  "revision": "2026-10-02.4",
+  "mcp_unavailable": "No AISkill tools; plugin rediscovery returned plugins=[]",
+  "domains": [
+    "project-plan",
+    "project-doc-search",
+    "web",
+    "markdown",
+    "vscode"
+  ],
+  "branches": [
+    "project-plan-domain-web",
+    "project-plan-wireframe",
+    "project-plan-wireframe-detail",
+    "project-plan-module-mapping",
+    "project-plan-uiux-requirements",
+    "project-plan-execution",
+    "project-plan-execution-screen",
+    "project-plan-execution-task",
+    "project-plan-qa",
+    "project-doc-search-wireframe",
+    "markdown-writing",
+    "safe-editing",
+    "markdown-safe-editing",
+    "shell-text-transport"
+  ],
+  "selected_paths": [
+    "RuleIndex.md",
+    "Domain/ProjectPlan/ArchitectureWritingRules.md",
+    "Domain/ProjectPlan/ProjectDocumentCommonRules.md",
+    "Domain/ProjectPlan/Architecture/Domain/DomainArchitectureCommonRules.md",
+    "Domain/ProjectPlan/Architecture/Domain/Web/DomainRules.md",
+    "Domain/ProjectPlan/Architecture/09_WireframeMockupWritingRules_1.md",
+    "Domain/ProjectPlan/Architecture/09_WireframeMockupWritingRules_2.md",
+    "Domain/ProjectPlan/Architecture/10_ModuleMappingWritingRules.md",
+    "Domain/ProjectPlan/Architecture/13_UIUXRequirementsWritingRules.md",
+    "Domain/ProjectPlan/Architecture/14_ExecutionPlanWritingRules_1.md",
+    "Domain/ProjectPlan/Architecture/14_ExecutionPlanWritingRules_2.md",
+    "Domain/ProjectPlan/Architecture/14_ExecutionPlanWritingRules_3.md",
+    "Domain/ProjectPlan/Architecture/15_QATestPlanWritingRules.md",
+    "_MCP_Tool/DocSearch/ProjectDocSearchRules.md",
+    "Domain/ProjectPlan/Architecture/12_APISpecificationWritingRules.md",
+    "Domain/Markdown/MarkdownWritingRules.md",
+    "Domain/IDE_VSCode/SafeEditingRules.md",
+    "Domain/IDE_VSCode/TextFileIntegrityRules.md",
+    "Domain/IDE_VSCode/MarkdownSafeEditingRules.md",
+    "Domain/IDE_VSCode/ShellTextTransportRules.md"
+  ],
+  "failures": [
+    "CLI v1 documents requires domain_ids",
+    "web-frontend registry target Domain/Web/WebFrontendRules.md missing"
+  ],
+  "permanent_improvement_report": "not registered: reporter unavailable"
+}

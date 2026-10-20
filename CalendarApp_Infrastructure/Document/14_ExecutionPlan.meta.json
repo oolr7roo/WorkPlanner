@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan",
+  "document_number": 14,
+  "document_type": "execution-plan",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "infrastructure",
+  "markdown_path": "CalendarApp_Infrastructure/Document/14_ExecutionPlan.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-RuntimeConfig",
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-Supervisor",
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-PostgresProcessManager",
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-PostgreSQLPathGuard",
+    "DOC-Document-6_FunctionalRequirements",
+    "DOC-Document-7_SystemConditions",
+    "DOC-Document-8_SoftwareRequirementsSpecification",
+    "DOC-CalendarApp_Infrastructure-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Infrastructure-Document-11_DataRequirements",
+    "DOC-CalendarApp_Infrastructure-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.724478Z",
+    "mtime_ns": 1791173207724478393,
+    "byte_size": 2996,
+    "sha256": "62000203c6ae66fd4985c87ded7e4a4e0f39516145094b1aff19b3e457c82d00"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

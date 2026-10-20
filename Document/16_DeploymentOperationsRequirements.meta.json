@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-16_DeploymentOperationsRequirements",
+  "document_number": 16,
+  "document_type": "operations-hub",
+  "scope": "hybrid",
+  "implementation_domain_id": null,
+  "markdown_path": "Document/16_DeploymentOperationsRequirements.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [
+    "OPS-001",
+    "OPS-002",
+    "OPS-003",
+    "OPS-004",
+    "OPS-005"
+  ],
+  "related_documents": [
+    "DOC-Document-16_DeploymentOperationsRequirements-Domain-web",
+    "DOC-Document-16_DeploymentOperationsRequirements-Domain-database",
+    "DOC-Document-16_DeploymentOperationsRequirements-Domain-infrastructure"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.879187Z",
+    "mtime_ns": 1791173207879186632,
+    "byte_size": 3583,
+    "sha256": "7edcc946cdf40fd103f607378b0abb414f2750be96028a78098c1a1ab3852a53"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

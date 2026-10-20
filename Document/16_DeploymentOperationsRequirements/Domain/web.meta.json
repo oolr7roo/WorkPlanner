@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-16_DeploymentOperationsRequirements-Domain-web",
+  "document_number": 16,
+  "document_type": "operations-detail",
+  "scope": "hybrid",
+  "implementation_domain_id": "web",
+  "markdown_path": "Document/16_DeploymentOperationsRequirements/Domain/web.md",
+  "parent_document_id": "DOC-Document-16_DeploymentOperationsRequirements",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-Document-16_DeploymentOperationsRequirements"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.905002Z",
+    "mtime_ns": 1791173207905002102,
+    "byte_size": 1076,
+    "sha256": "395bccd956392af0d23db8848fffae1685b60924c5be6e70a43fa27a6842cbbf"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

@@ -1,0 +1,179 @@
+{
+  "checks": [
+    {
+      "name": "SCR-001: single selected view",
+      "pass": true
+    },
+    {
+      "name": "SCR-001: no duplicate ID",
+      "pass": true
+    },
+    {
+      "name": "SCR-001: date label matches runtime",
+      "pass": true
+    },
+    {
+      "name": "SCR-001: shared mount keeps parent",
+      "pass": true
+    },
+    {
+      "name": "SCR-001: shared controls are not duplicated in authoring JSON",
+      "pass": true
+    },
+    {
+      "name": "SCR-001: measured coordinates within 0.01 px",
+      "pass": true
+    },
+    {
+      "name": "SCR-002: single selected view",
+      "pass": true
+    },
+    {
+      "name": "SCR-002: no duplicate ID",
+      "pass": true
+    },
+    {
+      "name": "SCR-002: date label matches runtime",
+      "pass": true
+    },
+    {
+      "name": "SCR-002: shared mount keeps parent",
+      "pass": true
+    },
+    {
+      "name": "SCR-002: shared controls are not duplicated in authoring JSON",
+      "pass": true
+    },
+    {
+      "name": "SCR-002: measured coordinates within 0.01 px",
+      "pass": true
+    },
+    {
+      "name": "SCR-003: single selected view",
+      "pass": true
+    },
+    {
+      "name": "SCR-003: no duplicate ID",
+      "pass": true
+    },
+    {
+      "name": "SCR-003: date label matches runtime",
+      "pass": true
+    },
+    {
+      "name": "SCR-003: shared mount keeps parent",
+      "pass": true
+    },
+    {
+      "name": "SCR-003: shared controls are not duplicated in authoring JSON",
+      "pass": true
+    },
+    {
+      "name": "SCR-003: measured coordinates within 0.01 px",
+      "pass": true
+    },
+    {
+      "name": "reject missing common",
+      "pass": true
+    },
+    {
+      "name": "reject path escape",
+      "pass": true
+    },
+    {
+      "name": "reject missing parent",
+      "pass": true
+    },
+    {
+      "name": "reject missing override",
+      "pass": true
+    },
+    {
+      "name": "reject event override prohibited",
+      "pass": true
+    },
+    {
+      "name": "reject duplicate ID",
+      "pass": true
+    },
+    {
+      "name": "reject duplicate common",
+      "pass": true
+    },
+    {
+      "name": "reject missing mount",
+      "pass": true
+    },
+    {
+      "name": "reject unknown version",
+      "pass": true
+    },
+    {
+      "name": "reject parent cycle",
+      "pass": true
+    },
+    {
+      "name": "CLI refuses authoring overwrite",
+      "pass": true
+    }
+  ],
+  "alignment": [
+    {
+      "sid": "SCR-001",
+      "count": 166,
+      "max_delta_px": 0.000012706069355772343
+    },
+    {
+      "sid": "SCR-002",
+      "count": 265,
+      "max_delta_px": 0.000012706069355772343
+    },
+    {
+      "sid": "SCR-003",
+      "count": 97,
+      "max_delta_px": 0.000012706069355772343
+    }
+  ],
+  "negative": [
+    {
+      "name": "missing common",
+      "rejected": true
+    },
+    {
+      "name": "path escape",
+      "rejected": true
+    },
+    {
+      "name": "missing parent",
+      "rejected": true
+    },
+    {
+      "name": "missing override",
+      "rejected": true
+    },
+    {
+      "name": "event override prohibited",
+      "rejected": true
+    },
+    {
+      "name": "duplicate ID",
+      "rejected": true
+    },
+    {
+      "name": "duplicate common",
+      "rejected": true
+    },
+    {
+      "name": "missing mount",
+      "rejected": true
+    },
+    {
+      "name": "unknown version",
+      "rejected": true
+    },
+    {
+      "name": "parent cycle",
+      "rejected": true
+    }
+  ]
+}

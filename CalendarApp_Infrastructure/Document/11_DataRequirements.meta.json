@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Infrastructure-Document-11_DataRequirements",
+  "document_number": 11,
+  "document_type": "project-plan-11",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "infrastructure",
+  "markdown_path": "CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [
+    "DATA-201",
+    "DATA-202",
+    "DATA-203",
+    "DATA-204"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Infrastructure-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Infrastructure-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.036705Z",
+    "mtime_ns": 1791173207036704516,
+    "byte_size": 1903,
+    "sha256": "264e499b475eaace0b17d1a0d2e874d5be163f04ae969711d3cf32d42b28f9e8"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

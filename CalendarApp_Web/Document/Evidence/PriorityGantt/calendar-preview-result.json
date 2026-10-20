@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "five-view navigation",
+    "gantt rendering",
+    "priority 1 and 10 boundaries",
+    "priority arrow semantics",
+    "same-group drag",
+    "cross-group drop rejected",
+    "modal default 5",
+    "editing priority",
+    "return to caller"
+  ],
+  "page_errors": []
+}

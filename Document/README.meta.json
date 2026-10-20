@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-README",
+  "document_number": 17,
+  "document_type": "document-index",
+  "scope": "workspace",
+  "implementation_domain_id": null,
+  "markdown_path": "Document/README.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-Document-1_MarketResearch",
+    "DOC-Document-2_DomainKnowledge",
+    "DOC-Document-3_PainPoint",
+    "DOC-Document-4_CustomerRequirements",
+    "DOC-Document-5_UserFlow",
+    "DOC-Document-6_FunctionalRequirements",
+    "DOC-Document-7_SystemConditions",
+    "DOC-Document-8_SoftwareRequirementsSpecification",
+    "DOC-Document-15_QATestPlan",
+    "DOC-Document-16_DeploymentOperationsRequirements",
+    "DOC-Document-17_ValidationReport",
+    "DOC-CalendarApp_Web-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan",
+    "DOC-CalendarApp_Database-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Database-Document-14_ExecutionPlan",
+    "DOC-CalendarApp_Infrastructure-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:48.008930Z",
+    "mtime_ns": 1791173208008930653,
+    "byte_size": 2763,
+    "sha256": "1be7e1ff1978f260d4946eae7207e14839aed0b2f85ba8872a7103e710c8720d"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

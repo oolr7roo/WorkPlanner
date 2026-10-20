@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-4_CustomerRequirements",
+  "document_number": 4,
+  "document_type": "project-plan-4",
+  "scope": "workspace",
+  "implementation_domain_id": null,
+  "markdown_path": "Document/4_CustomerRequirements.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "PP-001",
+    "PP-002",
+    "PP-005",
+    "PP-004"
+  ],
+  "owned_ids": [
+    "CR-001",
+    "CR-002",
+    "CR-003",
+    "CR-004",
+    "CR-005"
+  ],
+  "related_documents": [],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:46.590803Z",
+    "mtime_ns": 1791173206590802825,
+    "byte_size": 1606,
+    "sha256": "c2d0e7a90e2dc5ab8b761d6760bcc4856806dc0de10e67e82755e868633b52f0"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

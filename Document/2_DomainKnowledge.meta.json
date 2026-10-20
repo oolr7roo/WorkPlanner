@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-2_DomainKnowledge",
+  "document_number": 2,
+  "document_type": "project-plan-2",
+  "scope": "workspace",
+  "implementation_domain_id": null,
+  "markdown_path": "Document/2_DomainKnowledge.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [],
+  "related_documents": [],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:46.538947Z",
+    "mtime_ns": 1791173206538946467,
+    "byte_size": 1738,
+    "sha256": "48bf29cc89719013973cda039d56e97b3c2170fc0112db4403897dcddf68e791"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

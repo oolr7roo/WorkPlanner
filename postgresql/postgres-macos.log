@@ -1,0 +1,80 @@
+2026-10-05 12:08:01.654 KST [3845] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin27.0.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-10-05 12:08:01.654 KST [3845] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-05 12:08:01.654 KST [3845] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-10-05 12:08:01.657 KST [3849] LOG:  database system was shut down at 2026-10-05 12:08:01 KST
+2026-10-05 12:08:01.659 KST [3845] LOG:  database system is ready to accept connections
+2026-10-05 12:09:12.159 KST [3845] LOG:  received fast shutdown request
+2026-10-05 12:09:12.160 KST [3845] LOG:  aborting any active transactions
+2026-10-05 12:09:12.160 KST [3845] LOG:  background worker "logical replication launcher" (PID 3853) exited with exit code 1
+2026-10-05 12:09:12.160 KST [3847] LOG:  shutting down
+2026-10-05 12:09:12.160 KST [3847] LOG:  checkpoint starting: shutdown immediate
+2026-10-05 12:09:12.174 KST [3847] LOG:  checkpoint complete: wrote 939 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.008 s, sync=0.006 s, total=0.014 s; sync files=301, longest=0.001 s, average=0.001 s; distance=4345 kB, estimate=4345 kB; lsn=0/1959810, redo lsn=0/1959810
+2026-10-05 12:09:12.176 KST [3845] LOG:  database system is shut down
+2026-10-05 12:09:22.449 KST [4533] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin27.0.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-10-05 12:09:22.449 KST [4533] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-05 12:09:22.449 KST [4533] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-10-05 12:09:22.452 KST [4536] LOG:  database system was shut down at 2026-10-05 12:09:12 KST
+2026-10-05 12:09:22.453 KST [4533] LOG:  database system is ready to accept connections
+2026-10-05 12:10:57.895 KST [4533] LOG:  received fast shutdown request
+2026-10-05 12:10:57.895 KST [4533] LOG:  aborting any active transactions
+2026-10-05 12:10:57.896 KST [4533] LOG:  background worker "logical replication launcher" (PID 4539) exited with exit code 1
+2026-10-05 12:10:57.896 KST [4534] LOG:  shutting down
+2026-10-05 12:10:57.896 KST [4534] LOG:  checkpoint starting: shutdown immediate
+2026-10-05 12:10:57.899 KST [4534] LOG:  checkpoint complete: wrote 48 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.004 s; sync files=11, longest=0.001 s, average=0.001 s; distance=298 kB, estimate=298 kB; lsn=0/19A4368, redo lsn=0/19A4368
+2026-10-05 12:10:57.900 KST [4533] LOG:  database system is shut down
+2026-10-05 12:15:10.360 KST [7694] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin27.0.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-10-05 12:15:10.360 KST [7694] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-05 12:15:10.361 KST [7694] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-10-05 12:15:10.363 KST [7697] LOG:  database system was shut down at 2026-10-05 12:10:57 KST
+2026-10-05 12:15:10.365 KST [7694] LOG:  database system is ready to accept connections
+2026-10-05 12:20:10.365 KST [7695] LOG:  checkpoint starting: time
+2026-10-05 12:20:10.369 KST [7695] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.005 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/19A4470, redo lsn=0/19A4418
+2026-10-20 10:16:21.158 KST [67064] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin27.0.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-10-20 10:16:21.158 KST [67064] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-20 10:16:21.158 KST [67064] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-10-20 10:16:21.162 KST [67064] FATAL:  postmaster became multithreaded during startup
+2026-10-20 10:16:21.162 KST [67064] HINT:  Set the LC_ALL environment variable to a valid locale.
+2026-10-20 10:16:21.162 KST [67064] LOG:  database system is shut down
+2026-10-20 10:16:23.563 KST [67082] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin27.0.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-10-20 10:16:23.563 KST [67082] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-20 10:16:23.563 KST [67082] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-10-20 10:16:23.563 KST [67082] FATAL:  postmaster became multithreaded during startup
+2026-10-20 10:16:23.563 KST [67082] HINT:  Set the LC_ALL environment variable to a valid locale.
+2026-10-20 10:16:23.564 KST [67082] LOG:  database system is shut down
+2026-10-20 10:16:48.658 KST [67206] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin27.0.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-10-20 10:16:48.658 KST [67206] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-20 10:16:48.658 KST [67206] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-10-20 10:16:48.658 KST [67206] FATAL:  postmaster became multithreaded during startup
+2026-10-20 10:16:48.658 KST [67206] HINT:  Set the LC_ALL environment variable to a valid locale.
+2026-10-20 10:16:48.659 KST [67206] LOG:  database system is shut down
+2026-10-20 10:16:52.716 KST [67231] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin27.0.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-10-20 10:16:52.716 KST [67231] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-20 10:16:52.716 KST [67231] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-10-20 10:16:52.716 KST [67231] FATAL:  postmaster became multithreaded during startup
+2026-10-20 10:16:52.716 KST [67231] HINT:  Set the LC_ALL environment variable to a valid locale.
+2026-10-20 10:16:52.717 KST [67231] LOG:  database system is shut down
+2026-10-20 10:21:56.596 KST [69581] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin27.0.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-10-20 10:21:56.597 KST [69581] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-20 10:21:56.597 KST [69581] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-10-20 10:21:56.600 KST [69584] LOG:  database system was interrupted; last known up at 2026-10-05 12:20:10 KST
+2026-10-20 10:21:56.639 KST [69584] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-10-20 10:21:56.641 KST [69584] LOG:  redo starts at 0/19A4418
+2026-10-20 10:21:56.641 KST [69584] LOG:  invalid record length at 0/19A4520: expected at least 24, got 0
+2026-10-20 10:21:56.641 KST [69584] LOG:  redo done at 0/19A44E8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-10-20 10:21:56.642 KST [69582] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-10-20 10:21:56.642 KST [69582] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/19A4520, redo lsn=0/19A4520
+2026-10-20 10:21:56.643 KST [69581] LOG:  database system is ready to accept connections
+2026-10-20 10:22:14.637 KST [69581] LOG:  received fast shutdown request
+2026-10-20 10:22:14.637 KST [69581] LOG:  aborting any active transactions
+2026-10-20 10:22:14.638 KST [69581] LOG:  background worker "logical replication launcher" (PID 69587) exited with exit code 1
+2026-10-20 10:22:14.638 KST [69582] LOG:  shutting down
+2026-10-20 10:22:14.638 KST [69582] LOG:  checkpoint starting: shutdown immediate
+2026-10-20 10:22:14.638 KST [69582] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.000 s, total=0.001 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/19A45D0, redo lsn=0/19A45D0
+2026-10-20 10:22:14.639 KST [69581] LOG:  database system is shut down
+2026-10-20 10:22:14.891 KST [69710] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin27.0.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-10-20 10:22:14.892 KST [69710] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-20 10:22:14.892 KST [69710] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-10-20 10:22:14.894 KST [69713] LOG:  database system was shut down at 2026-10-20 10:22:14 KST
+2026-10-20 10:22:14.895 KST [69710] LOG:  database system is ready to accept connections
+2026-10-20 10:27:14.896 KST [69711] LOG:  checkpoint starting: time
+2026-10-20 10:27:14.901 KST [69711] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.005 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/19A46D8, redo lsn=0/19A4680

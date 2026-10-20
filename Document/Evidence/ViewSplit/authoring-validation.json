@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "status": "Unverified",
+  "validation": {
+    "schema": "Valid",
+    "source_alignment": "Valid",
+    "render_contract": "Valid",
+    "visual_fidelity": "Unverified",
+    "render_fidelity": "Unverified",
+    "complete": false
+  },
+  "target": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup",
+  "document_root": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document",
+  "workspace_document_root": "/Users/jhjo/CalendarApp/Document",
+  "schema_path": "/Users/jhjo/AISkill/_MCP_Tool/WireFrame/WireFrame_Web/schema/wireframe-v3.schema.json",
+  "workspace_root": "/Users/jhjo/CalendarApp",
+  "documents": [
+    {
+      "name": "COMMON-001.json",
+      "screen_id": "COMMON-001",
+      "component_count": 6,
+      "connection_count": 1,
+      "derivation_mode": "implementation-derived",
+      "visual_fidelity": "Unverified",
+      "reconciliation": "Unverified"
+    },
+    {
+      "name": "COMMON-002.json",
+      "screen_id": "COMMON-002",
+      "component_count": 10,
+      "connection_count": 6,
+      "derivation_mode": "implementation-derived",
+      "visual_fidelity": "Unverified",
+      "reconciliation": "Unverified"
+    },
+    {
+      "name": "COMMON-003.json",
+      "screen_id": "COMMON-003",
+      "component_count": 2,
+      "connection_count": 2,
+      "derivation_mode": "implementation-derived",
+      "visual_fidelity": "Unverified",
+      "reconciliation": "Unverified"
+    },
+    {
+      "name": "MOD-001.json",
+      "screen_id": "MOD-001",
+      "component_count": 20,
+      "connection_count": 10,
+      "derivation_mode": "implementation-derived",
+      "visual_fidelity": "Unverified",
+      "reconciliation": "Unverified"
+    },
+    {
+      "name": "SCR-001.json",
+      "screen_id": "SCR-001",
+      "component_count": 149,
+      "connection_count": 45,
+      "derivation_mode": "implementation-derived",
+      "visual_fidelity": "Unverified",
+      "reconciliation": "Unverified"
+    },
+    {
+      "name": "SCR-002.json",
+      "screen_id": "SCR-002",
+      "component_count": 248,
+      "connection_count": 171,
+      "derivation_mode": "implementation-derived",
+      "visual_fidelity": "Unverified",
+      "reconciliation": "Unverified"
+    },
+    {
+      "name": "SCR-003.json",
+      "screen_id": "SCR-003",
+      "component_count": 80,
+      "connection_count": 27,
+      "derivation_mode": "implementation-derived",
+      "visual_fidelity": "Unverified",
+      "reconciliation": "Unverified"
+    }
+  ],
+  "visual_evidence": [
+    {
+      "name": "COMMON-001.json",
+      "screen_id": "COMMON-001",
+      "status": "Unverified",
+      "reason": "visual_evidence_not_provided"
+    },
+    {
+      "name": "COMMON-002.json",
+      "screen_id": "COMMON-002",
+      "status": "Unverified",
+      "reason": "visual_evidence_not_provided"
+    },
+    {
+      "name": "COMMON-003.json",
+      "screen_id": "COMMON-003",
+      "status": "Unverified",
+      "reason": "visual_evidence_not_provided"
+    },
+    {
+      "name": "MOD-001.json",
+      "screen_id": "MOD-001",
+      "status": "Unverified",
+      "reason": "visual_evidence_not_provided"
+    },
+    {
+      "name": "SCR-001.json",
+      "screen_id": "SCR-001",
+      "status": "Unverified",
+      "reason": "visual_evidence_not_provided"
+    },
+    {
+      "name": "SCR-002.json",
+      "screen_id": "SCR-002",
+      "status": "Unverified",
+      "reason": "visual_evidence_not_provided"
+    },
+    {
+      "name": "SCR-003.json",
+      "screen_id": "SCR-003",
+      "status": "Unverified",
+      "reason": "visual_evidence_not_provided"
+    }
+  ],
+  "reconciliation": [
+    {
+      "name": "COMMON-001.json",
+      "screen_id": "COMMON-001",
+      "available": false,
+      "status": "Unverified",
+      "matching": {
+        "available": false,
+        "status": "Unverified",
+        "components": [],
+        "unresolved": [],
+        "candidates": 0
+      },
+      "loss": [],
+      "unresolved": [],
+      "diff": [],
+      "warnings": []
+    },
+    {
+      "name": "COMMON-002.json",
+      "screen_id": "COMMON-002",
+      "available": false,
+      "status": "Unverified",
+      "matching": {
+        "available": false,
+        "status": "Unverified",
+        "components": [],
+        "unresolved": [],
+        "candidates": 0
+      },
+      "loss": [],
+      "unresolved": [],
+      "diff": [],
+      "warnings": []
+    },
+    {
+      "name": "COMMON-003.json",
+      "screen_id": "COMMON-003",
+      "available": false,
+      "status": "Unverified",
+      "matching": {
+        "available": false,
+        "status": "Unverified",
+        "components": [],
+        "unresolved": [],
+        "candidates": 0
+      },
+      "loss": [],
+      "unresolved": [],
+      "diff": [],
+      "warnings": []
+    },
+    {
+      "name": "MOD-001.json",
+      "screen_id": "MOD-001",
+      "available": false,
+      "status": "Unverified",
+      "matching": {
+        "available": false,
+        "status": "Unverified",
+        "components": [],
+        "unresolved": [],
+        "candidates": 0
+      },
+      "loss": [],
+      "unresolved": [],
+      "diff": [],
+      "warnings": []
+    },
+    {
+      "name": "SCR-001.json",
+      "screen_id": "SCR-001",
+      "available": false,
+      "status": "Unverified",
+      "matching": {
+        "available": false,
+        "status": "Unverified",
+        "components": [],
+        "unresolved": [],
+        "candidates": 0
+      },
+      "loss": [],
+      "unresolved": [],
+      "diff": [],
+      "warnings": []
+    },
+    {
+      "name": "SCR-002.json",
+      "screen_id": "SCR-002",
+      "available": false,
+      "status": "Unverified",
+      "matching": {
+        "available": false,
+        "status": "Unverified",
+        "components": [],
+        "unresolved": [],
+        "candidates": 0
+      },
+      "loss": [],
+      "unresolved": [],
+      "diff": [],
+      "warnings": []
+    },
+    {
+      "name": "SCR-003.json",
+      "screen_id": "SCR-003",
+      "available": false,
+      "status": "Unverified",
+      "matching": {
+        "available": false,
+        "status": "Unverified",
+        "components": [],
+        "unresolved": [],
+        "candidates": 0
+      },
+      "loss": [],
+      "unresolved": [],
+      "diff": [],
+      "warnings": []
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}

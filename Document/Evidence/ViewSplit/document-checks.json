@@ -1,0 +1,136 @@
+{
+  "ok": true,
+  "markdown_files": 20,
+  "wireframe_files": 7,
+  "integrity": [
+    {
+      "file": "CalendarApp_Web/Document/09_WireframeMockup.md",
+      "bytes": 4422,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/10_ModuleMapping.md",
+      "bytes": 2877,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/11_DataRequirements.md",
+      "bytes": 2296,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/12_APISpecification.md",
+      "bytes": 1981,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/12_api_spec/API-003_CalendarSDK.md",
+      "bytes": 1777,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/13_UIUXRequirements.md",
+      "bytes": 3669,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan.md",
+      "bytes": 3397,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-BrowserEventStore.md",
+      "bytes": 2507,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement.md",
+      "bytes": 2774,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement/TASK-001.md",
+      "bytes": 6311,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement/TASK-002.md",
+      "bytes": 6300,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/SCR-001.md",
+      "bytes": 3412,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/SCR-001/TASK-001.md",
+      "bytes": 9760,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/SCR-001/TASK-002.md",
+      "bytes": 5724,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/SCR-002.md",
+      "bytes": 2363,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/SCR-002/TASK-001.md",
+      "bytes": 3936,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/SCR-003.md",
+      "bytes": 2361,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "CalendarApp_Web/Document/14_ExecutionPlan/SCR-003/TASK-001.md",
+      "bytes": 3934,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "Document/15_QATestPlan/Domain/web.md",
+      "bytes": 6785,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    },
+    {
+      "file": "Document/17_ValidationReport.md",
+      "bytes": 9890,
+      "metadata_current": true,
+      "safe_markdown_check": true
+    }
+  ],
+  "reference_preserved": {
+    "src/App.tsx": true,
+    "src/main.tsx": true,
+    "src/styles.css": true,
+    "package.json": true,
+    "vite.config.ts": true
+  },
+  "errors": [],
+  "scope": "Changed documents, direct links, metadata relations and supported v3/metadata schema constraints; official validator is separately recorded."
+}

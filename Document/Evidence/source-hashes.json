@@ -1,0 +1,17 @@
+{
+  "src/App.tsx": "24c12ab9d44812c8246fd6c90888c4a6cb026e70d581ea1ba4794d4ec2af0fe2",
+  "src/main.tsx": "ccbefe7be6c69706a1bb01c4c3f20492eb002435af6ba7e5a6d45f7c6aa3a140",
+  "src/styles.css": "f006ce51869d43896fb9b7193048dadfc4aa4e22ef5098e0adbf0e79e67f0b5e",
+  "server.mjs": "e836bd43cae6a41a89f2f1cc628726af6c2f48ca4df56a65231dc4efcca6e6d1",
+  "runtime-config.mjs": "da72047628c3975f34976f227683f4da9bcf62473bcffd983d282248f9ceb2fb",
+  "vite.config.ts": "ed90ceb8778493f981957a14cb3a30c5f527defddf3b804c85547b867b05bb5f",
+  "package.json": "c38ba6348521d68270e93fab03c17fedee452106a89698a891c7e50f63c22987",
+  "package-lock.json": "b6e3f37d0c6741ecd7f22dbb62d8a6ed2e6fd56dff06d7372882a0effe19d68e",
+  "index.html": "4aeaa20a1eeb8a6f781c643c8a27a8f53556ff7185b351aeb93c36a47b5042a3",
+  "start.command": "c54b8cea2336f61bcb55343b6911da0552d5ed95e254764c5a8c4ecad615edd3",
+  "stop.command": "34bbdca07f770d084cfe958e51ca0b2e9f84aef00195a5048c84f0365b0e06e4",
+  "start.bat": "207a954a24dd0d2f7fca1d032fd53a55b15057670d124d88c053dd47ecfe11c1",
+  "stop.bat": "f2082665eec0a67b1917bfebf54386888546c29e0e52a9548f43450681678de5",
+  ".config": "b8a0ad8730faae9d58d6ca5097429630a229f6cc060b4599aa2e6a1846d49832",
+  "postgresql/manage.mjs": "5ee6291ced273ca9dc4339f439923f3b6088a25c80cacd2ff0f4454e722ef48d"
+}

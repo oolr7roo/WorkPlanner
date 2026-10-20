@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-8_SoftwareRequirementsSpecification",
+  "document_number": 8,
+  "document_type": "project-plan-8",
+  "scope": "workspace",
+  "implementation_domain_id": null,
+  "markdown_path": "Document/8_SoftwareRequirementsSpecification.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-001",
+    "FR-002",
+    "FR-003",
+    "FR-004",
+    "FR-005",
+    "FR-006",
+    "FR-007",
+    "FR-008",
+    "FR-009",
+    "FR-010",
+    "FR-011",
+    "FR-012",
+    "NFR-001",
+    "NFR-002",
+    "NFR-003",
+    "NFR-004",
+    "NFR-005",
+    "SA-001",
+    "SA-002",
+    "SA-003",
+    "SA-004",
+    "CT-001",
+    "CT-002",
+    "CT-003",
+    "CT-004"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-Document-6_FunctionalRequirements",
+    "DOC-Document-7_SystemConditions"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:46.696190Z",
+    "mtime_ns": 1791173206696190507,
+    "byte_size": 3667,
+    "sha256": "bac9589e2d727b97df10d7d1db48bd76ab456a33077bd74d18f2db8bcd0bcf08"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

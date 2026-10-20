@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-15_QATestPlan-Domain-database",
+  "document_number": 15,
+  "document_type": "qa-detail",
+  "scope": "hybrid",
+  "implementation_domain_id": "database",
+  "markdown_path": "Document/15_QATestPlan/Domain/database.md",
+  "parent_document_id": "DOC-Document-15_QATestPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-010",
+    "DATA-102"
+  ],
+  "owned_ids": [
+    "TC-010",
+    "TC-011"
+  ],
+  "related_documents": [
+    "DOC-Document-15_QATestPlan"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.802079Z",
+    "mtime_ns": 1791173207802079388,
+    "byte_size": 2121,
+    "sha256": "a6d566b44d94ed78365f6bd5d6e4687da3b5129b22d2978df617bd2d00ed98c5"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

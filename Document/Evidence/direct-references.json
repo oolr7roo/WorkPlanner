@@ -1,0 +1,1711 @@
+{
+  "CalendarApp_Database/Document/10_ModuleMapping.md": [
+    {
+      "reference": "../../postgresql/manage.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/postgresql/manage.mjs",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../postgresql/manage.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/postgresql/manage.mjs",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/8_SoftwareRequirementsSpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/8_SoftwareRequirementsSpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Database/Document/11_DataRequirements.md": [
+    {
+      "reference": "10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Database/Document/12_APISpecification.md": [
+    {
+      "reference": "../../postgresql/manage.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/postgresql/manage.mjs",
+      "read_in_task": true
+    },
+    {
+      "reference": "11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/16_DeploymentOperationsRequirements/Domain/database.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/16_DeploymentOperationsRequirements/Domain/database.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Database/Document/14_ExecutionPlan/MOD-DatabaseBootstrap/TASK-001.md": [
+    {
+      "reference": "../MOD-DatabaseBootstrap.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/14_ExecutionPlan/MOD-DatabaseBootstrap.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Database/Document/14_ExecutionPlan/MOD-DatabaseBootstrap.md": [
+    {
+      "reference": "MOD-DatabaseBootstrap/TASK-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/14_ExecutionPlan/MOD-DatabaseBootstrap/TASK-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Database/Document/14_ExecutionPlan.md": [
+    {
+      "reference": "14_ExecutionPlan/MOD-DatabaseBootstrap.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/14_ExecutionPlan/MOD-DatabaseBootstrap.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/6_FunctionalRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/6_FunctionalRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/7_SystemConditions.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/7_SystemConditions.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/8_SoftwareRequirementsSpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/8_SoftwareRequirementsSpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-DatabaseBootstrap.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/14_ExecutionPlan/MOD-DatabaseBootstrap.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/10_ModuleMapping.md": [
+    {
+      "reference": "../../runtime-config.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/runtime-config.mjs",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../server.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/server.mjs",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../postgresql/manage.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/postgresql/manage.mjs",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../vite.config.ts",
+      "resolved_path": "/Users/jhjo/CalendarApp/vite.config.ts",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../package.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/package.json",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../postgresql/manage.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/postgresql/manage.mjs",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../start.command",
+      "resolved_path": "/Users/jhjo/CalendarApp/start.command",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../start.bat",
+      "resolved_path": "/Users/jhjo/CalendarApp/start.bat",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/8_SoftwareRequirementsSpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/8_SoftwareRequirementsSpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/11_DataRequirements.md": [
+    {
+      "reference": "10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/12_APISpecification.md": [
+    {
+      "reference": "12_api_spec/API-202_Supervisor.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_api_spec/API-202_Supervisor.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "12_api_spec/API-204_PostgresProcess.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_api_spec/API-204_PostgresProcess.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../CalendarApp_Database/Document/12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/12_api_spec/API-202_Supervisor.md": [
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/12_api_spec/API-204_PostgresProcess.md": [
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../postgresql/manage.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/postgresql/manage.mjs",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgreSQLPathGuard/TASK-001.md": [
+    {
+      "reference": "../MOD-PostgreSQLPathGuard.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgreSQLPathGuard.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgreSQLPathGuard.md": [
+    {
+      "reference": "MOD-PostgreSQLPathGuard/TASK-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgreSQLPathGuard/TASK-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager/TASK-001.md": [
+    {
+      "reference": "../MOD-PostgresProcessManager.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager/TASK-002.md": [
+    {
+      "reference": "../MOD-PostgresProcessManager.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager.md": [
+    {
+      "reference": "MOD-PostgresProcessManager/TASK-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager/TASK-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "MOD-PostgresProcessManager/TASK-002.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager/TASK-002.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-RuntimeConfig/TASK-001.md": [
+    {
+      "reference": "../MOD-RuntimeConfig.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-RuntimeConfig.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-RuntimeConfig.md": [
+    {
+      "reference": "MOD-RuntimeConfig/TASK-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-RuntimeConfig/TASK-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor/TASK-001.md": [
+    {
+      "reference": "../MOD-Supervisor.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor/TASK-002.md": [
+    {
+      "reference": "../MOD-Supervisor.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor.md": [
+    {
+      "reference": "MOD-Supervisor/TASK-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor/TASK-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "MOD-Supervisor/TASK-002.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor/TASK-002.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Infrastructure/Document/14_ExecutionPlan.md": [
+    {
+      "reference": "14_ExecutionPlan/MOD-RuntimeConfig.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-RuntimeConfig.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-Supervisor.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-PostgresProcessManager.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-PostgreSQLPathGuard.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgreSQLPathGuard.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/6_FunctionalRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/6_FunctionalRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/7_SystemConditions.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/7_SystemConditions.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/8_SoftwareRequirementsSpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/8_SoftwareRequirementsSpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-RuntimeConfig.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-RuntimeConfig.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-Supervisor.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-PostgresProcessManager.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-PostgreSQLPathGuard.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgreSQLPathGuard.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/09_WireframeMockup.md": [
+    {
+      "reference": "../../Document/5_UserFlow.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/6_FunctionalRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/6_FunctionalRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/8_SoftwareRequirementsSpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/8_SoftwareRequirementsSpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../src/styles.css",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/styles.css",
+      "read_in_task": true
+    },
+    {
+      "reference": "09_WireframeMockup/SCR-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/SCR-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "../../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../src/styles.css",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/styles.css",
+      "read_in_task": true
+    },
+    {
+      "reference": "09_WireframeMockup/MOD-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/MOD-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/10_ModuleMapping.md": [
+    {
+      "reference": "../../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../package.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/package.json",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../node_modules/trud-calendar-core/dist/index.d.ts",
+      "resolved_path": "/Users/jhjo/CalendarApp/node_modules/trud-calendar-core/dist/index.d.ts",
+      "read_in_task": false
+    },
+    {
+      "reference": "../../Document/8_SoftwareRequirementsSpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/8_SoftwareRequirementsSpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/11_DataRequirements.md": [
+    {
+      "reference": "11_data_spec/DATA-001_Events.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_data_spec/DATA-001_Events.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/11_data_spec/DATA-001_Events.md": [
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_api_spec/API-001_LocalStorage.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_api_spec/API-001_LocalStorage.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/12_APISpecification.md": [
+    {
+      "reference": "12_api_spec/API-001_LocalStorage.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_api_spec/API-001_LocalStorage.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "12_api_spec/API-003_CalendarSDK.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_api_spec/API-003_CalendarSDK.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/12_api_spec/API-001_LocalStorage.md": [
+    {
+      "reference": "../11_data_spec/DATA-001_Events.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_data_spec/DATA-001_Events.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/12_api_spec/API-003_CalendarSDK.md": [
+    {
+      "reference": "../../../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../node_modules/trud-calendar-core/dist/index.d.ts",
+      "resolved_path": "/Users/jhjo/CalendarApp/node_modules/trud-calendar-core/dist/index.d.ts",
+      "read_in_task": false
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/13_UIUXRequirements.md": [
+    {
+      "reference": "09_WireframeMockup.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "09_WireframeMockup/SCR-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/SCR-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "09_WireframeMockup/MOD-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/MOD-001.json",
+      "read_in_task": false
+    }
+  ],
+  "CalendarApp_Web/Document/14_ExecutionPlan/MOD-BrowserEventStore/TASK-001.md": [
+    {
+      "reference": "../MOD-BrowserEventStore.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-BrowserEventStore.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/14_ExecutionPlan/MOD-BrowserEventStore.md": [
+    {
+      "reference": "MOD-BrowserEventStore/TASK-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-BrowserEventStore/TASK-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../09_WireframeMockup/SCR-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/SCR-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "../09_WireframeMockup/MOD-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/MOD-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "../../../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement/TASK-001.md": [
+    {
+      "reference": "../MOD-EventManagement.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement/TASK-002.md": [
+    {
+      "reference": "../MOD-EventManagement.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement.md": [
+    {
+      "reference": "MOD-EventManagement/TASK-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement/TASK-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "MOD-EventManagement/TASK-002.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement/TASK-002.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../09_WireframeMockup/SCR-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/SCR-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "../09_WireframeMockup/MOD-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/MOD-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "../../../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/14_ExecutionPlan/SCR-001/TASK-001.md": [
+    {
+      "reference": "../SCR-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/SCR-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/14_ExecutionPlan/SCR-001/TASK-002.md": [
+    {
+      "reference": "../SCR-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/SCR-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../../../Document/17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/14_ExecutionPlan/SCR-001.md": [
+    {
+      "reference": "SCR-001/TASK-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/SCR-001/TASK-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "SCR-001/TASK-002.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/SCR-001/TASK-002.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../09_WireframeMockup/SCR-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/SCR-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "../09_WireframeMockup/MOD-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/MOD-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "../../../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    }
+  ],
+  "CalendarApp_Web/Document/14_ExecutionPlan.md": [
+    {
+      "reference": "09_WireframeMockup/SCR-001.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup/SCR-001.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "14_ExecutionPlan/SCR-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/SCR-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-EventManagement.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-BrowserEventStore.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-BrowserEventStore.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/6_FunctionalRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/6_FunctionalRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/7_SystemConditions.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/7_SystemConditions.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../../Document/8_SoftwareRequirementsSpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/8_SoftwareRequirementsSpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "11_DataRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/11_DataRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "12_APISpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/12_APISpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "09_WireframeMockup.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "13_UIUXRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/13_UIUXRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/SCR-001.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/SCR-001.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-EventManagement.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "14_ExecutionPlan/MOD-BrowserEventStore.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan/MOD-BrowserEventStore.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/15_QATestPlan/Domain/database.md": [
+    {
+      "reference": "../../15_QATestPlan.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/15_QATestPlan/Domain/infrastructure.md": [
+    {
+      "reference": "../../15_QATestPlan.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/15_QATestPlan/Domain/web.md": [
+    {
+      "reference": "../../15_QATestPlan.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/15_QATestPlan/EndToEnd.md": [
+    {
+      "reference": "../15_QATestPlan.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/15_QATestPlan.md": [
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-001",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-002",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-003",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-004",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-005",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-006",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-007",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-008",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-009",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/database.md#tc-010",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/database.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/database.md#tc-011",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/database.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/infrastructure.md#tc-012",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/infrastructure.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/infrastructure.md#tc-013",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/infrastructure.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/infrastructure.md#tc-014",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/infrastructure.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/infrastructure.md#tc-015",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/infrastructure.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md#tc-016",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/EndToEnd.md#tc-017",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/EndToEnd.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/web.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/database.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/database.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/Domain/infrastructure.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/Domain/infrastructure.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan/EndToEnd.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan/EndToEnd.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/16_DeploymentOperationsRequirements/Domain/database.md": [
+    {
+      "reference": "../../16_DeploymentOperationsRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/16_DeploymentOperationsRequirements.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/16_DeploymentOperationsRequirements/Domain/infrastructure.md": [
+    {
+      "reference": "../../16_DeploymentOperationsRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/16_DeploymentOperationsRequirements.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/16_DeploymentOperationsRequirements/Domain/web.md": [
+    {
+      "reference": "../../16_DeploymentOperationsRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/16_DeploymentOperationsRequirements.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/16_DeploymentOperationsRequirements.md": [
+    {
+      "reference": "16_DeploymentOperationsRequirements/Domain/web.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/16_DeploymentOperationsRequirements/Domain/web.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "16_DeploymentOperationsRequirements/Domain/database.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/16_DeploymentOperationsRequirements/Domain/database.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "16_DeploymentOperationsRequirements/Domain/infrastructure.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/16_DeploymentOperationsRequirements/Domain/infrastructure.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../server.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/server.mjs",
+      "read_in_task": true
+    },
+    {
+      "reference": "../postgresql/manage.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/postgresql/manage.mjs",
+      "read_in_task": true
+    },
+    {
+      "reference": "../runtime-config.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/runtime-config.mjs",
+      "read_in_task": true
+    }
+  ],
+  "Document/17_ValidationReport.md": [
+    {
+      "reference": "Evidence/month.png",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/month.png",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/week.png",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/week.png",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/day.png",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/day.png",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/new.png",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/new.png",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/edit.png",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/edit.png",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/form-error.png",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/form-error.png",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/mobile.png",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/mobile.png",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/mobile-new.png",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/mobile-new.png",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/storage-error.png",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/storage-error.png",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/runtime.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/runtime.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/document-validation.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/document-validation.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/wireframe-validation.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/wireframe-validation.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/source-hashes.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/source-hashes.json",
+      "read_in_task": false
+    }
+  ],
+  "Document/1_MarketResearch.md": [
+    {
+      "reference": "https://support.google.com/calendar/answer/72143?hl=en",
+      "kind": "external"
+    },
+    {
+      "reference": "https://support.microsoft.com/en-us/outlook/sharing/share-and-access-a-calendar-with-edit-or-delegate-permissions-in-outlook",
+      "kind": "external"
+    },
+    {
+      "reference": "https://support.apple.com/en-gb/guide/calendar/icalwr13-events/mac",
+      "kind": "external"
+    }
+  ],
+  "Document/2_DomainKnowledge.md": [],
+  "Document/3_PainPoint.md": [
+    {
+      "reference": "../src/App.tsx",
+      "resolved_path": "/Users/jhjo/CalendarApp/src/App.tsx",
+      "read_in_task": true
+    },
+    {
+      "reference": "../server.mjs",
+      "resolved_path": "/Users/jhjo/CalendarApp/server.mjs",
+      "read_in_task": true
+    }
+  ],
+  "Document/4_CustomerRequirements.md": [],
+  "Document/5_UserFlow.md": [
+    {
+      "reference": "#uf-001-달력-탐색",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "#uf-002-일정-등록",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "#uf-003-일정-수정",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "#uf-004-일정-삭제",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "#uf-005-기간-직접-조정",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "#uf-006-편집-취소",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "#uf-007-기존-일정-다시-사용",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "#uf-008-로컬-실행-관리",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/6_FunctionalRequirements.md": [],
+  "Document/7_SystemConditions.md": [],
+  "Document/8_SoftwareRequirementsSpecification.md": [
+    {
+      "reference": "6_FunctionalRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/6_FunctionalRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "7_SystemConditions.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/7_SystemConditions.md",
+      "read_in_task": true
+    }
+  ],
+  "Document/README.md": [
+    {
+      "reference": "1_MarketResearch.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/1_MarketResearch.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "2_DomainKnowledge.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/2_DomainKnowledge.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "3_PainPoint.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/3_PainPoint.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "4_CustomerRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/4_CustomerRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "5_UserFlow.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/5_UserFlow.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "6_FunctionalRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/6_FunctionalRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "7_SystemConditions.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/7_SystemConditions.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "8_SoftwareRequirementsSpecification.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/8_SoftwareRequirementsSpecification.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "15_QATestPlan.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/15_QATestPlan.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "16_DeploymentOperationsRequirements.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/16_DeploymentOperationsRequirements.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "17_ValidationReport.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/17_ValidationReport.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../CalendarApp_Web/Document/10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../CalendarApp_Web/Document/14_ExecutionPlan.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/14_ExecutionPlan.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../CalendarApp_Database/Document/10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../CalendarApp_Database/Document/14_ExecutionPlan.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Database/Document/14_ExecutionPlan.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../CalendarApp_Infrastructure/Document/10_ModuleMapping.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/10_ModuleMapping.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "../CalendarApp_Infrastructure/Document/14_ExecutionPlan.md",
+      "resolved_path": "/Users/jhjo/CalendarApp/CalendarApp_Infrastructure/Document/14_ExecutionPlan.md",
+      "read_in_task": true
+    },
+    {
+      "reference": "Evidence/direct-references.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/direct-references.json",
+      "read_in_task": false
+    },
+    {
+      "reference": "Evidence/docsearch-selection.json",
+      "resolved_path": "/Users/jhjo/CalendarApp/Document/Evidence/docsearch-selection.json",
+      "read_in_task": false
+    }
+  ]
+}

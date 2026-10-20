@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-10-05T04:10:43.203867Z",
+  "markdown_count": 58,
+  "metadata_count": 58,
+  "wireframe_count": 2,
+  "captured_states": 9,
+  "source_hashes_preserved": 15,
+  "checks": {
+    "metadata_schema": true,
+    "fingerprint": true,
+    "markdown_links_and_anchors": true,
+    "table_columns": true,
+    "FR_SRS_coverage": [
+      "FR-001",
+      "FR-002",
+      "FR-003",
+      "FR-004",
+      "FR-005",
+      "FR-006",
+      "FR-007",
+      "FR-008",
+      "FR-009",
+      "FR-010",
+      "FR-011",
+      "FR-012"
+    ],
+    "Task_ownership": true,
+    "reference_hashes": true,
+    "wireframe_schema_and_source": true,
+    "renderer_visual_fidelity": "Unverified",
+    "full_product_QA": "not_claimed",
+    "git": "unborn master, uncommitted"
+  },
+  "errors": [],
+  "document_structure_complete": true,
+  "approval_state": "Review"
+}

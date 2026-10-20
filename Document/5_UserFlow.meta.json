@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-5_UserFlow",
+  "document_number": 5,
+  "document_type": "project-plan-5",
+  "scope": "workspace",
+  "implementation_domain_id": null,
+  "markdown_path": "Document/5_UserFlow.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "CR-001",
+    "CR-002",
+    "CR-003",
+    "CR-004",
+    "CR-005"
+  ],
+  "owned_ids": [
+    "UF-001",
+    "UF-002",
+    "UF-003",
+    "UF-004",
+    "UF-005",
+    "UF-006",
+    "UF-007",
+    "UF-008"
+  ],
+  "related_documents": [],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:46.616595Z",
+    "mtime_ns": 1791173206616594963,
+    "byte_size": 5084,
+    "sha256": "1c9f589f9392e695982ea79e9e977a757d809fa86fbff856a3797bee7ac50b9f"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

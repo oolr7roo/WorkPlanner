@@ -1,0 +1,1934 @@
+{
+  "schema_version": 3,
+  "screen": {
+    "id": "SCR-005",
+    "name": "일정 우선순위",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "unit": "%",
+    "view": "priority",
+    "entry": "COMMON-002 view-priority",
+    "route_policy": "wireframe-view-navigation"
+  },
+  "derivation": {
+    "mode": "mixed",
+    "sources": [
+      "src/features/schedules/views/PriorityTreeView.tsx",
+      "src/features/schedules/scheduleTree.ts",
+      "src/features/schedules/scheduleDates.ts",
+      "CalendarApp_Web/Document/09_WireframeMockup/COMMON-002.json"
+    ],
+    "unverified": [
+      "모든 단말·공용 뷰어 시각 검증은 미완료이다."
+    ]
+  },
+  "frame": {
+    "id": "FRAME-SCR-005",
+    "name": "일정 우선순위",
+    "width": "100%",
+    "height": "100%",
+    "unit": "%",
+    "layout_unit": "percent",
+    "base_width": 1440,
+    "base_height": 1000
+  },
+  "components": [
+    {
+      "id": "app-shell",
+      "type": "panel",
+      "name": "app-shell",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "calendar-panel",
+      "type": "panel",
+      "name": "calendar-panel",
+      "visible": true,
+      "rect": {
+        "x": 1.666667,
+        "y": 10.7,
+        "w": 96.666667,
+        "h": 80.0
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 13
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "app-shell",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-guide",
+      "type": "text",
+      "name": "priority-guide",
+      "text": "위에 있을수록 높은 우선순위",
+      "visible": true,
+      "rect": {
+        "x": 2,
+        "y": 9.5,
+        "w": 96,
+        "h": 4
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 15,
+          "weight": "400"
+        }
+      },
+      "parent": "calendar-panel",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-drag-guide",
+      "type": "text",
+      "name": "priority-drag-guide",
+      "text": "같은 부모 안에서 ⋮⋮를 끌거나 Space·방향키·Enter로 순서를 변경합니다.",
+      "visible": true,
+      "rect": {
+        "x": 2,
+        "y": 14,
+        "w": 96,
+        "h": 4
+      },
+      "style": {
+        "color": "#66758d",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "400"
+        }
+      },
+      "parent": "calendar-panel",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-list",
+      "type": "panel",
+      "name": "priority-list",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 2,
+        "y": 21,
+        "w": 96,
+        "h": 71
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "calendar-panel",
+      "scope": "parent",
+      "properties": {
+        "scroll": "vertical",
+        "ordering": "parentId then sibling order",
+        "sample_data": [
+          {
+            "id": "event-1",
+            "title": "서비스 장애 대응",
+            "start": "2026-10-08T09:00",
+            "end": "2026-10-09T18:00",
+            "order": 0,
+            "color": "#d44e5a",
+            "parentId": null
+          },
+          {
+            "id": "event-2",
+            "title": "고객 제안서 제출",
+            "start": "2026-10-06T09:00",
+            "end": "2026-10-10T18:00",
+            "order": 0,
+            "color": "#dc8840",
+            "parentId": null
+          },
+          {
+            "id": "event-3",
+            "title": "월간 보고서 작성",
+            "start": "2026-10-05T09:00",
+            "end": "2026-10-08T18:00",
+            "order": 0,
+            "color": "#3366dd",
+            "parentId": null
+          },
+          {
+            "id": "event-4",
+            "title": "디자인 검토",
+            "start": "2026-10-08T14:00",
+            "end": "2026-10-08T16:00",
+            "order": 1,
+            "color": "#8767c5",
+            "parentId": "event-3"
+          },
+          {
+            "id": "event-5",
+            "title": "팀 회의 준비",
+            "start": "2026-10-09T09:00",
+            "end": "2026-10-12T18:00",
+            "order": 2,
+            "color": "#3c9b89",
+            "parentId": "event-3"
+          },
+          {
+            "id": "event-6",
+            "title": "자료 정리",
+            "start": "2026-10-10T09:00",
+            "end": "2026-10-14T18:00",
+            "order": 0,
+            "color": "#668cae",
+            "parentId": null
+          },
+          {
+            "id": "event-7",
+            "title": "참고 문서 읽기",
+            "start": "2026-10-12T09:00",
+            "end": "2026-10-16T18:00",
+            "order": 0,
+            "color": "#8795a8",
+            "parentId": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "priority-column-0",
+      "type": "text",
+      "name": "priority-column-0",
+      "text": "순서",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 5,
+        "h": 6
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-column-1",
+      "type": "text",
+      "name": "priority-column-1",
+      "text": "일정",
+      "visible": true,
+      "rect": {
+        "x": 6,
+        "y": 0,
+        "w": 43,
+        "h": 6
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-column-2",
+      "type": "text",
+      "name": "priority-column-2",
+      "text": "기간",
+      "visible": true,
+      "rect": {
+        "x": 51,
+        "y": 0,
+        "w": 29,
+        "h": 6
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-row-event-1",
+      "type": "panel",
+      "name": "priority-row-event-1",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 8,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent",
+      "properties": {
+        "sample_id": "event-1",
+        "manual_order": 0,
+        "draggable": true,
+        "reorder_scope": "same-parent-only",
+        "parentId": null
+      },
+      "events": {
+        "on": "drop",
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
+      }
+    },
+    {
+      "id": "drag-event-1",
+      "type": "button",
+      "name": "drag-event-1",
+      "text": "⋮⋮",
+      "visible": true,
+      "rect": {
+        "x": 0.8,
+        "y": 17,
+        "w": 3.3,
+        "h": 65
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-1",
+      "scope": "parent",
+      "test": "drag-event-1",
+      "events": {
+        "on": "dragstart",
+        "intent": "같은 부모 아래의 일정 순서를 변경한다."
+      },
+      "properties": {
+        "accessible_name": "서비스 장애 대응 순서 이동",
+        "keyboard": "Space 잡기, 방향키 위치 선택, Enter 확정, Escape 취소"
+      }
+    },
+    {
+      "id": "title-event-1",
+      "type": "button",
+      "name": "title-event-1",
+      "text": "서비스 장애 대응",
+      "visible": true,
+      "rect": {
+        "x": 6,
+        "y": 12,
+        "w": 43,
+        "h": 75
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-1",
+      "scope": "parent",
+      "test": "title-event-1",
+      "events": {
+        "on": "click",
+        "intent": "하위 일정을 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "edit-event-1",
+      "type": "button",
+      "name": "edit-event-1",
+      "text": "편집",
+      "visible": true,
+      "rect": {
+        "x": 78,
+        "y": 15,
+        "w": 8,
+        "h": 70
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-1",
+      "scope": "parent",
+      "test": "title-event-1",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정을 편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "accessible_name": "서비스 장애 대응 편집"
+      }
+    },
+    {
+      "id": "period-event-1",
+      "type": "text",
+      "name": "period-event-1",
+      "text": "10-08 09:00 – 10-09 18:00",
+      "visible": true,
+      "rect": {
+        "x": 51,
+        "y": 31,
+        "w": 29,
+        "h": 50
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-1",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-row-event-2",
+      "type": "panel",
+      "name": "priority-row-event-2",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 20,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent",
+      "properties": {
+        "sample_id": "event-2",
+        "manual_order": 0,
+        "draggable": true,
+        "reorder_scope": "same-parent-only",
+        "parentId": null
+      },
+      "events": {
+        "on": "drop",
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
+      }
+    },
+    {
+      "id": "drag-event-2",
+      "type": "button",
+      "name": "drag-event-2",
+      "text": "⋮⋮",
+      "visible": true,
+      "rect": {
+        "x": 0.8,
+        "y": 17,
+        "w": 3.3,
+        "h": 65
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-2",
+      "scope": "parent",
+      "test": "drag-event-2",
+      "events": {
+        "on": "dragstart",
+        "intent": "같은 부모 아래의 일정 순서를 변경한다."
+      },
+      "properties": {
+        "accessible_name": "고객 제안서 제출 순서 이동",
+        "keyboard": "Space 잡기, 방향키 위치 선택, Enter 확정, Escape 취소"
+      }
+    },
+    {
+      "id": "title-event-2",
+      "type": "button",
+      "name": "title-event-2",
+      "text": "고객 제안서 제출",
+      "visible": true,
+      "rect": {
+        "x": 6,
+        "y": 12,
+        "w": 43,
+        "h": 75
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-2",
+      "scope": "parent",
+      "test": "title-event-2",
+      "events": {
+        "on": "click",
+        "intent": "하위 일정을 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "edit-event-2",
+      "type": "button",
+      "name": "edit-event-2",
+      "text": "편집",
+      "visible": true,
+      "rect": {
+        "x": 78,
+        "y": 15,
+        "w": 8,
+        "h": 70
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-2",
+      "scope": "parent",
+      "test": "title-event-2",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정을 편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "accessible_name": "고객 제안서 제출 편집"
+      }
+    },
+    {
+      "id": "period-event-2",
+      "type": "text",
+      "name": "period-event-2",
+      "text": "10-06 09:00 – 10-10 18:00",
+      "visible": true,
+      "rect": {
+        "x": 51,
+        "y": 31,
+        "w": 29,
+        "h": 50
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-2",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-row-event-3",
+      "type": "panel",
+      "name": "priority-row-event-3",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 32,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent",
+      "properties": {
+        "sample_id": "event-3",
+        "manual_order": 0,
+        "draggable": true,
+        "reorder_scope": "same-parent-only",
+        "parentId": null
+      },
+      "events": {
+        "on": "drop",
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
+      }
+    },
+    {
+      "id": "drag-event-3",
+      "type": "button",
+      "name": "drag-event-3",
+      "text": "⋮⋮",
+      "visible": true,
+      "rect": {
+        "x": 0.8,
+        "y": 17,
+        "w": 3.3,
+        "h": 65
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-3",
+      "scope": "parent",
+      "test": "drag-event-3",
+      "events": {
+        "on": "dragstart",
+        "intent": "같은 부모 아래의 일정 순서를 변경한다."
+      },
+      "properties": {
+        "accessible_name": "월간 보고서 작성 순서 이동",
+        "keyboard": "Space 잡기, 방향키 위치 선택, Enter 확정, Escape 취소"
+      }
+    },
+    {
+      "id": "title-event-3",
+      "type": "button",
+      "name": "title-event-3",
+      "text": "월간 보고서 작성",
+      "visible": true,
+      "rect": {
+        "x": 6,
+        "y": 12,
+        "w": 43,
+        "h": 75
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-3",
+      "scope": "parent",
+      "test": "title-event-3",
+      "events": {
+        "on": "click",
+        "intent": "하위 일정을 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "edit-event-3",
+      "type": "button",
+      "name": "edit-event-3",
+      "text": "편집",
+      "visible": true,
+      "rect": {
+        "x": 78,
+        "y": 15,
+        "w": 8,
+        "h": 70
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-3",
+      "scope": "parent",
+      "test": "title-event-3",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정을 편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "accessible_name": "월간 보고서 작성 편집"
+      }
+    },
+    {
+      "id": "period-event-3",
+      "type": "text",
+      "name": "period-event-3",
+      "text": "10-05 09:00 – 10-08 18:00",
+      "visible": true,
+      "rect": {
+        "x": 51,
+        "y": 31,
+        "w": 29,
+        "h": 50
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-3",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-row-event-4",
+      "type": "panel",
+      "name": "priority-row-event-4",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 44,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent",
+      "properties": {
+        "sample_id": "event-4",
+        "manual_order": 1,
+        "draggable": true,
+        "reorder_scope": "same-parent-only",
+        "parentId": "event-3"
+      },
+      "events": {
+        "on": "drop",
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
+      }
+    },
+    {
+      "id": "drag-event-4",
+      "type": "button",
+      "name": "drag-event-4",
+      "text": "⋮⋮",
+      "visible": true,
+      "rect": {
+        "x": 0.8,
+        "y": 17,
+        "w": 3.3,
+        "h": 65
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-4",
+      "scope": "parent",
+      "test": "drag-event-4",
+      "events": {
+        "on": "dragstart",
+        "intent": "같은 부모 아래의 일정 순서를 변경한다."
+      },
+      "properties": {
+        "accessible_name": "디자인 검토 순서 이동",
+        "keyboard": "Space 잡기, 방향키 위치 선택, Enter 확정, Escape 취소"
+      }
+    },
+    {
+      "id": "title-event-4",
+      "type": "button",
+      "name": "title-event-4",
+      "text": "디자인 검토",
+      "visible": true,
+      "rect": {
+        "x": 6,
+        "y": 12,
+        "w": 43,
+        "h": 75
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-4",
+      "scope": "parent",
+      "test": "title-event-4",
+      "events": {
+        "on": "click",
+        "intent": "하위 일정을 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "edit-event-4",
+      "type": "button",
+      "name": "edit-event-4",
+      "text": "편집",
+      "visible": true,
+      "rect": {
+        "x": 78,
+        "y": 15,
+        "w": 8,
+        "h": 70
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-4",
+      "scope": "parent",
+      "test": "title-event-4",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정을 편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "accessible_name": "디자인 검토 편집"
+      }
+    },
+    {
+      "id": "period-event-4",
+      "type": "text",
+      "name": "period-event-4",
+      "text": "10-08 14:00 – 10-08 16:00",
+      "visible": true,
+      "rect": {
+        "x": 51,
+        "y": 31,
+        "w": 29,
+        "h": 50
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-4",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-row-event-5",
+      "type": "panel",
+      "name": "priority-row-event-5",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent",
+      "properties": {
+        "sample_id": "event-5",
+        "manual_order": 2,
+        "draggable": true,
+        "reorder_scope": "same-parent-only",
+        "parentId": "event-3"
+      },
+      "events": {
+        "on": "drop",
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
+      }
+    },
+    {
+      "id": "drag-event-5",
+      "type": "button",
+      "name": "drag-event-5",
+      "text": "⋮⋮",
+      "visible": true,
+      "rect": {
+        "x": 0.8,
+        "y": 17,
+        "w": 3.3,
+        "h": 65
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-5",
+      "scope": "parent",
+      "test": "drag-event-5",
+      "events": {
+        "on": "dragstart",
+        "intent": "같은 부모 아래의 일정 순서를 변경한다."
+      },
+      "properties": {
+        "accessible_name": "팀 회의 준비 순서 이동",
+        "keyboard": "Space 잡기, 방향키 위치 선택, Enter 확정, Escape 취소"
+      }
+    },
+    {
+      "id": "title-event-5",
+      "type": "button",
+      "name": "title-event-5",
+      "text": "팀 회의 준비",
+      "visible": true,
+      "rect": {
+        "x": 6,
+        "y": 12,
+        "w": 43,
+        "h": 75
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-5",
+      "scope": "parent",
+      "test": "title-event-5",
+      "events": {
+        "on": "click",
+        "intent": "하위 일정을 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "edit-event-5",
+      "type": "button",
+      "name": "edit-event-5",
+      "text": "편집",
+      "visible": true,
+      "rect": {
+        "x": 78,
+        "y": 15,
+        "w": 8,
+        "h": 70
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-5",
+      "scope": "parent",
+      "test": "title-event-5",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정을 편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "accessible_name": "팀 회의 준비 편집"
+      }
+    },
+    {
+      "id": "period-event-5",
+      "type": "text",
+      "name": "period-event-5",
+      "text": "10-09 09:00 – 10-12 18:00",
+      "visible": true,
+      "rect": {
+        "x": 51,
+        "y": 31,
+        "w": 29,
+        "h": 50
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-5",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-row-event-6",
+      "type": "panel",
+      "name": "priority-row-event-6",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 68,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent",
+      "properties": {
+        "sample_id": "event-6",
+        "manual_order": 0,
+        "draggable": true,
+        "reorder_scope": "same-parent-only",
+        "parentId": null
+      },
+      "events": {
+        "on": "drop",
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
+      }
+    },
+    {
+      "id": "drag-event-6",
+      "type": "button",
+      "name": "drag-event-6",
+      "text": "⋮⋮",
+      "visible": true,
+      "rect": {
+        "x": 0.8,
+        "y": 17,
+        "w": 3.3,
+        "h": 65
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-6",
+      "scope": "parent",
+      "test": "drag-event-6",
+      "events": {
+        "on": "dragstart",
+        "intent": "같은 부모 아래의 일정 순서를 변경한다."
+      },
+      "properties": {
+        "accessible_name": "자료 정리 순서 이동",
+        "keyboard": "Space 잡기, 방향키 위치 선택, Enter 확정, Escape 취소"
+      }
+    },
+    {
+      "id": "title-event-6",
+      "type": "button",
+      "name": "title-event-6",
+      "text": "자료 정리",
+      "visible": true,
+      "rect": {
+        "x": 6,
+        "y": 12,
+        "w": 43,
+        "h": 75
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-6",
+      "scope": "parent",
+      "test": "title-event-6",
+      "events": {
+        "on": "click",
+        "intent": "하위 일정을 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "edit-event-6",
+      "type": "button",
+      "name": "edit-event-6",
+      "text": "편집",
+      "visible": true,
+      "rect": {
+        "x": 78,
+        "y": 15,
+        "w": 8,
+        "h": 70
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-6",
+      "scope": "parent",
+      "test": "title-event-6",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정을 편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "accessible_name": "자료 정리 편집"
+      }
+    },
+    {
+      "id": "period-event-6",
+      "type": "text",
+      "name": "period-event-6",
+      "text": "10-10 09:00 – 10-14 18:00",
+      "visible": true,
+      "rect": {
+        "x": 51,
+        "y": 31,
+        "w": 29,
+        "h": 50
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-6",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-row-event-7",
+      "type": "panel",
+      "name": "priority-row-event-7",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 80,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent",
+      "properties": {
+        "sample_id": "event-7",
+        "manual_order": 0,
+        "draggable": true,
+        "reorder_scope": "same-parent-only",
+        "parentId": null
+      },
+      "events": {
+        "on": "drop",
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
+      }
+    },
+    {
+      "id": "drag-event-7",
+      "type": "button",
+      "name": "drag-event-7",
+      "text": "⋮⋮",
+      "visible": true,
+      "rect": {
+        "x": 0.8,
+        "y": 17,
+        "w": 3.3,
+        "h": 65
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-7",
+      "scope": "parent",
+      "test": "drag-event-7",
+      "events": {
+        "on": "dragstart",
+        "intent": "같은 부모 아래의 일정 순서를 변경한다."
+      },
+      "properties": {
+        "accessible_name": "참고 문서 읽기 순서 이동",
+        "keyboard": "Space 잡기, 방향키 위치 선택, Enter 확정, Escape 취소"
+      }
+    },
+    {
+      "id": "title-event-7",
+      "type": "button",
+      "name": "title-event-7",
+      "text": "참고 문서 읽기",
+      "visible": true,
+      "rect": {
+        "x": 6,
+        "y": 12,
+        "w": 43,
+        "h": 75
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-7",
+      "scope": "parent",
+      "test": "title-event-7",
+      "events": {
+        "on": "click",
+        "intent": "하위 일정을 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "edit-event-7",
+      "type": "button",
+      "name": "edit-event-7",
+      "text": "편집",
+      "visible": true,
+      "rect": {
+        "x": 78,
+        "y": 15,
+        "w": 8,
+        "h": 70
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "parent": "priority-row-event-7",
+      "scope": "parent",
+      "test": "title-event-7",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정을 편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "accessible_name": "참고 문서 읽기 편집"
+      }
+    },
+    {
+      "id": "period-event-7",
+      "type": "text",
+      "name": "period-event-7",
+      "text": "10-12 09:00 – 10-16 18:00",
+      "visible": true,
+      "rect": {
+        "x": 51,
+        "y": 31,
+        "w": 29,
+        "h": 50
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-row-event-7",
+      "scope": "parent"
+    },
+    {
+      "id": "priority-empty",
+      "type": "text",
+      "name": "priority-empty",
+      "text": "등록된 일정이 없습니다. 일정 추가로 첫 일정을 만들어 보세요.",
+      "visible": false,
+      "rect": {
+        "x": 8,
+        "y": 40,
+        "w": 84,
+        "h": 12
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "priority-list",
+      "scope": "parent",
+      "states": {
+        "default": {
+          "visible": false
+        },
+        "empty": {
+          "visible": true
+        }
+      }
+    },
+    {
+      "id": "priority-status",
+      "type": "text",
+      "name": "priority-status",
+      "text": "같은 부모 아래의 일정끼리 이동할 수 있습니다.",
+      "visible": false,
+      "rect": {
+        "x": 2,
+        "y": 93,
+        "w": 96,
+        "h": 5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "calendar-panel",
+      "scope": "parent",
+      "states": {
+        "default": {
+          "visible": false
+        },
+        "invalid-drop": {
+          "visible": true
+        }
+      },
+      "properties": {
+        "role": "status"
+      }
+    }
+  ],
+  "composition": {
+    "version": 1,
+    "adapter": "../tools/compose-wireframes.mjs",
+    "includes": [
+      {
+        "file": "COMMON-001.json",
+        "mounts": {
+          "app-header": {
+            "parent": "app-shell",
+            "rect": {
+              "x": 1.666667,
+              "y": 2.4,
+              "w": 96.666667,
+              "h": 6.5
+            }
+          }
+        },
+        "overrides": {
+          "page-title": {
+            "text": "일정 우선순위",
+            "rect": {
+              "x": 11,
+              "y": 0,
+              "w": 89,
+              "h": 100
+            }
+          },
+          "page-title-row": {
+            "rect": {
+              "x": 0,
+              "y": 35.4,
+              "w": 31,
+              "h": 64.6
+            }
+          },
+          "back-home": {
+            "rect": {
+              "x": 0,
+              "y": 7.1,
+              "w": 8,
+              "h": 85.7
+            }
+          }
+        }
+      },
+      {
+        "file": "COMMON-002.json",
+        "mounts": {
+          "toolbar": {
+            "parent": "calendar-panel",
+            "rect": {
+              "x": 0.071839,
+              "y": 0.125,
+              "w": 99.856322,
+              "h": 7.625
+            }
+          }
+        },
+        "overrides": {
+          "formatted-date": {
+            "text": "전체 일정",
+            "rect": {
+              "x": 5,
+              "y": 10,
+              "w": 90,
+              "h": 80
+            }
+          },
+          "date-controls": {
+            "rect": {
+              "x": 1.2,
+              "y": 17,
+              "w": 42,
+              "h": 72
+            }
+          },
+          "today": {
+            "visible": false
+          },
+          "prev": {
+            "visible": false
+          },
+          "next": {
+            "visible": false
+          },
+          "view-priority": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": true
+              }
+            },
+            "style": {
+              "color": "rgb(28, 74, 181)",
+              "background_color": "rgb(242, 245, 252)",
+              "border": {
+                "color": "rgb(139, 168, 241)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "800"
+              }
+            }
+          },
+          "view-gantt": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": false
+              }
+            },
+            "style": {
+              "color": "rgb(35, 48, 74)",
+              "background_color": "rgb(255, 255, 255)",
+              "border": {
+                "color": "rgb(220, 225, 235)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "400"
+              }
+            }
+          },
+          "view-month": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": false
+              }
+            },
+            "style": {
+              "color": "rgb(35, 48, 74)",
+              "background_color": "rgb(255, 255, 255)",
+              "border": {
+                "color": "rgb(220, 225, 235)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "400"
+              }
+            }
+          },
+          "view-week": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": false
+              }
+            },
+            "style": {
+              "color": "rgb(35, 48, 74)",
+              "background_color": "rgb(255, 255, 255)",
+              "border": {
+                "color": "rgb(220, 225, 235)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "400"
+              }
+            }
+          },
+          "view-day": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": false
+              }
+            },
+            "style": {
+              "color": "rgb(35, 48, 74)",
+              "background_color": "rgb(255, 255, 255)",
+              "border": {
+                "color": "rgb(220, 225, 235)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "400"
+              }
+            }
+          }
+        }
+      },
+      {
+        "file": "COMMON-003.json",
+        "mounts": {
+          "storage-note": {
+            "parent": "app-shell",
+            "rect": {
+              "x": 1.805556,
+              "y": 91.9,
+              "w": 96.388889,
+              "h": 1.95
+            }
+          },
+          "storage-error": {
+            "parent": "app-shell",
+            "rect": {
+              "x": 1.666667,
+              "y": 93.85,
+              "w": 96.666667,
+              "h": 1.95
+            }
+          }
+        },
+        "overrides": {}
+      }
+    ],
+    "contract": "CalendarApp 전용 작성 계약. 공용 v3의 외부 참조 지원을 의미하지 않는다."
+  },
+  "verification": {
+    "schema": "pending",
+    "source_alignment": "runtime implemented; tree contract synchronized; visual review remains",
+    "render_fidelity": "pending",
+    "complete": false
+  },
+  "sample_data": [
+    {
+      "id": "event-1",
+      "title": "서비스 장애 대응",
+      "start": "2026-10-08T09:00",
+      "end": "2026-10-09T18:00",
+      "order": 0,
+      "color": "#d44e5a",
+      "parentId": null
+    },
+    {
+      "id": "event-2",
+      "title": "고객 제안서 제출",
+      "start": "2026-10-06T09:00",
+      "end": "2026-10-10T18:00",
+      "order": 0,
+      "color": "#dc8840",
+      "parentId": null
+    },
+    {
+      "id": "event-3",
+      "title": "월간 보고서 작성",
+      "start": "2026-10-05T09:00",
+      "end": "2026-10-08T18:00",
+      "order": 0,
+      "color": "#3366dd",
+      "parentId": null
+    },
+    {
+      "id": "event-4",
+      "title": "디자인 검토",
+      "start": "2026-10-08T14:00",
+      "end": "2026-10-08T16:00",
+      "order": 1,
+      "color": "#8767c5",
+      "parentId": "event-3"
+    },
+    {
+      "id": "event-5",
+      "title": "팀 회의 준비",
+      "start": "2026-10-09T09:00",
+      "end": "2026-10-12T18:00",
+      "order": 2,
+      "color": "#3c9b89",
+      "parentId": "event-3"
+    },
+    {
+      "id": "event-6",
+      "title": "자료 정리",
+      "start": "2026-10-10T09:00",
+      "end": "2026-10-14T18:00",
+      "order": 0,
+      "color": "#668cae",
+      "parentId": null
+    },
+    {
+      "id": "event-7",
+      "title": "참고 문서 읽기",
+      "start": "2026-10-12T09:00",
+      "end": "2026-10-16T18:00",
+      "order": 0,
+      "color": "#8795a8",
+      "parentId": null
+    }
+  ],
+  "priority_policy": {
+    "sort": [
+      "sibling order ASC"
+    ],
+    "drag": "같은 부모 안에서만 순서 변경",
+    "keyboard": "Space 잡기, 방향키 위치 선택, Enter 확정, Escape 취소",
+    "new": "같은 부모의 마지막에 추가"
+  },
+  "tree_policy": {
+    "priority": "같은 부모 안에서 위쪽이 우선",
+    "indent_px": 8,
+    "max_indent_px": 24,
+    "toggle": "일정 제목 클릭으로 접고 펼침",
+    "edit": "별도 편집 버튼 또는 간트 막대로 MOD-001 열기",
+    "parent_period": "하위 시작 최솟값~종료 최댓값",
+    "delete": "자식은 한 단계 위로 보존",
+    "shared_collapsed_state": true
+  }
+}

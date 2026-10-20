@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-15_QATestPlan",
+  "document_number": 15,
+  "document_type": "qa-hub",
+  "scope": "hybrid",
+  "implementation_domain_id": null,
+  "markdown_path": "Document/15_QATestPlan.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-Document-15_QATestPlan-Domain-web",
+    "DOC-Document-15_QATestPlan-Domain-database",
+    "DOC-Document-15_QATestPlan-Domain-infrastructure",
+    "DOC-Document-15_QATestPlan-EndToEnd"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.750390Z",
+    "mtime_ns": 1791173207750389614,
+    "byte_size": 3844,
+    "sha256": "9f6a17e90f22ef693bff18974a3e770504391848d33d4e9a335d85b896febc54"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-PostgreSQLPathGuard",
+  "document_number": 14,
+  "document_type": "execution-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "infrastructure",
+  "markdown_path": "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgreSQLPathGuard.md",
+  "parent_document_id": "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-012",
+    "API-203"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-PostgreSQLPathGuard-TASK-001",
+    "DOC-CalendarApp_Infrastructure-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Infrastructure-Document-11_DataRequirements",
+    "DOC-CalendarApp_Infrastructure-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.697453Z",
+    "mtime_ns": 1791173207697453043,
+    "byte_size": 2250,
+    "sha256": "2a9d283a06a09d44d3f1b9a71716e57086f3cd42c577729436b94c0dcbb9aac8"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

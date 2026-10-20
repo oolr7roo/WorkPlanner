@@ -1,0 +1,4364 @@
+{
+  "schema_version": 3,
+  "screen": {
+    "id": "SCR-003",
+    "name": "내 일정 달력 · 일 보기",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "unit": "%",
+    "view": "day",
+    "entry": "COMMON-002 view-day",
+    "route_policy": "same-calendar-view-state"
+  },
+  "derivation": {
+    "mode": "mixed",
+    "sources": [
+      "src/App.tsx",
+      "src/styles.css",
+      "node_modules/trud-calendar/dist/index.js",
+      "Document/Evidence/ViewSplit/runtime.json"
+    ],
+    "unverified": [
+      "모든 단말·공용 뷰어 시각 검증은 미완료이다."
+    ],
+    "design_basis": {
+      "date": "2026-10-21",
+      "source": "2026-10-08 사용자 요청",
+      "scope": "공유 툴바에 우선순위·간트차트 보기가 추가됨. 기존 달력 본문 유지.",
+      "implementation_status": "runtime-implemented-review"
+    }
+  },
+  "frame": {
+    "id": "FRAME-SCR-003",
+    "name": "내 일정 달력 · 일 보기",
+    "width": "100%",
+    "height": "100%",
+    "unit": "%",
+    "layout_unit": "percent",
+    "base_width": 1440,
+    "base_height": 1000
+  },
+  "components": [
+    {
+      "id": "app-shell",
+      "type": "panel",
+      "name": "app-shell",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 100.0
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:app-shell",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 1
+        }
+      }
+    },
+    {
+      "id": "calendar-panel",
+      "type": "panel",
+      "name": "calendar-panel",
+      "visible": true,
+      "rect": {
+        "x": 1.666667,
+        "y": 10.7,
+        "w": 96.666667,
+        "h": 80.0
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:calendar-panel",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 13
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "app-shell",
+      "scope": "parent",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 9
+        }
+      }
+    },
+    {
+      "id": "calendar",
+      "type": "panel",
+      "name": "calendar",
+      "visible": true,
+      "rect": {
+        "x": 0.071839,
+        "y": 7.75,
+        "w": 99.856322,
+        "h": 92.125
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "type:Calendar",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "calendar-panel",
+      "scope": "parent",
+      "events": {
+        "on": "SDK callbacks",
+        "intent": "일정·시간 구간을 선택하거나 이동·길이 변경 결과를 반영한다.",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-005"
+          ]
+        }
+      },
+      "properties": {
+        "view": "day",
+        "external_component": "trud-calendar Calendar",
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 21
+        },
+        "day_hours": [
+          0,
+          24
+        ],
+        "week_starts_on": 0,
+        "sample_date": "2026-10-05",
+        "sample_events": [
+          {
+            "id": "doc-timed",
+            "title": "문서 검증 일정",
+            "start": "2026-10-05T09:00:00",
+            "end": "2026-10-05T10:00:00",
+            "color": "#3366dd"
+          },
+          {
+            "id": "doc-overlap",
+            "title": "겹치는 일정",
+            "start": "2026-10-05T09:30:00",
+            "end": "2026-10-05T10:30:00",
+            "color": "#b42334"
+          }
+        ],
+        "application_initial_view": "month"
+      }
+    },
+    {
+      "id": "day-scroll-001",
+      "name": "day-scroll-001",
+      "type": "panel",
+      "parent": "calendar",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 22
+        },
+        "dom_classes": "flex-1 overflow-y-auto",
+        "sample_geometry": true,
+        "scroll": {
+          "axis": "vertical",
+          "sample_scroll_top": 408,
+          "content_height_px": 1225,
+          "viewport_height_px": 737,
+          "fidelity": "공용 렌더러 스크롤·sticky 재현 미검증"
+        }
+      }
+    },
+    {
+      "id": "day-sticky-header-001",
+      "name": "day-sticky-header-001",
+      "type": "panel",
+      "parent": "day-scroll-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 9.90502
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 23
+        },
+        "dom_classes": "sticky top-0 z-20 bg-[var(--trc-background)]",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-001",
+      "name": "day-container-001",
+      "type": "panel",
+      "parent": "day-sticky-header-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgb(245, 245, 245)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 24
+        },
+        "dom_classes": "grid border-b border-[var(--trc-border)] bg-[var(--trc-muted)]",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-002",
+      "name": "day-container-002",
+      "type": "panel",
+      "parent": "day-container-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 4.604317,
+        "h": 98.630137
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 25
+        },
+        "dom_classes": "border-r border-[var(--trc-border)]",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-003",
+      "name": "day-container-003",
+      "type": "panel",
+      "parent": "day-container-001",
+      "scope": "parent",
+      "rect": {
+        "x": 4.604317,
+        "y": 0.0,
+        "w": 95.395683,
+        "h": 98.630137
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 26
+        },
+        "dom_classes": "text-center py-1 @[640px]:py-2 border-r border-[var(--trc-border)] last:border-r-0",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-label-001",
+      "name": "day-label-001",
+      "type": "text",
+      "parent": "day-container-003",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 11.111111,
+        "w": 100.0,
+        "h": 22.222222
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(115, 115, 115)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "500"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 27
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs font-medium text-[var(--trc-muted-foreground)] uppercase",
+        "sample_geometry": true
+      },
+      "text": "월"
+    },
+    {
+      "id": "day-label-002",
+      "name": "day-label-002",
+      "type": "text",
+      "parent": "day-container-003",
+      "scope": "parent",
+      "rect": {
+        "x": 48.491704,
+        "y": 33.333333,
+        "w": 3.016591,
+        "h": 55.555556
+      },
+      "style": {
+        "color": "rgb(29, 78, 216)",
+        "background_color": "rgb(219, 234, 254)",
+        "border": {
+          "color": "rgb(29, 78, 216)",
+          "width": 0,
+          "radius": 33554400
+        },
+        "typography": {
+          "size": 20,
+          "weight": "600"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 28
+        },
+        "dom_classes": "text-base @[640px]:text-xl font-semibold mx-auto w-8 h-8 @[640px]:w-10 @[640px]:h-10 flex items-center justify-center rounded-full bg-[var(--trc-today-bg)] text-[var(--trc-today-text)]",
+        "sample_geometry": true
+      },
+      "text": "5일"
+    },
+    {
+      "id": "day-time-grid-001",
+      "name": "day-time-grid-001",
+      "type": "panel",
+      "parent": "day-scroll-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": -45.454545,
+        "w": 100.0,
+        "h": 156.309362
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 29
+        },
+        "dom_classes": "grid relative",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-label-003",
+      "name": "day-label-003",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": -0.694444,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 30
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 12시"
+    },
+    {
+      "id": "day-label-004",
+      "name": "day-label-004",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 3.472222,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 31
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 1시"
+    },
+    {
+      "id": "day-label-005",
+      "name": "day-label-005",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 7.638889,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 32
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 2시"
+    },
+    {
+      "id": "day-label-006",
+      "name": "day-label-006",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 11.805556,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 33
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 3시"
+    },
+    {
+      "id": "day-label-007",
+      "name": "day-label-007",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 15.972222,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 34
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 4시"
+    },
+    {
+      "id": "day-label-008",
+      "name": "day-label-008",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 20.138889,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 35
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 5시"
+    },
+    {
+      "id": "day-label-009",
+      "name": "day-label-009",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 24.305556,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 36
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 6시"
+    },
+    {
+      "id": "day-label-010",
+      "name": "day-label-010",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 28.472222,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 37
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 7시"
+    },
+    {
+      "id": "day-label-011",
+      "name": "day-label-011",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 32.638889,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 38
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 8시"
+    },
+    {
+      "id": "day-label-012",
+      "name": "day-label-012",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 36.805556,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 39
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 9시"
+    },
+    {
+      "id": "day-label-013",
+      "name": "day-label-013",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 40.972222,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 40
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 10시"
+    },
+    {
+      "id": "day-label-014",
+      "name": "day-label-014",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 45.138889,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 41
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오전 11시"
+    },
+    {
+      "id": "day-label-015",
+      "name": "day-label-015",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 49.305556,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 42
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 12시"
+    },
+    {
+      "id": "day-label-016",
+      "name": "day-label-016",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 53.472222,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 43
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 1시"
+    },
+    {
+      "id": "day-label-017",
+      "name": "day-label-017",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 57.638889,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 44
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 2시"
+    },
+    {
+      "id": "day-label-018",
+      "name": "day-label-018",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 61.805556,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 45
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 3시"
+    },
+    {
+      "id": "day-label-019",
+      "name": "day-label-019",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 65.972222,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 46
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 4시"
+    },
+    {
+      "id": "day-label-020",
+      "name": "day-label-020",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 70.138889,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 47
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 5시"
+    },
+    {
+      "id": "day-label-021",
+      "name": "day-label-021",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 74.305556,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 48
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 6시"
+    },
+    {
+      "id": "day-label-022",
+      "name": "day-label-022",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 78.472222,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 49
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 7시"
+    },
+    {
+      "id": "day-label-023",
+      "name": "day-label-023",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 82.638889,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 50
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 8시"
+    },
+    {
+      "id": "day-label-024",
+      "name": "day-label-024",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 86.805556,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 51
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 9시"
+    },
+    {
+      "id": "day-label-025",
+      "name": "day-label-025",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 90.972222,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 52
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 10시"
+    },
+    {
+      "id": "day-label-026",
+      "name": "day-label-026",
+      "type": "text",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 95.138889,
+        "w": 4.604317,
+        "h": 4.861111
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 53
+        },
+        "dom_classes": "text-[10px] @[640px]:text-xs text-[var(--trc-muted-foreground)] text-right pr-1 @[640px]:pr-2 border-r border-[var(--trc-border)] -mt-2",
+        "sample_geometry": true
+      },
+      "text": "오후 11시"
+    },
+    {
+      "id": "day-container-004",
+      "name": "day-container-004",
+      "type": "panel",
+      "parent": "day-time-grid-001",
+      "scope": "parent",
+      "rect": {
+        "x": 4.604317,
+        "y": 0.0,
+        "w": 95.395683,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 54
+        },
+        "dom_classes": "relative border-r border-[var(--trc-border)] last:border-r-0",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-time-slot-001",
+      "name": "day-time-slot-001",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 55
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-001",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-002",
+      "name": "day-time-slot-002",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 4.166667,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 56
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-002",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-003",
+      "name": "day-time-slot-003",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 8.333333,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 57
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-003",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-004",
+      "name": "day-time-slot-004",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 12.5,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 58
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-004",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-005",
+      "name": "day-time-slot-005",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 16.666667,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 59
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-005",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-006",
+      "name": "day-time-slot-006",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 20.833333,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 60
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-006",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-007",
+      "name": "day-time-slot-007",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 25.0,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 61
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-007",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-008",
+      "name": "day-time-slot-008",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 29.166667,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 62
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-008",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-009",
+      "name": "day-time-slot-009",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 33.333333,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 63
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-009",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-010",
+      "name": "day-time-slot-010",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 37.5,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 64
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-010",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-011",
+      "name": "day-time-slot-011",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 41.666667,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 65
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-011",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-012",
+      "name": "day-time-slot-012",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 45.833333,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 66
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-012",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-013",
+      "name": "day-time-slot-013",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 50.0,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 67
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-013",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-014",
+      "name": "day-time-slot-014",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 54.166667,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 68
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-014",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-015",
+      "name": "day-time-slot-015",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 58.333333,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 69
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-015",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-016",
+      "name": "day-time-slot-016",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 62.5,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 70
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-016",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-017",
+      "name": "day-time-slot-017",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 66.666667,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 71
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-017",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-018",
+      "name": "day-time-slot-018",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 70.833333,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 72
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-018",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-019",
+      "name": "day-time-slot-019",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 75.0,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 73
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-019",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-020",
+      "name": "day-time-slot-020",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 79.166667,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 74
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-020",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-021",
+      "name": "day-time-slot-021",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 83.333333,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 75
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-021",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-022",
+      "name": "day-time-slot-022",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 87.5,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 76
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-022",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-023",
+      "name": "day-time-slot-023",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 91.666667,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 77
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-023",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-time-slot-024",
+      "name": "day-time-slot-024",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 95.833333,
+        "w": 100.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(229, 229, 229)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 78
+        },
+        "dom_classes": "border-b border-[var(--trc-border)] hover:bg-[var(--trc-accent)]/30 transition-colors cursor-pointer",
+        "sample_geometry": true
+      },
+      "test": "day-time-slot-024",
+      "events": {
+        "on": "click",
+        "intent": "선택한 날짜·시간으로 MOD-001 생성 상태를 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-002"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-container-005",
+      "name": "day-container-005",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 37.5,
+        "w": 50.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 79
+        },
+        "dom_classes": "absolute px-0.5 group",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-006",
+      "name": "day-container-006",
+      "type": "panel",
+      "parent": "day-container-005",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 8.333333
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 80
+        },
+        "dom_classes": "absolute top-0 left-0 right-0 cursor-n-resize z-10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity h-1",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-007",
+      "name": "day-container-007",
+      "type": "panel",
+      "parent": "day-container-006",
+      "scope": "parent",
+      "rect": {
+        "x": 47.586727,
+        "y": 12.5,
+        "w": 4.826546,
+        "h": 75.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgb(51, 102, 221)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 33554400
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 81
+        },
+        "dom_classes": "w-8 h-[3px] rounded-full",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-008",
+      "name": "day-container-008",
+      "type": "panel",
+      "parent": "day-container-005",
+      "scope": "parent",
+      "rect": {
+        "x": 0.301659,
+        "y": 0.0,
+        "w": 99.396682,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(51, 102, 221, 0.125)",
+        "border": {
+          "color": "rgb(10, 10, 10) rgb(10, 10, 10) rgb(10, 10, 10) rgb(51, 102, 221)",
+          "width": 0,
+          "radius": 6
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 82
+        },
+        "dom_classes": "h-full border-l-2 px-1.5 py-0.5 overflow-hidden text-left cursor-pointer hover:opacity-80 transition-opacity relative rounded-[calc(var(--trc-radius)*0.5)]",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-event-001",
+      "name": "day-event-001",
+      "type": "button",
+      "parent": "day-container-008",
+      "scope": "parent",
+      "rect": {
+        "x": 1.213961,
+        "y": 4.166667,
+        "w": 97.875569,
+        "h": 33.333333
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "500"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 83
+        },
+        "dom_classes": "text-xs font-medium text-[var(--trc-foreground)] truncate",
+        "sample_geometry": true
+      },
+      "text": "문서 검증 일정",
+      "test": "day-event-001",
+      "events": {
+        "on": "click",
+        "intent": "선택한 일정을 MOD-001 수정 상태로 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-003"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-label-027",
+      "name": "day-label-027",
+      "type": "text",
+      "parent": "day-container-008",
+      "scope": "parent",
+      "rect": {
+        "x": 1.213961,
+        "y": 37.5,
+        "w": 97.875569,
+        "h": 33.333333
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(115, 115, 115)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 84
+        },
+        "dom_classes": "text-xs text-[var(--trc-muted-foreground)] truncate",
+        "sample_geometry": true
+      },
+      "text": "오전 9:00"
+    },
+    {
+      "id": "day-container-009",
+      "name": "day-container-009",
+      "type": "panel",
+      "parent": "day-container-005",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 91.666667,
+        "w": 100.0,
+        "h": 8.333333
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 85
+        },
+        "dom_classes": "absolute bottom-0 left-0 right-0 cursor-s-resize z-10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity h-1",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-010",
+      "name": "day-container-010",
+      "type": "panel",
+      "parent": "day-container-009",
+      "scope": "parent",
+      "rect": {
+        "x": 47.586727,
+        "y": 12.5,
+        "w": 4.826546,
+        "h": 75.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgb(51, 102, 221)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 33554400
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 86
+        },
+        "dom_classes": "w-8 h-[3px] rounded-full",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-011",
+      "name": "day-container-011",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 50.0,
+        "y": 39.583333,
+        "w": 50.0,
+        "h": 4.166667
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 87
+        },
+        "dom_classes": "absolute px-0.5 group",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-012",
+      "name": "day-container-012",
+      "type": "panel",
+      "parent": "day-container-011",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 8.333333
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 88
+        },
+        "dom_classes": "absolute top-0 left-0 right-0 cursor-n-resize z-10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity h-1",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-013",
+      "name": "day-container-013",
+      "type": "panel",
+      "parent": "day-container-012",
+      "scope": "parent",
+      "rect": {
+        "x": 47.586727,
+        "y": 12.5,
+        "w": 4.826546,
+        "h": 75.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgb(180, 35, 52)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 33554400
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 89
+        },
+        "dom_classes": "w-8 h-[3px] rounded-full",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-014",
+      "name": "day-container-014",
+      "type": "panel",
+      "parent": "day-container-011",
+      "scope": "parent",
+      "rect": {
+        "x": 0.301659,
+        "y": 0.0,
+        "w": 99.396682,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(180, 35, 52, 0.125)",
+        "border": {
+          "color": "rgb(10, 10, 10) rgb(10, 10, 10) rgb(10, 10, 10) rgb(180, 35, 52)",
+          "width": 0,
+          "radius": 6
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 90
+        },
+        "dom_classes": "h-full border-l-2 px-1.5 py-0.5 overflow-hidden text-left cursor-pointer hover:opacity-80 transition-opacity relative rounded-[calc(var(--trc-radius)*0.5)]",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-event-002",
+      "name": "day-event-002",
+      "type": "button",
+      "parent": "day-container-014",
+      "scope": "parent",
+      "rect": {
+        "x": 1.213961,
+        "y": 4.166667,
+        "w": 97.875569,
+        "h": 33.333333
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "500"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 91
+        },
+        "dom_classes": "text-xs font-medium text-[var(--trc-foreground)] truncate",
+        "sample_geometry": true
+      },
+      "text": "겹치는 일정",
+      "test": "day-event-002",
+      "events": {
+        "on": "click",
+        "intent": "선택한 일정을 MOD-001 수정 상태로 연다.",
+        "result": "MOD-001",
+        "bindings": {
+          "modules": [
+            "EventManagement"
+          ],
+          "data": [
+            "DATA-001",
+            "DATA-002"
+          ],
+          "apis": [
+            "API-003"
+          ],
+          "requirements": [
+            "FR-003"
+          ]
+        }
+      }
+    },
+    {
+      "id": "day-label-028",
+      "name": "day-label-028",
+      "type": "text",
+      "parent": "day-container-014",
+      "scope": "parent",
+      "rect": {
+        "x": 1.213961,
+        "y": 37.5,
+        "w": 97.875569,
+        "h": 33.333333
+      },
+      "style": {
+        "color": "rgb(115, 115, 115)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(115, 115, 115)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 92
+        },
+        "dom_classes": "text-xs text-[var(--trc-muted-foreground)] truncate",
+        "sample_geometry": true
+      },
+      "text": "오전 9:30"
+    },
+    {
+      "id": "day-container-015",
+      "name": "day-container-015",
+      "type": "panel",
+      "parent": "day-container-011",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 91.666667,
+        "w": 100.0,
+        "h": 8.333333
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 93
+        },
+        "dom_classes": "absolute bottom-0 left-0 right-0 cursor-s-resize z-10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity h-1",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-016",
+      "name": "day-container-016",
+      "type": "panel",
+      "parent": "day-container-015",
+      "scope": "parent",
+      "rect": {
+        "x": 47.586727,
+        "y": 12.5,
+        "w": 4.826546,
+        "h": 75.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgb(180, 35, 52)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 33554400
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 94
+        },
+        "dom_classes": "w-8 h-[3px] rounded-full",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-017",
+      "name": "day-container-017",
+      "type": "panel",
+      "parent": "day-container-004",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 39.583333,
+        "w": 100.0,
+        "h": 0.868056
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 95
+        },
+        "dom_classes": "absolute left-0 right-0 z-10 pointer-events-none",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-container-018",
+      "name": "day-container-018",
+      "type": "panel",
+      "parent": "day-container-017",
+      "scope": "parent",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 96
+        },
+        "dom_classes": "flex items-center",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-current-time-001",
+      "name": "day-current-time-001",
+      "type": "panel",
+      "parent": "day-container-018",
+      "scope": "parent",
+      "rect": {
+        "x": -0.452489,
+        "y": 0.0,
+        "w": 0.754148,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgb(239, 68, 68)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 33554400
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 97
+        },
+        "dom_classes": "w-2.5 h-2.5 rounded-full bg-[var(--trc-current-time)] -ml-1.5",
+        "sample_geometry": true
+      }
+    },
+    {
+      "id": "day-current-time-002",
+      "name": "day-current-time-002",
+      "type": "panel",
+      "parent": "day-container-018",
+      "scope": "parent",
+      "rect": {
+        "x": 0.301659,
+        "y": 40.0,
+        "w": 99.698341,
+        "h": 20.0
+      },
+      "style": {
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgb(239, 68, 68)",
+        "border": {
+          "color": "rgb(10, 10, 10)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-sdk-dom",
+        "document": "node_modules/trud-calendar/dist/index.js",
+        "locator": "type:WeekView",
+        "style_documents": [
+          "src/styles.css",
+          "node_modules/trud-calendar/dist/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "view": "day",
+          "dom_index": 98
+        },
+        "dom_classes": "flex-1 h-0.5 bg-[var(--trc-current-time)]",
+        "sample_geometry": true
+      }
+    }
+  ],
+  "verification": {
+    "schema": "pending",
+    "source_alignment": "existing-source-preserved; new design not implemented",
+    "render_fidelity": "pending",
+    "complete": false
+  },
+  "composition": {
+    "version": 1,
+    "adapter": "../tools/compose-wireframes.mjs",
+    "includes": [
+      {
+        "file": "COMMON-001.json",
+        "mounts": {
+          "app-header": {
+            "parent": "app-shell",
+            "rect": {
+              "x": 1.666667,
+              "y": 2.4,
+              "w": 96.666667,
+              "h": 6.5
+            }
+          }
+        },
+        "overrides": {}
+      },
+      {
+        "file": "COMMON-002.json",
+        "mounts": {
+          "toolbar": {
+            "parent": "calendar-panel",
+            "rect": {
+              "x": 0.071839,
+              "y": 0.125,
+              "w": 99.856322,
+              "h": 7.625
+            }
+          }
+        },
+        "overrides": {
+          "date-controls": {
+            "rect": {
+              "x": 1.151079,
+              "y": 21.311475,
+              "w": 23.085656,
+              "h": 55.737705
+            }
+          },
+          "today": {
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "w": 16.730779,
+              "h": 100.0
+            }
+          },
+          "prev": {
+            "rect": {
+              "x": 18.288942,
+              "y": 0.0,
+              "w": 11.530409,
+              "h": 100.0
+            }
+          },
+          "next": {
+            "rect": {
+              "x": 31.377514,
+              "y": 0.0,
+              "w": 11.530409,
+              "h": 100.0
+            }
+          },
+          "formatted-date": {
+            "text": "2026년 10월 5일 월요일",
+            "rect": {
+              "x": 48.205678,
+              "y": 12.5,
+              "w": 51.794322,
+              "h": 75.0
+            }
+          },
+          "view-month": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": false
+              }
+            },
+            "style": {
+              "color": "rgb(35, 48, 74)",
+              "background_color": "rgb(255, 255, 255)",
+              "border": {
+                "color": "rgb(220, 225, 235)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "400"
+              }
+            }
+          },
+          "view-day": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": true
+              }
+            },
+            "style": {
+              "color": "rgb(28, 74, 181)",
+              "background_color": "rgb(242, 245, 252)",
+              "border": {
+                "color": "rgb(139, 168, 241)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "800"
+              }
+            }
+          }
+        }
+      },
+      {
+        "file": "COMMON-003.json",
+        "mounts": {
+          "storage-note": {
+            "parent": "app-shell",
+            "rect": {
+              "x": 1.805556,
+              "y": 91.9,
+              "w": 96.388889,
+              "h": 1.95
+            }
+          },
+          "storage-error": {
+            "parent": "app-shell",
+            "rect": {
+              "x": 1.666667,
+              "y": 93.85,
+              "w": 96.666667,
+              "h": 1.95
+            }
+          }
+        },
+        "overrides": {
+          "storage-note": {
+            "properties": {
+              "capture": {
+                "file": "Document/Evidence/ViewSplit/runtime.json",
+                "view": "day",
+                "dom_index": 99
+              }
+            }
+          }
+        }
+      }
+    ],
+    "contract": "CalendarApp 전용 작성 계약. 공용 v3의 외부 참조 지원을 의미하지 않는다."
+  },
+  "behaviors": [
+    {
+      "id": "view-selection",
+      "description": "COMMON-002의 선택 상태와 formattedDate를 현재 보기 상태로 공급한다. 별도 URL 전환 없음."
+    },
+    {
+      "id": "modal-return",
+      "description": "MOD-001 취소 후 현재 보기 유지. 일정 DATA-001은 세 보기가 공유한다."
+    },
+    {
+      "id": "responsive",
+      "description": "모바일은 같은 component 정체성의 Runtime 캡처로 대조한다. SDK 열 수·크기는 반응형이며 데스크톱 좌표를 모바일에 적용하지 않는다."
+    }
+  ]
+}

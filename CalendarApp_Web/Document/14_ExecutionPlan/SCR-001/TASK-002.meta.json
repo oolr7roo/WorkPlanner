@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-001-TASK-002",
+  "document_number": 14,
+  "document_type": "task",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/14_ExecutionPlan/SCR-001/TASK-002.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-001",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-001",
+    "FR-005",
+    "DATA-001",
+    "DATA-002",
+    "API-003"
+  ],
+  "owned_ids": [
+    "SCR-001/TASK-002"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-001",
+    "DOC-CalendarApp_Web-Document-11_DataRequirements",
+    "DOC-CalendarApp_Web-Document-12_APISpecification",
+    "DOC-Document-17_ValidationReport"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T11:18:47.036073Z",
+    "mtime_ns": 1791199127036072662,
+    "byte_size": 5724,
+    "sha256": "c1821a1d7073562be0da6fb2485e97b461394164a8682710b322a533515b29ff"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T11:28:22.470398Z"
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-12_api_spec-API-001_LocalStorage",
+  "document_number": 12,
+  "document_type": "api-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/12_api_spec/API-001_LocalStorage.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-12_APISpecification",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "API-001"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-11_data_spec-DATA-001_Events",
+    "DOC-CalendarApp_Web-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "byte_size": 981,
+    "sha256": "cbfbe0d685edc45aa5a8fbdbf260c1938467c84d00fd2813b9939e2b4b6318f4"
+  },
+  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.937357+00:00"
+}

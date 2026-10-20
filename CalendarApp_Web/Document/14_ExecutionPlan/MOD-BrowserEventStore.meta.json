@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-BrowserEventStore",
+  "document_number": 14,
+  "document_type": "execution-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-BrowserEventStore.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-007",
+    "FR-008",
+    "DATA-001",
+    "DATA-003",
+    "API-001"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-BrowserEventStore-TASK-001",
+    "DOC-CalendarApp_Web-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Web-Document-11_DataRequirements",
+    "DOC-CalendarApp_Web-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "byte_size": 2455,
+    "sha256": "9767877279d42eec230de33e6180371fb99d813fbae99addda25d454af163656"
+  },
+  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.938156+00:00"
+}

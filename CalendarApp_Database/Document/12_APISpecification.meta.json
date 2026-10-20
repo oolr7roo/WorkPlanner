@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Database-Document-12_APISpecification",
+  "document_number": 12,
+  "document_type": "api-specification",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "database",
+  "markdown_path": "CalendarApp_Database/Document/12_APISpecification.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [
+    "API-101"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Database-Document-11_DataRequirements",
+    "DOC-Document-16_DeploymentOperationsRequirements-Domain-database"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:46.984348Z",
+    "mtime_ns": 1791173206984348156,
+    "byte_size": 1536,
+    "sha256": "5e6bc7fce71dc9df8ab5997905303d1d7466305600f02ff72f074671bc052345"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

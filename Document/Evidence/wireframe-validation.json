@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "status": "Unverified",
+  "validation": {
+    "schema": "Valid",
+    "source_alignment": "Valid",
+    "render_contract": "Valid",
+    "visual_fidelity": "Unverified",
+    "render_fidelity": "Unverified",
+    "complete": false
+  },
+  "target": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document/09_WireframeMockup",
+  "document_root": "/Users/jhjo/CalendarApp/CalendarApp_Web/Document",
+  "workspace_document_root": "/Users/jhjo/CalendarApp/Document",
+  "schema_path": "/Users/jhjo/AISkill/_MCP_Tool/WireFrame/WireFrame_Web/schema/wireframe-v3.schema.json",
+  "workspace_root": "/Users/jhjo/CalendarApp",
+  "documents": [
+    {
+      "name": "MOD-001.json",
+      "screen_id": "MOD-001",
+      "component_count": 20,
+      "connection_count": 10,
+      "derivation_mode": "implementation-derived",
+      "visual_fidelity": "Unverified",
+      "reconciliation": "Unverified"
+    },
+    {
+      "name": "SCR-001.json",
+      "screen_id": "SCR-001",
+      "component_count": 19,
+      "connection_count": 10,
+      "derivation_mode": "implementation-derived",
+      "visual_fidelity": "Unverified",
+      "reconciliation": "Unverified"
+    }
+  ],
+  "visual_evidence": [
+    {
+      "name": "MOD-001.json",
+      "screen_id": "MOD-001",
+      "status": "Unverified",
+      "reason": "visual_evidence_not_provided"
+    },
+    {
+      "name": "SCR-001.json",
+      "screen_id": "SCR-001",
+      "status": "Unverified",
+      "reason": "visual_evidence_not_provided"
+    }
+  ],
+  "reconciliation": [
+    {
+      "name": "MOD-001.json",
+      "screen_id": "MOD-001",
+      "available": false,
+      "status": "Unverified",
+      "matching": {
+        "available": false,
+        "status": "Unverified",
+        "components": [],
+        "unresolved": [],
+        "candidates": 0
+      },
+      "loss": [],
+      "unresolved": [],
+      "diff": [],
+      "warnings": []
+    },
+    {
+      "name": "SCR-001.json",
+      "screen_id": "SCR-001",
+      "available": false,
+      "status": "Unverified",
+      "matching": {
+        "available": false,
+        "status": "Unverified",
+        "components": [],
+        "unresolved": [],
+        "candidates": 0
+      },
+      "loss": [],
+      "unresolved": [],
+      "diff": [],
+      "warnings": []
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}

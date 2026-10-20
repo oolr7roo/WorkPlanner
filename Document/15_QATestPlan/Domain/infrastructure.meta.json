@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-15_QATestPlan-Domain-infrastructure",
+  "document_number": 15,
+  "document_type": "qa-detail",
+  "scope": "hybrid",
+  "implementation_domain_id": "infrastructure",
+  "markdown_path": "Document/15_QATestPlan/Domain/infrastructure.md",
+  "parent_document_id": "DOC-Document-15_QATestPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "API-201",
+    "API-202",
+    "API-204",
+    "FR-012"
+  ],
+  "owned_ids": [
+    "TC-012",
+    "TC-013",
+    "TC-014",
+    "TC-015"
+  ],
+  "related_documents": [
+    "DOC-Document-15_QATestPlan"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.827959Z",
+    "mtime_ns": 1791173207827958484,
+    "byte_size": 3145,
+    "sha256": "6dc08c55779f80d8d703d3c35f4c3a462612d079e74baedb87b3a546fe849656"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

@@ -1,0 +1,168 @@
+@import "tailwindcss";
+@import "trud-calendar/styles.css";
+@source "../node_modules/trud-calendar/dist";
+
+:root {
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+  color: #172033;
+  background: #f4f6fb;
+  font-synthesis: none;
+  --trc-primary: #3366dd;
+  --trc-radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+.app-shell {
+  max-width: 1500px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: #5475c7;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+h1 { margin: 0; font-size: 28px; letter-spacing: -0.04em; }
+
+.page-title-row { display: flex; align-items: center; gap: 10px; }
+.home-link {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dce1eb;
+  border-radius: 8px;
+  background: white;
+  color: #23304a;
+  font-size: 22px;
+  line-height: 1;
+  text-decoration: none;
+}
+.home-link:hover { background: #f2f5fc; }
+.home-link:focus-visible { outline: 2px solid #3366dd; outline-offset: 2px; }
+
+.new-event, .save-button {
+  border: 0;
+  border-radius: 10px;
+  background: #3366dd;
+  color: white;
+  font-weight: 700;
+  padding: 11px 17px;
+}
+
+.new-event:hover, .save-button:hover { background: #234fba; }
+
+.calendar-panel {
+  height: min(800px, calc(100vh - 150px));
+  min-height: 560px;
+  overflow: hidden;
+  border-radius: 13px;
+  background: white;
+  box-shadow: 0 14px 36px rgba(24, 44, 81, 0.08);
+}
+
+.calendar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 13px 16px;
+  border-bottom: 1px solid #e6e9f0;
+}
+
+.date-controls, .view-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.date-controls strong {
+  margin-left: 12px;
+  font-size: 17px;
+}
+
+.date-controls button, .view-controls button {
+  min-width: 37px;
+  min-height: 34px;
+  border: 1px solid #dce1eb;
+  border-radius: 8px;
+  background: white;
+  color: #23304a;
+}
+
+.date-controls button:first-child { padding: 0 12px; }
+.view-controls button.active { background: #e7eeff; border-color: #8ba8f1; color: #1c4ab5; font-weight: 800; }
+.date-controls button:hover, .view-controls button:hover { background: #f2f5fc; }
+
+.storage-note { margin: 12px 2px 0; color: #68758d; font-size: 13px; }
+.storage-error, .form-error { color: #b42334; font-size: 13px; }
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(18, 27, 46, 0.48);
+}
+
+.editor {
+  width: min(100%, 500px);
+  padding: 23px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.19);
+}
+
+.editor-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.editor h2 { margin: 0; font-size: 21px; }
+.close-button { border: 0; background: none; font-size: 28px; line-height: 1; color: #6b7280; }
+.editor form { display: grid; gap: 16px; }
+.editor label { display: grid; gap: 7px; color: #334155; font-size: 13px; font-weight: 700; }
+.editor input:not([type="color"]) {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid #d5dce8;
+  border-radius: 8px;
+  background: white;
+  color: #172033;
+}
+.editor input:focus { outline: 2px solid #9bb5f3; outline-offset: 1px; }
+.time-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.color-field { justify-self: start; }
+.color-field input { width: 52px; height: 36px; padding: 2px; border: 1px solid #d5dce8; border-radius: 8px; }
+.editor-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
+.editor-actions button { padding: 9px 16px; border-radius: 8px; }
+.delete-button { margin-right: auto; border: 0; background: #fff0f1; color: #b42334; }
+.cancel-button { border: 1px solid #d5dce8; background: white; color: #334155; }
+
+@media (max-width: 700px) {
+  .app-shell { padding: 12px; }
+  h1 { font-size: 22px; }
+  .new-event { padding: 9px 12px; }
+  .calendar-panel { height: calc(100vh - 140px); min-height: 500px; }
+  .calendar-toolbar { padding: 10px; }
+  .date-controls strong { margin-left: 4px; font-size: 14px; }
+  .time-fields { grid-template-columns: 1fr; }
+}

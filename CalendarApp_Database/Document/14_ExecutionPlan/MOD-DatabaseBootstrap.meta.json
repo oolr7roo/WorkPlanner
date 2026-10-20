@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Database-Document-14_ExecutionPlan-MOD-DatabaseBootstrap",
+  "document_number": 14,
+  "document_type": "execution-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "database",
+  "markdown_path": "CalendarApp_Database/Document/14_ExecutionPlan/MOD-DatabaseBootstrap.md",
+  "parent_document_id": "DOC-CalendarApp_Database-Document-14_ExecutionPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-010",
+    "DATA-101",
+    "DATA-102",
+    "API-101"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Database-Document-14_ExecutionPlan-MOD-DatabaseBootstrap-TASK-001",
+    "DOC-CalendarApp_Database-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Database-Document-11_DataRequirements",
+    "DOC-CalendarApp_Database-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.402606Z",
+    "mtime_ns": 1791173207402605619,
+    "byte_size": 2285,
+    "sha256": "2850122f7373f499d411264c5725b8de4b1a931019e2c1d1e8b702c19bea3dce"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-RuntimeConfig",
+  "document_number": 14,
+  "document_type": "execution-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "infrastructure",
+  "markdown_path": "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-RuntimeConfig.md",
+  "parent_document_id": "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-009",
+    "DATA-201",
+    "API-201"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-RuntimeConfig-TASK-001",
+    "DOC-CalendarApp_Infrastructure-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Infrastructure-Document-11_DataRequirements",
+    "DOC-CalendarApp_Infrastructure-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.481217Z",
+    "mtime_ns": 1791173207481216785,
+    "byte_size": 2220,
+    "sha256": "cd4afcada2b5e83864e7b52e630646242618d0e2b962ff44ed4b2ba580096a80"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-Supervisor",
+  "document_number": 14,
+  "document_type": "execution-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "infrastructure",
+  "markdown_path": "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-Supervisor.md",
+  "parent_document_id": "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-009",
+    "FR-011",
+    "FR-012",
+    "DATA-202",
+    "API-202",
+    "API-203"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-Supervisor-TASK-001",
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-Supervisor-TASK-002",
+    "DOC-CalendarApp_Infrastructure-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Infrastructure-Document-11_DataRequirements",
+    "DOC-CalendarApp_Infrastructure-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.559659Z",
+    "mtime_ns": 1791173207559658575,
+    "byte_size": 2513,
+    "sha256": "4bdef63140bde0760cf460f978339dc818085a9a4c2311e15f71eddf02ad484d"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

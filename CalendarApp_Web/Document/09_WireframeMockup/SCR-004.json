@@ -1,0 +1,1966 @@
+{
+  "schema_version": 3,
+  "screen": {
+    "id": "SCR-004",
+    "name": "일정 간트차트",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "unit": "%",
+    "view": "gantt",
+    "entry": "COMMON-002 view-gantt",
+    "route_policy": "wireframe-view-navigation"
+  },
+  "derivation": {
+    "mode": "mixed",
+    "sources": [
+      "src/features/schedules/views/GanttView.tsx",
+      "src/features/schedules/scheduleTree.ts",
+      "src/features/schedules/scheduleDates.ts",
+      "CalendarApp_Web/Document/09_WireframeMockup/COMMON-002.json"
+    ],
+    "unverified": [
+      "모든 단말·공용 뷰어 시각 검증은 미완료이다."
+    ]
+  },
+  "frame": {
+    "id": "FRAME-SCR-004",
+    "name": "일정 간트차트",
+    "width": "100%",
+    "height": "100%",
+    "unit": "%",
+    "layout_unit": "percent",
+    "base_width": 1440,
+    "base_height": 1000
+  },
+  "components": [
+    {
+      "id": "app-shell",
+      "type": "panel",
+      "name": "app-shell",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "calendar-panel",
+      "type": "panel",
+      "name": "calendar-panel",
+      "visible": true,
+      "rect": {
+        "x": 1.666667,
+        "y": 10.7,
+        "w": 96.666667,
+        "h": 80.0
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 13
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "app-shell",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-guide",
+      "type": "text",
+      "name": "gantt-guide",
+      "text": "일정별 시작·종료를 막대로 표시합니다. 막대를 누르면 일정을 확인할 수 있어요.",
+      "visible": true,
+      "rect": {
+        "x": 2,
+        "y": 9.5,
+        "w": 96,
+        "h": 5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "400"
+        }
+      },
+      "parent": "calendar-panel",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-chart",
+      "type": "panel",
+      "name": "gantt-chart",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 2,
+        "y": 18,
+        "w": 96,
+        "h": 70
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "calendar-panel",
+      "scope": "parent",
+      "properties": {
+        "scroll": "both",
+        "sticky_date_header": true,
+        "sticky_schedule_column": true
+      }
+    },
+    {
+      "id": "gantt-title-column",
+      "type": "text",
+      "name": "gantt-title-column",
+      "text": "일정 / 기간",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-1",
+      "type": "text",
+      "name": "gantt-day-1",
+      "text": "1일",
+      "visible": true,
+      "rect": {
+        "x": 27.0,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-2",
+      "type": "text",
+      "name": "gantt-day-2",
+      "text": "2일",
+      "visible": true,
+      "rect": {
+        "x": 32.214285714285715,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-3",
+      "type": "text",
+      "name": "gantt-day-3",
+      "text": "3일",
+      "visible": true,
+      "rect": {
+        "x": 37.42857142857143,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-4",
+      "type": "text",
+      "name": "gantt-day-4",
+      "text": "4일",
+      "visible": true,
+      "rect": {
+        "x": 42.64285714285714,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-5",
+      "type": "text",
+      "name": "gantt-day-5",
+      "text": "5일",
+      "visible": true,
+      "rect": {
+        "x": 47.85714285714286,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-6",
+      "type": "text",
+      "name": "gantt-day-6",
+      "text": "6일",
+      "visible": true,
+      "rect": {
+        "x": 53.07142857142857,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-7",
+      "type": "text",
+      "name": "gantt-day-7",
+      "text": "7일",
+      "visible": true,
+      "rect": {
+        "x": 58.285714285714285,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-8",
+      "type": "text",
+      "name": "gantt-day-8",
+      "text": "8일",
+      "visible": true,
+      "rect": {
+        "x": 63.5,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-9",
+      "type": "text",
+      "name": "gantt-day-9",
+      "text": "9일",
+      "visible": true,
+      "rect": {
+        "x": 68.71428571428572,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-10",
+      "type": "text",
+      "name": "gantt-day-10",
+      "text": "10일",
+      "visible": true,
+      "rect": {
+        "x": 73.92857142857143,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-11",
+      "type": "text",
+      "name": "gantt-day-11",
+      "text": "11일",
+      "visible": true,
+      "rect": {
+        "x": 79.14285714285714,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-12",
+      "type": "text",
+      "name": "gantt-day-12",
+      "text": "12일",
+      "visible": true,
+      "rect": {
+        "x": 84.35714285714286,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-13",
+      "type": "text",
+      "name": "gantt-day-13",
+      "text": "13일",
+      "visible": true,
+      "rect": {
+        "x": 89.57142857142857,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-day-14",
+      "type": "text",
+      "name": "gantt-day-14",
+      "text": "14일",
+      "visible": true,
+      "rect": {
+        "x": 94.78571428571429,
+        "y": 0,
+        "w": 5.214285714285714,
+        "h": 7
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#eff3fa",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-row-event-1",
+      "type": "panel",
+      "name": "gantt-row-event-1",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 8,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-label-event-1",
+      "type": "button",
+      "name": "gantt-label-event-1",
+      "text": "서비스 장애 대응",
+      "visible": true,
+      "rect": {
+        "x": 0.5,
+        "y": 3,
+        "w": 25,
+        "h": 48
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 15,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-1",
+      "scope": "parent",
+      "test": "gantt-label-event-1",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정의 하위 트리를 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "gantt-period-event-1",
+      "type": "text",
+      "name": "gantt-period-event-1",
+      "text": "10-08 – 10-09",
+      "visible": true,
+      "rect": {
+        "x": 1,
+        "y": 56,
+        "w": 25,
+        "h": 30
+      },
+      "style": {
+        "color": "#66758d",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-row-event-1",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-bar-event-1",
+      "type": "button",
+      "name": "gantt-bar-event-1",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 65.45535714285714,
+        "y": 21,
+        "w": 7.169642857142857,
+        "h": 54
+      },
+      "style": {
+        "color": "#fff",
+        "background_color": "#d44e5a",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-1",
+      "scope": "parent",
+      "test": "gantt-bar-event-1",
+      "events": {
+        "on": "click",
+        "intent": "막대의 일정을 확인·편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "sample_id": "event-1",
+        "start": "2026-10-08T09:00",
+        "end": "2026-10-09T18:00",
+        "clipped_start": false,
+        "clipped_end": false,
+        "accessible_name": "서비스 장애 대응 2026-10-08T09:00 ~ 2026-10-09T18:00",
+        "tooltip": "서비스 장애 대응 2026-10-08T09:00 ~ 2026-10-09T18:00"
+      }
+    },
+    {
+      "id": "gantt-row-event-2",
+      "type": "panel",
+      "name": "gantt-row-event-2",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 20,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-label-event-2",
+      "type": "button",
+      "name": "gantt-label-event-2",
+      "text": "고객 제안서 제출",
+      "visible": true,
+      "rect": {
+        "x": 0.5,
+        "y": 3,
+        "w": 25,
+        "h": 48
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 15,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-2",
+      "scope": "parent",
+      "test": "gantt-label-event-2",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정의 하위 트리를 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "gantt-period-event-2",
+      "type": "text",
+      "name": "gantt-period-event-2",
+      "text": "10-06 – 10-10",
+      "visible": true,
+      "rect": {
+        "x": 1,
+        "y": 56,
+        "w": 25,
+        "h": 30
+      },
+      "style": {
+        "color": "#66758d",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-row-event-2",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-bar-event-2",
+      "type": "button",
+      "name": "gantt-bar-event-2",
+      "text": "고객 제안서 제출",
+      "visible": true,
+      "rect": {
+        "x": 55.026785714285715,
+        "y": 21,
+        "w": 22.8125,
+        "h": 54
+      },
+      "style": {
+        "color": "#fff",
+        "background_color": "#dc8840",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-2",
+      "scope": "parent",
+      "test": "gantt-bar-event-2",
+      "events": {
+        "on": "click",
+        "intent": "막대의 일정을 확인·편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "sample_id": "event-2",
+        "start": "2026-10-06T09:00",
+        "end": "2026-10-10T18:00",
+        "clipped_start": false,
+        "clipped_end": false,
+        "accessible_name": "고객 제안서 제출 2026-10-06T09:00 ~ 2026-10-10T18:00",
+        "tooltip": "고객 제안서 제출 2026-10-06T09:00 ~ 2026-10-10T18:00"
+      }
+    },
+    {
+      "id": "gantt-row-event-3",
+      "type": "panel",
+      "name": "gantt-row-event-3",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 32,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-label-event-3",
+      "type": "button",
+      "name": "gantt-label-event-3",
+      "text": "월간 보고서 작성",
+      "visible": true,
+      "rect": {
+        "x": 0.5,
+        "y": 3,
+        "w": 25,
+        "h": 48
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 15,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-3",
+      "scope": "parent",
+      "test": "gantt-label-event-3",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정의 하위 트리를 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "gantt-period-event-3",
+      "type": "text",
+      "name": "gantt-period-event-3",
+      "text": "10-05 – 10-08",
+      "visible": true,
+      "rect": {
+        "x": 1,
+        "y": 56,
+        "w": 25,
+        "h": 30
+      },
+      "style": {
+        "color": "#66758d",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-row-event-3",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-bar-event-3",
+      "type": "button",
+      "name": "gantt-bar-event-3",
+      "text": "월간 보고서 작성",
+      "visible": true,
+      "rect": {
+        "x": 49.8125,
+        "y": 21,
+        "w": 17.598214285714285,
+        "h": 54
+      },
+      "style": {
+        "color": "#fff",
+        "background_color": "#3366dd",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-3",
+      "scope": "parent",
+      "test": "gantt-bar-event-3",
+      "events": {
+        "on": "click",
+        "intent": "막대의 일정을 확인·편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "sample_id": "event-3",
+        "start": "2026-10-05T09:00",
+        "end": "2026-10-08T18:00",
+        "clipped_start": false,
+        "clipped_end": false,
+        "accessible_name": "월간 보고서 작성 2026-10-05T09:00 ~ 2026-10-08T18:00",
+        "tooltip": "월간 보고서 작성 2026-10-05T09:00 ~ 2026-10-08T18:00"
+      }
+    },
+    {
+      "id": "gantt-row-event-4",
+      "type": "panel",
+      "name": "gantt-row-event-4",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 44,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-label-event-4",
+      "type": "button",
+      "name": "gantt-label-event-4",
+      "text": "디자인 검토",
+      "visible": true,
+      "rect": {
+        "x": 0.5,
+        "y": 3,
+        "w": 25,
+        "h": 48
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 15,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-4",
+      "scope": "parent",
+      "test": "gantt-label-event-4",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정의 하위 트리를 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "gantt-period-event-4",
+      "type": "text",
+      "name": "gantt-period-event-4",
+      "text": "10-08 – 10-08",
+      "visible": true,
+      "rect": {
+        "x": 1,
+        "y": 56,
+        "w": 25,
+        "h": 30
+      },
+      "style": {
+        "color": "#66758d",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-row-event-4",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-bar-event-4",
+      "type": "button",
+      "name": "gantt-bar-event-4",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 66.54166666666666,
+        "y": 21,
+        "w": 0.4345238095238126,
+        "h": 54
+      },
+      "style": {
+        "color": "#fff",
+        "background_color": "#8767c5",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-4",
+      "scope": "parent",
+      "test": "gantt-bar-event-4",
+      "events": {
+        "on": "click",
+        "intent": "막대의 일정을 확인·편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "sample_id": "event-4",
+        "start": "2026-10-08T14:00",
+        "end": "2026-10-08T16:00",
+        "clipped_start": false,
+        "clipped_end": false,
+        "accessible_name": "디자인 검토 2026-10-08T14:00 ~ 2026-10-08T16:00",
+        "tooltip": "디자인 검토 2026-10-08T14:00 ~ 2026-10-08T16:00"
+      }
+    },
+    {
+      "id": "gantt-row-event-5",
+      "type": "panel",
+      "name": "gantt-row-event-5",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 56,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-label-event-5",
+      "type": "button",
+      "name": "gantt-label-event-5",
+      "text": "팀 회의 준비",
+      "visible": true,
+      "rect": {
+        "x": 0.5,
+        "y": 3,
+        "w": 25,
+        "h": 48
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 15,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-5",
+      "scope": "parent",
+      "test": "gantt-label-event-5",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정의 하위 트리를 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "gantt-period-event-5",
+      "type": "text",
+      "name": "gantt-period-event-5",
+      "text": "10-09 – 10-12",
+      "visible": true,
+      "rect": {
+        "x": 1,
+        "y": 56,
+        "w": 25,
+        "h": 30
+      },
+      "style": {
+        "color": "#66758d",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-row-event-5",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-bar-event-5",
+      "type": "button",
+      "name": "gantt-bar-event-5",
+      "text": "팀 회의 준비",
+      "visible": true,
+      "rect": {
+        "x": 70.66964285714286,
+        "y": 21,
+        "w": 17.598214285714285,
+        "h": 54
+      },
+      "style": {
+        "color": "#fff",
+        "background_color": "#3c9b89",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-5",
+      "scope": "parent",
+      "test": "gantt-bar-event-5",
+      "events": {
+        "on": "click",
+        "intent": "막대의 일정을 확인·편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "sample_id": "event-5",
+        "start": "2026-10-09T09:00",
+        "end": "2026-10-12T18:00",
+        "clipped_start": false,
+        "clipped_end": false,
+        "accessible_name": "팀 회의 준비 2026-10-09T09:00 ~ 2026-10-12T18:00",
+        "tooltip": "팀 회의 준비 2026-10-09T09:00 ~ 2026-10-12T18:00"
+      }
+    },
+    {
+      "id": "gantt-row-event-6",
+      "type": "panel",
+      "name": "gantt-row-event-6",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 68,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-label-event-6",
+      "type": "button",
+      "name": "gantt-label-event-6",
+      "text": "자료 정리",
+      "visible": true,
+      "rect": {
+        "x": 0.5,
+        "y": 3,
+        "w": 25,
+        "h": 48
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 15,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-6",
+      "scope": "parent",
+      "test": "gantt-label-event-6",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정의 하위 트리를 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "gantt-period-event-6",
+      "type": "text",
+      "name": "gantt-period-event-6",
+      "text": "10-10 – 10-14",
+      "visible": true,
+      "rect": {
+        "x": 1,
+        "y": 56,
+        "w": 25,
+        "h": 30
+      },
+      "style": {
+        "color": "#66758d",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-row-event-6",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-bar-event-6",
+      "type": "button",
+      "name": "gantt-bar-event-6",
+      "text": "자료 정리",
+      "visible": true,
+      "rect": {
+        "x": 75.88392857142857,
+        "y": 21,
+        "w": 22.8125,
+        "h": 54
+      },
+      "style": {
+        "color": "#fff",
+        "background_color": "#668cae",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-6",
+      "scope": "parent",
+      "test": "gantt-bar-event-6",
+      "events": {
+        "on": "click",
+        "intent": "막대의 일정을 확인·편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "sample_id": "event-6",
+        "start": "2026-10-10T09:00",
+        "end": "2026-10-14T18:00",
+        "clipped_start": false,
+        "clipped_end": false,
+        "accessible_name": "자료 정리 2026-10-10T09:00 ~ 2026-10-14T18:00",
+        "tooltip": "자료 정리 2026-10-10T09:00 ~ 2026-10-14T18:00"
+      }
+    },
+    {
+      "id": "gantt-row-event-7",
+      "type": "panel",
+      "name": "gantt-row-event-7",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 80,
+        "w": 100,
+        "h": 10.5
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-label-event-7",
+      "type": "button",
+      "name": "gantt-label-event-7",
+      "text": "참고 문서 읽기",
+      "visible": true,
+      "rect": {
+        "x": 0.5,
+        "y": 3,
+        "w": 25,
+        "h": 48
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#fff",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 15,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-7",
+      "scope": "parent",
+      "test": "gantt-label-event-7",
+      "events": {
+        "on": "click",
+        "intent": "해당 일정의 하위 트리를 펼치거나 접는다."
+      }
+    },
+    {
+      "id": "gantt-period-event-7",
+      "type": "text",
+      "name": "gantt-period-event-7",
+      "text": "10-12 – 10-16",
+      "visible": true,
+      "rect": {
+        "x": 1,
+        "y": 56,
+        "w": 25,
+        "h": 30
+      },
+      "style": {
+        "color": "#66758d",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-row-event-7",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-bar-event-7",
+      "type": "button",
+      "name": "gantt-bar-event-7",
+      "text": "참고 문서 읽기",
+      "visible": true,
+      "rect": {
+        "x": 86.3125,
+        "y": 21,
+        "w": 13.6875,
+        "h": 54
+      },
+      "style": {
+        "color": "#fff",
+        "background_color": "#8795a8",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-7",
+      "scope": "parent",
+      "test": "gantt-bar-event-7",
+      "events": {
+        "on": "click",
+        "intent": "막대의 일정을 확인·편집한다.",
+        "result": "MOD-001"
+      },
+      "properties": {
+        "sample_id": "event-7",
+        "start": "2026-10-12T09:00",
+        "end": "2026-10-16T18:00",
+        "clipped_start": false,
+        "clipped_end": true,
+        "accessible_name": "참고 문서 읽기 2026-10-12T09:00 ~ 2026-10-16T18:00",
+        "tooltip": "참고 문서 읽기 2026-10-12T09:00 ~ 2026-10-16T18:00"
+      }
+    },
+    {
+      "id": "gantt-continues-event-7",
+      "type": "text",
+      "name": "gantt-continues-event-7",
+      "text": "›",
+      "visible": true,
+      "rect": {
+        "x": 98,
+        "y": 20,
+        "w": 2,
+        "h": 54
+      },
+      "style": {
+        "color": "#fff",
+        "background_color": "#8795a8",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 18,
+          "weight": "700"
+        }
+      },
+      "parent": "gantt-row-event-7",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-today-line",
+      "type": "panel",
+      "name": "gantt-today-line",
+      "text": "",
+      "visible": true,
+      "rect": {
+        "x": 66.10714285714286,
+        "y": 7,
+        "w": 0.16,
+        "h": 93
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "#d44e5a",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-today-legend",
+      "type": "text",
+      "name": "gantt-today-legend",
+      "text": "│ 오늘 10월 8일     › 표시 기간 이후에도 계속되는 일정",
+      "visible": true,
+      "rect": {
+        "x": 2,
+        "y": 91,
+        "w": 96,
+        "h": 5
+      },
+      "style": {
+        "color": "#66758d",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 14,
+          "weight": "400"
+        }
+      },
+      "parent": "calendar-panel",
+      "scope": "parent"
+    },
+    {
+      "id": "gantt-empty",
+      "type": "text",
+      "name": "gantt-empty",
+      "text": "이 기간에 일정이 없습니다. 다른 기간을 보거나 일정을 추가해 주세요.",
+      "visible": false,
+      "rect": {
+        "x": 8,
+        "y": 40,
+        "w": 84,
+        "h": 12
+      },
+      "style": {
+        "color": "#23304a",
+        "background_color": "transparent",
+        "border": {
+          "color": "#dce1eb",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "parent": "gantt-chart",
+      "scope": "parent",
+      "states": {
+        "default": {
+          "visible": false
+        },
+        "empty": {
+          "visible": true
+        }
+      }
+    }
+  ],
+  "composition": {
+    "version": 1,
+    "adapter": "../tools/compose-wireframes.mjs",
+    "includes": [
+      {
+        "file": "COMMON-001.json",
+        "mounts": {
+          "app-header": {
+            "parent": "app-shell",
+            "rect": {
+              "x": 1.666667,
+              "y": 2.4,
+              "w": 96.666667,
+              "h": 6.5
+            }
+          }
+        },
+        "overrides": {
+          "page-title": {
+            "text": "일정 간트차트",
+            "rect": {
+              "x": 11,
+              "y": 0,
+              "w": 89,
+              "h": 100
+            }
+          },
+          "page-title-row": {
+            "rect": {
+              "x": 0,
+              "y": 35.4,
+              "w": 31,
+              "h": 64.6
+            }
+          },
+          "back-home": {
+            "rect": {
+              "x": 0,
+              "y": 7.1,
+              "w": 8,
+              "h": 85.7
+            }
+          }
+        }
+      },
+      {
+        "file": "COMMON-002.json",
+        "mounts": {
+          "toolbar": {
+            "parent": "calendar-panel",
+            "rect": {
+              "x": 0.071839,
+              "y": 0.125,
+              "w": 99.856322,
+              "h": 7.625
+            }
+          }
+        },
+        "overrides": {
+          "formatted-date": {
+            "text": "2026년 10월 1일 – 14일",
+            "rect": {
+              "x": 33,
+              "y": 10,
+              "w": 66,
+              "h": 80
+            }
+          },
+          "date-controls": {
+            "rect": {
+              "x": 1.2,
+              "y": 17,
+              "w": 42,
+              "h": 72
+            }
+          },
+          "today": {
+            "visible": true,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 8,
+              "h": 100
+            },
+            "properties": {
+              "accessible_name": "오늘"
+            }
+          },
+          "prev": {
+            "visible": true,
+            "rect": {
+              "x": 10,
+              "y": 0,
+              "w": 8,
+              "h": 100
+            },
+            "properties": {
+              "accessible_name": "이전 2주"
+            }
+          },
+          "next": {
+            "visible": true,
+            "rect": {
+              "x": 20,
+              "y": 0,
+              "w": 8,
+              "h": 100
+            },
+            "properties": {
+              "accessible_name": "다음 2주"
+            }
+          },
+          "view-priority": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": false
+              }
+            },
+            "style": {
+              "color": "rgb(35, 48, 74)",
+              "background_color": "rgb(255, 255, 255)",
+              "border": {
+                "color": "rgb(220, 225, 235)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "400"
+              }
+            }
+          },
+          "view-gantt": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": true
+              }
+            },
+            "style": {
+              "color": "rgb(28, 74, 181)",
+              "background_color": "rgb(242, 245, 252)",
+              "border": {
+                "color": "rgb(139, 168, 241)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "800"
+              }
+            }
+          },
+          "view-month": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": false
+              }
+            },
+            "style": {
+              "color": "rgb(35, 48, 74)",
+              "background_color": "rgb(255, 255, 255)",
+              "border": {
+                "color": "rgb(220, 225, 235)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "400"
+              }
+            }
+          },
+          "view-week": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": false
+              }
+            },
+            "style": {
+              "color": "rgb(35, 48, 74)",
+              "background_color": "rgb(255, 255, 255)",
+              "border": {
+                "color": "rgb(220, 225, 235)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "400"
+              }
+            }
+          },
+          "view-day": {
+            "states": {
+              "default": {
+                "visible": true,
+                "enabled": true,
+                "selected": false
+              }
+            },
+            "style": {
+              "color": "rgb(35, 48, 74)",
+              "background_color": "rgb(255, 255, 255)",
+              "border": {
+                "color": "rgb(220, 225, 235)",
+                "width": 1,
+                "radius": 8
+              },
+              "typography": {
+                "size": 16,
+                "weight": "400"
+              }
+            }
+          }
+        }
+      },
+      {
+        "file": "COMMON-003.json",
+        "mounts": {
+          "storage-note": {
+            "parent": "app-shell",
+            "rect": {
+              "x": 1.805556,
+              "y": 91.9,
+              "w": 96.388889,
+              "h": 1.95
+            }
+          },
+          "storage-error": {
+            "parent": "app-shell",
+            "rect": {
+              "x": 1.666667,
+              "y": 93.85,
+              "w": 96.666667,
+              "h": 1.95
+            }
+          }
+        },
+        "overrides": {}
+      }
+    ],
+    "contract": "CalendarApp 전용 작성 계약. 공용 v3의 외부 참조 지원을 의미하지 않는다."
+  },
+  "verification": {
+    "schema": "pending",
+    "source_alignment": "runtime implemented; tree contract synchronized; visual review remains",
+    "render_fidelity": "pending",
+    "complete": false
+  },
+  "sample_data": [
+    {
+      "id": "event-1",
+      "title": "서비스 장애 대응",
+      "start": "2026-10-08T09:00",
+      "end": "2026-10-09T18:00",
+      "order": 0,
+      "color": "#d44e5a",
+      "parentId": null
+    },
+    {
+      "id": "event-2",
+      "title": "고객 제안서 제출",
+      "start": "2026-10-06T09:00",
+      "end": "2026-10-10T18:00",
+      "order": 0,
+      "color": "#dc8840",
+      "parentId": null
+    },
+    {
+      "id": "event-3",
+      "title": "월간 보고서 작성",
+      "start": "2026-10-05T09:00",
+      "end": "2026-10-08T18:00",
+      "order": 0,
+      "color": "#3366dd",
+      "parentId": null
+    },
+    {
+      "id": "event-4",
+      "title": "디자인 검토",
+      "start": "2026-10-08T14:00",
+      "end": "2026-10-08T16:00",
+      "order": 1,
+      "color": "#8767c5",
+      "parentId": "event-3"
+    },
+    {
+      "id": "event-5",
+      "title": "팀 회의 준비",
+      "start": "2026-10-09T09:00",
+      "end": "2026-10-12T18:00",
+      "order": 2,
+      "color": "#3c9b89",
+      "parentId": "event-3"
+    },
+    {
+      "id": "event-6",
+      "title": "자료 정리",
+      "start": "2026-10-10T09:00",
+      "end": "2026-10-14T18:00",
+      "order": 0,
+      "color": "#668cae",
+      "parentId": null
+    },
+    {
+      "id": "event-7",
+      "title": "참고 문서 읽기",
+      "start": "2026-10-12T09:00",
+      "end": "2026-10-16T18:00",
+      "order": 0,
+      "color": "#8795a8",
+      "parentId": null
+    }
+  ],
+  "behaviors": [
+    {
+      "id": "timeline",
+      "description": "행마다 일정 하나, 가로축은 날짜·시간이다. 막대 시작·끝은 일정 시작·종료와 비례한다. 단일일·여러 날 일정 모두 표시한다. 보이는 기간과 겹치는 일정만 표시한다."
+    },
+    {
+      "id": "range",
+      "description": "기본 2주. 오늘·이전·다음으로 기간 탐색; 현재 날짜를 세로선으로 표시한다. 기간 밖으로 이어지는 막대 끝은 잘림 표시와 원래 날짜를 제공한다."
+    },
+    {
+      "id": "bar-select",
+      "description": "일정 이름은 하위 트리를 펼치거나 접는다. 막대 또는 별도 편집 버튼은 MOD-001을 연다. 빈 기간에는 빈 상태를 표시한다."
+    },
+    {
+      "id": "overflow",
+      "description": "일정이 많으면 행 영역을 세로 스크롤하고 날짜 헤더·일정 열을 유지한다. 좁은 화면은 타임라인을 가로 스크롤하며 열을 압축하지 않는다."
+    }
+  ],
+  "tree_policy": {
+    "priority": "같은 부모 안에서 위쪽이 우선",
+    "indent_px": 8,
+    "max_indent_px": 24,
+    "toggle": "일정 제목 클릭으로 접고 펼침",
+    "edit": "별도 편집 버튼 또는 간트 막대로 MOD-001 열기",
+    "parent_period": "하위 시작 최솟값~종료 최댓값",
+    "delete": "자식은 한 단계 위로 보존",
+    "shared_collapsed_state": true
+  }
+}

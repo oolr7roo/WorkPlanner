@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-Document-1_MarketResearch",
+  "document_number": 1,
+  "document_type": "project-plan-1",
+  "scope": "workspace",
+  "implementation_domain_id": null,
+  "markdown_path": "Document/1_MarketResearch.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [],
+  "related_documents": [],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:46.513026Z",
+    "mtime_ns": 1791173206513025579,
+    "byte_size": 2282,
+    "sha256": "e737973a6c5003cecd55afdc39dcae1037b39a9e2a2a89f75d3bc61676e55f05"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

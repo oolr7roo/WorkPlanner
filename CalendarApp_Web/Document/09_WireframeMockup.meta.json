@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-09_WireframeMockup",
+  "document_number": 9,
+  "document_type": "wireframe-index",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/09_WireframeMockup.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-001",
+    "FR-002",
+    "FR-003",
+    "FR-004",
+    "FR-005",
+    "FR-006",
+    "FR-007",
+    "FR-008"
+  ],
+  "owned_ids": [
+    "COMMON-001",
+    "COMMON-002",
+    "COMMON-003",
+    "SCR-001",
+    "SCR-002",
+    "SCR-003",
+    "MOD-001",
+    "SCR-004",
+    "SCR-005"
+  ],
+  "related_documents": [
+    "DOC-Document-5_UserFlow",
+    "DOC-Document-6_FunctionalRequirements",
+    "DOC-Document-8_SoftwareRequirementsSpecification",
+    "DOC-Document-17_ValidationReport"
+  ],
+  "source_fingerprint": {
+    "byte_size": 5576,
+    "sha256": "c27ff075f7e67a2bfeb403f0e4ce43d1f6a890f16c785bbbf3068290ebbb5449"
+  },
+  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.936105+00:00"
+}

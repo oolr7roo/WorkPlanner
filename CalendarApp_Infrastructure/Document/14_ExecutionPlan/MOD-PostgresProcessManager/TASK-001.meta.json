@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-PostgresProcessManager-TASK-001",
+  "document_number": 14,
+  "document_type": "task",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "infrastructure",
+  "markdown_path": "CalendarApp_Infrastructure/Document/14_ExecutionPlan/MOD-PostgresProcessManager/TASK-001.md",
+  "parent_document_id": "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-PostgresProcessManager",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-011",
+    "DATA-203",
+    "DATA-204",
+    "API-204"
+  ],
+  "owned_ids": [
+    "MOD-PostgresProcessManager/TASK-001"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-PostgresProcessManager",
+    "DOC-CalendarApp_Infrastructure-Document-11_DataRequirements",
+    "DOC-CalendarApp_Infrastructure-Document-12_APISpecification",
+    "DOC-Document-17_ValidationReport"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.588962Z",
+    "mtime_ns": 1791173207588961850,
+    "byte_size": 5487,
+    "sha256": "40e91b5b2a2e17697f7e436089e63bf1155cb3a6652e7cb61c121c2793cc2fdb"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

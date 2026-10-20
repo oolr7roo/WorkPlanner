@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan",
+  "document_number": 14,
+  "document_type": "execution-plan",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/14_ExecutionPlan.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-001",
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement",
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-BrowserEventStore",
+    "DOC-Document-6_FunctionalRequirements",
+    "DOC-Document-7_SystemConditions",
+    "DOC-Document-8_SoftwareRequirementsSpecification",
+    "DOC-CalendarApp_Web-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Web-Document-11_DataRequirements",
+    "DOC-CalendarApp_Web-Document-12_APISpecification",
+    "DOC-CalendarApp_Web-Document-09_WireframeMockup",
+    "DOC-CalendarApp_Web-Document-13_UIUXRequirements",
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-002",
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-003"
+  ],
+  "source_fingerprint": {
+    "byte_size": 4283,
+    "sha256": "edc6874528372a94de16cc7e6bebd57ebb37cf34afa3a4ded57f72dfbaaefc33"
+  },
+  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.936840+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Infrastructure-Document-12_APISpecification",
+  "document_number": 12,
+  "document_type": "api-specification",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "infrastructure",
+  "markdown_path": "CalendarApp_Infrastructure/Document/12_APISpecification.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [
+    "API-201",
+    "API-202",
+    "API-203",
+    "API-204"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Infrastructure-Document-12_api_spec-API-202_Supervisor",
+    "DOC-CalendarApp_Infrastructure-Document-12_api_spec-API-204_PostgresProcess",
+    "DOC-CalendarApp_Database-Document-12_APISpecification",
+    "DOC-CalendarApp_Infrastructure-Document-10_ModuleMapping",
+    "DOC-CalendarApp_Infrastructure-Document-11_DataRequirements"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T04:06:47.062302Z",
+    "mtime_ns": 1791173207062302486,
+    "byte_size": 2141,
+    "sha256": "def4af20555afff7776964532b04a8166962da8f12312d2e1a3caca8f6590d0a"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+}

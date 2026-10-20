@@ -1,0 +1,1 @@
+E:/WorkPlan/CalendarApp/postgresql/runtime/bin/postgres.exe "-D" "E:/WorkPlan/CalendarApp/postgresql/data" "-h" "127.0.0.1" "-p" "55432"

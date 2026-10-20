@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement-TASK-002",
+  "document_number": 14,
+  "document_type": "task",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement/TASK-002.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-002",
+    "FR-003",
+    "FR-004",
+    "FR-006",
+    "FR-008",
+    "DATA-001",
+    "DATA-002",
+    "DATA-003",
+    "API-002"
+  ],
+  "owned_ids": [
+    "MOD-EventManagement/TASK-002"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement",
+    "DOC-CalendarApp_Web-Document-11_DataRequirements",
+    "DOC-CalendarApp_Web-Document-12_APISpecification",
+    "DOC-Document-17_ValidationReport"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-05T11:18:47.245171Z",
+    "mtime_ns": 1791199127245170891,
+    "byte_size": 6300,
+    "sha256": "577e9e202fa96de18a91e8323882b9a463de3200a6811de21ec5e61d9bbb1e61"
+  },
+  "metadata_refreshed_at_utc": "2026-10-05T11:28:22.470398Z"
+}

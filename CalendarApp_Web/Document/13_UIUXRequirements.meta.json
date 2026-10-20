@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-13_UIUXRequirements",
+  "document_number": 13,
+  "document_type": "uiux-requirements",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/13_UIUXRequirements.md",
+  "parent_document_id": null,
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-09_WireframeMockup"
+  ],
+  "source_fingerprint": {
+    "byte_size": 4455,
+    "sha256": "bc38a7cb74f095fff596e9f70ae882c3a796bb627d39c592542a7a8839d4efa5"
+  },
+  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.937086+00:00"
+}
