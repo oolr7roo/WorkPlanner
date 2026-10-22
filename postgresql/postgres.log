@@ -157,3 +157,77 @@
 2026-10-02 13:36:41.382 KST [32800] LOG:  checkpoint starting: shutdown immediate
 2026-10-02 13:36:41.502 KST [32800] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.423 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/1A2F1C8, redo lsn=0/1A2F1C8
 2026-10-02 13:36:41.531 KST [58280] LOG:  database system is shut down
+2026-10-22 09:53:58.083 KST [96868] FATAL:  could not open directory "pg_notify": No such file or directory
+2026-10-22 09:53:58.085 KST [96868] LOG:  database system is shut down
+2026-10-22 12:16:38.628 KST [105852] LOG:  starting PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-22 12:16:38.629 KST [105852] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-22 12:16:38.669 KST [102908] LOG:  database system was shut down at 2026-10-02 13:36:41 KST
+2026-10-22 12:16:38.698 KST [105852] LOG:  database system is ready to accept connections
+2026-10-22 12:16:38.861 KST [105852] LOG:  received fast shutdown request
+2026-10-22 12:16:38.863 KST [105852] LOG:  aborting any active transactions
+2026-10-22 12:16:38.866 KST [105852] LOG:  background worker "logical replication launcher" (PID 67636) exited with exit code 1
+2026-10-22 12:16:38.867 KST [113464] LOG:  shutting down
+2026-10-22 12:16:38.868 KST [113464] LOG:  checkpoint starting: shutdown immediate
+2026-10-22 12:16:38.877 KST [113464] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.011 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1A2F240, redo lsn=0/1A2F240
+2026-10-22 12:16:38.885 KST [105852] LOG:  database system is shut down
+2026-10-22 12:16:48.941 KST [97564] LOG:  starting PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-22 12:16:48.942 KST [97564] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-22 12:16:48.974 KST [113536] LOG:  database system was shut down at 2026-10-22 12:16:38 KST
+2026-10-22 12:16:48.996 KST [97564] LOG:  database system is ready to accept connections
+2026-10-22 12:17:12.953 KST [97564] LOG:  received fast shutdown request
+2026-10-22 12:17:12.954 KST [97564] LOG:  aborting any active transactions
+2026-10-22 12:17:12.959 KST [97564] LOG:  background worker "logical replication launcher" (PID 31720) exited with exit code 1
+2026-10-22 12:17:12.960 KST [116448] LOG:  shutting down
+2026-10-22 12:17:12.960 KST [116448] LOG:  checkpoint starting: shutdown immediate
+2026-10-22 12:17:12.967 KST [116448] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.008 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1A2F2F0, redo lsn=0/1A2F2F0
+2026-10-22 12:17:12.974 KST [97564] LOG:  database system is shut down
+2026-10-22 12:17:32.838 KST [38800] LOG:  starting PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-22 12:17:32.839 KST [38800] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-22 12:17:32.872 KST [67636] LOG:  database system was shut down at 2026-10-22 12:17:12 KST
+2026-10-22 12:17:32.896 KST [38800] LOG:  database system is ready to accept connections
+2026-10-22 12:17:37.313 KST [38800] LOG:  received fast shutdown request
+2026-10-22 12:17:37.315 KST [38800] LOG:  aborting any active transactions
+2026-10-22 12:17:37.321 KST [38800] LOG:  background worker "logical replication launcher" (PID 110856) exited with exit code 1
+2026-10-22 12:17:37.321 KST [111432] LOG:  shutting down
+2026-10-22 12:17:37.322 KST [111432] LOG:  checkpoint starting: shutdown immediate
+2026-10-22 12:17:37.330 KST [111432] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.009 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1A2F368, redo lsn=0/1A2F368
+2026-10-22 12:17:37.338 KST [38800] LOG:  database system is shut down
+2026-10-22 12:17:38.555 KST [38844] LOG:  starting PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-22 12:17:38.556 KST [38844] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-22 12:17:38.589 KST [115848] LOG:  database system was shut down at 2026-10-22 12:17:37 KST
+2026-10-22 12:17:38.612 KST [38844] LOG:  database system is ready to accept connections
+2026-10-22 12:17:39.270 KST [38844] LOG:  received fast shutdown request
+2026-10-22 12:17:39.271 KST [38844] LOG:  aborting any active transactions
+2026-10-22 12:17:39.277 KST [38844] LOG:  background worker "logical replication launcher" (PID 109892) exited with exit code 1
+2026-10-22 12:17:39.277 KST [108704] LOG:  shutting down
+2026-10-22 12:17:39.278 KST [108704] LOG:  checkpoint starting: shutdown immediate
+2026-10-22 12:17:39.286 KST [108704] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.009 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1A2F3E0, redo lsn=0/1A2F3E0
+2026-10-22 12:17:39.292 KST [38844] LOG:  database system is shut down
+2026-10-22 12:19:23.738 KST [94932] LOG:  starting PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-22 12:19:23.739 KST [94932] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-22 12:19:23.772 KST [112236] LOG:  database system was shut down at 2026-10-22 12:17:39 KST
+2026-10-22 12:19:23.794 KST [94932] LOG:  database system is ready to accept connections
+2026-10-22 12:19:27.901 KST [94932] LOG:  received fast shutdown request
+2026-10-22 12:19:27.902 KST [94932] LOG:  aborting any active transactions
+2026-10-22 12:19:27.910 KST [94932] LOG:  background worker "logical replication launcher" (PID 19880) exited with exit code 1
+2026-10-22 12:19:27.910 KST [28124] LOG:  shutting down
+2026-10-22 12:19:27.911 KST [28124] LOG:  checkpoint starting: shutdown immediate
+2026-10-22 12:19:27.920 KST [28124] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.010 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1A2F458, redo lsn=0/1A2F458
+2026-10-22 12:19:27.927 KST [94932] LOG:  database system is shut down
+2026-10-22 16:55:55.626 KST [94720] LOG:  starting PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-22 16:55:55.627 KST [94720] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-22 16:55:55.675 KST [106080] LOG:  database system was shut down at 2026-10-22 12:19:27 KST
+2026-10-22 16:55:55.705 KST [94720] LOG:  database system is ready to accept connections
+2026-10-22 16:55:55.958 KST [94720] LOG:  received fast shutdown request
+2026-10-22 16:55:55.959 KST [94720] LOG:  aborting any active transactions
+2026-10-22 16:55:55.966 KST [94720] LOG:  background worker "logical replication launcher" (PID 79364) exited with exit code 1
+2026-10-22 16:55:55.967 KST [107912] LOG:  shutting down
+2026-10-22 16:55:55.968 KST [107912] LOG:  checkpoint starting: shutdown immediate
+2026-10-22 16:55:55.979 KST [107912] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.013 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1A2F4D0, redo lsn=0/1A2F4D0
+2026-10-22 16:55:55.989 KST [94720] LOG:  database system is shut down
+2026-10-22 16:56:07.713 KST [58192] LOG:  starting PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-22 16:56:07.714 KST [58192] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-10-22 16:56:07.752 KST [85452] LOG:  database system was shut down at 2026-10-22 16:55:55 KST
+2026-10-22 16:56:07.777 KST [58192] LOG:  database system is ready to accept connections
+2026-10-22 17:01:07.853 KST [84044] LOG:  checkpoint starting: time
+2026-10-22 17:01:07.861 KST [84044] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.009 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1A2F5D8, redo lsn=0/1A2F580

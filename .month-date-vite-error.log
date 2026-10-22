@@ -1,0 +1,2 @@
+오후 5:03:10 [vite] (client) error while updating dependencies:
+Error: EPERM: operation not permitted, rename 'C:\WorkPlanner\node_modules\.vite\deps_temp_801dd12e' -> 'C:\WorkPlanner\node_modules\.vite\deps'
