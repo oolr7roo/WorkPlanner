@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-22",
+  "scope": "Existing editable schedules; draft-only start change correction",
+  "origin": "http://127.0.0.1:5174",
+  "calculation": {
+    "passed": 13,
+    "cases": [
+      "before",
+      "equal",
+      "later",
+      "midnight",
+      "month",
+      "year",
+      "multi-day",
+      "empty-next",
+      "bad-next",
+      "bad-start",
+      "bad-end",
+      "zero",
+      "negative"
+    ]
+  },
+  "browser": {
+    "shiftToNextDay": "passed: 2026-10-23T14:00 -> end 15:00",
+    "startBeforeEnd": "passed: 14:30 retains 15:00",
+    "startEqualsEnd": "passed: 16:00 -> 17:30 for prior 90-minute draft",
+    "manualEnd": "passed: start unchanged",
+    "cancelAndReopen": "passed: original 2026-10-22T12:34-13:34 retained",
+    "saveAndReopen": "passed: 2026-10-23T14:00-15:00 retained",
+    "invalidPeriod": "passed: error shown; subsequent start change does not guess end",
+    "emptyStart": "passed: end unchanged, no crash",
+    "newChildSchedule": "passed: changed start does not auto-correct end",
+    "parentSchedule": "passed: both date fields disabled"
+  },
+  "build": "TypeScript and Vite production build passed",
+  "wireframe": {
+    "schema": "Valid",
+    "source_alignment": "Valid",
+    "render_contract": "Valid",
+    "visual_fidelity": "Unverified (existing whole-render reconciliation not performed)"
+  },
+  "screenshot": "editor.png",
+  "preservedReferences": {
+    "src/features/schedules/useSchedules.ts": "aecea017a47d21e10d46f4fc25dc65c9374b431685f21dbc259cbd229edb9010",
+    "src/features/schedules/scheduleStorage.ts": "6bd5e33f44d20047dc8156d42f5fcb83482d5a734a0f7c910d83ee1b286dc183",
+    "src/App.tsx": "c0471d25d4e682260645f5294f1414d3e27781d6c08590d690ceeacd7654c7e8",
+    "src/styles.css": "bd3567c7e6a729c01d931cc792c877a29b4669772cdabf79fd6670c5a248b91c",
+    "CalendarApp_Web/Document/14_ExecutionPlan.md": "681b2045713fc8291e5e81e3ba80c1807a66558edc6c3cb581ab21945a0ba0b1",
+    "CalendarApp_Web/Document/14_ExecutionPlan/MOD-EventManagement.md": "fdc301dd9311baf6833fd7cba82e2fef3e5a00203435a39f380b9ac89a06dafa"
+  }
+}

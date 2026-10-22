@@ -20,6 +20,7 @@
     "mode": "mixed",
     "sources": [
       "src/App.tsx",
+      "src/features/schedules/components/ScheduleEditor.tsx",
       "src/styles.css",
       "Document/Evidence/runtime.json"
     ],
@@ -461,7 +462,7 @@
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:draft.start",
         "style_documents": [
           "src/styles.css"
@@ -497,7 +498,7 @@
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:draft.start",
         "style_documents": [
           "src/styles.css"
@@ -520,7 +521,7 @@
       "scope": "parent",
       "events": {
         "on": "change",
-        "intent": "일정 시작 초안을 변경한다.",
+        "intent": "기존 일정 수정 중 시작이 종료와 같거나 뒤가 되면 변경 직전 유효 기간을 유지하여 종료 초안도 이동한다. 빈 입력·잘못된 기존 기간·새 일정 생성은 보정하지 않는다. 저장 전에는 일정 정본을 변경하지 않는다.",
         "bindings": {
           "modules": [
             "EventManagement"
@@ -554,7 +555,7 @@
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:draft.end",
         "style_documents": [
           "src/styles.css"
@@ -590,7 +591,7 @@
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:draft.end",
         "style_documents": [
           "src/styles.css"
@@ -613,7 +614,7 @@
       "scope": "parent",
       "events": {
         "on": "change",
-        "intent": "일정 종료 초안을 변경한다.",
+        "intent": "종료 초안만 변경하고 시작은 유지한다. 시작보다 늦지 않은 종료는 저장 시 오류로 안내한다.",
         "bindings": {
           "modules": [
             "EventManagement"

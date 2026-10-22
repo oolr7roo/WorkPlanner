@@ -13,6 +13,12 @@ export function defaultDraft(start = localInputDate(new Date()), end?: string) {
   const later = new Date(start); later.setHours(later.getHours() + 1);
   return { title: "", start: start.slice(0, 16), end: end?.slice(0, 16) ?? localInputDate(later), color: "#3366dd" };
 }
+export function adjustEndForStartChange(start: string, end: string, nextStart: string): string {
+  const previousStart = Date.parse(start), previousEnd = Date.parse(end), next = Date.parse(nextStart);
+  if (![previousStart, previousEnd, next].every(Number.isFinite) || previousEnd <= previousStart || next < previousEnd) return end;
+  const adjusted = new Date(next + previousEnd - previousStart);
+  return Number.isFinite(adjusted.getTime()) ? localInputDate(adjusted) : end;
+}
 export function effectiveSchedules(items: Schedule[]): Schedule[] {
   const byParent = new Map<string, Schedule[]>();
   for (const item of items) if (item.parentId) byParent.set(item.parentId, [...(byParent.get(item.parentId) ?? []), item]);
