@@ -1,0 +1,116 @@
+{
+  "actions": {
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "color": "rgb(23, 32, 51)",
+    "fontSize": "16px",
+    "h": 46,
+    "w": 190.765625,
+    "x": 1225.234375,
+    "y": 33.5
+  },
+  "add": {
+    "background": "rgb(51, 102, 221)",
+    "borderRadius": "10px",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "16px",
+    "h": 46,
+    "w": 120.765625,
+    "x": 1225.234375,
+    "y": 33.5
+  },
+  "depths": {
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "10px",
+    "color": "rgb(23, 32, 51)",
+    "fontSize": "16px",
+    "h": 111,
+    "w": 514,
+    "x": 463,
+    "y": 368.84375
+  },
+  "dialog": {
+    "background": "rgb(255, 255, 255)",
+    "borderRadius": "16px",
+    "color": "rgb(23, 32, 51)",
+    "fontSize": "16px",
+    "h": 822.890625,
+    "w": 560,
+    "x": 440,
+    "y": 88.546875
+  },
+  "footer": {
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "color": "rgb(23, 32, 51)",
+    "fontSize": "16px",
+    "h": 44,
+    "w": 514,
+    "x": 463,
+    "y": 844.4375
+  },
+  "form": {
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "color": "rgb(23, 32, 51)",
+    "fontSize": "16px",
+    "h": 725.390625,
+    "w": 514,
+    "x": 463,
+    "y": 163.046875
+  },
+  "header": {
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "color": "rgb(23, 32, 51)",
+    "fontSize": "16px",
+    "h": 65,
+    "w": 1392,
+    "x": 24,
+    "y": 24
+  },
+  "presetChoice": {
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "color": "rgb(23, 32, 51)",
+    "fontSize": "16px",
+    "h": 68.5,
+    "w": 514,
+    "x": 463,
+    "y": 199.84375
+  },
+  "presetName": {
+    "background": "rgb(255, 255, 255)",
+    "borderRadius": "8px",
+    "color": "rgb(23, 32, 51)",
+    "fontSize": "13px",
+    "h": 42,
+    "w": 514,
+    "x": 463,
+    "y": 310.84375
+  },
+  "preview": {
+    "background": "rgb(248, 250, 252)",
+    "borderRadius": "10px",
+    "color": "rgb(23, 32, 51)",
+    "fontSize": "16px",
+    "h": 211,
+    "w": 514,
+    "x": 463,
+    "y": 555.84375
+  },
+  "settings": {
+    "background": "rgb(255, 255, 255)",
+    "borderRadius": "10px",
+    "color": "rgb(51, 65, 85)",
+    "fontSize": "16px",
+    "h": 46,
+    "w": 62,
+    "x": 1354,
+    "y": 33.5
+  },
+  "viewport": {
+    "height": 1000,
+    "width": 1440
+  }
+}

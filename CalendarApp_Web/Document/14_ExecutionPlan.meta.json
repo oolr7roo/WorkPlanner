@@ -10,7 +10,12 @@
   "parent_document_id": null,
   "status": "Review",
   "metadata_state": "needs-review",
-  "source_ids": [],
+  "source_ids": [
+    "FR-013",
+    "FR-014",
+    "DATA-004",
+    "API-001"
+  ],
   "owned_ids": [],
   "related_documents": [
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-001",
@@ -28,8 +33,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-003"
   ],
   "source_fingerprint": {
-    "byte_size": 4283,
-    "sha256": "edc6874528372a94de16cc7e6bebd57ebb37cf34afa3a4ded57f72dfbaaefc33"
+    "modified_at_utc": "2026-10-22T07:46:51.268Z",
+    "mtime_ns": 1792655211268846000,
+    "byte_size": 4665,
+    "sha256": "8373ce9b6e29753780c6cf62d1178f014d3dfb218716b18ea6718d8d49efaac5"
   },
-  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.936840+00:00"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.714Z"
 }

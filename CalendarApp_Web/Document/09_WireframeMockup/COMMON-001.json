@@ -15,7 +15,8 @@
       "src/App.tsx",
       "src/styles.css",
       "node_modules/trud-calendar/dist/index.js",
-      "Document/Evidence/ViewSplit/runtime.json"
+      "Document/Evidence/ViewSplit/runtime.json",
+      "Document/Evidence/ColorPresets/geometry.json"
     ],
     "unverified": [
       "공용 WireFrame 렌더러의 시각 충실도는 미검증이다.",
@@ -79,8 +80,8 @@
       "name": "brand",
       "visible": true,
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "w": 12.5,
         "h": 27.692308
       },
@@ -122,7 +123,7 @@
       "name": "page-title-row",
       "visible": true,
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 35.384615,
         "w": 12.5,
         "h": 64.615385
@@ -164,7 +165,7 @@
       "name": "back-home",
       "visible": true,
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 7.142857,
         "w": 20.689655,
         "h": 85.714286
@@ -215,9 +216,9 @@
       "visible": true,
       "rect": {
         "x": 26.436782,
-        "y": 0.0,
+        "y": 0,
         "w": 73.563218,
-        "h": 100.0
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -257,10 +258,10 @@
       "name": "new-event",
       "visible": true,
       "rect": {
-        "x": 92.38618,
-        "y": 14.615385,
-        "w": 7.61382,
-        "h": 70.769231
+        "x": 0,
+        "y": 0,
+        "w": 63.305758,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -283,7 +284,7 @@
           "weight": "700"
         }
       },
-      "parent": "app-header",
+      "parent": "header-actions",
       "scope": "parent",
       "text": "+ 일정 추가",
       "events": {
@@ -305,11 +306,97 @@
       "test": "new-event",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
-          "view": "month",
-          "dom_index": 8
+          "file": "Document/Evidence/ColorPresets/geometry.json",
+          "view": "priority"
         }
       }
+    },
+    {
+      "id": "header-actions",
+      "type": "toolbar",
+      "name": "일정 추가와 설정",
+      "parent": "app-header",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 86.295573,
+        "y": 14.615385,
+        "w": 13.704427,
+        "h": 70.769231
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:header-actions",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "#172033",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "#172033",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "color-settings",
+      "type": "button",
+      "name": "색상 설정 열기",
+      "text": "설정",
+      "parent": "header-actions",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 67.499386,
+        "y": 0,
+        "w": 32.500614,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:settings-button",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "단계별 색상 프리셋 설정 팝업 MOD-002를 연다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-013"
+          ]
+        }
+      },
+      "test": "color-settings"
     }
   ],
   "verification": {

@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-Evidence-ColorPresets-README",
+  "document_number": 17,
+  "document_type": "validation-evidence",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/Evidence/ColorPresets/README.md",
+  "parent_document_id": "DOC-Document-17_ValidationReport",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-013",
+    "FR-014",
+    "DATA-004"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-Document-17_ValidationReport"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-22T07:46:51.272Z",
+    "mtime_ns": 1792655211272726300,
+    "byte_size": 2621,
+    "sha256": "e28d729160bd9a2c68d27073f7cae8067815e6382432b4b7a744f63766c03518"
+  },
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.717Z"
+}

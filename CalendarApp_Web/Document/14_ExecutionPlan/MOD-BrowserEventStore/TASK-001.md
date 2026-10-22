@@ -31,3 +31,10 @@ API-001, DATA-001. v2 키에 저장하고 v1은 변경하지 않는다. 기존 �
 - AISkill MCP branches는 등록 Web 원본 부재로 재시도 실패했다. CLI도 Web 원본이 없어 coding-work만 전달받고 안전 편집 원문을 MCP로 직접 읽었다. safe-editing은 로컬 카탈로그에 미등록이다. 개선 Reporter 도구가 없어 오류를 영구 등록하지 못했다.
 
 증거: [트리 목록](../../Evidence/TreeSchedules/priority.png), [간트](../../Evidence/TreeSchedules/gantt.png).
+
+## 단계별 설정 저장 기준
+
+추가 Write Set: src/features/schedules/scheduleColorStorage.ts 및 scheduleStorage.ts의 선택적 colorMode 형식 검사. 정책 검사는 EventManagement의 공개 validateColorSettings 함수를 사용하며 UI·Hook에 직접 의존하지 않는다. 읽기 실패 원본 보존·명시적 저장·쓰기 실패 결과를 확인한다.
+
+
+2026-10-22 범위 검증: 정책·저장 경계 26건, 격리 브라우저의 프리셋 저장/취소/복원·다섯 보기·신규/하위·직접 색상 보존·자식 승격·모바일·날짜 보정 회귀 확인. [검증 근거](../../Evidence/ColorPresets/README.md). 저장 실패 UI 전체 경로와 공용 renderer 충실도는 미검증이며 Review를 유지한다.

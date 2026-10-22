@@ -1,0 +1,110 @@
+{
+  "executed_at": "2026-10-22T07:44:57.183Z",
+  "method": "TypeScript transpileModule; isolated vm localStorage adapter; no browser production data",
+  "cases": [
+    {
+      "name": "default valid",
+      "status": "passed"
+    },
+    {
+      "name": "reject null",
+      "status": "passed"
+    },
+    {
+      "name": "reject wrong version",
+      "status": "passed"
+    },
+    {
+      "name": "reject empty presets",
+      "status": "passed"
+    },
+    {
+      "name": "reject missing active",
+      "status": "passed"
+    },
+    {
+      "name": "reject blank name",
+      "status": "passed"
+    },
+    {
+      "name": "reject duplicate IDs",
+      "status": "passed"
+    },
+    {
+      "name": "reject bad hex",
+      "status": "passed"
+    },
+    {
+      "name": "reject same ignoring case",
+      "status": "passed"
+    },
+    {
+      "name": "fresh defaults",
+      "status": "passed"
+    },
+    {
+      "name": "cycle deeper palette",
+      "status": "passed"
+    },
+    {
+      "name": "skip same parent ignoring case",
+      "status": "passed"
+    },
+    {
+      "name": "root auto",
+      "status": "passed"
+    },
+    {
+      "name": "child differs",
+      "status": "passed"
+    },
+    {
+      "name": "manual preserved",
+      "status": "passed"
+    },
+    {
+      "name": "legacy preserved",
+      "status": "passed"
+    },
+    {
+      "name": "input unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "new child automatic",
+      "status": "passed"
+    },
+    {
+      "name": "promoted child recalculates",
+      "status": "passed"
+    },
+    {
+      "name": "missing settings no write",
+      "status": "passed"
+    },
+    {
+      "name": "roundtrip",
+      "status": "passed"
+    },
+    {
+      "name": "corrupt JSON preserves bytes",
+      "status": "passed"
+    },
+    {
+      "name": "invalid settings preserves bytes",
+      "status": "passed"
+    },
+    {
+      "name": "read denied fallback",
+      "status": "passed"
+    },
+    {
+      "name": "write denied preserves bytes",
+      "status": "passed"
+    },
+    {
+      "name": "invalid write blocked",
+      "status": "passed"
+    }
+  ]
+}

@@ -32,3 +32,14 @@ flowchart LR
 | DATA-003 | React 메모리 | 오류 문자열과 모달 표시 상태 | 일반 UI 상태 | 새로고침 뒤 초안 복원 없음 |
 
 [모듈 책임](10_ModuleMapping.md)과 [인터페이스](12_APISpecification.md)를 직접 참조한다. 서버 정본 데이터와 브라우저 캐시 구분에서 일정은 브라우저 자체 정본이며 서버 복제본은 없다.
+
+## DATA-004 색상 프리셋 설정
+
+| Data ID | 이름 | 생산·소비 | UI 위치 | 관련 API | 상태 |
+| --- | --- | --- | --- | --- | --- |
+| DATA-004 | 프리셋 목록과 활성 프리셋 | EventManagement / BrowserEventStore / 설정 UI | COMMON-001#color-settings, MOD-002 | API-001 | Review |
+
+설정은 version=1, activePresetId와 presets[{id,name,colors}]를 가진다. 프리셋 id는 비어 있지 않고 고유하며 이름은 trim 후 비어 있지 않아야 한다. colors는 #RRGGBB 배열이며 서로 다른 색이 최소 2개여야 한다. 활성 id는 목록에 있어야 한다. 단계 초과는 순환하고 자동색이 부모의 실제 표시색과 같으면 다음 다른 후보를 사용한다. 설정 초안은 팝업 메모리에만 존재한다. 저장 성공 후에만 활성 설정을 바꾼다. 손상·쓰기 실패는 설정 원본을 보존하고 오류를 표시한다.
+
+
+상세 형식·기본값·보존·오류 경계는 [DATA-004](11_data_spec/DATA-004_ColorSettings.md)를 참조한다.

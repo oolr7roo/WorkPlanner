@@ -10,16 +10,20 @@
   "parent_document_id": null,
   "status": "Review",
   "metadata_state": "needs-review",
-  "source_ids": [],
+  "source_ids": [
+    "FR-013",
+    "FR-014",
+    "DATA-004"
+  ],
   "owned_ids": [],
   "related_documents": [
     "DOC-CalendarApp_Web-Document-09_WireframeMockup"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T03:32:47.397Z",
-    "mtime_ns": 1792639967397852100,
-    "byte_size": 4808,
-    "sha256": "2d212ed27c59692aca634597f64341833f4be83be8216c61a2d72981b87b2c5d"
+    "modified_at_utc": "2026-10-22T07:46:51.254Z",
+    "mtime_ns": 1792655211254781800,
+    "byte_size": 5380,
+    "sha256": "634fb223aeac10c5ea23542bebdf3e2c0f85590cdfb5deaa8720c90e1f4aa8ac"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T03:37:50.575Z"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.701Z"
 }

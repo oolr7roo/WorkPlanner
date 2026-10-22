@@ -22,7 +22,8 @@
       "src/App.tsx",
       "src/features/schedules/components/ScheduleEditor.tsx",
       "src/styles.css",
-      "Document/Evidence/runtime.json"
+      "Document/Evidence/runtime.json",
+      "Document/Evidence/ColorPresets/editor-geometry.json"
     ],
     "unverified": [
       "모든 단말·공용 뷰어 시각 검증은 미완료이다."
@@ -51,15 +52,15 @@
       "name": "backdrop",
       "visible": true,
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
-        "w": 100.0,
-        "h": 100.0
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
-        "locator": "text:modal-backdrop",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:dialog",
         "style_documents": [
           "src/styles.css"
         ]
@@ -99,15 +100,15 @@
       "name": "editor",
       "visible": true,
       "rect": {
-        "x": 30.5,
-        "y": 25,
-        "w": 39,
-        "h": 50
+        "x": 0,
+        "y": 0,
+        "w": 34.722222,
+        "h": 39.9
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
-        "locator": "text:aria-modal",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:aria-labelledby",
         "style_documents": [
           "src/styles.css"
         ]
@@ -135,13 +136,13 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 5,
+        "y": 5.764411,
         "w": 90.8,
-        "h": 8
+        "h": 7.894737
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:editor-header",
         "style_documents": [
           "src/styles.css"
@@ -171,12 +172,12 @@
       "rect": {
         "x": 0,
         "y": 0,
-        "w": 70,
+        "w": 20.130094,
         "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:editor-title",
         "style_documents": [
           "src/styles.css"
@@ -197,7 +198,7 @@
       },
       "parent": "editor-header",
       "scope": "parent",
-      "text": "새 일정"
+      "text": "일정 수정"
     },
     {
       "id": "close",
@@ -205,14 +206,14 @@
       "name": "close",
       "visible": true,
       "rect": {
-        "x": 96.52051,
-        "y": 5.55556,
-        "w": 3.47949,
-        "h": 88.88889
+        "x": 95.677313,
+        "y": 5.555556,
+        "w": 4.322687,
+        "h": 88.888889
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:close-button",
         "style_documents": [
           "src/styles.css"
@@ -258,13 +259,13 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 18,
+        "y": 18.671679,
         "w": 90.8,
-        "h": 76
+        "h": 75.56391
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "type:form",
         "style_documents": [
           "src/styles.css"
@@ -293,13 +294,13 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 24,
+        "y": 28.026534,
         "w": 100,
-        "h": 19
+        "h": 22.719735
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:time-fields",
         "style_documents": [
           "src/styles.css"
@@ -328,13 +329,13 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 88,
+        "y": 85.406302,
         "w": 100,
-        "h": 12
+        "h": 14.593698
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:editor-actions",
         "style_documents": [
           "src/styles.css"
@@ -365,11 +366,11 @@
         "x": 0,
         "y": 0,
         "w": 100,
-        "h": 19
+        "h": 22.719735
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:draft.title",
         "style_documents": [
           "src/styles.css"
@@ -398,14 +399,14 @@
       "name": "title-field-input",
       "visible": true,
       "rect": {
-        "x": 0.0,
-        "y": 38.68613,
-        "w": 100.0,
-        "h": 61.31387
+        "x": 0,
+        "y": 38.686131,
+        "w": 100,
+        "h": 61.313869
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:draft.title",
         "style_documents": [
           "src/styles.css"
@@ -455,10 +456,10 @@
       "name": "start-field",
       "visible": true,
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
-        "w": 48.67841,
-        "h": 100.0
+        "x": 0,
+        "y": 0,
+        "w": 48.678414,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -491,10 +492,10 @@
       "name": "start-field-input",
       "visible": true,
       "rect": {
-        "x": 0.0,
-        "y": 38.68613,
-        "w": 100.0,
-        "h": 61.31387
+        "x": 0,
+        "y": 38.686131,
+        "w": 100,
+        "h": 61.313869
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -548,10 +549,10 @@
       "name": "end-field",
       "visible": true,
       "rect": {
-        "x": 51.32159,
-        "y": 0.0,
-        "w": 48.67841,
-        "h": 100.0
+        "x": 51.321586,
+        "y": 0,
+        "w": 48.678414,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -584,10 +585,10 @@
       "name": "end-field-input",
       "visible": true,
       "rect": {
-        "x": 0.0,
-        "y": 38.68613,
-        "w": 100.0,
-        "h": 61.31387
+        "x": 0,
+        "y": 38.686131,
+        "w": 100,
+        "h": 61.313869
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -641,15 +642,15 @@
       "name": "color-field",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 48,
-        "w": 18,
-        "h": 18
+        "x": 88.546256,
+        "y": 8.759124,
+        "w": 11.453744,
+        "h": 91.240876
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
-        "locator": "text:color-field",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:draft.color",
         "style_documents": [
           "src/styles.css"
         ]
@@ -667,7 +668,7 @@
           "weight": "700"
         }
       },
-      "parent": "editor-form",
+      "parent": "color-mode-fields",
       "scope": "parent",
       "text": "색상"
     },
@@ -677,15 +678,15 @@
       "name": "color-field-input",
       "visible": true,
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 42.4,
-        "w": 100.0,
+        "w": 100,
         "h": 57.6
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
-        "locator": "text:color-field",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:draft.color",
         "style_documents": [
           "src/styles.css"
         ]
@@ -726,6 +727,14 @@
         "input_type": "color",
         "required": false,
         "placeholder": ""
+      },
+      "states": {
+        "auto": {
+          "enabled": false
+        },
+        "manual": {
+          "enabled": true
+        }
       }
     },
     {
@@ -734,14 +743,14 @@
       "name": "cancel",
       "visible": true,
       "rect": {
-        "x": 71.5033,
-        "y": 0.0,
-        "w": 13.58756,
-        "h": 100.0
+        "x": 69.603524,
+        "y": 0,
+        "w": 14.537445,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:cancel-button",
         "style_documents": [
           "src/styles.css"
@@ -788,14 +797,14 @@
       "name": "save",
       "visible": true,
       "rect": {
-        "x": 86.85297,
-        "y": 0.0,
-        "w": 13.14703,
-        "h": 100.0
+        "x": 85.903084,
+        "y": 0,
+        "w": 14.096916,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:save-button",
         "style_documents": [
           "src/styles.css"
@@ -847,14 +856,14 @@
       "name": "delete",
       "visible": false,
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
-        "w": 13.14703,
-        "h": 100.0
+        "x": 0,
+        "y": 0,
+        "w": 14.096916,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:delete-button",
         "style_documents": [
           "src/styles.css"
@@ -916,7 +925,7 @@
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/App.tsx",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
         "locator": "text:form-error",
         "style_documents": [
           "src/styles.css"
@@ -970,6 +979,100 @@
         "role": "alert",
         "geometry_evidence": "form-error capture; parent resizes in error state"
       }
+    },
+    {
+      "id": "color-mode-fields",
+      "type": "panel",
+      "name": "색상 입력 그룹",
+      "parent": "editor-form",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 56.053068,
+        "w": 100,
+        "h": 22.719735
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:color-mode-fields",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      }
+    },
+    {
+      "id": "color-mode-field",
+      "type": "label",
+      "name": "색상 방식",
+      "text": "색상 방식",
+      "parent": "color-mode-fields",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 85.022026,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:색상 방식",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      }
+    },
+    {
+      "id": "color-mode-select",
+      "type": "select",
+      "name": "색상 방식 선택",
+      "text": "자동 · 단계별 색상",
+      "parent": "color-mode-field",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 38.686131,
+        "w": 100,
+        "h": 61.313869
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:draft.colorMode",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "options": [
+          "자동 · 단계별 색상",
+          "직접 지정"
+        ],
+        "values": [
+          "auto",
+          "manual"
+        ]
+      },
+      "events": {
+        "on": "change",
+        "intent": "자동 또는 직접 지정 방식을 초안에 반영한다. 기존 모드 누락 일정은 직접 지정이다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
+          ]
+        }
+      }
     }
   ],
   "modal": {
@@ -997,12 +1100,16 @@
     {
       "id": "caller-return",
       "description": "저장·취소·닫기 후 월·주·일·간트차트·우선순위 중 호출한 화면으로 복귀한다."
+    },
+    {
+      "id": "automatic-color",
+      "description": "새 일정은 자동 색상이 기본이다. 단계 색상을 순환하되 부모 표시색과 같은 후보는 건너뛴다. 직접 지정과 기존 모드 누락 일정의 색상은 보존한다."
     }
   ],
   "verification": {
-    "schema": "pending",
-    "source_alignment": "existing-source-preserved; new design not implemented",
-    "render_fidelity": "pending",
+    "schema": "valid",
+    "source_alignment": "measured-desktop-dom; ColorPresets/editor-geometry.json",
+    "render_fidelity": "unverified",
     "complete": false
   },
   "limitations": [

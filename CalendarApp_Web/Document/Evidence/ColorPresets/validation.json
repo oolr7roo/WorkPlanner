@@ -1,0 +1,193 @@
+{
+  "executed_at": "2026-10-22T07:47:30.971Z",
+  "build": {
+    "command": "npm.cmd run build",
+    "result": "passed",
+    "modules": 60
+  },
+  "policy_storage": {
+    "passed": 26,
+    "evidence": "policy-storage.json"
+  },
+  "documents": {
+    "files": 21,
+    "broken_links": [],
+    "table_errors": [],
+    "fingerprint_errors": [],
+    "text_errors": [],
+    "note": "09번 인덱스의 기존 미리보기 상대 링크를 실제 public 경로로 바로잡은 뒤 재검사"
+  },
+  "wireframes": [
+    {
+      "ok": true,
+      "status": "Unverified",
+      "validation": {
+        "schema": "Valid",
+        "source_alignment": "Valid",
+        "render_contract": "Valid",
+        "visual_fidelity": "Unverified",
+        "render_fidelity": "Unverified",
+        "complete": false
+      },
+      "target": "C:\\WorkPlanner\\CalendarApp_Web\\Document\\09_WireframeMockup",
+      "document_root": "C:\\WorkPlanner\\CalendarApp_Web\\Document",
+      "workspace_document_root": "C:\\WorkPlanner\\Document",
+      "schema_path": "C:\\AISkill\\_MCP_Tool\\WireFrame\\WireFrame_Web\\schema\\wireframe-v3.schema.json",
+      "workspace_root": "C:\\WorkPlanner",
+      "documents": [
+        {
+          "name": "COMMON-001.json",
+          "screen_id": "COMMON-001",
+          "component_count": 8,
+          "connection_count": 2,
+          "derivation_mode": "implementation-derived",
+          "visual_fidelity": "Unverified",
+          "reconciliation": "Unverified"
+        }
+      ],
+      "visual_evidence": [
+        {
+          "name": "COMMON-001.json",
+          "screen_id": "COMMON-001",
+          "status": "Unverified",
+          "reason": "visual_evidence_not_provided"
+        }
+      ],
+      "reconciliation": [
+        {
+          "name": "COMMON-001.json",
+          "screen_id": "COMMON-001",
+          "available": false,
+          "status": "Unverified",
+          "matching": {
+            "available": false,
+            "status": "Unverified",
+            "components": [],
+            "unresolved": [],
+            "candidates": 0
+          },
+          "loss": [],
+          "unresolved": [],
+          "diff": [],
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "status": "Unverified",
+      "validation": {
+        "schema": "Valid",
+        "source_alignment": "Valid",
+        "render_contract": "Valid",
+        "visual_fidelity": "Unverified",
+        "render_fidelity": "Unverified",
+        "complete": false
+      },
+      "target": "C:\\WorkPlanner\\CalendarApp_Web\\Document\\09_WireframeMockup",
+      "document_root": "C:\\WorkPlanner\\CalendarApp_Web\\Document",
+      "workspace_document_root": "C:\\WorkPlanner\\Document",
+      "schema_path": "C:\\AISkill\\_MCP_Tool\\WireFrame\\WireFrame_Web\\schema\\wireframe-v3.schema.json",
+      "workspace_root": "C:\\WorkPlanner",
+      "documents": [
+        {
+          "name": "MOD-001.json",
+          "screen_id": "MOD-001",
+          "component_count": 23,
+          "connection_count": 11,
+          "derivation_mode": "mixed",
+          "visual_fidelity": "Unverified",
+          "reconciliation": "Unverified"
+        }
+      ],
+      "visual_evidence": [
+        {
+          "name": "MOD-001.json",
+          "screen_id": "MOD-001",
+          "status": "Unverified",
+          "reason": "visual_evidence_not_provided"
+        }
+      ],
+      "reconciliation": [
+        {
+          "name": "MOD-001.json",
+          "screen_id": "MOD-001",
+          "available": false,
+          "status": "Unverified",
+          "matching": {
+            "available": false,
+            "status": "Unverified",
+            "components": [],
+            "unresolved": [],
+            "candidates": 0
+          },
+          "loss": [],
+          "unresolved": [],
+          "diff": [],
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "ok": true,
+      "status": "Unverified",
+      "validation": {
+        "schema": "Valid",
+        "source_alignment": "Valid",
+        "render_contract": "Valid",
+        "visual_fidelity": "Unverified",
+        "render_fidelity": "Unverified",
+        "complete": false
+      },
+      "target": "C:\\WorkPlanner\\CalendarApp_Web\\Document\\09_WireframeMockup",
+      "document_root": "C:\\WorkPlanner\\CalendarApp_Web\\Document",
+      "workspace_document_root": "C:\\WorkPlanner\\Document",
+      "schema_path": "C:\\AISkill\\_MCP_Tool\\WireFrame\\WireFrame_Web\\schema\\wireframe-v3.schema.json",
+      "workspace_root": "C:\\WorkPlanner",
+      "documents": [
+        {
+          "name": "MOD-002.json",
+          "screen_id": "MOD-002",
+          "component_count": 19,
+          "connection_count": 8,
+          "derivation_mode": "implementation-derived",
+          "visual_fidelity": "Unverified",
+          "reconciliation": "Unverified"
+        }
+      ],
+      "visual_evidence": [
+        {
+          "name": "MOD-002.json",
+          "screen_id": "MOD-002",
+          "status": "Unverified",
+          "reason": "visual_evidence_not_provided"
+        }
+      ],
+      "reconciliation": [
+        {
+          "name": "MOD-002.json",
+          "screen_id": "MOD-002",
+          "available": false,
+          "status": "Unverified",
+          "matching": {
+            "available": false,
+            "status": "Unverified",
+            "components": [],
+            "unresolved": [],
+            "candidates": 0
+          },
+          "loss": [],
+          "unresolved": [],
+          "diff": [],
+          "warnings": []
+        }
+      ],
+      "warnings": [],
+      "errors": []
+    }
+  ]
+}

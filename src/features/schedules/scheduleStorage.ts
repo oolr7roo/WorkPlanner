@@ -14,6 +14,7 @@ export function readSchedules(): { items: Schedule[]; error: string } {
     const items: Schedule[] = parsed.map((item, index) => {
       if (!item || typeof item.id !== "string" || !item.id || ids.has(item.id) || typeof item.title !== "string"
         || typeof item.start !== "string" || typeof item.end !== "string"
+        || (item.colorMode !== undefined && item.colorMode !== "auto" && item.colorMode !== "manual")
         || !Number.isFinite(Date.parse(item.start)) || !Number.isFinite(Date.parse(item.end)) || Date.parse(item.end) <= Date.parse(item.start)) throw new Error("Invalid schedule");
       ids.add(item.id);
       return { ...item, parentId: typeof item.parentId === "string" ? item.parentId : null,

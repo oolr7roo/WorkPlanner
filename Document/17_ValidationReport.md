@@ -82,3 +82,8 @@ Markdown 형식·같은 이름의 metadata·fingerprint·내부 상대 링크·�
 모바일에서 day scrollTop 600을 설정한 뒤 week→day는 각각 403으로 관찰되었다. 스크롤 보존을 보장하는 정책으로 문서화하지 않는다. 날짜·시간의 줄바꿈과 일부 표시 잘림은 현 구현 한계이며 문서 분리로 해결되었다고 주장하지 않는다. 새 일정 취소 후 보기 유지만 재검증했으며 저장·삭제 후 복귀의 모든 조합은 미검증이다.
 
 전용 도구 입력·출력과 문서 책임은 [소유 Task](../CalendarApp_Web/Document/14_ExecutionPlan/SCR-001/TASK-001.md)에 정의한다. 전체 문서는 Review이며 고객 승인과 renderer 전체 충실도는 완료되지 않았다. 기존 unborn master 상태로 인해 Git 반영은 수행하지 않았다.
+
+
+## 8. 2026-10-22 단계별 색상 프리셋
+
+사용자 승인으로 FR-013·014, DATA-004와 별도 브라우저 저장 계약을 추가했다. UI·정책·상태·저장소를 분리하고 기존 수동 색상과 날짜 보정을 보존했다. 현재 범위의 실행 결과와 미검증 경계는 [검증 보고서](../CalendarApp_Web/Document/Evidence/ColorPresets/README.md)에 기록한다. 이전 절의 Git 미반영 문구는 당시 기준선이며 현재 작업은 별도 작업 브랜치에서 검증 후 로컬 master에 반영한다. 전체 문서 상태는 Review다.

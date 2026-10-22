@@ -1,0 +1,282 @@
+[
+  {
+    "id": "settings-title",
+    "rect": {
+      "h": 31.5,
+      "w": 161.765625,
+      "x": 463,
+      "y": 111.546875
+    },
+    "selector": ".color-settings h2",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "21px",
+      "fontWeight": "400"
+    },
+    "tag": "H2"
+  },
+  {
+    "id": "settings-close",
+    "rect": {
+      "h": 28,
+      "w": 19.625,
+      "x": 957.375,
+      "y": 113.296875
+    },
+    "selector": ".color-settings .close-button",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(107, 114, 128)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(107, 114, 128)",
+      "fontSize": "28px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON"
+  },
+  {
+    "id": "settings-help",
+    "rect": {
+      "h": 20.796875,
+      "w": 514,
+      "x": 463,
+      "y": 163.046875
+    },
+    "selector": ".color-settings .settings-help",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "13px",
+      "fontWeight": "400"
+    },
+    "tag": "P"
+  },
+  {
+    "id": "preset-select",
+    "rect": {
+      "h": 42,
+      "w": 394.375,
+      "x": 463,
+      "y": 226.34375
+    },
+    "selector": ".color-settings select",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "tag": "SELECT"
+  },
+  {
+    "id": "preset-add",
+    "rect": {
+      "h": 44,
+      "w": 111.625,
+      "x": 865.375,
+      "y": 224.34375
+    },
+    "selector": ".preset-choice button",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON"
+  },
+  {
+    "id": "preset-name",
+    "rect": {
+      "h": 42,
+      "w": 514,
+      "x": 463,
+      "y": 310.84375
+    },
+    "selector": ".color-settings input:not([type=color])",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "tag": "INPUT"
+  },
+  {
+    "id": "depth-colors",
+    "rect": {
+      "h": 111,
+      "w": 514,
+      "x": 463,
+      "y": 368.84375
+    },
+    "selector": ".depth-colors",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(226, 232, 240)",
+      "borderRadius": "10px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "FIELDSET"
+  },
+  {
+    "id": "depth-color-template",
+    "rect": {
+      "h": 62.5,
+      "w": 112,
+      "x": 478,
+      "y": 402.34375
+    },
+    "selector": ".depth-colors label",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "tag": "LABEL"
+  },
+  {
+    "id": "depth-add",
+    "rect": {
+      "h": 44,
+      "w": 95.625,
+      "x": 463,
+      "y": 495.84375
+    },
+    "selector": ".settings-tools button:first-child",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON"
+  },
+  {
+    "id": "depth-remove",
+    "rect": {
+      "h": 44,
+      "w": 149.25,
+      "x": 566.625,
+      "y": 495.84375
+    },
+    "selector": ".settings-tools button:last-child",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON"
+  },
+  {
+    "id": "color-preview",
+    "rect": {
+      "h": 211,
+      "w": 514,
+      "x": 463,
+      "y": 555.84375
+    },
+    "selector": ".color-preview",
+    "style": {
+      "background_color": "rgb(248, 250, 252)",
+      "borderColor": "rgb(226, 232, 240)",
+      "borderRadius": "10px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "SECTION"
+  },
+  {
+    "id": "settings-note",
+    "rect": {
+      "h": 41.59375,
+      "w": 514,
+      "x": 463,
+      "y": 782.84375
+    },
+    "selector": ".color-settings .settings-help:last-of-type",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "13px",
+      "fontWeight": "400"
+    },
+    "tag": "P"
+  },
+  {
+    "id": "settings-cancel",
+    "rect": {
+      "h": 44,
+      "w": 66,
+      "x": 801.375,
+      "y": 844.4375
+    },
+    "selector": ".color-settings .editor-actions .cancel-button",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON"
+  },
+  {
+    "id": "settings-save",
+    "rect": {
+      "h": 44,
+      "w": 101.625,
+      "x": 875.375,
+      "y": 844.4375
+    },
+    "selector": ".color-settings .save-button",
+    "style": {
+      "background_color": "rgb(51, 102, 221)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "8px",
+      "borderWidth": "0px",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "700"
+    },
+    "tag": "BUTTON"
+  }
+]

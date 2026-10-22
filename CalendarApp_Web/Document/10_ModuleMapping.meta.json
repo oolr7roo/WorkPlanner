@@ -18,7 +18,10 @@
     "FR-005",
     "FR-006",
     "FR-007",
-    "FR-008"
+    "FR-008",
+    "FR-013",
+    "FR-014",
+    "DATA-004"
   ],
   "owned_ids": [
     "EventManagement",
@@ -28,8 +31,10 @@
     "DOC-Document-8_SoftwareRequirementsSpecification"
   ],
   "source_fingerprint": {
-    "byte_size": 1977,
-    "sha256": "cb8ec94cf6885d94abb3e7b10b18e0d917bff2e9fe8eea50ee86e14cee5dc8b7"
+    "modified_at_utc": "2026-10-22T07:46:51.247Z",
+    "mtime_ns": 1792655211247154100,
+    "byte_size": 3016,
+    "sha256": "c94c019aab7f7133948493e9e48682ab048056320836f3749739844ddf709f89"
   },
-  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.936331+00:00"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.694Z"
 }

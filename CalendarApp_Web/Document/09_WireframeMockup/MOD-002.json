@@ -1,0 +1,914 @@
+{
+  "schema_version": 3,
+  "screen": {
+    "id": "MOD-002",
+    "name": "단계별 색상 설정",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "unit": "%",
+    "purpose": "자동 일정의 단계별 색상 프리셋 관리"
+  },
+  "frame": {
+    "id": "FRAME-MOD-002",
+    "name": "단계별 색상 설정",
+    "width": "100%",
+    "height": "100%",
+    "unit": "%",
+    "layout_unit": "percent",
+    "base_width": 1440,
+    "base_height": 1000
+  },
+  "derivation": {
+    "mode": "implementation-derived",
+    "sources": [
+      "src/features/schedules/components/ScheduleColorSettings.tsx",
+      "src/styles.css",
+      "Document/Evidence/ColorPresets/geometry.json",
+      "Document/Evidence/ColorPresets/controls-geometry.json",
+      "Document/Evidence/ColorPresets/repeat-geometry.json"
+    ],
+    "unverified": [
+      "공용 WireFrame 렌더러의 시각 충실도는 미검증이다."
+    ]
+  },
+  "components": [
+    {
+      "id": "backdrop",
+      "type": "panel",
+      "name": "backdrop",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "background_color": "rgba(18, 27, 46, 0.48)"
+      }
+    },
+    {
+      "id": "settings-dialog",
+      "type": "panel",
+      "name": "settings-dialog",
+      "visible": true,
+      "rect": {
+        "x": 30.555556,
+        "y": 8.854687,
+        "w": 38.888889,
+        "h": 82.289063
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:color-settings",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "backdrop",
+      "scope": "parent",
+      "style": {
+        "background_color": "#ffffff",
+        "border": {
+          "color": "#172033",
+          "width": 1,
+          "radius": 16
+        }
+      }
+    },
+    {
+      "id": "settings-header",
+      "type": "header",
+      "name": "settings-header",
+      "visible": true,
+      "rect": {
+        "x": 4.107143,
+        "y": 2.795025,
+        "w": 91.785714,
+        "h": 3.827969
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:editor-header",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-dialog",
+      "scope": "parent",
+      "style": {
+        "color": "#172033",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "#172033",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "settings-form",
+      "type": "panel",
+      "name": "settings-form",
+      "visible": true,
+      "rect": {
+        "x": 4.107143,
+        "y": 9.053451,
+        "w": 91.785714,
+        "h": 88.151524
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:form",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-dialog",
+      "scope": "parent",
+      "style": {
+        "color": "#172033",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "#172033",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "settings-actions",
+      "type": "toolbar",
+      "name": "settings-actions",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 93.934303,
+        "w": 100,
+        "h": 6.065697
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:editor-actions",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "style": {
+        "color": "#172033",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "#172033",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "settings-title",
+      "type": "heading",
+      "name": "단계별 색상 설정",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 31.471911,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:color-settings-title",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-header",
+      "scope": "parent",
+      "text": "단계별 색상 설정",
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 21,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "settings-close",
+      "type": "button",
+      "name": "×",
+      "visible": true,
+      "rect": {
+        "x": 96.181907,
+        "y": 5.555556,
+        "w": 3.818093,
+        "h": 88.888889
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:설정 닫기",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-header",
+      "scope": "parent",
+      "text": "×",
+      "style": {
+        "color": "rgb(107, 114, 128)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(107, 114, 128)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 28,
+          "weight": "400"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "초안을 버리고 닫는다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-013"
+          ]
+        }
+      }
+    },
+    {
+      "id": "settings-help",
+      "type": "text",
+      "name": "자동 색상 일정에 적용됩니다. 직접 지정한 색상은 유지됩니다.",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 2.86699
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:자동 색상 일정에 적용됩니다. 직접 지정한 색상은 유지됩니다.",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "text": "자동 색상 일정에 적용됩니다. 직접 지정한 색상은 유지됩니다.",
+      "style": {
+        "color": "rgb(100, 116, 139)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(100, 116, 139)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "preset-select",
+      "type": "select",
+      "name": "기본 단계별 색상",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 8.725902,
+        "w": 76.726654,
+        "h": 5.789984
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:draft.activePresetId",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "text": "기본 단계별 색상",
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "기본 단계별 색상 초안을 변경한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-013"
+          ]
+        }
+      },
+      "properties": {
+        "label": "프리셋 선택",
+        "dynamic_options": "presets[].name"
+      }
+    },
+    {
+      "id": "preset-add",
+      "type": "button",
+      "name": "프리셋 추가",
+      "visible": true,
+      "rect": {
+        "x": 78.283074,
+        "y": 8.450188,
+        "w": 21.716926,
+        "h": 6.065697
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:프리셋 추가",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "text": "프리셋 추가",
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "프리셋 추가 초안을 변경한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-013"
+          ]
+        }
+      }
+    },
+    {
+      "id": "preset-name",
+      "type": "input",
+      "name": "기본 단계별 색상",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 20.374798,
+        "w": 100,
+        "h": 5.789984
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:preset.name",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "text": "기본 단계별 색상",
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "기본 단계별 색상 초안을 변경한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-013"
+          ]
+        }
+      },
+      "properties": {
+        "input_type": "text",
+        "required": true,
+        "label": "프리셋 이름"
+      }
+    },
+    {
+      "id": "depth-colors",
+      "type": "panel",
+      "name": "단계별 기본색",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 28.37049,
+        "w": 100,
+        "h": 15.3021
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:단계별 기본색",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "text": "단계별 기본색",
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(226, 232, 240)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "layout": "desktop four columns; mobile two columns",
+        "minimum_stages": 2
+      }
+    },
+    {
+      "id": "depth-add",
+      "type": "button",
+      "name": "단계 추가",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 45.878298,
+        "w": 18.604086,
+        "h": 6.065697
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:단계 추가",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "text": "단계 추가",
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "단계 추가 초안을 변경한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-013"
+          ]
+        }
+      }
+    },
+    {
+      "id": "depth-remove",
+      "type": "button",
+      "name": "마지막 단계 제거",
+      "visible": true,
+      "rect": {
+        "x": 20.160506,
+        "y": 45.878298,
+        "w": 29.036965,
+        "h": 6.065697
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:마지막 단계 제거",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "text": "마지막 단계 제거",
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "마지막 단계 제거 초안을 변경한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-013"
+          ]
+        }
+      }
+    },
+    {
+      "id": "color-preview",
+      "type": "list",
+      "name": "트리 미리보기",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 54.149704,
+        "w": 100,
+        "h": 29.087776
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:트리 미리보기",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "text": "트리 미리보기",
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(248, 250, 252)",
+        "border": {
+          "color": "rgb(226, 232, 240)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "sample_data": [
+          "#3366dd",
+          "#16845b",
+          "#c56a15",
+          "#8053bd",
+          "#3366dd"
+        ],
+        "source": "colorAtDepth; current draft",
+        "depth_labels": true
+      }
+    },
+    {
+      "id": "settings-note",
+      "type": "text",
+      "name": "설정한 단계보다 깊으면 색상을 순환합니다. 설정은 이 브라우저에 저장되며 저장을 눌러야 반영됩니다.",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 85.443188,
+        "w": 100,
+        "h": 5.73398
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:설정한 단계보다 깊으면 색상을 순환합니다. 설정은 이 브라우저에 저장되며 저장을 눌러야 반영됩니다.",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-form",
+      "scope": "parent",
+      "text": "설정한 단계보다 깊으면 색상을 순환합니다. 설정은 이 브라우저에 저장되며 저장을 눌러야 반영됩니다.",
+      "style": {
+        "color": "rgb(100, 116, 139)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(100, 116, 139)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "settings-cancel",
+      "type": "button",
+      "name": "취소",
+      "visible": true,
+      "rect": {
+        "x": 65.831712,
+        "y": 0,
+        "w": 12.840467,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:취소",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-actions",
+      "scope": "parent",
+      "text": "취소",
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "초안을 버리고 닫는다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-013"
+          ]
+        }
+      }
+    },
+    {
+      "id": "settings-save",
+      "type": "button",
+      "name": "설정 저장",
+      "visible": true,
+      "rect": {
+        "x": 80.228599,
+        "y": 0,
+        "w": 19.771401,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:설정 저장",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "parent": "settings-actions",
+      "scope": "parent",
+      "text": "설정 저장",
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "background_color": "rgb(51, 102, 221)",
+        "border": {
+          "color": "rgb(255, 255, 255)",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "events": {
+        "on": "submit",
+        "intent": "프리셋을 검증하고 브라우저 저장에 성공하면 적용한 뒤 닫는다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-013"
+          ],
+          "apis": [
+            "API-001"
+          ]
+        }
+      }
+    },
+    {
+      "id": "depth-color-list",
+      "type": "list",
+      "name": "반복 단계 색상 입력",
+      "parent": "depth-colors",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 2.918288,
+        "y": 30.18018,
+        "w": 94.163424,
+        "h": 56.306306
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+        "locator": "text:preset.colors.map",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "repeat": {
+        "direction": "horizontal",
+        "item_extent": 23.140496,
+        "gap": 2.479339,
+        "template_source_ref": {
+          "adapter": "web-react-source",
+          "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
+          "locator": "text:preset.colors.map",
+          "style_documents": [
+            "src/styles.css"
+          ]
+        },
+        "fields": [
+          {
+            "key": "label",
+            "type": "text",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 40
+            }
+          },
+          {
+            "key": "color",
+            "type": "input",
+            "rect": {
+              "x": 0,
+              "y": 42.4,
+              "w": 100,
+              "h": 57.6
+            }
+          }
+        ],
+        "sample_data": [
+          {
+            "label": "1단계",
+            "color": "#3366dd"
+          },
+          {
+            "label": "2단계",
+            "color": "#16845b"
+          },
+          {
+            "label": "3단계",
+            "color": "#c56a15"
+          },
+          {
+            "label": "4단계",
+            "color": "#8053bd"
+          }
+        ]
+      },
+      "style": {
+        "background_color": "rgba(0, 0, 0, 0)"
+      }
+    }
+  ],
+  "modal": {
+    "title": "단계별 색상 설정",
+    "backdrop": true,
+    "close_on_cancel": true
+  },
+  "behaviors": [
+    {
+      "id": "draft-boundary",
+      "description": "프리셋 선택·이름·단계별 색상은 초안에만 반영한다. 저장 성공 후 적용하며 취소·닫기·Escape는 초안을 버린다."
+    },
+    {
+      "id": "safe-storage",
+      "description": "최소 두 종류의 서로 다른 색상과 활성 프리셋을 검증한다. 저장 실패 시 활성 설정과 원본 저장값을 보존한다."
+    },
+    {
+      "id": "responsive",
+      "description": "390×844에서 팝업 내부 스크롤을 허용하며 단계 입력은 두 열이다. 깊은 단계는 순환하고 부모와 같은 표시색은 건너뛴다."
+    }
+  ],
+  "verification": {
+    "schema": "valid",
+    "source_alignment": "measured-desktop-dom",
+    "render_fidelity": "unverified",
+    "complete": false
+  }
+}

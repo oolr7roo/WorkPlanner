@@ -25,14 +25,15 @@
     "UF-005",
     "UF-006",
     "UF-007",
-    "UF-008"
+    "UF-008",
+    "UF-009"
   ],
   "related_documents": [],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-05T04:06:46.616595Z",
-    "mtime_ns": 1791173206616594963,
-    "byte_size": 5084,
-    "sha256": "1c9f589f9392e695982ea79e9e977a757d809fa86fbff856a3797bee7ac50b9f"
+    "modified_at_utc": "2026-10-22T07:46:51.242Z",
+    "mtime_ns": 1792655211242626800,
+    "byte_size": 5963,
+    "sha256": "0bd1d403c3fd335873c78b730894d3b251a7f9a8447d9a5af9f2eb1c819efd90"
   },
-  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.687Z"
 }

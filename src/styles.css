@@ -14,7 +14,7 @@
 * { box-sizing: border-box; }
 
 body { margin: 0; }
-button, input { font: inherit; }
+button, input, select { font: inherit; }
 button { cursor: pointer; }
 
 .app-shell {
@@ -69,6 +69,9 @@ h1 { margin: 0; font-size: 28px; letter-spacing: -0.04em; }
 }
 
 .new-event:hover, .save-button:hover { background: #234fba; }
+.header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.settings-button { padding: 10px 14px; border: 1px solid #d5dce8; border-radius: 10px; background: white; color: #334155; font-weight: 700; }
+.settings-button:hover { background: #e7eeff; }
 
 .calendar-panel {
   height: min(800px, calc(100vh - 150px));
@@ -139,7 +142,7 @@ h1 { margin: 0; font-size: 28px; letter-spacing: -0.04em; }
 .close-button { border: 0; background: none; font-size: 28px; line-height: 1; color: #6b7280; }
 .editor form { display: grid; gap: 16px; }
 .editor label { display: grid; gap: 7px; color: #334155; font-size: 13px; font-weight: 700; }
-.editor input:not([type="color"]) {
+.editor input:not([type="color"]), .editor select {
   width: 100%;
   min-height: 42px;
   padding: 9px 11px;
@@ -156,11 +159,32 @@ h1 { margin: 0; font-size: 28px; letter-spacing: -0.04em; }
 .editor-actions button { padding: 9px 16px; border-radius: 8px; }
 .delete-button { margin-right: auto; border: 0; background: #fff0f1; color: #b42334; }
 .cancel-button { border: 1px solid #d5dce8; background: white; color: #334155; }
+.color-mode-fields { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: end; }
+.color-settings { width: min(calc(100% - 24px), 560px); max-height: calc(100dvh - 32px); margin: auto; overflow-y: auto; border: 1px solid #e2e8f0; }
+.color-settings::backdrop { background: rgba(18, 27, 46, 0.48); }
+.settings-help { margin: 0; color: #64748b; font-size: 13px; line-height: 1.6; }
+.preset-choice { display: flex; align-items: end; gap: 8px; }
+.preset-choice label { flex: 1; min-width: 0; }
+.preset-choice button, .settings-tools button { padding: 9px 12px; border-radius: 8px; }
+.depth-colors { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; min-width: 0; margin: 0; padding: 14px; border: 1px solid #e2e8f0; border-radius: 10px; }
+.depth-colors legend { padding: 0 4px; color: #334155; font-size: 13px; font-weight: 700; }
+.depth-colors input { width: 100%; height: 36px; padding: 2px; border: 1px solid #d5dce8; border-radius: 6px; }
+.settings-tools { display: flex; gap: 8px; flex-wrap: wrap; }
+.settings-tools button:disabled { opacity: 0.45; cursor: default; }
+.color-preview { padding: 14px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; }
+.color-preview h3 { margin: 0 0 10px; font-size: 14px; }
+.color-preview div { display: flex; align-items: center; gap: 8px; min-height: 30px; font-size: 13px; }
+.color-preview span { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.color-preview code { margin-left: auto; color: #64748b; font-size: 12px; }
 
 @media (max-width: 700px) {
   .app-shell { padding: 12px; }
   h1 { font-size: 22px; }
   .new-event { padding: 9px 12px; }
+  .app-header { flex-wrap: wrap; }
+  .header-actions { margin-left: auto; }
+  .settings-button { padding: 8px 12px; }
+  .depth-colors { grid-template-columns: repeat(2, 1fr); }
   .calendar-panel { height: calc(100vh - 140px); min-height: 500px; }
   .calendar-toolbar { padding: 10px; }
   .date-controls strong { margin-left: 4px; font-size: 14px; }

@@ -58,3 +58,10 @@ MOD-001, DATA-001~003. 숫자 우선순위는 제거하고 parentId/order로 형
 - AISkill MCP branches는 등록 Web 원본 부재로 재시도 실패했다. CLI도 Web 원본이 없어 coding-work만 전달받고 안전 편집 원문을 MCP로 직접 읽었다. safe-editing은 로컬 카탈로그에 미등록이다. 개선 Reporter 도구가 없어 오류를 영구 등록하지 못했다.
 
 증거: [트리 목록](../../Evidence/TreeSchedules/priority.png), [간트](../../Evidence/TreeSchedules/gantt.png).
+
+## 단계별 색상 연결 기준
+
+추가 수정 파일: types.ts, useSchedules.ts, components/ScheduleEditor.tsx. 신규 일정 auto·기존 mode 부재 manual, 자동/직접 초안 선택, 전체 보기 전달 표시색을 소유한다. 색상 계산은 TASK-003 공개 함수를 호출한다. 시작·종료 보정과 날짜 계산 source는 보존한다.
+
+
+2026-10-22 범위 검증: 정책·저장 경계 26건, 격리 브라우저의 프리셋 저장/취소/복원·다섯 보기·신규/하위·직접 색상 보존·자식 승격·모바일·날짜 보정 회귀 확인. [검증 근거](../../Evidence/ColorPresets/README.md). 저장 실패 UI 전체 경로와 공용 renderer 충실도는 미검증이며 Review를 유지한다.

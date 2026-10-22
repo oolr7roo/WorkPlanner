@@ -18,7 +18,8 @@
     "UF-005",
     "UF-006",
     "UF-007",
-    "UF-008"
+    "UF-008",
+    "UF-009"
   ],
   "owned_ids": [
     "FR-001",
@@ -37,14 +38,16 @@
     "NFR-002",
     "NFR-003",
     "NFR-004",
-    "NFR-005"
+    "NFR-005",
+    "FR-013",
+    "FR-014"
   ],
   "related_documents": [],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-05T04:06:46.642639Z",
-    "mtime_ns": 1791173206642638684,
-    "byte_size": 4100,
-    "sha256": "4a7c8cf1e1cc0e761ebf3a85dda1bd9d1bd8300c8b50832c8cc58fe7f800f102"
+    "modified_at_utc": "2026-10-22T07:46:51.244Z",
+    "mtime_ns": 1792655211244138100,
+    "byte_size": 4919,
+    "sha256": "130230432886103e2af93ee1532ce69b6ef0ee37768a495f24fabc0f77ac901a"
   },
-  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.690Z"
 }

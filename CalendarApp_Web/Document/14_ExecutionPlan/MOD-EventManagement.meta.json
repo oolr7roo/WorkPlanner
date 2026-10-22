@@ -19,7 +19,11 @@
     "DATA-001",
     "DATA-002",
     "DATA-003",
-    "API-002"
+    "API-002",
+    "FR-013",
+    "FR-014",
+    "DATA-004",
+    "API-001"
   ],
   "owned_ids": [],
   "related_documents": [
@@ -30,8 +34,10 @@
     "DOC-CalendarApp_Web-Document-12_APISpecification"
   ],
   "source_fingerprint": {
-    "byte_size": 2722,
-    "sha256": "8a95515baadaae5b80386bc0bc2116b61e7a01717aae81522c2e63a8f80eea16"
+    "modified_at_utc": "2026-10-22T07:46:51.266Z",
+    "mtime_ns": 1792655211266031800,
+    "byte_size": 3447,
+    "sha256": "16c6f2c369bce62b6776497c6d58dc9ae6b585a74513bbdfbda96c782c365441"
   },
-  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.937918+00:00"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.711Z"
 }

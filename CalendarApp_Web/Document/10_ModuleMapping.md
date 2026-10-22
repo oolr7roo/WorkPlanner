@@ -17,3 +17,14 @@
 UI는 localStorage에 직접 접근하지 않는다. 순수 트리·날짜 함수는 React·DOM에 의존하지 않는다. 저장 어댑터는 렌더링·일정 CRUD를 소유하지 않는다. 기존 trud-calendar는 월·주·일만 소유하며 외부 모듈을 수정하지 않는다.
 
 화면 소유: [SCR-001 Task](14_ExecutionPlan/SCR-001/TASK-001.md). 업무 소유: [EventManagement Task](14_ExecutionPlan/MOD-EventManagement/TASK-001.md). 저장 소유: [BrowserEventStore Task](14_ExecutionPlan/MOD-BrowserEventStore/TASK-001.md).
+
+## 단계별 색상 책임
+
+| 소유 모듈 | 컴포넌트 | 책임 |
+| --- | --- | --- |
+| EventManagement | scheduleColors.ts | 프리셋 형식 검사·깊이별 표시색·부모와 색상 구분, DOM·React·저장소 의존 없음 |
+| EventManagement | useScheduleColorSettings.ts | 설정 상태·저장 결과; BrowserEventStore 공개 함수 사용 |
+| BrowserEventStore | scheduleColorStorage.ts | 별도 설정 키의 읽기·쓰기·손상 원본 보존 |
+| 설정 UI | components/ScheduleColorSettings.tsx | 설정 초안·입력·미리보기·콜백; localStorage 직접 접근 금지 |
+
+App은 설정·일정 Hook을 조합하고 헤더·팝업을 연결한다. 기존 useSchedules는 일정 모드 저장과 모든 보기에 전달할 표시 일정을 계산한다. 새 순수 색상 계산 모듈이 날짜 계산 모듈을 수정하지 않는다. 설정 UI는 SCR-001/TASK-003, 색상 정책·Hook은 MOD-EventManagement/TASK-003, 저장은 MOD-BrowserEventStore/TASK-001이 소유한다.

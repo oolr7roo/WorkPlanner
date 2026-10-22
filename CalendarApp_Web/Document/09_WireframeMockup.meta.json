@@ -18,7 +18,10 @@
     "FR-005",
     "FR-006",
     "FR-007",
-    "FR-008"
+    "FR-008",
+    "FR-013",
+    "FR-014",
+    "DATA-004"
   ],
   "owned_ids": [
     "COMMON-001",
@@ -29,7 +32,8 @@
     "SCR-003",
     "MOD-001",
     "SCR-004",
-    "SCR-005"
+    "SCR-005",
+    "MOD-002"
   ],
   "related_documents": [
     "DOC-Document-5_UserFlow",
@@ -38,8 +42,10 @@
     "DOC-Document-17_ValidationReport"
   ],
   "source_fingerprint": {
-    "byte_size": 5576,
-    "sha256": "c27ff075f7e67a2bfeb403f0e4ce43d1f6a890f16c785bbbf3068290ebbb5449"
+    "modified_at_utc": "2026-10-22T07:48:04.039Z",
+    "mtime_ns": 1792655284039114800,
+    "byte_size": 5961,
+    "sha256": "9e929133479d22215897324b337642cf3b530ba184690b60ce965b4d068f7cf4"
   },
-  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.936105+00:00"
+  "metadata_refreshed_at_utc": "2026-10-22T07:48:04.051Z"
 }

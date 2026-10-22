@@ -16,6 +16,8 @@ web 구현 도메인의 현재 책임·작업 흐름 진입점·검증 마일스
 | SCR-004 | 간트 트리 | [SCR-004](09_WireframeMockup/SCR-004.json) | [공통 화면 소유](14_ExecutionPlan/SCR-001.md) | Review |
 | SCR-005 | 우선순위 트리 | [SCR-005](09_WireframeMockup/SCR-005.json) | [공통 화면 소유](14_ExecutionPlan/SCR-001.md) | Review |
 
+설정 팝업 MOD-002는 [SCR-001/TASK-003](14_ExecutionPlan/SCR-001/TASK-003.md)이, 색상 정책·설정 상태는 [MOD-EventManagement/TASK-003](14_ExecutionPlan/MOD-EventManagement/TASK-003.md)이 소유한다. 실행 순서는 계약·정책 → 저장 → 설정 UI → App 조립 → 다섯 보기 통합 검증이다.
+
 ### 2.2 내부 모듈·공통 작업 흐름별
 
 | 유형 | 대상 | 구현 책임 | 연결 대상 | 2단계 하위문서 | 상태 |

@@ -12,21 +12,27 @@
   "metadata_state": "needs-review",
   "source_ids": [
     "FR-007",
-    "FR-008"
+    "FR-008",
+    "FR-013",
+    "FR-014"
   ],
   "owned_ids": [
     "DATA-001",
     "DATA-002",
-    "DATA-003"
+    "DATA-003",
+    "DATA-004"
   ],
   "related_documents": [
     "DOC-CalendarApp_Web-Document-11_data_spec-DATA-001_Events",
     "DOC-CalendarApp_Web-Document-10_ModuleMapping",
-    "DOC-CalendarApp_Web-Document-12_APISpecification"
+    "DOC-CalendarApp_Web-Document-12_APISpecification",
+    "DOC-CalendarApp_Web-Document-11_data_spec-DATA-004_ColorSettings"
   ],
   "source_fingerprint": {
-    "byte_size": 2438,
-    "sha256": "3a2182504040a74add83c67464e4fa034aca365cbd53157fce6166d451d2d373"
+    "modified_at_utc": "2026-10-22T07:46:51.248Z",
+    "mtime_ns": 1792655211248661300,
+    "byte_size": 3516,
+    "sha256": "ac48f4ede9af713f6cae19c670ef0e0c95e5b187322fcc5161595e497bbb99b5"
   },
-  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.936734+00:00"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.695Z"
 }

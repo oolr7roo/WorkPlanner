@@ -10,14 +10,17 @@
   "parent_document_id": null,
   "status": "Review",
   "metadata_state": "needs-review",
-  "source_ids": [],
+  "source_ids": [
+    "FR-013",
+    "FR-014"
+  ],
   "owned_ids": [],
   "related_documents": [],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-05T11:23:46.706014Z",
-    "mtime_ns": 1791199426706014141,
-    "byte_size": 9890,
-    "sha256": "4606275b027f5c73b62c6a4552ea18e041d6f3c63fa6c0db6f5064ce39789870"
+    "modified_at_utc": "2026-10-22T07:46:51.273Z",
+    "mtime_ns": 1792655211273246800,
+    "byte_size": 10562,
+    "sha256": "f4507cfc9f1a9bfb49c1666f3188ba01136f0b4630e957b84ccac9ff77e6d845"
   },
-  "metadata_refreshed_at_utc": "2026-10-05T11:28:22.470398Z"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.718Z"
 }

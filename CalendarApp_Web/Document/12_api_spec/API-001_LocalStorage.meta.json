@@ -11,7 +11,10 @@
   "status": "Review",
   "metadata_state": "needs-review",
   "source_ids": [
-    "API-001"
+    "API-001",
+    "FR-013",
+    "FR-014",
+    "DATA-004"
   ],
   "owned_ids": [],
   "related_documents": [
@@ -19,8 +22,10 @@
     "DOC-CalendarApp_Web-Document-12_APISpecification"
   ],
   "source_fingerprint": {
-    "byte_size": 981,
-    "sha256": "cbfbe0d685edc45aa5a8fbdbf260c1938467c84d00fd2813b9939e2b4b6318f4"
+    "modified_at_utc": "2026-10-22T07:46:51.253Z",
+    "mtime_ns": 1792655211253266200,
+    "byte_size": 1602,
+    "sha256": "453db523c8f6dc314e7a730d59d9cc0f5af2a7182176db41c2bcb10aaef32b57"
   },
-  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.937357+00:00"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.700Z"
 }

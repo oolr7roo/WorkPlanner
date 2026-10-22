@@ -11,7 +11,10 @@
   "status": "Review",
   "metadata_state": "needs-review",
   "source_ids": [
-    "DATA-001"
+    "DATA-001",
+    "FR-013",
+    "FR-014",
+    "DATA-004"
   ],
   "owned_ids": [],
   "related_documents": [
@@ -19,8 +22,10 @@
     "DOC-CalendarApp_Web-Document-12_api_spec-API-001_LocalStorage"
   ],
   "source_fingerprint": {
-    "byte_size": 1278,
-    "sha256": "508c6ef642ee3e0d5fe83366e489e873f18b231bf10b6367a4ccaa007f6243e9"
+    "modified_at_utc": "2026-10-22T07:46:51.249Z",
+    "mtime_ns": 1792655211249164600,
+    "byte_size": 1767,
+    "sha256": "96de819fbc4253ff20ea7bccbabfffcadb263ca825760a1457be3d88ea6f546e"
   },
-  "metadata_refreshed_at_utc": "2026-10-20T23:32:43.937667+00:00"
+  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.697Z"
 }

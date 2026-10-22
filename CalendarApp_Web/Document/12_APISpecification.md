@@ -28,3 +28,7 @@
 | API-003 | Calendar SDK | SDK | 보기·선택·이동·리사이즈 | App UI | DATA-001, DATA-002 | SCR-001~003.json#calendar, COMMON-002.json#toolbar | [계약](12_api_spec/API-003_CalendarSDK.md) | Review |
 
 [모듈](10_ModuleMapping.md), [데이터](11_DataRequirements.md). 일정 데이터는 HTTP로 전달되지 않는다.
+
+## 색상 설정 저장 확장
+
+기존 API-001 localStorage 계약에 DATA-004 별도 키를 추가한다. UI는 저장 어댑터 함수를 거치며 프리셋 저장 성공 후에만 화면 설정을 갱신한다. 네트워크·DB 인터페이스는 추가하지 않는다.

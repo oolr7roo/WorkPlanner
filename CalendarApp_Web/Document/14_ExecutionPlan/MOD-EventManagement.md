@@ -13,6 +13,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | [TASK-001](MOD-EventManagement/TASK-001.md) | 등록·수정과 입력 검증 기준선 확인 | MOD-EventManagement | 없음 | SEQUENTIAL | NONE | 일정 업무·편집 구현 | source: src/App.tsx; 8·10·11·12번, 관련 JSON | Review |
 | 2 | [TASK-002](MOD-EventManagement/TASK-002.md) | 삭제·취소의 반영 경계 확인 | MOD-EventManagement | TASK-001 | SEQUENTIAL | NONE | 일정 업무·편집 구현 | source: src/App.tsx; 8·10·11·12번, 관련 JSON | Review |
+| 3 | [TASK-003](MOD-EventManagement/TASK-003.md) | 단계별 색상 정책과 설정 상태 | MOD-EventManagement | 공개 계약 확정 | SEQUENTIAL | NONE | src/features/schedules/scheduleColors.ts, src/features/schedules/useScheduleColorSettings.ts | 10·11·12번, 기존 source | Review |
 
 ## 3. 책임 및 연결 판단
 
@@ -39,3 +40,6 @@
 현재 구현은 존재하나 전체 인수 검증 전이므로 Task 상태는 Review다. UI·업무·저장은 features/schedules와 공통 툴바로 분리한다. UI → Hook → 순수 업무 함수·저장 어댑터 방향을 유지한다. DB 운영·Windows 전체 프로세스 검증은 미실행이며 미실행을 구현 부재와 혼동하지 않는다.
 
 JSON 연결 정본: [월](../09_WireframeMockup/SCR-001.json), [주](../09_WireframeMockup/SCR-002.json), [일](../09_WireframeMockup/SCR-003.json), [MOD-001](../09_WireframeMockup/MOD-001.json). Source: [App](../../../src/App.tsx).
+
+
+단계별 색상 확장: FR-013·014 → COMMON-001/MOD-001/MOD-002 → MOD-EventManagement → DATA-002·004/API-001. 순수 정책·설정 상태와 팝업의 상세 소유는 TASK-003이며 저장 어댑터·App 조립은 기존 TASK-001이 담당한다. [범위 검증](../Evidence/ColorPresets/README.md)을 확인했다. 전체 문서·인수 상태는 Review를 유지한다.
