@@ -1,0 +1,85 @@
+{
+  "executed_at": "2026-10-22T23:47:17.894Z",
+  "cases": [
+    {
+      "name": "missing list compatible",
+      "status": "passed"
+    },
+    {
+      "name": "empty list valid",
+      "status": "passed"
+    },
+    {
+      "name": "valid list",
+      "status": "passed"
+    },
+    {
+      "name": "reject null",
+      "status": "passed"
+    },
+    {
+      "name": "reject object",
+      "status": "passed"
+    },
+    {
+      "name": "reject null item",
+      "status": "passed"
+    },
+    {
+      "name": "reject blank id",
+      "status": "passed"
+    },
+    {
+      "name": "reject duplicate id",
+      "status": "passed"
+    },
+    {
+      "name": "reject text missing",
+      "status": "passed"
+    },
+    {
+      "name": "reject blank text",
+      "status": "passed"
+    },
+    {
+      "name": "reject string done",
+      "status": "passed"
+    },
+    {
+      "name": "copy isolates toggle edit delete",
+      "status": "passed"
+    },
+    {
+      "name": "normalize trims without mutation",
+      "status": "passed"
+    },
+    {
+      "name": "legacy v1 without checklist",
+      "status": "passed"
+    },
+    {
+      "name": "new v2 roundtrip",
+      "status": "passed"
+    },
+    {
+      "name": "malformed list blocks original rewrite",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate item id rejected in storage",
+      "status": "passed"
+    },
+    {
+      "name": "same item id in different schedules valid",
+      "status": "passed"
+    },
+    {
+      "name": "quota write preserves raw storage",
+      "status": "passed"
+    },
+    {
+      "name": "parent removal preserves child checklist",
+      "status": "passed"
+    }
+  ]
+}

@@ -65,3 +65,11 @@ MOD-001, DATA-001~003. 숫자 우선순위는 제거하고 parentId/order로 형
 
 
 2026-10-22 범위 검증: 정책·저장 경계 26건, 격리 브라우저의 프리셋 저장/취소/복원·다섯 보기·신규/하위·직접 색상 보존·자식 승격·모바일·날짜 보정 회귀 확인. [검증 근거](../../Evidence/ColorPresets/README.md). 저장 실패 UI 전체 경로와 공용 renderer 충실도는 미검증이며 Review를 유지한다.
+
+
+## 2026-10-23 색상 헤더와 체크리스트 기준
+
+FR-014·015 / DATA-002·005 / API-001. Write Set: types.ts, scheduleChecklist.ts, useSchedules.ts, components/ScheduleEditor.tsx, components/ScheduleColorControl.tsx, components/ScheduleChecklist.tsx, MOD-001.json 및 이 Task·메타데이터. 입력 컴포넌트는 초안만 전달하고 순수 함수가 검증·정규화한다. 일정 편집 초기값은 checklist를 깊게 복사한다. 공개 계약 확정 → 순수 정책/저장 검사 → UI → App 연결 → 격리 통합 검증 → 문서 대조/차이 해소의 SEQUENTIAL/NONE 흐름이다. 다른 Task의 소유를 중복하지 않는다. 색상은 실제 변경에서만 manual, 자동 복원은 auto이며 전체 설정 변경은 수동 일정 보존이다. 날짜 보정·부모 기간·우선순위는 유지한다. 기존 체크리스트 부재·손상/중복/공백 항목·저장 실패·취소/재접속·긴 목록/모바일/키보드·다섯 보기를 검증한다. 전용 구현 템플릿 없음; 기존 React/TypeScript 구조를 따른다.
+
+
+2026-10-23 범위 검증: 정책·저장 경계 20건 및 실제 격리 UI의 저장/취소/재접속·개별/자동 색상·일괄 적용·날짜 보정·다섯 보기·모바일/긴 목록을 확인했다. 색상 선택창 Escape의 일정 초안 손실 경로를 UI 경계에서 해소했다. MOD-001·002의 source/계층/좌표와 대조했다. [검증 보고서](../../Evidence/EditorChecklist/README.md). 전체 renderer 충실도·실제 quota 오류 UI·전체 접근성은 미검증이며 Review를 유지한다.

@@ -23,7 +23,9 @@
     "API-001",
     "FR-013",
     "FR-014",
-    "DATA-004"
+    "DATA-004",
+    "FR-015",
+    "DATA-005"
   ],
   "owned_ids": [
     "SCR-001/TASK-001"
@@ -35,10 +37,10 @@
     "DOC-Document-17_ValidationReport"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T08:08:16.155Z",
-    "mtime_ns": 1792656496155736000,
-    "byte_size": 6603,
-    "sha256": "4c44f080dbd1c1c7bc1614bf1954b70ad6c8b7fefb3dce805bd5ad8883115871"
+    "modified_at_utc": "2026-10-22T23:55:29.321Z",
+    "mtime_ns": 1792713329321802800,
+    "byte_size": 7598,
+    "sha256": "eb694a597fbd5349be51ef4c6026ece3185ec7e63d307c97df05e19d214d3a7b"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T08:08:16.183Z"
+  "metadata_refreshed_at_utc": "2026-10-22T23:56:05.830Z"
 }

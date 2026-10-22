@@ -13,17 +13,19 @@
   "source_ids": [
     "FR-013",
     "FR-014",
-    "DATA-004"
+    "DATA-004",
+    "FR-015",
+    "DATA-005"
   ],
   "owned_ids": [],
   "related_documents": [
     "DOC-CalendarApp_Web-Document-09_WireframeMockup"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T07:46:51.254Z",
-    "mtime_ns": 1792655211254781800,
-    "byte_size": 5380,
-    "sha256": "634fb223aeac10c5ea23542bebdf3e2c0f85590cdfb5deaa8720c90e1f4aa8ac"
+    "modified_at_utc": "2026-10-22T23:55:29.315Z",
+    "mtime_ns": 1792713329315240000,
+    "byte_size": 6134,
+    "sha256": "4089af56f89b7a3e10a95a831e20040faba41e75ab65b2581135ab848d9bff80"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.701Z"
+  "metadata_refreshed_at_utc": "2026-10-22T23:56:05.823Z"
 }

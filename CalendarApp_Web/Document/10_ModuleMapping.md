@@ -28,3 +28,8 @@ UI는 localStorage에 직접 접근하지 않는다. 순수 트리·날짜 함�
 | 설정 UI | components/ScheduleColorSettings.tsx | 설정 초안·입력·미리보기·콜백; localStorage 직접 접근 금지 |
 
 App은 설정·일정 Hook을 조합하고 헤더·팝업을 연결한다. 기존 useSchedules는 일정 모드 저장과 모든 보기에 전달할 표시 일정을 계산한다. 새 순수 색상 계산 모듈이 날짜 계산 모듈을 수정하지 않는다. 설정 UI는 SCR-001/TASK-003, 색상 정책·Hook은 MOD-EventManagement/TASK-003, 저장은 MOD-BrowserEventStore/TASK-001이 소유한다.
+
+
+## 체크리스트·헤더 색상 책임
+
+FR-014·015: MOD-EventManagement가 일정 초안·검증·저장 요청을 소유한다. ScheduleChecklist와 ScheduleColorControl은 입력/표시만 담당하고 localStorage를 참조하지 않는다. 순수 scheduleChecklist가 항목 형식·중복 id·공백 검사를 담당하며 BrowserEventStore는 호환 읽기와 기존 API-001 쓰기를 소유한다. App은 checklist 초안 전달만 조립한다. 소유 Task는 MOD-EventManagement/TASK-001, 저장은 MOD-BrowserEventStore/TASK-001, App·스타일은 SCR-001/TASK-001, MOD-002 안내는 SCR-001/TASK-003이다.

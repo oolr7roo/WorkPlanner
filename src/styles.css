@@ -130,7 +130,11 @@ h1 { margin: 0; font-size: 28px; letter-spacing: -0.04em; }
 }
 
 .editor {
-  width: min(100%, 500px);
+  width: min(calc(100% - 24px), 500px);
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
   padding: 23px;
   border-radius: 16px;
   background: white;
@@ -153,13 +157,28 @@ h1 { margin: 0; font-size: 28px; letter-spacing: -0.04em; }
 }
 .editor input:focus { outline: 2px solid #9bb5f3; outline-offset: 1px; }
 .time-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.color-field { justify-self: start; }
-.color-field input { width: 52px; height: 36px; padding: 2px; border: 1px solid #d5dce8; border-radius: 8px; }
+.editor-heading { display: flex; align-items: center; gap: 10px; min-width: 0; flex-wrap: wrap; }
+.editor-color-control { display: flex; align-items: center; gap: 6px; }
+.header-color-input { width: 32px; height: 32px; padding: 2px; border: 1px solid #d5dce8; border-radius: 50%; cursor: pointer; background: white; }
+.header-color-input::-webkit-color-swatch-wrapper { padding: 0; }
+.header-color-input::-webkit-color-swatch { border: 0; border-radius: 50%; }
+.header-color-input::-moz-color-swatch { border: 0; border-radius: 50%; }
+.restore-auto-color { border: 0; padding: 4px; background: transparent; color: #3366dd; font-size: 11px; text-decoration: underline; }
+.schedule-checklist { min-width: 0; border-top: 1px solid #e2e8f0; padding-top: 14px; }
+.checklist-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.checklist-heading h3 { margin: 0; font-size: 15px; }
+.checklist-heading span, .checklist-empty { color: #64748b; font-size: 12px; }
+.schedule-checklist ul { list-style: none; margin: 10px 0; padding: 0; display: grid; gap: 8px; }
+.checklist-item { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; align-items: center; gap: 8px; }
+.editor .checklist-item input[type="checkbox"] { width: 18px; min-height: 18px; height: 18px; padding: 0; margin: 0; accent-color: #3366dd; }
+.editor .checklist-item input:not([type]) { min-width: 0; }
+.checklist-item.is-done input:not([type]) { text-decoration: line-through; color: #64748b; }
+.checklist-remove { border: 0; padding: 8px 4px; background: transparent; color: #b42334; font-size: 12px; }
+.checklist-add { padding: 7px 10px; border-radius: 8px; font-size: 13px; }
 .editor-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
 .editor-actions button { padding: 9px 16px; border-radius: 8px; }
 .delete-button { margin-right: auto; border: 0; background: #fff0f1; color: #b42334; }
 .cancel-button { border: 1px solid #d5dce8; background: white; color: #334155; }
-.color-mode-fields { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: end; }
 .color-settings { width: min(calc(100% - 24px), 560px); max-height: calc(100dvh - 32px); margin: auto; overflow-y: auto; border: 1px solid #e2e8f0; }
 .color-settings::backdrop { background: rgba(18, 27, 46, 0.48); }
 .settings-help { margin: 0; color: #64748b; font-size: 13px; line-height: 1.6; }

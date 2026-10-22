@@ -44,3 +44,11 @@ SEQUENTIAL / NONE. 선행: MOD-EventManagement/TASK-003, MOD-BrowserEventStore/T
 
 
 2026-10-22 범위 검증: 정책·저장 경계 26건, 격리 브라우저의 프리셋 저장/취소/복원·다섯 보기·신규/하위·직접 색상 보존·자식 승격·모바일·날짜 보정 회귀 확인. [검증 근거](../../Evidence/ColorPresets/README.md). 저장 실패 UI 전체 경로와 공용 renderer 충실도는 미검증이며 Review를 유지한다.
+
+
+## 일괄 적용 안내 조정
+
+ScheduleColorSettings.tsx·MOD-002.json에서 새 일정 자동색·자동 일정 일괄 적용·개별 지정 보존과 헤더 색상 선택 안내를 명확히 한다. 저장 성공 후 설정 적용이라는 기존 Hook 계약은 유지한다. 일괄적인 수동 색상 덮어쓰기 동작은 추가하지 않는다.
+
+
+2026-10-23 범위 검증: 정책·저장 경계 20건 및 실제 격리 UI의 저장/취소/재접속·개별/자동 색상·일괄 적용·날짜 보정·다섯 보기·모바일/긴 목록을 확인했다. 색상 선택창 Escape의 일정 초안 손실 경로를 UI 경계에서 해소했다. MOD-001·002의 source/계층/좌표와 대조했다. [검증 보고서](../../Evidence/EditorChecklist/README.md). 전체 renderer 충실도·실제 quota 오류 UI·전체 접근성은 미검증이며 Review를 유지한다.

@@ -30,7 +30,7 @@ export function ScheduleColorSettings(props: Props) {
     onClick={event => { if (event.target === event.currentTarget) { const rect = event.currentTarget.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) props.onClose(); } }}>
     <div className="editor-header"><h2 id="color-settings-title">단계별 색상 설정</h2><button type="button" className="close-button" onClick={props.onClose} aria-label="설정 닫기">×</button></div>
     <form onSubmit={submit}>
-      <p className="settings-help">자동 색상 일정에 적용됩니다. 직접 지정한 색상은 유지됩니다.</p>
+      <p className="settings-help">새 일정은 단계별 자동 색상을 사용합니다. 저장하면 모든 자동 색상 일정에 일괄 적용되며, 개별 지정한 색상은 유지됩니다.</p>
       <div className="preset-choice"><label>프리셋 선택<select value={draft.activePresetId} onChange={event => setDraft({ ...draft, activePresetId: event.target.value })}>
         {draft.presets.map(item => <option key={item.id} value={item.id}>{item.name || "이름 없는 프리셋"}</option>)}
       </select></label><button type="button" className="cancel-button" onClick={addPreset}>프리셋 추가</button></div>
@@ -46,7 +46,7 @@ export function ScheduleColorSettings(props: Props) {
       </section>
       <p className="settings-help">설정한 단계보다 깊으면 색상을 순환합니다. 설정은 이 브라우저에 저장되며 저장을 눌러야 반영됩니다.</p>
       {error && <p className="form-error" role="alert">{error}</p>}
-      <div className="editor-actions"><button type="button" className="cancel-button" onClick={props.onClose}>취소</button><button type="submit" className="save-button">설정 저장</button></div>
+      <div className="editor-actions"><button type="button" className="cancel-button" onClick={props.onClose}>취소</button><button type="submit" className="save-button">저장하고 일괄 적용</button></div>
     </form>
   </dialog>;
 }

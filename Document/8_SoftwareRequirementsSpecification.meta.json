@@ -37,7 +37,8 @@
     "CT-003",
     "CT-004",
     "FR-013",
-    "FR-014"
+    "FR-014",
+    "FR-015"
   ],
   "owned_ids": [],
   "related_documents": [
@@ -45,10 +46,10 @@
     "DOC-Document-7_SystemConditions"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T07:46:51.245Z",
-    "mtime_ns": 1792655211245647400,
-    "byte_size": 4301,
-    "sha256": "c783faeb85118eba3036b1899c5983006de4b2b35f462f0c7a69158730d2d8cc"
+    "modified_at_utc": "2026-10-22T23:55:29.301Z",
+    "mtime_ns": 1792713329301975300,
+    "byte_size": 4927,
+    "sha256": "457b2a8c3e812f2366e4d7acd527a26fe00676d39218b02dadfc187831c1b1ee"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.692Z"
+  "metadata_refreshed_at_utc": "2026-10-22T23:56:05.807Z"
 }

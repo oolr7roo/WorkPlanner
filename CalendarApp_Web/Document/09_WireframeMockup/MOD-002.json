@@ -27,7 +27,8 @@
       "src/styles.css",
       "Document/Evidence/ColorPresets/geometry.json",
       "Document/Evidence/ColorPresets/controls-geometry.json",
-      "Document/Evidence/ColorPresets/repeat-geometry.json"
+      "Document/Evidence/ColorPresets/repeat-geometry.json",
+      "Document/Evidence/EditorChecklist/settings-geometry.json"
     ],
     "unverified": [
       "공용 WireFrame 렌더러의 시각 충실도는 미검증이다."
@@ -64,9 +65,9 @@
       "visible": true,
       "rect": {
         "x": 30.555556,
-        "y": 8.854687,
+        "y": 7.815625,
         "w": 38.888889,
-        "h": 82.289063
+        "h": 84.36875
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -79,11 +80,22 @@
       "parent": "backdrop",
       "scope": "parent",
       "style": {
-        "background_color": "#ffffff",
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
         "border": {
-          "color": "#172033",
-          "width": 1,
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
           "radius": 16
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-dialog"
         }
       }
     },
@@ -94,9 +106,9 @@
       "visible": true,
       "rect": {
         "x": 4.107143,
-        "y": 2.795025,
+        "y": 2.726128,
         "w": 91.785714,
-        "h": 3.827969
+        "h": 3.73361
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -109,16 +121,22 @@
       "parent": "settings-dialog",
       "scope": "parent",
       "style": {
-        "color": "#172033",
+        "color": "rgb(23, 32, 51)",
         "background_color": "rgba(0, 0, 0, 0)",
         "border": {
-          "color": "#172033",
+          "color": "rgb(23, 32, 51)",
           "width": 0,
           "radius": 0
         },
         "typography": {
           "size": 16,
           "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-header"
         }
       }
     },
@@ -129,9 +147,9 @@
       "visible": true,
       "rect": {
         "x": 4.107143,
-        "y": 9.053451,
+        "y": 8.830284,
         "w": 91.785714,
-        "h": 88.151524
+        "h": 88.443588
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -144,16 +162,22 @@
       "parent": "settings-dialog",
       "scope": "parent",
       "style": {
-        "color": "#172033",
+        "color": "rgb(23, 32, 51)",
         "background_color": "rgba(0, 0, 0, 0)",
         "border": {
-          "color": "#172033",
+          "color": "rgb(23, 32, 51)",
           "width": 0,
           "radius": 0
         },
         "typography": {
           "size": 16,
           "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-form"
         }
       }
     },
@@ -164,9 +188,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 93.934303,
+        "y": 94.103359,
         "w": 100,
-        "h": 6.065697
+        "h": 5.896641
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -179,16 +203,22 @@
       "parent": "settings-form",
       "scope": "parent",
       "style": {
-        "color": "#172033",
+        "color": "rgb(23, 32, 51)",
         "background_color": "rgba(0, 0, 0, 0)",
         "border": {
-          "color": "#172033",
+          "color": "rgb(23, 32, 51)",
           "width": 0,
           "radius": 0
         },
         "typography": {
           "size": 16,
           "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-actions"
         }
       }
     },
@@ -225,6 +255,12 @@
         "typography": {
           "size": 21,
           "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-title"
         }
       }
     },
@@ -277,6 +313,12 @@
             "FR-013"
           ]
         }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-close"
+        }
       }
     },
     {
@@ -288,19 +330,19 @@
         "x": 0,
         "y": 0,
         "w": 100,
-        "h": 2.86699
+        "h": 5.574169
       },
       "source_ref": {
         "adapter": "web-react-source",
         "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
-        "locator": "text:자동 색상 일정에 적용됩니다. 직접 지정한 색상은 유지됩니다.",
+        "locator": "text:새 일정은 단계별 자동 색상을 사용합니다.",
         "style_documents": [
           "src/styles.css"
         ]
       },
       "parent": "settings-form",
       "scope": "parent",
-      "text": "자동 색상 일정에 적용됩니다. 직접 지정한 색상은 유지됩니다.",
+      "text": "새 일정은 단계별 자동 색상을 사용합니다. 저장하면 모든 자동 색상 일정에 일괄 적용되며, 개별 지정한 색상은 유지됩니다.",
       "style": {
         "color": "rgb(100, 116, 139)",
         "background_color": "rgba(0, 0, 0, 0)",
@@ -313,6 +355,12 @@
           "size": 13,
           "weight": "400"
         }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-help"
+        }
       }
     },
     {
@@ -322,9 +370,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 8.725902,
+        "y": 11.269788,
         "w": 76.726654,
-        "h": 5.789984
+        "h": 5.628612
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -367,7 +415,11 @@
       },
       "properties": {
         "label": "프리셋 선택",
-        "dynamic_options": "presets[].name"
+        "dynamic_options": "presets[].name",
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "preset-select"
+        }
       }
     },
     {
@@ -377,9 +429,9 @@
       "visible": true,
       "rect": {
         "x": 78.283074,
-        "y": 8.450188,
+        "y": 11.001759,
         "w": 21.716926,
-        "h": 6.065697
+        "h": 5.896641
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -419,6 +471,12 @@
             "FR-013"
           ]
         }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "preset-add"
+        }
       }
     },
     {
@@ -428,9 +486,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 20.374798,
+        "y": 22.59402,
         "w": 100,
-        "h": 5.789984
+        "h": 5.628612
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -474,7 +532,11 @@
       "properties": {
         "input_type": "text",
         "required": true,
-        "label": "프리셋 이름"
+        "label": "프리셋 이름",
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "preset-name"
+        }
       }
     },
     {
@@ -484,9 +546,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 28.37049,
+        "y": 30.366865,
         "w": 100,
-        "h": 15.3021
+        "h": 14.875618
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -514,7 +576,11 @@
       },
       "properties": {
         "layout": "desktop four columns; mobile two columns",
-        "minimum_stages": 2
+        "minimum_stages": 2,
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "depth-colors"
+        }
       }
     },
     {
@@ -524,9 +590,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 45.878298,
+        "y": 47.386716,
         "w": 18.604086,
-        "h": 6.065697
+        "h": 5.896641
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -566,6 +632,12 @@
             "FR-013"
           ]
         }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "depth-add"
+        }
       }
     },
     {
@@ -575,9 +647,9 @@
       "visible": true,
       "rect": {
         "x": 20.160506,
-        "y": 45.878298,
+        "y": 47.386716,
         "w": 29.036965,
-        "h": 6.065697
+        "h": 5.896641
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -617,6 +689,12 @@
             "FR-013"
           ]
         }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "depth-remove"
+        }
       }
     },
     {
@@ -626,9 +704,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 54.149704,
+        "y": 55.42759,
         "w": 100,
-        "h": 29.087776
+        "h": 28.277075
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -663,7 +741,11 @@
           "#3366dd"
         ],
         "source": "colorAtDepth; current draft",
-        "depth_labels": true
+        "depth_labels": true,
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "color-preview"
+        }
       }
     },
     {
@@ -673,9 +755,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 85.443188,
+        "y": 85.848899,
         "w": 100,
-        "h": 5.73398
+        "h": 5.574169
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -700,6 +782,12 @@
           "size": 13,
           "weight": "400"
         }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-note"
+        }
       }
     },
     {
@@ -708,7 +796,7 @@
       "name": "취소",
       "visible": true,
       "rect": {
-        "x": 65.831712,
+        "x": 52.285992,
         "y": 0,
         "w": 12.840467,
         "h": 100
@@ -751,30 +839,36 @@
             "FR-013"
           ]
         }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-cancel"
+        }
       }
     },
     {
       "id": "settings-save",
       "type": "button",
-      "name": "설정 저장",
+      "name": "저장하고 일괄 적용",
       "visible": true,
       "rect": {
-        "x": 80.228599,
+        "x": 66.682879,
         "y": 0,
-        "w": 19.771401,
+        "w": 33.317121,
         "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
         "document": "src/features/schedules/components/ScheduleColorSettings.tsx",
-        "locator": "text:설정 저장",
+        "locator": "text:저장하고 일괄 적용",
         "style_documents": [
           "src/styles.css"
         ]
       },
       "parent": "settings-actions",
       "scope": "parent",
-      "text": "설정 저장",
+      "text": "저장하고 일괄 적용",
       "style": {
         "color": "rgb(255, 255, 255)",
         "background_color": "rgb(51, 102, 221)",
@@ -790,7 +884,7 @@
       },
       "events": {
         "on": "submit",
-        "intent": "프리셋을 검증하고 브라우저 저장에 성공하면 적용한 뒤 닫는다.",
+        "intent": "설정 저장에 성공하면 모든 자동 색상 일정에 표시색을 일괄 적용한다. 개별 지정 색상과 체크리스트는 유지한다.",
         "bindings": {
           "modules": [
             "MOD-EventManagement"
@@ -804,6 +898,12 @@
           "apis": [
             "API-001"
           ]
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "settings-save"
         }
       }
     },
@@ -882,7 +982,23 @@
         ]
       },
       "style": {
-        "background_color": "rgba(0, 0, 0, 0)"
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(51, 65, 85)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/settings-geometry.json",
+          "id": "depth-color-list"
+        }
       }
     }
   ],

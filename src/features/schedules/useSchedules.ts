@@ -4,6 +4,7 @@ import { effectiveSchedules } from "./scheduleDates";
 import { readSchedules, writeSchedules } from "./scheduleStorage";
 import { removeSchedule, reorder, siblings } from "./scheduleTree";
 import { draftAutomaticColor, resolveScheduleColors } from "./scheduleColors";
+import { normalizeChecklist, validateChecklist } from "./scheduleChecklist";
 
 export function useSchedules(colors: readonly string[]) {
   const [initial] = useState(readSchedules);
@@ -20,8 +21,10 @@ export function useSchedules(colors: readonly string[]) {
     const title = draft.title.trim();
     if (!title) return "일정 제목을 입력해 주세요.";
     if (draft.colorMode !== undefined && draft.colorMode !== "auto" && draft.colorMode !== "manual") return "색상 모드를 확인해 주세요.";
+    const checklistError = validateChecklist(draft.checklist);
+    if (checklistError) return checklistError;
     if (!Number.isFinite(Date.parse(draft.start)) || !Number.isFinite(Date.parse(draft.end)) || Date.parse(draft.end) <= Date.parse(draft.start)) return "종료 시간을 시작 시간보다 늦게 설정해 주세요.";
-    const values = { ...draft, title, start: draft.start.length === 16 ? `${draft.start}:00` : draft.start, end: draft.end.length === 16 ? `${draft.end}:00` : draft.end };
+    const values = { ...draft, title, checklist: normalizeChecklist(draft.checklist), start: draft.start.length === 16 ? `${draft.start}:00` : draft.start, end: draft.end.length === 16 ? `${draft.end}:00` : draft.end };
     if (id) setItems(current => current.map(item => item.id === id ? { ...item, ...values } : item));
     else {
       const newId = crypto.randomUUID();

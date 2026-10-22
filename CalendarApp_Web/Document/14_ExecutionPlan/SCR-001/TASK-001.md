@@ -52,3 +52,11 @@ App.tsx·styles.css·COMMON-001.json 헤더 버튼과 MOD-001.json의 색상 모
 
 
 월 날짜 표시 검증 결과: 앱 빌드·어댑터 타입·보존/실패 경계 7건·PC/모바일 42개 숫자·월 이동·선택·일정 저장/편집·키보드·주/일 보존을 확인했다. SCR-001의 month-label-* 42개는 숫자·접근성 이름·실측 좌표·소스 연결을 동기화했다. SDK 사전 번들 제외 시 React 런타임 의존성을 명시해 개발/빌드 경로를 맞췄다. 추가 Vite 설정 타입 검사의 기존 TS2339는 기준선과 동일하며 공용 renderer 충실도는 미검증이다. [검증 근거](../../Evidence/MonthDateNumbers/README.md). 전체 상태는 Review를 유지한다.
+
+
+## 편집 초안·체크리스트 조립
+
+App.tsx에서 신규 빈 checklist, 기존 checklist 전달을 조립하며(편집 초기 복제는 ScheduleEditor가 담당) 검증/저장 정책을 넣지 않는다. styles.css의 헤더 색상 버튼·체크리스트·모달 내부 스크롤을 소유한다. 기능 UI와 MOD-001 의미는 MOD-EventManagement/TASK-001이 담당한다. 모바일·긴 목록·저장/취소 및 다섯 보기 통합을 확인한다.
+
+
+2026-10-23 범위 검증: 정책·저장 경계 20건 및 실제 격리 UI의 저장/취소/재접속·개별/자동 색상·일괄 적용·날짜 보정·다섯 보기·모바일/긴 목록을 확인했다. 색상 선택창 Escape의 일정 초안 손실 경로를 UI 경계에서 해소했다. MOD-001·002의 source/계층/좌표와 대조했다. [검증 보고서](../../Evidence/EditorChecklist/README.md). 전체 renderer 충실도·실제 quota 오류 UI·전체 접근성은 미검증이며 Review를 유지한다.

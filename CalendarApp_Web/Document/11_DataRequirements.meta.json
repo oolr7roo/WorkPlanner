@@ -14,25 +14,29 @@
     "FR-007",
     "FR-008",
     "FR-013",
-    "FR-014"
+    "FR-014",
+    "FR-015",
+    "DATA-005"
   ],
   "owned_ids": [
     "DATA-001",
     "DATA-002",
     "DATA-003",
-    "DATA-004"
+    "DATA-004",
+    "DATA-005"
   ],
   "related_documents": [
     "DOC-CalendarApp_Web-Document-11_data_spec-DATA-001_Events",
     "DOC-CalendarApp_Web-Document-10_ModuleMapping",
     "DOC-CalendarApp_Web-Document-12_APISpecification",
-    "DOC-CalendarApp_Web-Document-11_data_spec-DATA-004_ColorSettings"
+    "DOC-CalendarApp_Web-Document-11_data_spec-DATA-004_ColorSettings",
+    "DOC-CalendarApp_Web-Document-11_data_spec-DATA-005_Checklist"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T07:46:51.248Z",
-    "mtime_ns": 1792655211248661300,
-    "byte_size": 3516,
-    "sha256": "ac48f4ede9af713f6cae19c670ef0e0c95e5b187322fcc5161595e497bbb99b5"
+    "modified_at_utc": "2026-10-22T23:55:29.306Z",
+    "mtime_ns": 1792713329306794300,
+    "byte_size": 4120,
+    "sha256": "f370938d7c9b2c0d616969befbff3cbaaa26ca80b6f8e16e9856841ee94f6f9f"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.695Z"
+  "metadata_refreshed_at_utc": "2026-10-22T23:56:05.813Z"
 }

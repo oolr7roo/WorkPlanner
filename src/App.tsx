@@ -26,12 +26,12 @@ export default function App() {
     if (schedules.blocked) return;
     const parent = schedules.effective.find(item => item.id === parentId);
     if (parentId) tree.expand(parentId);
-    setEditor({ id: null, parentId, draft: { ...defaultDraft(start ?? parent?.start, end), colorMode: "auto", color: schedules.automaticColor(parentId) } });
+    setEditor({ id: null, parentId, draft: { ...defaultDraft(start ?? parent?.start, end), colorMode: "auto", color: schedules.automaticColor(parentId), checklist: [] } });
   }
   function openEdit(id: string) {
     if (schedules.blocked) return;
     const item = schedules.effective.find(item => item.id === id);
-    if (item) setEditor({ id, parentId: item.parentId, draft: { title: item.title, start: item.start.slice(0, 16), end: item.end.slice(0, 16), color: item.color ?? "#3366dd", colorMode: item.colorMode ?? "manual" } });
+    if (item) setEditor({ id, parentId: item.parentId, draft: { title: item.title, start: item.start.slice(0, 16), end: item.end.slice(0, 16), color: item.color ?? "#3366dd", colorMode: item.colorMode ?? "manual", checklist: item.checklist } });
   }
   const treeProps = { items: schedules.effective, rows: tree.rows, collapsed: tree.collapsed, selected: tree.selected,
     onToggle: tree.toggle, onEdit: openEdit, onAddChild: (id: string) => openNew(undefined, undefined, id), disabled: schedules.blocked };

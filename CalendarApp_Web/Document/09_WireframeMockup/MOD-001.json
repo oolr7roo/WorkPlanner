@@ -23,7 +23,10 @@
       "src/features/schedules/components/ScheduleEditor.tsx",
       "src/styles.css",
       "Document/Evidence/runtime.json",
-      "Document/Evidence/ColorPresets/editor-geometry.json"
+      "Document/Evidence/ColorPresets/editor-geometry.json",
+      "src/features/schedules/components/ScheduleColorControl.tsx",
+      "src/features/schedules/components/ScheduleChecklist.tsx",
+      "Document/Evidence/EditorChecklist/editor-geometry.json"
     ],
     "unverified": [
       "모든 단말·공용 뷰어 시각 검증은 미완료이다."
@@ -100,10 +103,10 @@
       "name": "editor",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
+        "x": 32.638889,
+        "y": 24,
         "w": 34.722222,
-        "h": 39.9
+        "h": 52
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -127,7 +130,13 @@
         }
       },
       "parent": "backdrop",
-      "scope": "parent"
+      "scope": "parent",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "editor"
+        }
+      }
     },
     {
       "id": "editor-header",
@@ -136,9 +145,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 5.764411,
+        "y": 4.423077,
         "w": 90.8,
-        "h": 7.894737
+        "h": 6.153846
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -162,7 +171,13 @@
         }
       },
       "parent": "editor",
-      "scope": "parent"
+      "scope": "parent",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "editor-header"
+        }
+      }
     },
     {
       "id": "editor-title",
@@ -170,10 +185,10 @@
       "name": "editor-title",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "w": 20.130094,
-        "h": 100
+        "x": 62.410026,
+        "y": 0.78125,
+        "w": 37.589974,
+        "h": 98.4375
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -196,9 +211,15 @@
           "weight": "400"
         }
       },
-      "parent": "editor-header",
+      "parent": "editor-heading",
       "scope": "parent",
-      "text": "일정 수정"
+      "text": "일정 수정",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "editor-title"
+        }
+      }
     },
     {
       "id": "close",
@@ -207,9 +228,9 @@
       "visible": true,
       "rect": {
         "x": 95.677313,
-        "y": 5.555556,
+        "y": 6.25,
         "w": 4.322687,
-        "h": 88.888889
+        "h": 87.5
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -250,7 +271,13 @@
           ]
         }
       },
-      "test": "close"
+      "test": "close",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "close"
+        }
+      }
     },
     {
       "id": "editor-form",
@@ -259,9 +286,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 18.671679,
+        "y": 14.423077,
         "w": 90.8,
-        "h": 75.56391
+        "h": 81.153846
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -285,7 +312,13 @@
         }
       },
       "parent": "editor",
-      "scope": "parent"
+      "scope": "parent",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "editor-form"
+        }
+      }
     },
     {
       "id": "time-fields",
@@ -294,9 +327,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 28.026534,
+        "y": 20.023697,
         "w": 100,
-        "h": 22.719735
+        "h": 16.232227
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -320,7 +353,13 @@
         }
       },
       "parent": "editor-form",
-      "scope": "parent"
+      "scope": "parent",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "time-fields"
+        }
+      }
     },
     {
       "id": "editor-actions",
@@ -329,9 +368,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 85.406302,
+        "y": 89.57346,
         "w": 100,
-        "h": 14.593698
+        "h": 10.42654
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -355,7 +394,13 @@
         }
       },
       "parent": "editor-form",
-      "scope": "parent"
+      "scope": "parent",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "editor-actions"
+        }
+      }
     },
     {
       "id": "title-field",
@@ -366,7 +411,7 @@
         "x": 0,
         "y": 0,
         "w": 100,
-        "h": 22.719735
+        "h": 16.232227
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -391,7 +436,13 @@
       },
       "parent": "editor-form",
       "scope": "parent",
-      "text": "제목"
+      "text": "제목",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "title-field"
+        }
+      }
     },
     {
       "id": "title-field-input",
@@ -447,7 +498,11 @@
       "properties": {
         "input_type": "text",
         "required": true,
-        "placeholder": "일정 제목"
+        "placeholder": "일정 제목",
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "title-field-input"
+        }
       }
     },
     {
@@ -484,7 +539,13 @@
       },
       "parent": "time-fields",
       "scope": "parent",
-      "text": "시작"
+      "text": "시작",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "start-field"
+        }
+      }
     },
     {
       "id": "start-field-input",
@@ -540,7 +601,11 @@
       "properties": {
         "input_type": "datetime-local",
         "required": true,
-        "placeholder": ""
+        "placeholder": "",
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "start-field-input"
+        }
       }
     },
     {
@@ -577,7 +642,13 @@
       },
       "parent": "time-fields",
       "scope": "parent",
-      "text": "종료"
+      "text": "종료",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "end-field"
+        }
+      }
     },
     {
       "id": "end-field-input",
@@ -633,44 +704,53 @@
       "properties": {
         "input_type": "datetime-local",
         "required": true,
-        "placeholder": ""
+        "placeholder": "",
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "end-field-input"
+        }
       }
     },
     {
       "id": "color-field",
-      "type": "label",
+      "type": "panel",
       "name": "color-field",
       "visible": true,
       "rect": {
-        "x": 88.546256,
-        "y": 8.759124,
-        "w": 11.453744,
-        "h": 91.240876
+        "x": 0,
+        "y": 0,
+        "w": 58.296915,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/features/schedules/components/ScheduleEditor.tsx",
-        "locator": "text:draft.color",
+        "document": "src/features/schedules/components/ScheduleColorControl.tsx",
+        "locator": "text:editor-color-control",
         "style_documents": [
           "src/styles.css"
         ]
       },
       "style": {
-        "color": "rgb(51, 65, 85)",
+        "color": "rgb(23, 32, 51)",
         "background_color": "rgba(0, 0, 0, 0)",
         "border": {
-          "color": "rgb(51, 65, 85)",
+          "color": "rgb(23, 32, 51)",
           "width": 0,
           "radius": 0
         },
         "typography": {
-          "size": 13,
-          "weight": "700"
+          "size": 16,
+          "weight": "400"
         }
       },
-      "parent": "color-mode-fields",
+      "parent": "editor-heading",
       "scope": "parent",
-      "text": "색상"
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "color-field"
+        }
+      }
     },
     {
       "id": "color-field-input",
@@ -679,36 +759,36 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 42.4,
-        "w": 100,
-        "h": 57.6
+        "y": 0,
+        "w": 22.577445,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
-        "document": "src/features/schedules/components/ScheduleEditor.tsx",
-        "locator": "text:draft.color",
+        "document": "src/features/schedules/components/ScheduleColorControl.tsx",
+        "locator": "text:header-color-input",
         "style_documents": [
           "src/styles.css"
         ]
       },
       "style": {
-        "color": "rgb(51, 65, 85)",
-        "background_color": "rgba(0, 0, 0, 0)",
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
         "border": {
           "color": "rgb(213, 220, 232)",
           "width": 1,
-          "radius": 8
+          "radius": 50
         },
         "typography": {
-          "size": 13,
-          "weight": "700"
+          "size": 16,
+          "weight": "400"
         }
       },
       "parent": "color-field",
       "scope": "parent",
       "events": {
         "on": "change",
-        "intent": "일정 색상 초안을 변경한다.",
+        "intent": "색상 선택창을 열거나 취소한 것만으로 모드를 변경하지 않는다. 실제 색상 변경 시 개별 지정 초안으로 전환한다.",
         "bindings": {
           "modules": [
             "EventManagement"
@@ -717,24 +797,16 @@
             "DATA-002"
           ],
           "requirements": [
-            "FR-002",
-            "FR-003"
+            "FR-014"
           ]
         }
       },
       "test": "color-field-input",
       "properties": {
         "input_type": "color",
-        "required": false,
-        "placeholder": ""
-      },
-      "states": {
-        "auto": {
-          "enabled": false
-        },
-        "manual": {
-          "enabled": true
-        }
+        "accessible_name": "일정 색상 선택",
+        "mode": "manual",
+        "sample_value": "#884422"
       }
     },
     {
@@ -789,7 +861,13 @@
           ]
         }
       },
-      "test": "cancel"
+      "test": "cancel",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "cancel"
+        }
+      }
     },
     {
       "id": "save",
@@ -828,7 +906,7 @@
       "text": "저장",
       "events": {
         "on": "submit",
-        "intent": "유효한 일정 초안을 등록·수정한다.",
+        "intent": "일정과 체크리스트 초안을 검증하고 저장한다. 빈 체크항목은 오류로 안내하고 초안을 유지한다.",
         "bindings": {
           "modules": [
             "EventManagement"
@@ -836,7 +914,8 @@
           "data": [
             "DATA-001",
             "DATA-002",
-            "DATA-003"
+            "DATA-003",
+            "DATA-005"
           ],
           "apis": [
             "API-002"
@@ -844,17 +923,24 @@
           "requirements": [
             "FR-002",
             "FR-003",
-            "FR-008"
+            "FR-008",
+            "FR-015"
           ]
         }
       },
-      "test": "save"
+      "test": "save",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "save"
+        }
+      }
     },
     {
       "id": "delete",
       "type": "button",
       "name": "delete",
-      "visible": false,
+      "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
@@ -909,6 +995,12 @@
         "editing": {
           "visible": true,
           "enabled": true
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "delete"
         }
       }
     },
@@ -974,92 +1066,97 @@
         "messages": [
           "일정 제목을 입력해 주세요.",
           "종료 시간을 시작 시간보다 늦게 설정해 주세요.",
-          "우선순위는 1부터 10까지의 정수로 입력해 주세요."
+          "체크리스트의 빈 항목을 입력하거나 삭제해 주세요."
         ],
         "role": "alert",
         "geometry_evidence": "form-error capture; parent resizes in error state"
       }
     },
     {
-      "id": "color-mode-fields",
+      "id": "editor-heading",
       "type": "panel",
-      "name": "색상 입력 그룹",
-      "parent": "editor-form",
-      "scope": "parent",
+      "name": "editor-heading",
       "visible": true,
-      "rect": {
-        "x": 0,
-        "y": 56.053068,
-        "w": 100,
-        "h": 22.719735
-      },
-      "source_ref": {
-        "adapter": "web-react-source",
-        "document": "src/features/schedules/components/ScheduleEditor.tsx",
-        "locator": "text:color-mode-fields",
-        "style_documents": [
-          "src/styles.css"
-        ]
-      }
-    },
-    {
-      "id": "color-mode-field",
-      "type": "label",
-      "name": "색상 방식",
-      "text": "색상 방식",
-      "parent": "color-mode-fields",
+      "parent": "editor-header",
       "scope": "parent",
-      "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
-        "w": 85.022026,
+        "w": 53.551762,
         "h": 100
       },
-      "source_ref": {
-        "adapter": "web-react-source",
-        "document": "src/features/schedules/components/ScheduleEditor.tsx",
-        "locator": "text:색상 방식",
-        "style_documents": [
-          "src/styles.css"
-        ]
-      }
-    },
-    {
-      "id": "color-mode-select",
-      "type": "select",
-      "name": "색상 방식 선택",
-      "text": "자동 · 단계별 색상",
-      "parent": "color-mode-field",
-      "scope": "parent",
-      "visible": true,
-      "rect": {
-        "x": 0,
-        "y": 38.686131,
-        "w": 100,
-        "h": 61.313869
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
       },
       "source_ref": {
         "adapter": "web-react-source",
         "document": "src/features/schedules/components/ScheduleEditor.tsx",
-        "locator": "text:draft.colorMode",
+        "locator": "text:editor-heading",
         "style_documents": [
           "src/styles.css"
         ]
       },
       "properties": {
-        "options": [
-          "자동 · 단계별 색상",
-          "직접 지정"
-        ],
-        "values": [
-          "auto",
-          "manual"
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "editor-heading"
+        }
+      }
+    },
+    {
+      "id": "restore-auto-color",
+      "type": "button",
+      "name": "자동 색상으로 복원",
+      "visible": true,
+      "parent": "color-field",
+      "scope": "parent",
+      "rect": {
+        "x": 26.810715,
+        "y": 11.71875,
+        "w": 73.189285,
+        "h": 76.5625
+      },
+      "style": {
+        "color": "rgb(51, 102, 221)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(51, 102, 221)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 11,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorControl.tsx",
+        "locator": "text:자동 색상으로 복원",
+        "style_documents": [
+          "src/styles.css"
         ]
       },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "restore-auto-color"
+        }
+      },
+      "text": "자동 색상으로 복원",
       "events": {
-        "on": "change",
-        "intent": "자동 또는 직접 지정 방식을 초안에 반영한다. 기존 모드 누락 일정은 직접 지정이다.",
+        "on": "click",
+        "intent": "현재 초안을 단계별 자동 색상으로 복원한다. 저장 전에는 일정 정본을 변경하지 않는다.",
         "bindings": {
           "modules": [
             "MOD-EventManagement"
@@ -1070,6 +1167,353 @@
           ],
           "requirements": [
             "FR-014"
+          ]
+        }
+      },
+      "states": {
+        "auto": {
+          "visible": false
+        },
+        "manual": {
+          "visible": true
+        }
+      }
+    },
+    {
+      "id": "checklist",
+      "type": "panel",
+      "name": "checklist",
+      "visible": true,
+      "parent": "editor-form",
+      "scope": "parent",
+      "rect": {
+        "x": 0,
+        "y": 40.047393,
+        "w": 100,
+        "h": 44.78673
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(226, 232, 240) rgb(23, 32, 51) rgb(23, 32, 51)",
+          "width": 1,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:schedule-checklist",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "checklist"
+        }
+      }
+    },
+    {
+      "id": "checklist-heading",
+      "type": "panel",
+      "name": "checklist-heading",
+      "visible": true,
+      "parent": "checklist",
+      "scope": "parent",
+      "rect": {
+        "x": 0,
+        "y": 7.936508,
+        "w": 100,
+        "h": 11.904762
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:checklist-heading",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "checklist-heading"
+        }
+      }
+    },
+    {
+      "id": "checklist-title",
+      "type": "heading",
+      "name": "체크리스트",
+      "visible": true,
+      "parent": "checklist-heading",
+      "scope": "parent",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 16.519824,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 15,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:checklist-title",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "checklist-title"
+        }
+      },
+      "text": "체크리스트"
+    },
+    {
+      "id": "checklist-count",
+      "type": "text",
+      "name": "1/2 완료",
+      "visible": true,
+      "parent": "checklist-heading",
+      "scope": "parent",
+      "rect": {
+        "x": 89.8231,
+        "y": 10,
+        "w": 10.1769,
+        "h": 80
+      },
+      "style": {
+        "color": "rgb(100, 116, 139)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(100, 116, 139)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:items.filter",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "checklist-count"
+        }
+      },
+      "text": "1/2 완료"
+    },
+    {
+      "id": "checklist-items",
+      "type": "list",
+      "name": "checklist-items",
+      "visible": true,
+      "parent": "checklist",
+      "scope": "parent",
+      "rect": {
+        "x": 0,
+        "y": 25.132275,
+        "w": 100,
+        "h": 50.793651
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:items.map",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "checklist-items"
+        },
+        "empty_state": "일정에 필요한 할 일을 추가하세요."
+      },
+      "repeat": {
+        "direction": "vertical",
+        "item_extent": 45.83333333333333,
+        "gap": 8.333333333333332,
+        "template_source_ref": {
+          "adapter": "web-react-source",
+          "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+          "locator": "text:items.map",
+          "style_documents": [
+            "src/styles.css"
+          ]
+        },
+        "fields": [
+          {
+            "key": "done",
+            "type": "input",
+            "rect": {
+              "x": 0,
+              "y": 29.545455,
+              "w": 3.964758,
+              "h": 40.909091
+            }
+          },
+          {
+            "key": "text",
+            "type": "input",
+            "rect": {
+              "x": 5.726872,
+              "y": 0,
+              "w": 85.462555,
+              "h": 100
+            }
+          },
+          {
+            "key": "remove",
+            "type": "button",
+            "rect": {
+              "x": 92.951542,
+              "y": 11.363636,
+              "w": 7.048458,
+              "h": 77.272727
+            }
+          }
+        ],
+        "sample_data": [
+          {
+            "done": true,
+            "text": "자료 준비",
+            "remove": "삭제"
+          },
+          {
+            "done": false,
+            "text": "결과 확인",
+            "remove": "삭제"
+          }
+        ]
+      },
+      "events": {
+        "on": "change/click/keydown",
+        "intent": "초안 항목의 텍스트·완료 상태를 변경하거나 선택 항목을 삭제한다. Enter는 새 항목을 추가하며 일정 저장을 실행하지 않는다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-005"
+          ],
+          "requirements": [
+            "FR-015"
+          ]
+        }
+      }
+    },
+    {
+      "id": "checklist-add",
+      "type": "button",
+      "name": "+ 항목 추가",
+      "visible": true,
+      "parent": "checklist",
+      "scope": "parent",
+      "rect": {
+        "x": 0,
+        "y": 81.216931,
+        "w": 20.319383,
+        "h": 18.783069
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:항목 추가",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "id": "checklist-add"
+        }
+      },
+      "text": "+ 항목 추가",
+      "events": {
+        "on": "click",
+        "intent": "빈 체크항목 초안을 추가하고 입력에 초점을 옮긴다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-005"
+          ],
+          "requirements": [
+            "FR-015"
           ]
         }
       }
@@ -1104,11 +1548,19 @@
     {
       "id": "automatic-color",
       "description": "새 일정은 자동 색상이 기본이다. 단계 색상을 순환하되 부모 표시색과 같은 후보는 건너뛴다. 직접 지정과 기존 모드 누락 일정의 색상은 보존한다."
+    },
+    {
+      "id": "checklist-draft",
+      "description": "목록을 복제해 편집하며 저장하면 반영하고 취소·닫기·Escape는 초안 전체를 버린다. 체크리스트는 일정 계층/기간과 독립적이다."
+    },
+    {
+      "id": "color-picker-cancel",
+      "description": "색상 선택창 Escape는 해당 선택창만 닫아 편집 초안을 보존한다. 선택창이 닫힌 뒤 Escape는 일정 편집 전체를 취소한다."
     }
   ],
   "verification": {
     "schema": "valid",
-    "source_alignment": "measured-desktop-dom; ColorPresets/editor-geometry.json",
+    "source_alignment": "measured-desktop-dom; EditorChecklist/editor-geometry.json",
     "render_fidelity": "unverified",
     "complete": false
   },

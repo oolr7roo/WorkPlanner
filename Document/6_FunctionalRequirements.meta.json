@@ -40,14 +40,15 @@
     "NFR-004",
     "NFR-005",
     "FR-013",
-    "FR-014"
+    "FR-014",
+    "FR-015"
   ],
   "related_documents": [],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T07:46:51.244Z",
-    "mtime_ns": 1792655211244138100,
-    "byte_size": 4919,
-    "sha256": "130230432886103e2af93ee1532ce69b6ef0ee37768a495f24fabc0f77ac901a"
+    "modified_at_utc": "2026-10-22T23:55:29.300Z",
+    "mtime_ns": 1792713329300697500,
+    "byte_size": 5557,
+    "sha256": "7684b8b2172f04906b75fb61bbfade08a13b30fbbce23d41338abf9ec0740db0"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.690Z"
+  "metadata_refreshed_at_utc": "2026-10-22T23:56:05.804Z"
 }

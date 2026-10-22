@@ -7,6 +7,7 @@
 | DATA-001 | 일정 집합 | 현재 관리하는 일정들 | EventManagement / BrowserEventStore | App UI, Calendar | SCR-001~003.json#calendar, SCR-004·005 트리 | API-001, API-003 | Review |
 | DATA-002 | 일정 초안 | 제목·시작·종료·색상 입력 | App UI | EventManagement | MOD-001.json#editor-form | API-003 | Review |
 | DATA-003 | UI 편집·오류 상태 | editingId, editorOpen, formError, storageError | App UI / BrowserEventStore | App UI | MOD-001.json#editor, COMMON-003.json#storage-error | API-001 | Review |
+| DATA-005 | 일정 체크리스트 | 항목 id·text·done 목록 | EventManagement / BrowserEventStore | 편집 UI | MOD-001#checklist | API-001 | Review |
 
 상세 일정 형식은 [DATA-001](11_data_spec/DATA-001_Events.md)에 정의한다. DATA-002는 title/start/end/color의 문자열 초안이며 DATA-001의 저장 형식과 같은 정본으로 취급하지 않는다. DATA-003의 편집 초안은 메모리 상태이다. 접힘 id 집합은 별도 키 workplan-calendar-collapsed-v1로 저장하며 선택·보기·기준 날짜는 메모리 상태이다.
 
@@ -43,3 +44,8 @@ flowchart LR
 
 
 상세 형식·기본값·보존·오류 경계는 [DATA-004](11_data_spec/DATA-004_ColorSettings.md)를 참조한다.
+
+
+## DATA-005 일정 체크리스트
+
+FR-015의 checklist는 DATA-001 일정 및 DATA-002 초안의 선택적 배열이며 부재는 빈 목록이다. 항목은 고유 id·text·done을 가지며 배열 순서를 유지한다. UI는 편집용 깊은 복사만 변경하고 저장할 때 정규화·검증한다. API-001을 사용하며 별도 키나 서버를 추가하지 않는다. 상세: [DATA-005](11_data_spec/DATA-005_Checklist.md).

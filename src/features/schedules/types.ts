@@ -1,8 +1,9 @@
 import type { CalendarEvent } from "trud-calendar-core";
 
 export type ColorMode = "auto" | "manual";
-export type Schedule = CalendarEvent & { parentId: string | null; order: number; colorMode?: ColorMode };
-export type ScheduleDraft = Pick<Schedule, "title" | "start" | "end"> & { color: string; colorMode?: ColorMode };
+export type ChecklistItem = { id: string; text: string; done: boolean };
+export type Schedule = CalendarEvent & { parentId: string | null; order: number; colorMode?: ColorMode; checklist?: ChecklistItem[] };
+export type ScheduleDraft = Pick<Schedule, "title" | "start" | "end"> & { color: string; colorMode?: ColorMode; checklist?: ChecklistItem[] };
 export type ColorPreset = { id: string; name: string; colors: string[] };
 export type ColorSettings = { version: 1; activePresetId: string; presets: ColorPreset[] };
 export type AppView = "priority" | "gantt" | "month" | "week" | "day";

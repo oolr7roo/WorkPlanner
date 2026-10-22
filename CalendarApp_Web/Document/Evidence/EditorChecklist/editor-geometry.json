@@ -1,0 +1,542 @@
+{
+  "cancel": {
+    "rect": {
+      "h": 44,
+      "w": 66,
+      "x": 809,
+      "y": 693
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "취소"
+  },
+  "checklist": {
+    "rect": {
+      "h": 189,
+      "w": 454,
+      "x": 493,
+      "y": 484
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(226, 232, 240) rgb(23, 32, 51) rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "1px 0px 0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "체크리스트1/2 완료삭제삭제+ 항목 추가"
+  },
+  "checklist-add": {
+    "rect": {
+      "h": 35.5,
+      "w": 92.25,
+      "x": 493,
+      "y": 637.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "400"
+    },
+    "text": "+ 항목 추가"
+  },
+  "checklist-count": {
+    "rect": {
+      "h": 18,
+      "w": 46.203125,
+      "x": 900.796875,
+      "y": 501.25
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "12px",
+      "fontWeight": "400"
+    },
+    "text": "1/2 완료"
+  },
+  "checklist-done": {
+    "rect": {
+      "h": 18,
+      "w": 18,
+      "x": 493,
+      "y": 544.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": ""
+  },
+  "checklist-heading": {
+    "rect": {
+      "h": 22.5,
+      "w": 454,
+      "x": 493,
+      "y": 499
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "체크리스트1/2 완료"
+  },
+  "checklist-items": {
+    "rect": {
+      "h": 96,
+      "w": 454,
+      "x": 493,
+      "y": 531.5
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "삭제삭제"
+  },
+  "checklist-remove": {
+    "rect": {
+      "h": 34,
+      "w": 32,
+      "x": 915,
+      "y": 536.5
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(180, 35, 52)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(180, 35, 52)",
+      "fontSize": "12px",
+      "fontWeight": "400"
+    },
+    "text": "삭제"
+  },
+  "checklist-template": {
+    "rect": {
+      "h": 44,
+      "w": 454,
+      "x": 493,
+      "y": 531.5
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "삭제"
+  },
+  "checklist-text": {
+    "rect": {
+      "h": 44,
+      "w": 388,
+      "x": 519,
+      "y": 531.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": ""
+  },
+  "checklist-title": {
+    "rect": {
+      "h": 22.5,
+      "w": 75,
+      "x": 493,
+      "y": 499
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "15px",
+      "fontWeight": "400"
+    },
+    "text": "체크리스트"
+  },
+  "close": {
+    "rect": {
+      "h": 28,
+      "w": 19.625,
+      "x": 927.375,
+      "y": 265
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(107, 114, 128)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(107, 114, 128)",
+      "fontSize": "28px",
+      "fontWeight": "400"
+    },
+    "text": "×"
+  },
+  "color-field": {
+    "rect": {
+      "h": 32,
+      "w": 141.734375,
+      "x": 493,
+      "y": 263
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "자동 색상으로 복원"
+  },
+  "color-field-input": {
+    "rect": {
+      "h": 32,
+      "w": 32,
+      "x": 493,
+      "y": 263
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "50%",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": ""
+  },
+  "delete": {
+    "rect": {
+      "h": 44,
+      "w": 64,
+      "x": 493,
+      "y": 693
+    },
+    "style": {
+      "background_color": "rgb(255, 240, 241)",
+      "borderColor": "rgb(180, 35, 52)",
+      "borderRadius": "8px",
+      "borderWidth": "0px",
+      "color": "rgb(180, 35, 52)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "삭제"
+  },
+  "editor": {
+    "rect": {
+      "h": 520,
+      "w": 500,
+      "x": 470,
+      "y": 240
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "16px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "자동 색상으로 복원일정 수정×제목시작종료체크리스트1/2 완료삭제삭제+ 항목 추가삭제취소저장"
+  },
+  "editor-actions": {
+    "rect": {
+      "h": 44,
+      "w": 454,
+      "x": 493,
+      "y": 693
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "삭제취소저장"
+  },
+  "editor-form": {
+    "rect": {
+      "h": 422,
+      "w": 454,
+      "x": 493,
+      "y": 315
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "제목시작종료체크리스트1/2 완료삭제삭제+ 항목 추가삭제취소저장"
+  },
+  "editor-header": {
+    "rect": {
+      "h": 32,
+      "w": 454,
+      "x": 493,
+      "y": 263
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "자동 색상으로 복원일정 수정×"
+  },
+  "editor-heading": {
+    "rect": {
+      "h": 32,
+      "w": 243.125,
+      "x": 493,
+      "y": 263
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "자동 색상으로 복원일정 수정"
+  },
+  "editor-title": {
+    "rect": {
+      "h": 31.5,
+      "w": 91.390625,
+      "x": 644.734375,
+      "y": 263.25
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "21px",
+      "fontWeight": "400"
+    },
+    "text": "일정 수정"
+  },
+  "end-field": {
+    "rect": {
+      "h": 68.5,
+      "w": 221,
+      "x": 726,
+      "y": 399.5
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": "종료"
+  },
+  "end-field-input": {
+    "rect": {
+      "h": 42,
+      "w": 221,
+      "x": 726,
+      "y": 426
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": ""
+  },
+  "restore-auto-color": {
+    "rect": {
+      "h": 24.5,
+      "w": 103.734375,
+      "x": 531,
+      "y": 266.75
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 102, 221)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 102, 221)",
+      "fontSize": "11px",
+      "fontWeight": "400"
+    },
+    "text": "자동 색상으로 복원"
+  },
+  "save": {
+    "rect": {
+      "h": 44,
+      "w": 64,
+      "x": 883,
+      "y": 693
+    },
+    "style": {
+      "background_color": "rgb(51, 102, 221)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "8px",
+      "borderWidth": "0px",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "700"
+    },
+    "text": "저장"
+  },
+  "start-field": {
+    "rect": {
+      "h": 68.5,
+      "w": 221,
+      "x": 493,
+      "y": 399.5
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": "시작"
+  },
+  "start-field-input": {
+    "rect": {
+      "h": 42,
+      "w": 221,
+      "x": 493,
+      "y": 426
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": ""
+  },
+  "time-fields": {
+    "rect": {
+      "h": 68.5,
+      "w": 454,
+      "x": 493,
+      "y": 399.5
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "시작종료"
+  },
+  "title-field": {
+    "rect": {
+      "h": 68.5,
+      "w": 454,
+      "x": 493,
+      "y": 315
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": "제목"
+  },
+  "title-field-input": {
+    "rect": {
+      "h": 42,
+      "w": 454,
+      "x": 493,
+      "y": 341.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": ""
+  }
+}

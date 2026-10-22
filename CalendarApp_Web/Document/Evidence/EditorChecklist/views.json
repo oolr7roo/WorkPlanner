@@ -1,0 +1,32 @@
+[
+  {
+    "view": "간트차트 보기",
+    "parent": true,
+    "child": true,
+    "manual": true
+  },
+  {
+    "view": "월 보기",
+    "parent": true,
+    "child": true,
+    "manual": true
+  },
+  {
+    "view": "주 보기",
+    "parent": true,
+    "child": true,
+    "manual": true
+  },
+  {
+    "view": "일 보기",
+    "parent": true,
+    "child": true,
+    "manual": true
+  },
+  {
+    "view": "우선순위 보기",
+    "parent": true,
+    "child": true,
+    "manual": true
+  }
+]
