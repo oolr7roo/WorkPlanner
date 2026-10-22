@@ -1,0 +1,15 @@
+{
+  "baseline": [
+    {
+      "code": 2339,
+      "message": "Property 'url' does not exist on type 'IncomingMessage'."
+    }
+  ],
+  "current": [
+    {
+      "code": 2339,
+      "message": "Property 'url' does not exist on type 'IncomingMessage'."
+    }
+  ],
+  "note": "Vite config is outside project tsconfig include; baseline and changed config diagnostics compared in memory without modifying files."
+}

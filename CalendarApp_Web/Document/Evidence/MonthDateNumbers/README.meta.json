@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-Evidence-MonthDateNumbers-README",
+  "document_number": 17,
+  "document_type": "validation-evidence",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/Evidence/MonthDateNumbers/README.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-001-TASK-001",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-001",
+    "FR-002"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-001-TASK-001"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-22T08:08:16.157Z",
+    "mtime_ns": 1792656496157927200,
+    "byte_size": 2640,
+    "sha256": "9d1a34a9dfcfc3434926dd3c9bf25e36bcf8ac7c6bcb247d2e7450989af111f5"
+  },
+  "metadata_refreshed_at_utc": "2026-10-22T08:08:16.189Z"
+}

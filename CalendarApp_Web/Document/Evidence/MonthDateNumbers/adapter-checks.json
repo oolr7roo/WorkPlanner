@@ -1,0 +1,33 @@
+{
+  "sdk_version": "1.0.1",
+  "cases": [
+    {
+      "name": "exactly one month label replaced",
+      "status": "passed"
+    },
+    {
+      "name": "week and resource date labels unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "all other SDK source unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "missing MonthView rejected",
+      "status": "passed"
+    },
+    {
+      "name": "changed label rejected",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate month labels rejected",
+      "status": "passed"
+    },
+    {
+      "name": "other packages excluded",
+      "status": "passed"
+    }
+  ]
+}

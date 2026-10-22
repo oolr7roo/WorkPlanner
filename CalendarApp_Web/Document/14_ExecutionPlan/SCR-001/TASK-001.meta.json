@@ -35,10 +35,10 @@
     "DOC-Document-17_ValidationReport"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T07:46:51.259Z",
-    "mtime_ns": 1792655211259970300,
-    "byte_size": 4135,
-    "sha256": "615debb49828efa73df85e33f0fde49d5eed9f965ba59b7d46a8ea7116048e3f"
+    "modified_at_utc": "2026-10-22T08:08:16.155Z",
+    "mtime_ns": 1792656496155736000,
+    "byte_size": 6603,
+    "sha256": "4c44f080dbd1c1c7bc1614bf1954b70ad6c8b7fefb3dce805bd5ad8883115871"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.706Z"
+  "metadata_refreshed_at_utc": "2026-10-22T08:08:16.183Z"
 }

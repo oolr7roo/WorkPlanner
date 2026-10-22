@@ -1,12 +1,19 @@
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
+import { calendarMonthLabels } from "./build/calendarMonthLabels";
 
 export default defineConfig({
+  // Keep the SDK visible to the compatibility transform in dev and production.
+  optimizeDeps: {
+    exclude: ["trud-calendar"],
+    include: ["react", "react-dom/client", "react/jsx-runtime", "react/jsx-dev-runtime", "@floating-ui/react"],
+  },
   server: {
     allowedHosts: ["home-macmini.tail7073a2.ts.net"],
     watch: { ignored: ["**/postgresql/**"] },
   },
   plugins: [
+    calendarMonthLabels(),
     tailwindcss(),
     {
       name: "block-postgresql-directory",

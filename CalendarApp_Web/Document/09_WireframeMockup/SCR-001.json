@@ -18,7 +18,10 @@
       "src/App.tsx",
       "src/styles.css",
       "node_modules/trud-calendar/dist/index.js",
-      "Document/Evidence/ViewSplit/runtime.json"
+      "Document/Evidence/ViewSplit/runtime.json",
+      "src/features/schedules/components/MonthDayNumber.tsx",
+      "build/calendarMonthLabels.ts",
+      "Document/Evidence/MonthDateNumbers/label-geometry.json"
     ],
     "unverified": [
       "모든 단말·공용 뷰어 시각 검증은 미완료이다."
@@ -47,10 +50,10 @@
       "name": "app-shell",
       "visible": true,
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
-        "w": 100.0,
-        "h": 100.0
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -90,7 +93,7 @@
         "x": 1.666667,
         "y": 10.7,
         "w": 96.666667,
-        "h": 80.0
+        "h": 80
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -219,9 +222,9 @@
       "parent": "calendar",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
-        "w": 100.0,
+        "x": 0,
+        "y": 0,
+        "w": 100,
         "h": 4.477612
       },
       "style": {
@@ -263,8 +266,8 @@
       "parent": "month-container-001",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "w": 14.285072,
         "h": 96.969697
       },
@@ -309,7 +312,7 @@
       "scope": "parent",
       "rect": {
         "x": 14.285072,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 96.969697
       },
@@ -354,7 +357,7 @@
       "scope": "parent",
       "rect": {
         "x": 28.571268,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 96.969697
       },
@@ -399,7 +402,7 @@
       "scope": "parent",
       "rect": {
         "x": 42.85634,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 96.969697
       },
@@ -444,7 +447,7 @@
       "scope": "parent",
       "rect": {
         "x": 57.142536,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 96.969697
       },
@@ -489,7 +492,7 @@
       "scope": "parent",
       "rect": {
         "x": 71.427608,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 96.969697
       },
@@ -534,7 +537,7 @@
       "scope": "parent",
       "rect": {
         "x": 85.713804,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 96.969697
       },
@@ -578,9 +581,9 @@
       "parent": "calendar",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 4.477612,
-        "w": 100.0,
+        "w": 100,
         "h": 95.522388
       },
       "style": {
@@ -622,9 +625,9 @@
       "parent": "month-date-grid-001",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
-        "w": 100.0,
+        "x": 0,
+        "y": 0,
+        "w": 100,
         "h": 16.690341
       },
       "style": {
@@ -666,8 +669,8 @@
       "parent": "month-week-row-001",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -776,9 +779,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -794,24 +797,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 34
+          "date": "2026-09-27"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 9월 27일",
+        "date": "2026-09-27",
+        "aria_current": null
       },
-      "text": "27일"
+      "text": "27"
     },
     {
       "id": "month-date-cell-002",
@@ -821,7 +827,7 @@
       "scope": "parent",
       "rect": {
         "x": 14.285072,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -930,9 +936,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -948,24 +954,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 38
+          "date": "2026-09-28"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 9월 28일",
+        "date": "2026-09-28",
+        "aria_current": null
       },
-      "text": "28일"
+      "text": "28"
     },
     {
       "id": "month-date-cell-003",
@@ -975,7 +984,7 @@
       "scope": "parent",
       "rect": {
         "x": 28.571268,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -1084,9 +1093,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -1102,24 +1111,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 42
+          "date": "2026-09-29"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 9월 29일",
+        "date": "2026-09-29",
+        "aria_current": null
       },
-      "text": "29일"
+      "text": "29"
     },
     {
       "id": "month-date-cell-004",
@@ -1129,7 +1141,7 @@
       "scope": "parent",
       "rect": {
         "x": 42.85634,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -1238,9 +1250,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -1256,24 +1268,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 46
+          "date": "2026-09-30"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 9월 30일",
+        "date": "2026-09-30",
+        "aria_current": null
       },
-      "text": "30일"
+      "text": "30"
     },
     {
       "id": "month-date-cell-005",
@@ -1283,7 +1298,7 @@
       "scope": "parent",
       "rect": {
         "x": 57.142536,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -1392,9 +1407,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -1410,24 +1425,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 50
+          "date": "2026-10-01"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 1일",
+        "date": "2026-10-01",
+        "aria_current": null
       },
-      "text": "1일"
+      "text": "1"
     },
     {
       "id": "month-date-cell-006",
@@ -1437,7 +1455,7 @@
       "scope": "parent",
       "rect": {
         "x": 71.427608,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -1546,9 +1564,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -1564,24 +1582,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 54
+          "date": "2026-10-02"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 2일",
+        "date": "2026-10-02",
+        "aria_current": null
       },
-      "text": "2일"
+      "text": "2"
     },
     {
       "id": "month-date-cell-007",
@@ -1591,7 +1612,7 @@
       "scope": "parent",
       "rect": {
         "x": 85.713804,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -1700,9 +1721,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.653329,
-        "y": 0.0,
+        "y": 0,
         "w": 14.693342,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -1718,24 +1739,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 58
+          "date": "2026-10-03"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 3일",
+        "date": "2026-10-03",
+        "aria_current": null
       },
-      "text": "3일"
+      "text": "3"
     },
     {
       "id": "month-week-row-002",
@@ -1744,9 +1768,9 @@
       "parent": "month-date-grid-001",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 16.690341,
-        "w": 100.0,
+        "w": 100,
         "h": 16.690341
       },
       "style": {
@@ -1788,8 +1812,8 @@
       "parent": "month-week-row-002",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -1898,9 +1922,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -1916,24 +1940,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 63
+          "date": "2026-10-04"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 4일",
+        "date": "2026-10-04",
+        "aria_current": null
       },
-      "text": "4일"
+      "text": "4"
     },
     {
       "id": "month-date-cell-009",
@@ -1943,7 +1970,7 @@
       "scope": "parent",
       "rect": {
         "x": 14.285072,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -2052,42 +2079,45 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
-        "color": "rgb(29, 78, 216)",
-        "background_color": "rgb(219, 234, 254)",
+        "color": "rgb(10, 10, 10)",
+        "background_color": "rgba(0, 0, 0, 0)",
         "border": {
-          "color": "rgb(29, 78, 216)",
+          "color": "rgb(10, 10, 10)",
           "width": 0,
           "radius": 33554400
         },
         "typography": {
           "size": 14,
-          "weight": "700"
+          "weight": "400"
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 67
+          "date": "2026-10-05"
         },
-        "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full bg-[var(--trc-today-bg)] text-[var(--trc-today-text)] font-bold",
-        "sample_geometry": true
+        "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 5일",
+        "date": "2026-10-05",
+        "aria_current": null
       },
-      "text": "5일"
+      "text": "5"
     },
     {
       "id": "month-container-011",
@@ -2140,9 +2170,9 @@
       "parent": "month-container-011",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
-        "w": 100.0,
+        "x": 0,
+        "y": 0,
+        "w": 100,
         "h": 48.275862
       },
       "style": {
@@ -2184,10 +2214,10 @@
       "parent": "month-container-012",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
-        "w": 100.0,
-        "h": 100.0
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -2250,9 +2280,9 @@
       "parent": "month-container-011",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 51.724138,
-        "w": 100.0,
+        "w": 100,
         "h": 48.275862
       },
       "style": {
@@ -2294,10 +2324,10 @@
       "parent": "month-container-013",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
-        "w": 100.0,
-        "h": 100.0
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -2361,7 +2391,7 @@
       "scope": "parent",
       "rect": {
         "x": 28.571268,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -2470,9 +2500,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -2488,24 +2518,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 77
+          "date": "2026-10-06"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 6일",
+        "date": "2026-10-06",
+        "aria_current": null
       },
-      "text": "6일"
+      "text": "6"
     },
     {
       "id": "month-date-cell-011",
@@ -2515,7 +2548,7 @@
       "scope": "parent",
       "rect": {
         "x": 42.85634,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -2624,9 +2657,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -2642,24 +2675,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 81
+          "date": "2026-10-07"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 7일",
+        "date": "2026-10-07",
+        "aria_current": null
       },
-      "text": "7일"
+      "text": "7"
     },
     {
       "id": "month-date-cell-012",
@@ -2669,7 +2705,7 @@
       "scope": "parent",
       "rect": {
         "x": 57.142536,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -2778,9 +2814,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -2796,24 +2832,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 85
+          "date": "2026-10-08"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 8일",
+        "date": "2026-10-08",
+        "aria_current": null
       },
-      "text": "8일"
+      "text": "8"
     },
     {
       "id": "month-date-cell-013",
@@ -2823,7 +2862,7 @@
       "scope": "parent",
       "rect": {
         "x": 71.427608,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -2932,9 +2971,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -2950,24 +2989,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 89
+          "date": "2026-10-09"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 9일",
+        "date": "2026-10-09",
+        "aria_current": null
       },
-      "text": "9일"
+      "text": "9"
     },
     {
       "id": "month-date-cell-014",
@@ -2977,7 +3019,7 @@
       "scope": "parent",
       "rect": {
         "x": 85.713804,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -3086,9 +3128,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.653329,
-        "y": 0.0,
+        "y": 0,
         "w": 14.693342,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -3104,24 +3146,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 93
+          "date": "2026-10-10"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 10일",
+        "date": "2026-10-10",
+        "aria_current": null
       },
-      "text": "10일"
+      "text": "10"
     },
     {
       "id": "month-week-row-003",
@@ -3130,9 +3175,9 @@
       "parent": "month-date-grid-001",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 33.380682,
-        "w": 100.0,
+        "w": 100,
         "h": 16.690341
       },
       "style": {
@@ -3174,8 +3219,8 @@
       "parent": "month-week-row-003",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -3284,9 +3329,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -3302,24 +3347,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 98
+          "date": "2026-10-11"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 11일",
+        "date": "2026-10-11",
+        "aria_current": null
       },
-      "text": "11일"
+      "text": "11"
     },
     {
       "id": "month-date-cell-016",
@@ -3329,7 +3377,7 @@
       "scope": "parent",
       "rect": {
         "x": 14.285072,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -3438,9 +3486,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -3456,24 +3504,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 102
+          "date": "2026-10-12"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 12일",
+        "date": "2026-10-12",
+        "aria_current": null
       },
-      "text": "12일"
+      "text": "12"
     },
     {
       "id": "month-date-cell-017",
@@ -3483,7 +3534,7 @@
       "scope": "parent",
       "rect": {
         "x": 28.571268,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -3592,9 +3643,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -3610,24 +3661,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 106
+          "date": "2026-10-13"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 13일",
+        "date": "2026-10-13",
+        "aria_current": null
       },
-      "text": "13일"
+      "text": "13"
     },
     {
       "id": "month-date-cell-018",
@@ -3637,7 +3691,7 @@
       "scope": "parent",
       "rect": {
         "x": 42.85634,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -3746,9 +3800,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -3764,24 +3818,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 110
+          "date": "2026-10-14"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 14일",
+        "date": "2026-10-14",
+        "aria_current": null
       },
-      "text": "14일"
+      "text": "14"
     },
     {
       "id": "month-date-cell-019",
@@ -3791,7 +3848,7 @@
       "scope": "parent",
       "rect": {
         "x": 57.142536,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -3900,9 +3957,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -3918,24 +3975,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 114
+          "date": "2026-10-15"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 15일",
+        "date": "2026-10-15",
+        "aria_current": null
       },
-      "text": "15일"
+      "text": "15"
     },
     {
       "id": "month-date-cell-020",
@@ -3945,7 +4005,7 @@
       "scope": "parent",
       "rect": {
         "x": 71.427608,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -4054,9 +4114,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -4072,24 +4132,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 118
+          "date": "2026-10-16"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 16일",
+        "date": "2026-10-16",
+        "aria_current": null
       },
-      "text": "16일"
+      "text": "16"
     },
     {
       "id": "month-date-cell-021",
@@ -4099,7 +4162,7 @@
       "scope": "parent",
       "rect": {
         "x": 85.713804,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -4208,9 +4271,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.653329,
-        "y": 0.0,
+        "y": 0,
         "w": 14.693342,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -4226,24 +4289,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 122
+          "date": "2026-10-17"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 17일",
+        "date": "2026-10-17",
+        "aria_current": null
       },
-      "text": "17일"
+      "text": "17"
     },
     {
       "id": "month-week-row-004",
@@ -4252,9 +4318,9 @@
       "parent": "month-date-grid-001",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 50.071023,
-        "w": 100.0,
+        "w": 100,
         "h": 16.690341
       },
       "style": {
@@ -4296,8 +4362,8 @@
       "parent": "month-week-row-004",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -4406,9 +4472,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -4424,24 +4490,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 127
+          "date": "2026-10-18"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 18일",
+        "date": "2026-10-18",
+        "aria_current": null
       },
-      "text": "18일"
+      "text": "18"
     },
     {
       "id": "month-date-cell-023",
@@ -4451,7 +4520,7 @@
       "scope": "parent",
       "rect": {
         "x": 14.285072,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -4560,9 +4629,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -4578,24 +4647,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 131
+          "date": "2026-10-19"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 19일",
+        "date": "2026-10-19",
+        "aria_current": null
       },
-      "text": "19일"
+      "text": "19"
     },
     {
       "id": "month-date-cell-024",
@@ -4605,7 +4677,7 @@
       "scope": "parent",
       "rect": {
         "x": 28.571268,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -4714,9 +4786,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -4732,24 +4804,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 135
+          "date": "2026-10-20"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 20일",
+        "date": "2026-10-20",
+        "aria_current": null
       },
-      "text": "20일"
+      "text": "20"
     },
     {
       "id": "month-date-cell-025",
@@ -4759,7 +4834,7 @@
       "scope": "parent",
       "rect": {
         "x": 42.85634,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -4868,9 +4943,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -4886,24 +4961,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 139
+          "date": "2026-10-21"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 21일",
+        "date": "2026-10-21",
+        "aria_current": null
       },
-      "text": "21일"
+      "text": "21"
     },
     {
       "id": "month-date-cell-026",
@@ -4913,7 +4991,7 @@
       "scope": "parent",
       "rect": {
         "x": 57.142536,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -5022,42 +5100,45 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
-        "color": "rgb(10, 10, 10)",
-        "background_color": "rgba(0, 0, 0, 0)",
+        "color": "rgb(29, 78, 216)",
+        "background_color": "rgb(219, 234, 254)",
         "border": {
-          "color": "rgb(10, 10, 10)",
+          "color": "rgb(29, 78, 216)",
           "width": 0,
           "radius": 33554400
         },
         "typography": {
           "size": 14,
-          "weight": "400"
+          "weight": "700"
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 143
+          "date": "2026-10-22"
         },
-        "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full bg-[var(--trc-today-bg)] text-[var(--trc-today-text)] font-bold",
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 22일",
+        "date": "2026-10-22",
+        "aria_current": "date"
       },
-      "text": "22일"
+      "text": "22"
     },
     {
       "id": "month-date-cell-027",
@@ -5067,7 +5148,7 @@
       "scope": "parent",
       "rect": {
         "x": 71.427608,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -5176,9 +5257,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -5194,24 +5275,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 147
+          "date": "2026-10-23"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 23일",
+        "date": "2026-10-23",
+        "aria_current": null
       },
-      "text": "23일"
+      "text": "23"
     },
     {
       "id": "month-date-cell-028",
@@ -5221,7 +5305,7 @@
       "scope": "parent",
       "rect": {
         "x": 85.713804,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -5330,9 +5414,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.653329,
-        "y": 0.0,
+        "y": 0,
         "w": 14.693342,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -5348,24 +5432,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 151
+          "date": "2026-10-24"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 24일",
+        "date": "2026-10-24",
+        "aria_current": null
       },
-      "text": "24일"
+      "text": "24"
     },
     {
       "id": "month-week-row-005",
@@ -5374,9 +5461,9 @@
       "parent": "month-date-grid-001",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 66.761364,
-        "w": 100.0,
+        "w": 100,
         "h": 16.690341
       },
       "style": {
@@ -5418,8 +5505,8 @@
       "parent": "month-week-row-005",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -5528,9 +5615,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -5546,24 +5633,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 156
+          "date": "2026-10-25"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 25일",
+        "date": "2026-10-25",
+        "aria_current": null
       },
-      "text": "25일"
+      "text": "25"
     },
     {
       "id": "month-date-cell-030",
@@ -5573,7 +5663,7 @@
       "scope": "parent",
       "rect": {
         "x": 14.285072,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -5682,9 +5772,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -5700,24 +5790,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 160
+          "date": "2026-10-26"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 26일",
+        "date": "2026-10-26",
+        "aria_current": null
       },
-      "text": "26일"
+      "text": "26"
     },
     {
       "id": "month-date-cell-031",
@@ -5727,7 +5820,7 @@
       "scope": "parent",
       "rect": {
         "x": 28.571268,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -5836,9 +5929,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -5854,24 +5947,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 164
+          "date": "2026-10-27"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 27일",
+        "date": "2026-10-27",
+        "aria_current": null
       },
-      "text": "27일"
+      "text": "27"
     },
     {
       "id": "month-date-cell-032",
@@ -5881,7 +5977,7 @@
       "scope": "parent",
       "rect": {
         "x": 42.85634,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -5990,9 +6086,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6008,24 +6104,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 168
+          "date": "2026-10-28"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 28일",
+        "date": "2026-10-28",
+        "aria_current": null
       },
-      "text": "28일"
+      "text": "28"
     },
     {
       "id": "month-date-cell-033",
@@ -6035,7 +6134,7 @@
       "scope": "parent",
       "rect": {
         "x": 57.142536,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -6144,9 +6243,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6162,24 +6261,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 172
+          "date": "2026-10-29"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 29일",
+        "date": "2026-10-29",
+        "aria_current": null
       },
-      "text": "29일"
+      "text": "29"
     },
     {
       "id": "month-date-cell-034",
@@ -6189,7 +6291,7 @@
       "scope": "parent",
       "rect": {
         "x": 71.427608,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
         "h": 99.148936
       },
@@ -6298,9 +6400,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6316,24 +6418,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 176
+          "date": "2026-10-30"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 30일",
+        "date": "2026-10-30",
+        "aria_current": null
       },
-      "text": "30일"
+      "text": "30"
     },
     {
       "id": "month-date-cell-035",
@@ -6343,7 +6448,7 @@
       "scope": "parent",
       "rect": {
         "x": 85.713804,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
         "h": 99.148936
       },
@@ -6452,9 +6557,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.653329,
-        "y": 0.0,
+        "y": 0,
         "w": 14.693342,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6470,24 +6575,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 180
+          "date": "2026-10-31"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 10월 31일",
+        "date": "2026-10-31",
+        "aria_current": null
       },
-      "text": "31일"
+      "text": "31"
     },
     {
       "id": "month-week-row-006",
@@ -6496,9 +6604,9 @@
       "parent": "month-date-grid-001",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
+        "x": 0,
         "y": 83.451705,
-        "w": 100.0,
+        "w": 100,
         "h": 16.548295
       },
       "style": {
@@ -6540,10 +6648,10 @@
       "parent": "month-week-row-006",
       "scope": "parent",
       "rect": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "w": 14.285072,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6650,9 +6758,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6668,24 +6776,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 185
+          "date": "2026-11-01"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 11월 1일",
+        "date": "2026-11-01",
+        "aria_current": null
       },
-      "text": "1일"
+      "text": "1"
     },
     {
       "id": "month-date-cell-037",
@@ -6695,9 +6806,9 @@
       "scope": "parent",
       "rect": {
         "x": 14.285072,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6804,9 +6915,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6822,24 +6933,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 189
+          "date": "2026-11-02"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 11월 2일",
+        "date": "2026-11-02",
+        "aria_current": null
       },
-      "text": "2일"
+      "text": "2"
     },
     {
       "id": "month-date-cell-038",
@@ -6849,9 +6963,9 @@
       "scope": "parent",
       "rect": {
         "x": 28.571268,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6958,9 +7072,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -6976,24 +7090,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 193
+          "date": "2026-11-03"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 11월 3일",
+        "date": "2026-11-03",
+        "aria_current": null
       },
-      "text": "3일"
+      "text": "3"
     },
     {
       "id": "month-date-cell-039",
@@ -7003,9 +7120,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.85634,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -7112,9 +7229,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -7130,24 +7247,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 197
+          "date": "2026-11-04"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 11월 4일",
+        "date": "2026-11-04",
+        "aria_current": null
       },
-      "text": "4일"
+      "text": "4"
     },
     {
       "id": "month-date-cell-040",
@@ -7157,9 +7277,9 @@
       "scope": "parent",
       "rect": {
         "x": 57.142536,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -7266,9 +7386,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.614573,
-        "y": 0.0,
+        "y": 0,
         "w": 14.770854,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -7284,24 +7404,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 201
+          "date": "2026-11-05"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 11월 5일",
+        "date": "2026-11-05",
+        "aria_current": null
       },
-      "text": "5일"
+      "text": "5"
     },
     {
       "id": "month-date-cell-041",
@@ -7311,9 +7434,9 @@
       "scope": "parent",
       "rect": {
         "x": 71.427608,
-        "y": 0.0,
+        "y": 0,
         "w": 14.286196,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -7420,9 +7543,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.611061,
-        "y": 0.0,
+        "y": 0,
         "w": 14.769637,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -7438,24 +7561,27 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 205
+          "date": "2026-11-06"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 11월 6일",
+        "date": "2026-11-06",
+        "aria_current": null
       },
-      "text": "6일"
+      "text": "6"
     },
     {
       "id": "month-date-cell-042",
@@ -7465,9 +7591,9 @@
       "scope": "parent",
       "rect": {
         "x": 85.713804,
-        "y": 0.0,
+        "y": 0,
         "w": 14.285072,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -7574,9 +7700,9 @@
       "scope": "parent",
       "rect": {
         "x": 42.653329,
-        "y": 0.0,
+        "y": 0,
         "w": 14.693342,
-        "h": 100.0
+        "h": 100
       },
       "style": {
         "color": "rgb(10, 10, 10)",
@@ -7592,28 +7718,31 @@
         }
       },
       "source_ref": {
-        "adapter": "web-sdk-dom",
-        "document": "node_modules/trud-calendar/dist/index.js",
-        "locator": "type:MonthView",
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/MonthDayNumber.tsx",
+        "locator": "text:MonthDayNumber",
         "style_documents": [
-          "src/styles.css",
-          "node_modules/trud-calendar/dist/styles.css"
+          "node_modules/trud-calendar/dist/styles.css",
+          "src/styles.css"
         ]
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/MonthDateNumbers/label-geometry.json",
           "view": "month",
-          "dom_index": 209
+          "date": "2026-11-07"
         },
         "dom_classes": "text-xs @[640px]:text-sm w-5 h-5 @[640px]:w-7 @[640px]:h-7 flex items-center justify-center rounded-full text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "accessible_name": "2026년 11월 7일",
+        "date": "2026-11-07",
+        "aria_current": null
       },
-      "text": "7일"
+      "text": "7"
     }
   ],
   "verification": {
-    "schema": "pending",
+    "schema": "valid",
     "source_alignment": "existing-source-preserved; new design not implemented",
     "render_fidelity": "pending",
     "complete": false
@@ -7701,6 +7830,10 @@
     {
       "id": "responsive",
       "description": "모바일은 같은 component 정체성의 Runtime 캡처로 대조한다. SDK 열 수·크기는 반응형이며 데스크톱 좌표를 모바일에 적용하지 않는다."
+    },
+    {
+      "id": "month-numeric-date-labels",
+      "description": "월 보기 날짜 라벨은 숫자만 표시하며 접근성 이름은 전체 한국어 날짜다. 오늘 강조·다른 달 구분·셀 동작은 SDK가 소유한다."
     }
   ]
 }

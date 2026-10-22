@@ -38,3 +38,17 @@ App.tsx·styles.css·COMMON-001.json 헤더 버튼과 MOD-001.json의 색상 모
 
 
 2026-10-22 범위 검증: 정책·저장 경계 26건, 격리 브라우저의 프리셋 저장/취소/복원·다섯 보기·신규/하위·직접 색상 보존·자식 승격·모바일·날짜 보정 회귀 확인. [검증 근거](../../Evidence/ColorPresets/README.md). 저장 실패 UI 전체 경로와 공용 renderer 충실도는 미검증이며 Review를 유지한다.
+
+
+## 2026-10-22 월 날짜 숫자 표시
+
+사용자 승인 범위는 월 보기의 날짜 라벨 전체를 숫자로 표시하는 것이다. 오늘 강조·다른 달 구분·한국어 제목/요일·날짜 선택·일정 표시·키보드 탐색을 유지하며 접근성 이름은 전체 날짜를 제공한다.
+
+- 소유: 이 Task가 build/calendarMonthLabels.ts, vite.config.ts, src/features/schedules/components/MonthDayNumber.tsx, SCR-001.json의 month-label-* 및 관련 검증 근거를 담당한다. CalendarView는 SDK 연결을 유지하고 표시 정책·SDK 호환 어댑터를 직접 소유하지 않는다.
+- SDK dayCell은 셀 전체를 교체하므로 사용하지 않는다. 빌드 어댑터는 MonthView의 날짜 라벨 호출 한 곳만 전용 표시 컴포넌트로 연결한다. node_modules 원본은 수정하지 않으며, 기대한 구조가 아니면 빌드를 실패시킨다.
+- 흐름: 기준 확정 → 표시 컴포넌트/어댑터 구현 → 빌드 및 어댑터 정상·변경된 SDK 거부 검사 → 격리 origin PC/모바일 통합 확인 → 문서 대조·차이 해소. SEQUENTIAL / NONE. 기존 Task의 좁은 표시 기준선 변경으로 별도 Task는 추가하지 않는다.
+- Write Set: 위 네 파일, 이 Task와 메타데이터, Evidence/MonthDateNumbers. 저장 형식·API·업무 로직 변경은 없다. 적용 가능한 전용 구현 템플릿 없음; 기존 React/TypeScript·Vite 구조 사용.
+- 리스크: SDK 업데이트 시 어댑터 호환 재검토가 필요하다. CSS로 글자를 숨기거나 로케일 전체를 바꾸지 않는다. 검증은 빌드, 월 이동·1/10/31일·다른 달·오늘·날짜 선택·일정 편집·키보드·주/일 유지·390×844를 포함한다. 전체 renderer 충실도는 별도로 미검증을 유지한다.
+
+
+월 날짜 표시 검증 결과: 앱 빌드·어댑터 타입·보존/실패 경계 7건·PC/모바일 42개 숫자·월 이동·선택·일정 저장/편집·키보드·주/일 보존을 확인했다. SCR-001의 month-label-* 42개는 숫자·접근성 이름·실측 좌표·소스 연결을 동기화했다. SDK 사전 번들 제외 시 React 런타임 의존성을 명시해 개발/빌드 경로를 맞췄다. 추가 Vite 설정 타입 검사의 기존 TS2339는 기준선과 동일하며 공용 renderer 충실도는 미검증이다. [검증 근거](../../Evidence/MonthDateNumbers/README.md). 전체 상태는 Review를 유지한다.
