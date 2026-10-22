@@ -23,6 +23,6 @@
 | --- | --- | --- | --- | --- |
 | Node.js / Vite | FR-009, FR-012 | 감독 프로세스와 로컬 웹 제공 | [패키지](../../package.json) | Review |
 | pg_ctl / initdb / psql / createdb | FR-010, FR-011 | DB 준비·관리 | [호출](../../postgresql/manage.mjs) | Review |
-| zsh / cmd / PowerShell / open | FR-009 | OS별 시작·종료·브라우저 열기 | [시작 Mac](../../start.command), [시작 Windows](../../start.bat) | Review |
+| zsh / cmd / PowerShell / open | FR-009 | OS별 시작·종료·브라우저 열기 | [시작 Mac](../../start.command), [시작 Windows](../../WorkPlannerStart.bat) | Review |
 
 Supervisor가 상태를 소유하고 앱 업무 일정을 직접 변경하지 않는다. [SRS](../../Document/8_SoftwareRequirementsSpecification.md).

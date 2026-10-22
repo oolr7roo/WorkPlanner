@@ -5,14 +5,14 @@
 - 작업 흐름 유형: Module
 - 대상 작업 흐름: MOD-PostgresProcessManager DB 프로세스 관리
 - 관련 SRS 근거: FR-011
-- 현재 구현을 재현·검증하는 기준선이다. 일정·분리 파일·신규 기능 개발을 승인한 계획이 아니다.
+- 기존 책임을 유지하며 승인된 Windows 실행 복구와 검증을 수행한다.
 
 ## 2. 작업 순서 / 의존성
 
 | 순서 | Task ID | 작업명 | 대상 | 선행 조건 | 실행 모드 | 병렬 그룹 | Write Set | Read-only Shared Set | 상태 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | [TASK-001](MOD-PostgresProcessManager/TASK-001.md) | 플랫폼 도구·초기화 경계 확인 | MOD-PostgresProcessManager | 없음 | SEQUENTIAL | NONE | 없음(현 기준선 검증) | source: postgresql/manage.mjs; 8·10·11·12번, 관련 JSON | Review |
-| 2 | [TASK-002](MOD-PostgresProcessManager/TASK-002.md) | DB 시작·정지와 실패 복구 확인 | MOD-PostgresProcessManager | TASK-001 | SEQUENTIAL | NONE | 없음(현 기준선 검증) | source: postgresql/manage.mjs; 8·10·11·12번, 관련 JSON | Review |
+| 2 | [TASK-002](MOD-PostgresProcessManager/TASK-002.md) | DB 시작·정지와 실패 복구 확인 | MOD-PostgresProcessManager | TASK-001 | SEQUENTIAL | NONE | postgresql/data 누락 빈 폴더·postgresql/backups | source: postgresql/manage.mjs; 8·10·11·12번, 관련 JSON | Review |
 
 ## 3. 책임 및 연결 판단
 
@@ -36,4 +36,4 @@
 
 ## 5. 리스크 / 차단 사항
 
-현재 구현은 존재하나 전체 인수 검증 전이므로 Task 상태는 Review다. Web의 UI·업무·저장 결합은 현재 원칙 예외로 기록하고 향후 구현 변경 시 재검토한다. 별도 MVVM·Service Interface가 이미 구현된 것으로 서술하지 않는다. DB 운영·Windows 전체 프로세스 검증은 미실행이며 미실행을 구현 부재와 혼동하지 않는다.
+현재 구현은 존재하나 전체 인수 검증 전이므로 Task 상태는 Review다. Web의 UI·업무·저장 결합은 현재 원칙 예외로 기록하고 향후 구현 변경 시 재검토한다. 별도 MVVM·Service Interface가 이미 구현된 것으로 서술하지 않는다. Windows 배치 시작·중복 시작·종료·중복 종료·재시작과 포트 충돌 회수를 실제 검증했다. macOS 동작과 전체 제품 QA는 미검증이다.
