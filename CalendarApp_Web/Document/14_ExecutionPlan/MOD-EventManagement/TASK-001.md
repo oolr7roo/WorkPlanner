@@ -2,6 +2,10 @@
 
 상태: Review. 사용자 승인: 2026-10-21 대화의 계획대로 구현 요청. 관련 요구사항 FR-001~008.
 
+## 계획·작업 구현 범위
+
+현재 Write Set: src/features/schedules/types.ts, scheduleKinds.ts, useSchedules.ts, components/ScheduleEditor.tsx, MOD-001.json의 kind-field·kind-field-input. 순수 함수는 kind 검증·부재 기본값·표시 투영, 편집기는 초안, Hook은 저장 검증을 담당한다. 기존 색상·날짜·체크리스트 책임은 유지한다.
+
 ## 소유 범위
 
 src/features/schedules/types.ts, src/features/schedules/useSchedules.ts, src/features/schedules/scheduleTree.ts, src/features/schedules/scheduleDates.ts, src/features/schedules/components/ScheduleEditor.tsx
@@ -86,3 +90,23 @@ FR-014·015 / DATA-002·005 / API-001. Write Set: types.ts, scheduleChecklist.ts
 - RGB 개별 지정, 기본값 후 저장·취소, 새로고침 유지, 단계별 프리셋 변경 추종, Escape·닫기·배경 클릭 초안 보존 및 모바일 배치를 검증했다.
 - TypeScript/Vite 빌드, 순수 변환 16개 검사(4096 RGB 왕복 포함), MOD-001 스키마·소스 연결 검사가 통과했다. 공용 뷰어 시각 검증은 미완료다.
 - 검증 근거: [색상창 기본값 검증](../../Evidence/ColorPickerDefault/README.md).
+
+
+## 계획·작업 현재 기준선 (2026-10-23)
+
+사용자 승인: 편집창 구분 선택과 간트·월·주·일 작업만 표시. FR-016 / DATA-001·002 / API-001·002·003. 구분은 계층과 독립적인 plan/task이며 부재는 task, 신규 기본값도 task다. 저장·취소 경계를 유지한다. 전체 집합에서 부모 기간과 단계 색상을 계산한 뒤 작업만 표시하고, 우선순위는 전체를 관리한다. 숨겨진 계획의 접힘은 작업을 가리지 않는다. 계획도 표시 옵션은 범위 밖이다.
+
+실행: 기준 확정 → 모델/저장 계약 → 순수 표시 투영 → UI → 조립 → 빌드/격리 UI → 문서 대조/차이 해소. SEQUENTIAL/NONE. 구분 누락·오류, 계획 접힘 아래 작업, 중간 계획 아래 손자 작업, 저장/취소/재접속, 색상·부모 기간·자식 보존을 검증한다. 신규 테스트 파일은 만들지 않는다. 현재 HEAD a86a7a0, 기존 dirty dist/index.html·postgresql/supervisor.log. start-check master_not_pushed는 이전 local-only 완료의 선택적 미요청 원격 상태이며 필수 반영 누락이 아니다. 구현 단위는 package.json의 현재 웹 앱, 외부 SDK/DB/서버/운영 origin은 변경 금지다.
+
+
+### 계획·작업 구현 대조 결과
+
+| 비교 항목 | 현재 기준 | 실제 근거 | 판정 |
+| --- | --- | --- | --- |
+| 구분·호환 | FR-016, DATA-001/002 | kind 정책·저장 경계 12건 통과 | 일치 |
+| 편집·저장·취소 | MOD-001 kind-field 및 save/cancel | 실제 신규 기본값, 구분 변경 취소, 저장·재접속 복원 확인 | 일치 |
+| 표시·계층 | SCR-001~005 표시 기준 | 월·주·일 작업2/계획0, 간트 계획 접힘 무시·작업 접힘 공유 확인 | 일치 |
+| 배치·스타일 | MOD-001 및 기존 styles.css | 1440×1000 실측과 390×844 콤보박스·저장 버튼 확인; CSS 변경 없음 | 일치 |
+| 공용 뷰어 | 기존 전체 시각 reconciliation | 구조·source·bindings 자동 검증 통과, 공용 뷰어 시각/참조 문서 실제 열기는 미실행 | 미검증 |
+
+[이번 범위 검증](../../Evidence/ScheduleKinds/README.md). 앱 동작 범위의 필수 차이는 해소했다. 전체 제품·공용 뷰어 Review는 유지한다.

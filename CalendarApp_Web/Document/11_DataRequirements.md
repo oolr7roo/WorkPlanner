@@ -49,3 +49,6 @@ flowchart LR
 ## DATA-005 일정 체크리스트
 
 FR-015의 checklist는 DATA-001 일정 및 DATA-002 초안의 선택적 배열이며 부재는 빈 목록이다. 항목은 고유 id·text·done을 가지며 배열 순서를 유지한다. UI는 편집용 깊은 복사만 변경하고 저장할 때 정규화·검증한다. API-001을 사용하며 별도 키나 서버를 추가하지 않는다. 상세: [DATA-005](11_data_spec/DATA-005_Checklist.md).
+
+
+계획·작업: DATA-001·DATA-002에 구분을 전달한다. [일정 집합 상세](11_data_spec/DATA-001_Events.md)의 호환·검증 계약을 따르며 MOD-001 kind-field에서 입력한다.

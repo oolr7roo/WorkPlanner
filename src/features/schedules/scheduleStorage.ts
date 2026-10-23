@@ -1,5 +1,6 @@
 import type { Schedule } from "./types";
 import { validateChecklist } from "./scheduleChecklist";
+import { scheduleKind, validScheduleKind } from "./scheduleKinds";
 
 const KEY = "workplan-calendar-events-v2";
 const LEGACY_KEY = "workplan-calendar-events-v1";
@@ -15,11 +16,12 @@ export function readSchedules(): { items: Schedule[]; error: string } {
     const items: Schedule[] = parsed.map((item, index) => {
       if (!item || typeof item.id !== "string" || !item.id || ids.has(item.id) || typeof item.title !== "string"
         || typeof item.start !== "string" || typeof item.end !== "string"
+        || !validScheduleKind(item.kind)
         || (item.colorMode !== undefined && item.colorMode !== "auto" && item.colorMode !== "manual")
         || validateChecklist(item.checklist)
         || !Number.isFinite(Date.parse(item.start)) || !Number.isFinite(Date.parse(item.end)) || Date.parse(item.end) <= Date.parse(item.start)) throw new Error("Invalid schedule");
       ids.add(item.id);
-      return { ...item, parentId: typeof item.parentId === "string" ? item.parentId : null,
+      return { ...item, kind: scheduleKind(item), parentId: typeof item.parentId === "string" ? item.parentId : null,
         order: Number.isInteger(item.order) && item.order >= 0 ? item.order : index };
     });
     const byId = new Map(items.map(item => [item.id, item]));

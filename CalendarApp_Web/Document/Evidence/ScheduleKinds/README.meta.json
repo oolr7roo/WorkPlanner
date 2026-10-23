@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-Evidence-ScheduleKinds-README",
+  "document_number": 17,
+  "document_type": "validation-evidence",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/Evidence/ScheduleKinds/README.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement-TASK-001",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-016",
+    "DATA-001",
+    "DATA-002"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement-TASK-001"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-23T00:44:35.178Z",
+    "mtime_ns": 1792716275178846200,
+    "byte_size": 4477,
+    "sha256": "f48311fa336e165d6ddada022a12a1f6d3cda54daa0a7f21e0174870b5b3fd58"
+  },
+  "metadata_refreshed_at_utc": "2026-10-23T00:44:35.233Z"
+}

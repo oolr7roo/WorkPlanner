@@ -16,7 +16,8 @@
     "FR-014",
     "DATA-004",
     "FR-015",
-    "DATA-005"
+    "DATA-005",
+    "FR-016"
   ],
   "owned_ids": [],
   "related_documents": [
@@ -24,10 +25,10 @@
     "DOC-CalendarApp_Web-Document-12_api_spec-API-001_LocalStorage"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T23:55:29.310Z",
-    "mtime_ns": 1792713329310365400,
-    "byte_size": 2077,
-    "sha256": "a0eddcf498e86b4638b3bfac2cb429b40d647ded7fb74acb8c0759ca5b4217b0"
+    "modified_at_utc": "2026-10-23T00:44:35.151Z",
+    "mtime_ns": 1792716275151651400,
+    "byte_size": 2952,
+    "sha256": "00e32215fc0c930a055a0339de2192e8643bf64871426848c5623c2f5edd59ea"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T23:56:05.816Z"
+  "metadata_refreshed_at_utc": "2026-10-23T00:44:35.203Z"
 }

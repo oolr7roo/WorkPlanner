@@ -1,0 +1,38 @@
+[
+  {
+    "name": "gantt hidden collapsed plans preserve descendant tasks",
+    "labels": [
+      "개발 작업",
+      "검증 작업"
+    ]
+  },
+  {
+    "name": "gantt task collapse preserves behavior",
+    "labels": [
+      "개발 작업"
+    ]
+  },
+  {
+    "name": "month task visibility",
+    "tasks": 2,
+    "plans": 0
+  },
+  {
+    "name": "week task visibility",
+    "tasks": 2,
+    "plans": 0
+  },
+  {
+    "name": "day task visibility",
+    "tasks": 2,
+    "plans": 0
+  },
+  {
+    "name": "saved kind restored after reload",
+    "observed": "plan (계획 selected in UI)"
+  },
+  {
+    "name": "mobile saved plan is hidden from month",
+    "visible": 0
+  }
+]

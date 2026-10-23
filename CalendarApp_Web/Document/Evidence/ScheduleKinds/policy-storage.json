@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "name": "missing kind defaults task",
+      "passed": true
+    },
+    {
+      "name": "valid values and malformed explicit values",
+      "passed": true
+    },
+    {
+      "name": "calendar excludes plans preserves legacy",
+      "passed": true
+    },
+    {
+      "name": "collapsed hidden plan does not hide tasks",
+      "passed": true
+    },
+    {
+      "name": "task collapse hides descendant through intermediate plan",
+      "passed": true
+    },
+    {
+      "name": "visible depth and task descendants",
+      "passed": true
+    },
+    {
+      "name": "projection does not mutate original",
+      "passed": true
+    },
+    {
+      "name": "v1 legacy restore leaves original raw key",
+      "passed": true
+    },
+    {
+      "name": "v2 plan and task roundtrip",
+      "passed": true
+    },
+    {
+      "name": "invalid explicit kind blocked and raw preserved",
+      "passed": true
+    },
+    {
+      "name": "hidden plans still drive summary dates and depth colors",
+      "passed": true
+    },
+    {
+      "name": "delete plan preserves task kind and children",
+      "passed": true
+    }
+  ]
+}

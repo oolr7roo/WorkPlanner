@@ -29,7 +29,9 @@
       "Document/Evidence/EditorChecklist/editor-geometry.json",
       "src/features/schedules/components/ScheduleColorPicker.tsx",
       "src/features/schedules/colorValues.ts",
-      "Document/Evidence/ColorPickerDefault/geometry.json"
+      "Document/Evidence/ColorPickerDefault/geometry.json",
+      "src/features/schedules/scheduleKinds.ts",
+      "Document/Evidence/ScheduleKinds/editor-geometry.json"
     ],
     "unverified": [
       "모든 단말·공용 뷰어 시각 검증은 미완료이다."
@@ -107,9 +109,9 @@
       "visible": true,
       "rect": {
         "x": 32.638889,
-        "y": 24.025,
+        "y": 16.25,
         "w": 34.722222,
-        "h": 51.95
+        "h": 67.5
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -136,7 +138,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "editor"
         }
       }
@@ -148,9 +150,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 4.427334,
+        "y": 3.407407,
         "w": 90.8,
-        "h": 6.063523
+        "h": 4.666667
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -177,7 +179,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "editor-header"
         }
       }
@@ -219,7 +221,7 @@
       "text": "일정 수정",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "editor-title"
         }
       }
@@ -277,7 +279,7 @@
       "test": "close",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "close"
         }
       }
@@ -289,9 +291,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 14.340712,
+        "y": 11.037037,
         "w": 90.8,
-        "h": 81.231954
+        "h": 85.555556
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -318,7 +320,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "editor-form"
         }
       }
@@ -330,9 +332,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 20.023697,
+        "y": 41.558442,
         "w": 100,
-        "h": 16.232227
+        "h": 11.861472
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -359,7 +361,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "time-fields"
         }
       }
@@ -371,9 +373,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 89.57346,
+        "y": 92.380952,
         "w": 100,
-        "h": 10.42654
+        "h": 7.619048
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -400,7 +402,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "editor-actions"
         }
       }
@@ -414,7 +416,7 @@
         "x": 0,
         "y": 0,
         "w": 100,
-        "h": 16.232227
+        "h": 11.861472
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -442,7 +444,7 @@
       "text": "제목",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "title-field"
         }
       }
@@ -503,7 +505,7 @@
         "required": true,
         "placeholder": "일정 제목",
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "title-field-input"
         }
       }
@@ -545,7 +547,7 @@
       "text": "시작",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "start-field"
         }
       }
@@ -606,7 +608,7 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "start-field-input"
         }
       }
@@ -648,7 +650,7 @@
       "text": "종료",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "end-field"
         }
       }
@@ -709,7 +711,7 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "end-field-input"
         }
       }
@@ -750,7 +752,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "color-field"
         }
       }
@@ -776,7 +778,7 @@
       },
       "style": {
         "color": "rgb(23, 32, 51)",
-        "background_color": "rgb(34, 85, 136)",
+        "background_color": "rgb(51, 102, 221)",
         "border": {
           "color": "rgb(255, 255, 255)",
           "width": 3,
@@ -810,7 +812,7 @@
         "mode": "auto",
         "sample_value": "#225588",
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "color-field-input"
         }
       }
@@ -870,7 +872,7 @@
       "test": "cancel",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "cancel"
         }
       }
@@ -930,14 +932,15 @@
             "FR-002",
             "FR-003",
             "FR-008",
-            "FR-015"
+            "FR-015",
+            "FR-016"
           ]
         }
       },
       "test": "save",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "save"
         }
       }
@@ -1005,7 +1008,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "delete"
         }
       }
@@ -1072,7 +1075,8 @@
         "messages": [
           "일정 제목을 입력해 주세요.",
           "종료 시간을 시작 시간보다 늦게 설정해 주세요.",
-          "체크리스트의 빈 항목을 입력하거나 삭제해 주세요."
+          "체크리스트의 빈 항목을 입력하거나 삭제해 주세요.",
+          "일정 구분을 확인해 주세요."
         ],
         "role": "alert",
         "geometry_evidence": "form-error capture; parent resizes in error state"
@@ -1114,7 +1118,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "editor-heading"
         }
       }
@@ -1128,9 +1132,9 @@
       "scope": "parent",
       "rect": {
         "x": 0,
-        "y": 40.047393,
+        "y": 56.190476,
         "w": 100,
-        "h": 44.78673
+        "h": 32.727273
       },
       "style": {
         "color": "rgb(23, 32, 51)",
@@ -1155,7 +1159,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "checklist"
         }
       }
@@ -1196,7 +1200,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "checklist-heading"
         }
       }
@@ -1237,7 +1241,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "checklist-title"
         }
       },
@@ -1279,7 +1283,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "checklist-count"
         }
       },
@@ -1321,7 +1325,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "checklist-items"
         },
         "empty_state": "일정에 필요한 할 일을 추가하세요."
@@ -1436,7 +1440,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
           "id": "checklist-add"
         }
       },
@@ -2275,6 +2279,161 @@
           ]
         }
       }
+    },
+    {
+      "id": "kind-field",
+      "type": "label",
+      "name": "kind-field",
+      "parent": "editor-form",
+      "scope": "parent",
+      "visible": true,
+      "test": "kind-field",
+      "rect": {
+        "x": 0,
+        "y": 14.632035,
+        "w": 100,
+        "h": 11.861472
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:schedule-kind-field",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(51, 65, 85)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "id": "kind-field"
+        }
+      },
+      "text": "구분"
+    },
+    {
+      "id": "kind-field-input",
+      "type": "select",
+      "name": "kind-field-input",
+      "parent": "kind-field",
+      "scope": "parent",
+      "visible": true,
+      "test": "kind-field-input",
+      "rect": {
+        "x": 0,
+        "y": 38.686131,
+        "w": 100,
+        "h": 61.313869
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:draft.kind",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "id": "kind-field-input"
+        },
+        "options": [
+          {
+            "value": "task",
+            "label": "작업"
+          },
+          {
+            "value": "plan",
+            "label": "계획"
+          }
+        ],
+        "sample_value": "task",
+        "accessible_name": "구분"
+      },
+      "events": {
+        "on": "change",
+        "intent": "계획 또는 작업 구분 초안을 변경한다. 저장하면 반영하고 취소하면 저장된 구분을 유지한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002"
+          ],
+          "requirements": [
+            "FR-016"
+          ]
+        }
+      }
+    },
+    {
+      "id": "kind-help",
+      "type": "text",
+      "name": "kind-help",
+      "parent": "editor-form",
+      "scope": "parent",
+      "visible": true,
+      "test": "kind-help",
+      "rect": {
+        "x": 0,
+        "y": 29.264069,
+        "w": 100,
+        "h": 6.753247
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:간트·월·주·일에는",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(104, 117, 141)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(104, 117, 141)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "id": "kind-help"
+        }
+      },
+      "text": "간트·월·주·일에는 작업만 표시됩니다. 계획은 우선순위에서 관리할 수 있습니다."
     }
   ],
   "modal": {
@@ -2318,11 +2477,15 @@
     {
       "id": "picker-default",
       "description": "기본값은 색상창 맨 아래에 있으며 단계별 자동 모드로 복원한다. 선택창 취소·닫기·Escape·배경 클릭은 색상창만 닫고 일정 초안을 보존한다."
+    },
+    {
+      "id": "schedule-kind",
+      "description": "새 일정과 구분이 없는 기존 일정은 작업이다. 계획·작업은 계층과 독립적이며 간트·월·주·일에는 작업만, 우선순위에는 전체를 표시한다."
     }
   ],
   "verification": {
     "schema": "valid",
-    "source_alignment": "measured-desktop-dom; ColorPickerDefault/geometry.json; mobile viewport 390x844 verified",
+    "source_alignment": "ScheduleKinds/editor-geometry.json measured desktop; mobile 390x844 verified",
     "render_fidelity": "unverified",
     "complete": false
   },

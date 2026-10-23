@@ -20,7 +20,8 @@
     "FR-014",
     "DATA-004",
     "FR-015",
-    "DATA-005"
+    "DATA-005",
+    "FR-016"
   ],
   "owned_ids": [
     "MOD-BrowserEventStore/TASK-001"
@@ -32,10 +33,10 @@
     "DOC-Document-17_ValidationReport"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T23:55:29.319Z",
-    "mtime_ns": 1792713329319796900,
-    "byte_size": 4848,
-    "sha256": "b33fe51236bd6873aecc202617db8370782234f0c4beae2ede2ec789c6a2d3fb"
+    "modified_at_utc": "2026-10-23T00:44:35.167Z",
+    "mtime_ns": 1792716275167758600,
+    "byte_size": 6635,
+    "sha256": "241b886a8250487d6931ba8f9e2a68f2ceaae493e29412d438754f493bf15fa4"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T23:56:05.828Z"
+  "metadata_refreshed_at_utc": "2026-10-23T00:44:35.221Z"
 }

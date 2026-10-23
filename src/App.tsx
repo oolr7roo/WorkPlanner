@@ -9,6 +9,7 @@ import { useScheduleColorSettings } from "./features/schedules/useScheduleColorS
 import { PriorityTreeView } from "./features/schedules/views/PriorityTreeView";
 import { GanttView } from "./features/schedules/views/GanttView";
 import { CalendarView } from "./features/schedules/views/CalendarView";
+import { scheduleKind, taskRows, taskSchedules } from "./features/schedules/scheduleKinds";
 import type { AppView, ScheduleDraft } from "./features/schedules/types";
 import "./features/schedules/schedules.css";
 import "./features/schedules/gantt.css";
@@ -26,12 +27,12 @@ export default function App() {
     if (schedules.blocked) return;
     const parent = schedules.effective.find(item => item.id === parentId);
     if (parentId) tree.expand(parentId);
-    setEditor({ id: null, parentId, draft: { ...defaultDraft(start ?? parent?.start, end), colorMode: "auto", color: schedules.automaticColor(parentId), checklist: [] } });
+    setEditor({ id: null, parentId, draft: { ...defaultDraft(start ?? parent?.start, end), kind: "task", colorMode: "auto", color: schedules.automaticColor(parentId), checklist: [] } });
   }
   function openEdit(id: string) {
     if (schedules.blocked) return;
     const item = schedules.effective.find(item => item.id === id);
-    if (item) setEditor({ id, parentId: item.parentId, draft: { title: item.title, start: item.start.slice(0, 16), end: item.end.slice(0, 16), color: item.color ?? "#3366dd", colorMode: item.colorMode ?? "manual", checklist: item.checklist } });
+    if (item) setEditor({ id, parentId: item.parentId, draft: { title: item.title, start: item.start.slice(0, 16), end: item.end.slice(0, 16), kind: scheduleKind(item), color: item.color ?? "#3366dd", colorMode: item.colorMode ?? "manual", checklist: item.checklist } });
   }
   const treeProps = { items: schedules.effective, rows: tree.rows, collapsed: tree.collapsed, selected: tree.selected,
     onToggle: tree.toggle, onEdit: openEdit, onAddChild: (id: string) => openNew(undefined, undefined, id), disabled: schedules.blocked };
@@ -45,8 +46,8 @@ export default function App() {
       {view === "priority" || view === "gantt" ? <>
         <CalendarToolbar view={view} label={view === "priority" ? "전체 일정" : `${date.replaceAll("-", ".")} – ${addDays(date, 13).replaceAll("-", ".")}`}
           onViewChange={setView} onToday={() => setDate(localInputDate(new Date()).slice(0, 10))} onPrev={() => setDate(addDays(date, -14))} onNext={() => setDate(addDays(date, 14))} />
-        {view === "priority" ? <PriorityTreeView {...treeProps} onMove={schedules.reorder} /> : <GanttView {...treeProps} date={date} />}
-      </> : <CalendarView events={schedules.effective} view={view} date={date} onDateChange={setDate} onViewChange={setView} onEdit={openEdit}
+        {view === "priority" ? <PriorityTreeView {...treeProps} onMove={schedules.reorder} /> : <GanttView {...treeProps} items={taskSchedules(schedules.effective)} rows={taskRows(schedules.effective, tree.collapsed)} date={date} />}
+      </> : <CalendarView events={taskSchedules(schedules.effective)} view={view} date={date} onDateChange={setDate} onViewChange={setView} onEdit={openEdit}
         onNew={(start, end) => openNew(start, end)} onMove={schedules.moveTime} disabled={schedules.blocked}
         toolbar={props => <CalendarToolbar {...props} view={view} label={props.formattedDate} onViewChange={setView} />} />}
     </main>

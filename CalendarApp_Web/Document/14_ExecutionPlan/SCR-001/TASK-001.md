@@ -6,7 +6,7 @@
 
 src/App.tsx, src/components/CalendarToolbar.tsx, src/features/schedules/views/*, src/features/schedules/components/ScheduleTreeLabel.tsx, src/features/schedules/components/ScheduleDragHandle.tsx, src/features/schedules/useScheduleTree.ts, src/features/schedules/schedules.css, src/features/schedules/gantt.css, src/styles.css
 
-COMMON-002, SCR-004, SCR-005. 앱이 view와 기준 날짜를 소유한다. 두 화면은 동일한 트리 행과 접힘 상태를 사용한다. 제목 클릭은 펼침·접힘, 편집은 별도 버튼이다. 들여쓰기는 8px씩 최대 24px. 달력 SDK 어댑터는 월·주·일만 담당한다.
+COMMON-002, SCR-004, SCR-005. 앱이 view와 기준 날짜를 소유한다. 우선순위는 전체 트리 행을 사용한다. 간트는 전체 계층에서 계산한 작업 행을 사용하며 계획의 접힘은 무시하고 작업의 접힘은 공유한다. 제목 클릭은 펼침·접힘, 편집은 별도 버튼이다. 들여쓰기는 8px씩 최대 24px. 달력 SDK 어댑터는 월·주·일만 담당한다.
 
 ## 실행과 책임 경계
 
@@ -73,3 +73,23 @@ App.tsx에서 신규 빈 checklist, 기존 checklist 전달을 조립하며(편�
 - RGB 개별 지정, 기본값 후 저장·취소, 새로고침 유지, 단계별 프리셋 변경 추종, Escape·닫기·배경 클릭 초안 보존 및 모바일 배치를 검증했다.
 - TypeScript/Vite 빌드, 순수 변환 16개 검사(4096 RGB 왕복 포함), MOD-001 스키마·소스 연결 검사가 통과했다. 공용 뷰어 시각 검증은 미완료다.
 - 검증 근거: [색상창 기본값 검증](../../Evidence/ColorPickerDefault/README.md).
+
+
+## 계획·작업 현재 기준선 (2026-10-23)
+
+사용자 승인: 편집창 구분 선택과 간트·월·주·일 작업만 표시. FR-016 / DATA-001·002 / API-001·002·003. 구분은 계층과 독립적인 plan/task이며 부재는 task, 신규 기본값도 task다. 저장·취소 경계를 유지한다. 전체 집합에서 부모 기간과 단계 색상을 계산한 뒤 작업만 표시하고, 우선순위는 전체를 관리한다. 숨겨진 계획의 접힘은 작업을 가리지 않는다. 계획도 표시 옵션은 범위 밖이다.
+
+현재 Write Set: src/App.tsx, src/features/schedules/views/GanttView.tsx, src/styles.css, SCR-001~005.json 및 Task·메타데이터. App은 순수 투영을 호출하고 View는 표시만 한다. Gantt의 작업 목록·빈 상태 안내를 맞춘다. MOD-001 좌표 측정 협력은 EventManagement Task가 소유한다. 월·주·일·간트 작업 표시와 전체 우선순위, 접힘 공유 예외를 통합 검증한다. 최상위 14_ExecutionPlan.md 및 대응 2단계 문서는 확인만: 진입점·Task 순서·소유권·상태 변경이 없다. SCR-002/003 TASK-001은 해당 JSON 의미 기준만 동기화한다.
+
+
+### 계획·작업 구현 대조 결과
+
+| 비교 항목 | 현재 기준 | 실제 근거 | 판정 |
+| --- | --- | --- | --- |
+| 구분·호환 | FR-016, DATA-001/002 | kind 정책·저장 경계 12건 통과 | 일치 |
+| 편집·저장·취소 | MOD-001 kind-field 및 save/cancel | 실제 신규 기본값, 구분 변경 취소, 저장·재접속 복원 확인 | 일치 |
+| 표시·계층 | SCR-001~005 표시 기준 | 월·주·일 작업2/계획0, 간트 계획 접힘 무시·작업 접힘 공유 확인 | 일치 |
+| 배치·스타일 | MOD-001 및 기존 styles.css | 1440×1000 실측과 390×844 콤보박스·저장 버튼 확인; CSS 변경 없음 | 일치 |
+| 공용 뷰어 | 기존 전체 시각 reconciliation | 구조·source·bindings 자동 검증 통과, 공용 뷰어 시각/참조 문서 실제 열기는 미실행 | 미검증 |
+
+[이번 범위 검증](../../Evidence/ScheduleKinds/README.md). 앱 동작 범위의 필수 차이는 해소했다. 전체 제품·공용 뷰어 Review는 유지한다.

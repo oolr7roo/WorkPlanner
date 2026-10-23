@@ -175,7 +175,8 @@
             "FR-001",
             "FR-002",
             "FR-003",
-            "FR-005"
+            "FR-005",
+            "FR-016"
           ]
         }
       },
@@ -209,7 +210,8 @@
             "color": "#b42334"
           }
         ],
-        "application_initial_view": "month"
+        "application_initial_view": "month",
+        "visible_schedule_kind": "task"
       }
     },
     {
@@ -4359,6 +4361,10 @@
     {
       "id": "responsive",
       "description": "모바일은 같은 component 정체성의 Runtime 캡처로 대조한다. SDK 열 수·크기는 반응형이며 데스크톱 좌표를 모바일에 적용하지 않는다."
+    },
+    {
+      "id": "schedule-kind-visibility",
+      "description": "전체 계층에서 기간·색상을 계산한 뒤 작업만 표시한다. 구분 부재는 작업이다. 계획은 숨기며 저장 집합은 유지한다."
     }
   ]
 }

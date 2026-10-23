@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import type { ScheduleDraft } from "../types";
+import type { ScheduleDraft, ScheduleKind } from "../types";
 import { adjustEndForStartChange } from "../scheduleDates";
 import { copyChecklist } from "../scheduleChecklist";
 import { ScheduleColorControl } from "./ScheduleColorControl";
@@ -31,6 +31,10 @@ export function ScheduleEditor(props: Props) {
     {props.parentTitle && <p className="editor-context">상위 일정: {props.parentTitle}</p>}
     <form onSubmit={submit}>
       <label>제목<input autoFocus value={draft.title} onChange={event => setDraft({ ...draft, title: event.target.value })} placeholder="일정 제목" required /></label>
+      <label className="schedule-kind-field">구분<select value={draft.kind ?? "task"} onChange={event => setDraft(current => ({ ...current, kind: event.target.value as ScheduleKind }))}>
+        <option value="task">작업</option><option value="plan">계획</option>
+      </select></label>
+      <p className="editor-context">간트·월·주·일에는 작업만 표시됩니다. 계획은 우선순위에서 관리할 수 있습니다.</p>
       {props.hasChildren && <p className="editor-context">상위 일정의 기간은 하위 일정의 시작·종료에 맞춰 자동 계산됩니다.</p>}
       <div className="time-fields"><label>시작<input type="datetime-local" disabled={props.hasChildren} value={draft.start} onChange={event => changeStart(event.target.value)} required /></label>
         <label>종료<input type="datetime-local" disabled={props.hasChildren} value={draft.end} onChange={event => setDraft({ ...draft, end: event.target.value })} required /></label></div>

@@ -56,3 +56,19 @@ Web implementation-derived. 실제 구현은 source·SDK가 소유하고 JSON은
 | Write Set | SCR-003.json·소유 실행계획·현재 Task·메타데이터 |
 | Read-only Shared Set | 공통 JSON·결합 도구·앱 source·SDK·데이터/API 계약 |
 | 통합·검토 게이트 | source hash 유지·미검증 항목 구분 |
+
+
+현재 표시 기준: FR-016에 따라 작업만 표시하며 전체 저장 집합·계층·색상은 유지한다. App의 공유 투영 구현은 SCR-001/TASK-001 단독 소유다. 이 Task는 SCR-003.json의 calendar 표시 의미와 검증을 소유한다.
+
+
+### 계획·작업 구현 대조 결과
+
+| 비교 항목 | 현재 기준 | 실제 근거 | 판정 |
+| --- | --- | --- | --- |
+| 구분·호환 | FR-016, DATA-001/002 | kind 정책·저장 경계 12건 통과 | 일치 |
+| 편집·저장·취소 | MOD-001 kind-field 및 save/cancel | 실제 신규 기본값, 구분 변경 취소, 저장·재접속 복원 확인 | 일치 |
+| 표시·계층 | SCR-001~005 표시 기준 | 월·주·일 작업2/계획0, 간트 계획 접힘 무시·작업 접힘 공유 확인 | 일치 |
+| 배치·스타일 | MOD-001 및 기존 styles.css | 1440×1000 실측과 390×844 콤보박스·저장 버튼 확인; CSS 변경 없음 | 일치 |
+| 공용 뷰어 | 기존 전체 시각 reconciliation | 구조·source·bindings 자동 검증 통과, 공용 뷰어 시각/참조 문서 실제 열기는 미실행 | 미검증 |
+
+[이번 범위 검증](../../Evidence/ScheduleKinds/README.md). 앱 동작 범위의 필수 차이는 해소했다. 전체 제품·공용 뷰어 Review는 유지한다.

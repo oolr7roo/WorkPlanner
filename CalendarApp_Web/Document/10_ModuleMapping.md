@@ -41,3 +41,8 @@ FR-014의 colorValues는 HEX/RGB/HSV 변환만 소유한다. ScheduleColorPicker
 
 
 - 색상창 기본값 구현·검증 완료(2026-10-23): [검증 기록](Evidence/ColorPickerDefault/README.md). RGB/HSV 변환과 UI 초안·일정 초안 책임을 분리했으며 기존 자동색상 설정과 저장 계약을 유지한다.
+
+
+## 계획·작업 구분 책임
+
+FR-016의 MOD-001 kind-field 입력·save는 EventManagement가 소유한다. scheduleKinds.ts는 구분 검증·기본값 및 작업 표시 목록/행을 만드는 순수 정책이다. BrowserEventStore는 해당 공개 검증 함수로 kind를 복원하며 UI에 의존하지 않는다. App은 전체 계산 결과와 작업 투영을 각 View에 전달하고 GanttView·CalendarView는 구분을 다시 판정하지 않는다. 전체 계층의 기간·색상 계산은 표시 투영보다 선행한다.

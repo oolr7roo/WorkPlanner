@@ -25,7 +25,8 @@
     "DATA-004",
     "FR-015",
     "DATA-005",
-    "API-001"
+    "API-001",
+    "FR-016"
   ],
   "owned_ids": [
     "MOD-EventManagement/TASK-001"
@@ -37,10 +38,10 @@
     "DOC-Document-17_ValidationReport"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T00:21:28.189Z",
-    "mtime_ns": 1792714888189236500,
-    "byte_size": 12337,
-    "sha256": "b5aeeafc37a53aee84be5540b32c14546b48be2274f6fb636b5c4d0db9d8fdbe"
+    "modified_at_utc": "2026-10-23T00:44:35.164Z",
+    "mtime_ns": 1792716275164745800,
+    "byte_size": 15010,
+    "sha256": "ee0d5286a086de3e66ed4a5555d00a4b7d07035375a96b065d1afb2803b2eba4"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T00:21:28.210Z"
+  "metadata_refreshed_at_utc": "2026-10-23T00:44:35.218Z"
 }

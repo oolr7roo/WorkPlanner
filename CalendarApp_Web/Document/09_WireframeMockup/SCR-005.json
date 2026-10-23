@@ -1930,5 +1930,11 @@
     "parent_period": "하위 시작 최솟값~종료 최댓값",
     "delete": "자식은 한 단계 위로 보존",
     "shared_collapsed_state": true
-  }
+  },
+  "behaviors": [
+    {
+      "id": "schedule-kind-visibility",
+      "description": "계획과 작업을 모두 관리하며 구분 변경 후에도 편집할 수 있다."
+    }
+  ]
 }

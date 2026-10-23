@@ -17,7 +17,8 @@
     "FR-005",
     "DATA-001",
     "DATA-002",
-    "API-003"
+    "API-003",
+    "FR-016"
   ],
   "owned_ids": [
     "SCR-002/TASK-001"
@@ -29,10 +30,10 @@
     "DOC-CalendarApp_Web-Document-12_APISpecification"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-05T11:18:46.930845Z",
-    "mtime_ns": 1791199126930844802,
-    "byte_size": 3936,
-    "sha256": "95d5efdd4844c563a0ab3886cb94755a88eef0f2a047ea40a2fc443fa063dccf"
+    "modified_at_utc": "2026-10-23T00:44:35.172Z",
+    "mtime_ns": 1792716275172293500,
+    "byte_size": 5291,
+    "sha256": "d88ad586cef515bc0c587f5a1e45a8f22d5fe1be6dea7e7417bc9238287a37b2"
   },
-  "metadata_refreshed_at_utc": "2026-10-05T11:28:22.470398Z"
+  "metadata_refreshed_at_utc": "2026-10-23T00:44:35.227Z"
 }

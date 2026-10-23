@@ -16,7 +16,8 @@
     "FR-013",
     "FR-014",
     "FR-015",
-    "DATA-005"
+    "DATA-005",
+    "FR-016"
   ],
   "owned_ids": [
     "DATA-001",
@@ -33,10 +34,10 @@
     "DOC-CalendarApp_Web-Document-11_data_spec-DATA-005_Checklist"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T23:55:29.306Z",
-    "mtime_ns": 1792713329306794300,
-    "byte_size": 4120,
-    "sha256": "f370938d7c9b2c0d616969befbff3cbaaa26ca80b6f8e16e9856841ee94f6f9f"
+    "modified_at_utc": "2026-10-23T00:44:35.153Z",
+    "mtime_ns": 1792716275153163600,
+    "byte_size": 4320,
+    "sha256": "def3a7fca4667cf43381537e0eed0fc9e5bef9e78291f92f9576a71782d91156"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T23:56:05.813Z"
+  "metadata_refreshed_at_utc": "2026-10-23T00:44:35.206Z"
 }
