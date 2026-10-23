@@ -24,7 +24,6 @@ web 구현 도메인의 현재 책임·작업 흐름 진입점·검증 마일스
 | --- | --- | --- | --- | --- | --- |
 | Module | MOD-EventManagement | 일정 관리 | SCR-001~003 / MOD-001 | [MOD-EventManagement](14_ExecutionPlan/MOD-EventManagement.md) | Review |
 | Module | MOD-BrowserEventStore | 레거시 읽기·접힘 보존 | SCR-001~003 / MOD-001 | [MOD-BrowserEventStore](14_ExecutionPlan/MOD-BrowserEventStore.md) | Review |
-
 | Module | MOD-ScheduleService | 공통 업무 검증·HTTP | API-004 | [MOD-ScheduleService](14_ExecutionPlan/MOD-ScheduleService.md) | Review |
 | Module | MOD-WorkspaceClient | snapshot·revision·가져오기 UI | MOD-001~003·COMMON-001/003 | [MOD-WorkspaceClient](14_ExecutionPlan/MOD-WorkspaceClient.md) | Review |
 | Module | MOD-MCP | 로컬 stdio 도구·resource | API-005 | [MOD-MCP](14_ExecutionPlan/MOD-MCP.md) | Review |

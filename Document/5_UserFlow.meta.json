@@ -25,7 +25,8 @@
     "UF-007",
     "UF-008",
     "UF-009",
-    "UF-010"
+    "UF-010",
+    "UF-011"
   ],
   "owned_ids": [
     "UF-001",
@@ -37,14 +38,15 @@
     "UF-007",
     "UF-008",
     "UF-009",
-    "UF-010"
+    "UF-010",
+    "UF-011"
   ],
   "related_documents": [],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T02:58:28.179Z",
-    "mtime_ns": 1792724308179088800,
-    "byte_size": 6271,
-    "sha256": "ed86930e01f2484914f8fd6464b4a62770d0e42a282729f3f9e4fcb09837c012"
+    "modified_at_utc": "2026-10-23T03:13:55.865Z",
+    "mtime_ns": 1792725235865090400,
+    "byte_size": 8452,
+    "sha256": "046d0d92ae5cc81e80b75fd13fdeeff71b9c318862d1b7ee1582b3a9cba03144"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.455Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:13:55.893Z"
 }

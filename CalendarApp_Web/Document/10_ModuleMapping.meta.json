@@ -38,10 +38,10 @@
     "DOC-Document-8_SoftwareRequirementsSpecification"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T02:58:29.144Z",
-    "mtime_ns": 1792724309144870400,
+    "modified_at_utc": "2026-10-23T03:03:16.466Z",
+    "mtime_ns": 1792724596466194300,
     "byte_size": 6040,
     "sha256": "b97756fc13ae0c09d6e2cbba5254cda0d71a2ff428676c009e91692638a6b35b"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.483Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:16:46.957Z"
 }

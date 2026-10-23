@@ -39,10 +39,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-003"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T02:58:30.492Z",
-    "mtime_ns": 1792724310492321200,
-    "byte_size": 5716,
-    "sha256": "27f6daec9878b67650a0ac75710f1520c4f5ed080db12ef42af2f032b85ff7a0"
+    "modified_at_utc": "2026-10-23T03:13:55.877Z",
+    "mtime_ns": 1792725235877156000,
+    "byte_size": 5714,
+    "sha256": "60b83fa85f4ed3f5341d5f726e40be681dbca0ecb38293e7dcbe893bb74d45da"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.500Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:13:55.953Z"
 }

@@ -13,7 +13,6 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | [TASK-001](MOD-Supervisor/TASK-001.md) | 시작·제어 준비 순서 확인 | MOD-Supervisor | 없음 | SEQUENTIAL | NONE | WorkPlannerStart.bat, WorkPlannerStart.ps1, .gitignore, postgresql/README.txt | source: server.mjs, start.command; 8·10·11·12번, 관련 JSON | Review |
 | 2 | [TASK-002](MOD-Supervisor/TASK-002.md) | 종료·실패 회수 경계 확인 | MOD-Supervisor | TASK-001 | SEQUENTIAL | NONE | WorkPlannerstop.bat | source: server.mjs, stop.command; 8·10·11·12번, 관련 JSON | Review |
-
 | 3 | [TASK-003](MOD-Supervisor/TASK-003.md) | 공통 API 준비·서버 조립 | server.mjs·server/runtime.mjs·vite.config.ts·.gitignore | 필수 저장/서비스/API 모듈 검증 완료 | SEQUENTIAL | NONE | Task 명시 범위 | 기존 batch·DB 준비 source | Review |
 
 ## 3. 책임 및 연결 판단

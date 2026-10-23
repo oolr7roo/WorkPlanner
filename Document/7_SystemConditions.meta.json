@@ -19,14 +19,16 @@
     "CT-001",
     "CT-002",
     "CT-003",
-    "CT-004"
+    "CT-004",
+    "CT-005",
+    "CT-006"
   ],
   "related_documents": [],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-05T04:06:46.668504Z",
-    "mtime_ns": 1791173206668503738,
-    "byte_size": 1709,
-    "sha256": "2f896a94f84de92c01e8ce2c95dde98012e0754ff6ad7387e41d43798b97b00d"
+    "modified_at_utc": "2026-10-23T03:13:55.869Z",
+    "mtime_ns": 1792725235869121500,
+    "byte_size": 2404,
+    "sha256": "d777e70a05a2142c8b1a816f70dac3fe329a0084dd6b0ddb93821213ee608807"
   },
-  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:13:55.914Z"
 }

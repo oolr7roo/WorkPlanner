@@ -40,10 +40,10 @@
     "DOC-Document-17_ValidationReport"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T02:58:32.563Z",
-    "mtime_ns": 1792724312563632700,
+    "modified_at_utc": "2026-10-23T03:03:16.530Z",
+    "mtime_ns": 1792724596530264300,
     "byte_size": 13616,
     "sha256": "be2ce96ccdb4b127fcca0f925547d4044864498f7010138d4a52eb932c9928c8"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.555Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:16:48.339Z"
 }

@@ -15,7 +15,6 @@ UI가 없는 도메인이므로 해당 없음.
 | 유형 | 대상 | 구현 책임 | 연결 대상 | 2단계 하위문서 | 상태 |
 | --- | --- | --- | --- | --- | --- |
 | Module | MOD-DatabaseBootstrap | 데이터베이스 준비 | 비UI 운영 경계 | [MOD-DatabaseBootstrap](14_ExecutionPlan/MOD-DatabaseBootstrap.md) | Review |
-
 | Module | MOD-ScheduleRepository | 일정 snapshot·revision·요청 기록 | API-102 | [MOD-ScheduleRepository](14_ExecutionPlan/MOD-ScheduleRepository.md) | Review |
 
 ## 3. 실행 기준과 문서 간 연결

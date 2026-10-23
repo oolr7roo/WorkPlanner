@@ -44,7 +44,8 @@
     "UF-010",
     "FR-017",
     "FR-018",
-    "FR-019"
+    "FR-019",
+    "UF-011"
   ],
   "owned_ids": [
     "FR-001",
@@ -74,10 +75,10 @@
   ],
   "related_documents": [],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T02:58:28.364Z",
-    "mtime_ns": 1792724308364402900,
-    "byte_size": 6900,
-    "sha256": "2a019c4259d61cfbf416b81646c02885facca4aba190cba07a998989492fee7f"
+    "modified_at_utc": "2026-10-23T03:13:55.867Z",
+    "mtime_ns": 1792725235867606500,
+    "byte_size": 6948,
+    "sha256": "37a71d8d2b00b73d3966a8cb5fed24930d81dd509304d4bcbc29a68a7a86c161"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.461Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:13:55.900Z"
 }

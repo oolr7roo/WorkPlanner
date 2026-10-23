@@ -13,6 +13,8 @@ SCR-001의 의미는 기존 전체 달력에서 월 보기로 구체화한다. �
 | UF-001, FR-001 | 탐색과 보기 전환 | SCR-001~003, COMMON-002 |
 | UF-002~006, FR-002~006, FR-008 | 일정 관리·오류 안내 | SCR-001~003, COMMON-001, COMMON-003, MOD-001 |
 | UF-007, FR-007 | 같은 일정 집합의 보존 | SCR-001~003, COMMON-003 |
+| UF-007, UF-009, FR-017 | 공통 일정·설정 보존과 오류 안내 | COMMON-003·MOD-001·MOD-002 |
+| UF-011, FR-019 | 기존 기록 미리보기·명시적 가져오기 | COMMON-001·MOD-003 |
 
 입력 정본: [사용자 흐름](../../Document/5_UserFlow.md), [기능 요구사항](../../Document/6_FunctionalRequirements.md), [SRS](../../Document/8_SoftwareRequirementsSpecification.md).
 
