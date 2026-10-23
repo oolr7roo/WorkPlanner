@@ -25,10 +25,10 @@
     "DOC-CalendarApp_Web-Document-12_api_spec-API-001_LocalStorage"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T00:44:35.151Z",
-    "mtime_ns": 1792716275151651400,
-    "byte_size": 2952,
-    "sha256": "00e32215fc0c930a055a0339de2192e8643bf64871426848c5623c2f5edd59ea"
+    "modified_at_utc": "2026-10-23T01:19:24.185Z",
+    "mtime_ns": 1792718364185484500,
+    "byte_size": 2955,
+    "sha256": "44d0402d00f94a521d48d57fcdc8290c969378955ed5fbf0bc9cbffa4decf8a0"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T00:44:35.203Z"
+  "metadata_refreshed_at_utc": "2026-10-23T01:21:08.490Z"
 }

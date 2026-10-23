@@ -27,7 +27,7 @@ export default function App() {
     if (schedules.blocked) return;
     const parent = schedules.effective.find(item => item.id === parentId);
     if (parentId) tree.expand(parentId);
-    setEditor({ id: null, parentId, draft: { ...defaultDraft(start ?? parent?.start, end), kind: "task", colorMode: "auto", color: schedules.automaticColor(parentId), checklist: [] } });
+    setEditor({ id: null, parentId, draft: { ...defaultDraft(start ?? parent?.start, end), kind: "plan", colorMode: "auto", color: schedules.automaticColor(parentId), checklist: [] } });
   }
   function openEdit(id: string) {
     if (schedules.blocked) return;

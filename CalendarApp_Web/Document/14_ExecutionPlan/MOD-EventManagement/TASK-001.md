@@ -94,7 +94,7 @@ FR-014·015 / DATA-002·005 / API-001. Write Set: types.ts, scheduleChecklist.ts
 
 ## 계획·작업 현재 기준선 (2026-10-23)
 
-사용자 승인: 편집창 구분 선택과 간트·월·주·일 작업만 표시. FR-016 / DATA-001·002 / API-001·002·003. 구분은 계층과 독립적인 plan/task이며 부재는 task, 신규 기본값도 task다. 저장·취소 경계를 유지한다. 전체 집합에서 부모 기간과 단계 색상을 계산한 뒤 작업만 표시하고, 우선순위는 전체를 관리한다. 숨겨진 계획의 접힘은 작업을 가리지 않는다. 계획도 표시 옵션은 범위 밖이다.
+사용자 승인: 편집창 구분 선택과 간트·월·주·일 작업만 표시. FR-016 / DATA-001·002 / API-001·002·003. 구분은 계층과 독립적인 plan/task이며 부재는 task, 신규 기본값은 plan이다. 저장·취소 경계를 유지한다. 전체 집합에서 부모 기간과 단계 색상을 계산한 뒤 작업만 표시하고, 우선순위는 전체를 관리한다. 숨겨진 계획의 접힘은 작업을 가리지 않는다. 계획도 표시 옵션은 범위 밖이다.
 
 실행: 기준 확정 → 모델/저장 계약 → 순수 표시 투영 → UI → 조립 → 빌드/격리 UI → 문서 대조/차이 해소. SEQUENTIAL/NONE. 구분 누락·오류, 계획 접힘 아래 작업, 중간 계획 아래 손자 작업, 저장/취소/재접속, 색상·부모 기간·자식 보존을 검증한다. 신규 테스트 파일은 만들지 않는다. 현재 HEAD a86a7a0, 기존 dirty dist/index.html·postgresql/supervisor.log. start-check master_not_pushed는 이전 local-only 완료의 선택적 미요청 원격 상태이며 필수 반영 누락이 아니다. 구현 단위는 package.json의 현재 웹 앱, 외부 SDK/DB/서버/운영 origin은 변경 금지다.
 
@@ -110,3 +110,11 @@ FR-014·015 / DATA-002·005 / API-001. Write Set: types.ts, scheduleChecklist.ts
 | 공용 뷰어 | 기존 전체 시각 reconciliation | 구조·source·bindings 자동 검증 통과, 공용 뷰어 시각/참조 문서 실제 열기는 미실행 | 미검증 |
 
 [이번 범위 검증](../../Evidence/ScheduleKinds/README.md). 앱 동작 범위의 필수 차이는 해소했다. 전체 제품·공용 뷰어 Review는 유지한다.
+
+
+### 신규 구분 기본값 조정 (2026-10-23)
+
+사용자 요청에 따라 새 일정·하위 일정·달력 시간 선택 생성의 기본 구분을 plan(계획)으로 조립한다. 기존 구분 부재의 task 해석 및 저장된 plan/task는 유지한다. Source 수정은 src/App.tsx의 openNew 초기값 한 곳, Semantic 수정은 MOD-001 kind-field-input의 기본값 의미와 schedule-kind 동작이다. 배치·스타일·기존 저장 정책은 확인만, 2단계·최상위 실행계획은 기존 Task 내부 기준 조정으로 확인만이다. 기존 dist/index.html·postgresql/supervisor.log는 커밋 제외. start-check master_not_pushed는 이전 local-only 완료의 미요청 원격 상태이며 필수 반영 누락이 아니다. 검증: 빌드, 신규·하위 기본 선택, 명시적 작업 저장·재열기, 취소 후 재추가를 확인한다.
+
+
+기본값 조정 검증: TypeScript/Vite 빌드 통과. 격리 origin 127.0.0.1:5180에서 신규·취소 후 재추가·하위 일정의 계획 기본값과 명시적 작업 저장/새로고침/재편집의 작업 유지를 확인했다. [기본 선택 화면](../../Evidence/DefaultPlan/new-default.png). 저장소·기존 구분 해석 source는 수정하지 않았다. 배치·스타일은 불변이며 공용 renderer 전체 시각 검증은 기존 미검증 상태를 유지한다.
