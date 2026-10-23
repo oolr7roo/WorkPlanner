@@ -39,7 +39,15 @@
     "FR-013",
     "FR-014",
     "FR-015",
-    "FR-016"
+    "FR-016",
+    "UF-009",
+    "UF-002",
+    "UF-003",
+    "API-004",
+    "FR-017",
+    "DATA-001",
+    "FR-018",
+    "FR-019"
   ],
   "owned_ids": [],
   "related_documents": [
@@ -47,10 +55,10 @@
     "DOC-Document-7_SystemConditions"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T00:44:35.147Z",
-    "mtime_ns": 1792716275147627100,
-    "byte_size": 5065,
-    "sha256": "412cf44dd4894b8108fa56ed3a66fd4eaffd27aeca671395d52faf83aa15e58f"
+    "modified_at_utc": "2026-10-23T02:58:28.547Z",
+    "mtime_ns": 1792724308547898700,
+    "byte_size": 5739,
+    "sha256": "e9b56c73f32d43ea27542ba3cb1da1771c93d52bc74bbd33499a453374a26b75"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T00:44:35.199Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.467Z"
 }

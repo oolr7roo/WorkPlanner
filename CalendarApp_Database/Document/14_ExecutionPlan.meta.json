@@ -10,8 +10,12 @@
   "parent_document_id": null,
   "status": "Review",
   "metadata_state": "needs-review",
-  "source_ids": [],
-  "owned_ids": [],
+  "source_ids": [
+    "API-102"
+  ],
+  "owned_ids": [
+    "MOD-ScheduleRepository"
+  ],
   "related_documents": [
     "DOC-CalendarApp_Database-Document-14_ExecutionPlan-MOD-DatabaseBootstrap",
     "DOC-Document-6_FunctionalRequirements",
@@ -22,10 +26,10 @@
     "DOC-CalendarApp_Database-Document-12_APISpecification"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-05T04:06:47.428787Z",
-    "mtime_ns": 1791173207428786424,
-    "byte_size": 1954,
-    "sha256": "c3d14e78a2f71d0acf3db1946063455dae5d9c0f26d514fcc616037c03aba7dd"
+    "modified_at_utc": "2026-10-23T02:58:31.803Z",
+    "mtime_ns": 1792724311803697400,
+    "byte_size": 2376,
+    "sha256": "0ccded3477ccbafdad63bcc7d85831766fe612f0008a4abbfc7165fe584a07d2"
   },
-  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.503Z"
 }

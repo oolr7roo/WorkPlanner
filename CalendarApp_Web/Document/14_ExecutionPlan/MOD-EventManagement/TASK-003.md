@@ -44,3 +44,13 @@ SEQUENTIAL / NONE. 선행: 문서 계약 확정; 저장 어댑터 연결 전 순
 
 
 2026-10-22 범위 검증: 정책·저장 경계 26건, 격리 브라우저의 프리셋 저장/취소/복원·다섯 보기·신규/하위·직접 색상 보존·자식 승격·모바일·날짜 보정 회귀 확인. [검증 근거](../../Evidence/ColorPresets/README.md). 저장 실패 UI 전체 경로와 공용 renderer 충실도는 미검증이며 Review를 유지한다.
+
+
+## 공통 서버 전환 현재 기준
+
+useSchedules/색상 Hook의 저장 요청은 WorkspaceClient 공개 계약으로 전달한다. 부모 기간·색상·체크리스트 순수 규칙은 서비스에서도 재사용하며 중복 판정을 새로 만들지 않는다. 구현→실제 검증→현재 문서 대조→차이 해소를 따른다. 신규 API 계약은 12번 API-004/005와 신규 모듈 Task를 따른다.
+
+
+## 공통 설정 비동기 저장 기준
+
+ScheduleColorSettings는 복제한 초안과 pending/error만 소유하고 WorkspaceClient가 API-004 저장을 수행한다. 저장 중 입력·취소·닫기를 막고 실패·충돌이면 초안을 유지한다. ScheduleColorControl은 상위 busy를 disabled로 전달받아 저장 중 색상 변경을 막는다. 기존 수동/자동 색상 계산은 그대로 재사용한다. 실제 웹 설정 저장 뒤 MCP context로 동일 설정을 확인한다.

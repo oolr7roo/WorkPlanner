@@ -11,19 +11,21 @@
   "status": "Review",
   "metadata_state": "needs-review",
   "source_ids": [
-    "FR-010"
+    "FR-010",
+    "FR-017"
   ],
   "owned_ids": [
-    "DatabaseBootstrap"
+    "DatabaseBootstrap",
+    "MOD-ScheduleRepository"
   ],
   "related_documents": [
     "DOC-Document-8_SoftwareRequirementsSpecification"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-05T04:06:46.931645Z",
-    "mtime_ns": 1791173206931644669,
-    "byte_size": 1082,
-    "sha256": "2b3e294673f31a0fb746a9357b785be916f5b641b4496bbb965c27ef9f2083d4"
+    "modified_at_utc": "2026-10-23T02:58:29.526Z",
+    "mtime_ns": 1792724309526203800,
+    "byte_size": 1506,
+    "sha256": "c02c1fdaf28526c54e80f855c5815f9d42c7885c7738e9a1c599e251144da8ca"
   },
-  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.490Z"
 }

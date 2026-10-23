@@ -39,3 +39,6 @@ UI가 없는 도메인이므로 해당 없음.
 | M4 | MOD-PostgreSQLPathGuard | [MOD-PostgreSQLPathGuard](14_ExecutionPlan/MOD-PostgreSQLPathGuard.md) | SEQUENTIAL | NONE | M3 | Review: 실제 검증 증거 | 현재 구현·정본·Task 연결 일치 |
 
 공용 source 파일·프로세스·클러스터 자원이 겹치므로 병렬 Wave를 확정하지 않는다. 작성 상태는 Review이며 구현이 이미 존재하는 것과 검증·고객 승인 완료를 분리한다. 도메인 간 순서는 Infrastructure 환경 확인→Database 준비 확인→Web 사용 경로 확인이다. 운영 시스템 상태를 바꾸는 실행은 문서 작성 작업에 포함하지 않는다.
+
+
+추가 조립 진입점: [MOD-Supervisor TASK-003](14_ExecutionPlan/MOD-Supervisor/TASK-003.md). 공통 API·DB pool 준비가 완료된 뒤 ready, 종료 시 연결 회수 후 기존 DB 정지.

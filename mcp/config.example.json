@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "workplanner": {
+      "command": "node",
+      "args": [
+        "C:/WorkPlanner/mcp/server.mjs"
+      ]
+    }
+  }
+}

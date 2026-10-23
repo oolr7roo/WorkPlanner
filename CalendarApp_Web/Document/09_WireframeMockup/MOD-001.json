@@ -32,7 +32,9 @@
       "Document/Evidence/ColorPickerDefault/geometry.json",
       "src/features/schedules/scheduleKinds.ts",
       "Document/Evidence/ScheduleKinds/editor-geometry.json",
-      "Document/Evidence/KindHelpRemoved/editor-geometry.json"
+      "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+      "Document/Evidence/McpWorkspace/editor-geometry.json",
+      "src/features/schedules/schedules.css"
     ],
     "unverified": [
       "모든 단말·공용 뷰어 시각 검증은 미완료이다."
@@ -110,9 +112,9 @@
       "visible": true,
       "rect": {
         "x": 32.638889,
-        "y": 19.8,
+        "y": 22.4,
         "w": 34.722222,
-        "h": 60.4
+        "h": 55.2
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -139,7 +141,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "editor"
         }
       }
@@ -151,9 +153,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 3.807947,
+        "y": 4.166667,
         "w": 90.8,
-        "h": 5.215232
+        "h": 5.706522
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -180,7 +182,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "editor-header"
         }
       }
@@ -222,7 +224,7 @@
       "text": "일정 수정",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "editor-title"
         }
       }
@@ -280,7 +282,7 @@
       "test": "close",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "close"
         }
       }
@@ -292,9 +294,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 12.334437,
+        "y": 13.496377,
         "w": 90.8,
-        "h": 83.857616
+        "h": 82.336957
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -321,7 +323,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "editor-form"
         }
       }
@@ -333,9 +335,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 33.366239,
+        "y": 37.183718,
         "w": 100,
-        "h": 13.524186
+        "h": 15.071507
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -362,7 +364,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "time-fields"
         }
       }
@@ -374,9 +376,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 91.312932,
+        "y": 90.319032,
         "w": 100,
-        "h": 8.687068
+        "h": 9.680968
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -403,7 +405,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "editor-actions"
         }
       }
@@ -417,7 +419,7 @@
         "x": 0,
         "y": 0,
         "w": 100,
-        "h": 13.524186
+        "h": 15.071507
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -445,7 +447,7 @@
       "text": "제목",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "title-field"
         }
       }
@@ -506,7 +508,7 @@
         "required": true,
         "placeholder": "일정 제목",
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "title-field-input"
         }
       }
@@ -548,7 +550,7 @@
       "text": "시작",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "start-field"
         }
       }
@@ -609,7 +611,7 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "start-field-input"
         }
       }
@@ -651,7 +653,7 @@
       "text": "종료",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "end-field"
         }
       }
@@ -712,7 +714,7 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "end-field-input"
         }
       }
@@ -753,7 +755,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "color-field"
         }
       }
@@ -813,7 +815,7 @@
         "mode": "auto",
         "sample_value": "#225588",
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "color-field-input"
         }
       }
@@ -824,10 +826,10 @@
       "name": "cancel",
       "visible": true,
       "rect": {
-        "x": 69.603524,
-        "y": 0,
-        "w": 14.537445,
-        "h": 100
+        "x": 0,
+        "y": -126.136364,
+        "w": 20.319383,
+        "h": 80.681818
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -846,7 +848,7 @@
           "radius": 8
         },
         "typography": {
-          "size": 16,
+          "size": 13,
           "weight": "400"
         }
       },
@@ -873,7 +875,7 @@
       "test": "cancel",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "cancel"
         }
       }
@@ -915,34 +917,42 @@
       "text": "저장",
       "events": {
         "on": "submit",
-        "intent": "일정과 체크리스트 초안을 검증하고 저장한다. 빈 체크항목은 오류로 안내하고 초안을 유지한다.",
+        "intent": "공통 API로 초안과 편집 시작 revision을 저장한다. 저장 중 입력·닫기를 막고 실패·충돌 시 초안을 유지한다.",
         "bindings": {
           "modules": [
-            "EventManagement"
+            "EventManagement",
+            "MOD-WorkspaceClient"
           ],
           "data": [
             "DATA-001",
             "DATA-002",
             "DATA-003",
-            "DATA-005"
+            "DATA-005",
+            "DATA-006"
           ],
           "apis": [
-            "API-002"
+            "API-004"
           ],
           "requirements": [
             "FR-002",
             "FR-003",
             "FR-008",
             "FR-015",
-            "FR-016"
+            "FR-016",
+            "FR-017"
           ]
         }
       },
       "test": "save",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "save"
+        }
+      },
+      "states": {
+        "busy": {
+          "enabled": false
         }
       }
     },
@@ -983,17 +993,23 @@
       "text": "삭제",
       "events": {
         "on": "click",
-        "intent": "편집 중인 일정만 삭제하고 닫는다.",
+        "intent": "명시적으로 삭제를 확정하면 공통 API로 요청한다. 자식은 승격하며 성공한 뒤 닫고 실패 시 초안을 유지한다.",
         "bindings": {
           "modules": [
-            "EventManagement"
+            "EventManagement",
+            "MOD-WorkspaceClient"
           ],
           "data": [
             "DATA-001",
-            "DATA-003"
+            "DATA-003",
+            "DATA-006"
           ],
           "requirements": [
-            "FR-004"
+            "FR-004",
+            "FR-017"
+          ],
+          "apis": [
+            "API-004"
           ]
         }
       },
@@ -1005,11 +1021,14 @@
         "editing": {
           "visible": true,
           "enabled": true
+        },
+        "busy": {
+          "enabled": false
         }
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "delete"
         }
       }
@@ -1119,7 +1138,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "editor-heading"
         }
       }
@@ -2291,9 +2310,9 @@
       "test": "kind-field",
       "rect": {
         "x": 0,
-        "y": 16.683119,
+        "y": 18.591859,
         "w": 100,
-        "h": 13.524186
+        "h": 15.071507
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -2318,7 +2337,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "kind-field"
         }
       },
@@ -2361,7 +2380,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
           "id": "kind-field-input"
         },
         "options": [

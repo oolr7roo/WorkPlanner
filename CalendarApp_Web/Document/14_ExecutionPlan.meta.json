@@ -14,9 +14,15 @@
     "FR-013",
     "FR-014",
     "DATA-004",
-    "API-001"
+    "API-001",
+    "API-004",
+    "API-005"
   ],
-  "owned_ids": [],
+  "owned_ids": [
+    "MOD-ScheduleService",
+    "MOD-WorkspaceClient",
+    "MOD-MCP"
+  ],
   "related_documents": [
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-001",
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement",
@@ -33,10 +39,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-003"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T07:46:51.268Z",
-    "mtime_ns": 1792655211268846000,
-    "byte_size": 4665,
-    "sha256": "8373ce9b6e29753780c6cf62d1178f014d3dfb218716b18ea6718d8d49efaac5"
+    "modified_at_utc": "2026-10-23T02:58:30.492Z",
+    "mtime_ns": 1792724310492321200,
+    "byte_size": 5716,
+    "sha256": "27f6daec9878b67650a0ac75710f1520c4f5ed080db12ef42af2f032b85ff7a0"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.714Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.500Z"
 }

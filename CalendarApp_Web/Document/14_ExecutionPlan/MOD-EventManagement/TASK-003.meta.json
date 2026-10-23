@@ -14,7 +14,8 @@
     "FR-013",
     "FR-014",
     "DATA-004",
-    "API-001"
+    "API-001",
+    "API-004"
   ],
   "owned_ids": [
     "MOD-EventManagement/TASK-003"
@@ -23,10 +24,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T07:46:51.261Z",
-    "mtime_ns": 1792655211261476100,
-    "byte_size": 3213,
-    "sha256": "70e5d1da836660be79078b0600fcc2c84262f2636aed0341d5b9bf9907f8ab09"
+    "modified_at_utc": "2026-10-23T02:58:33.143Z",
+    "mtime_ns": 1792724313143583700,
+    "byte_size": 4148,
+    "sha256": "f37a98442662b81d528f0322e5cd24f2a67108cf3a5057087beed68242fcc281"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.707Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.564Z"
 }

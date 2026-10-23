@@ -11,21 +11,28 @@
   "status": "Review",
   "metadata_state": "needs-review",
   "source_ids": [
-    "FR-010"
+    "FR-010",
+    "DATA-101",
+    "API-101",
+    "DATA-102",
+    "DATA-103",
+    "DATA-104"
   ],
   "owned_ids": [
     "DATA-101",
-    "DATA-102"
+    "DATA-102",
+    "DATA-103",
+    "DATA-104"
   ],
   "related_documents": [
     "DOC-CalendarApp_Database-Document-10_ModuleMapping",
     "DOC-CalendarApp_Database-Document-12_APISpecification"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-05T04:06:46.958316Z",
-    "mtime_ns": 1791173206958315393,
-    "byte_size": 1657,
-    "sha256": "2b02a47b1699e5e8a773dceaf89fd9e08459ba5644681a40a01cbaabdb17c2d2"
+    "modified_at_utc": "2026-10-23T02:58:29.713Z",
+    "mtime_ns": 1792724309713806100,
+    "byte_size": 2202,
+    "sha256": "03446850a8936ca0046ec6ec608060d7f58821d9dc2016f2c955d5bc1f152658"
   },
-  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.493Z"
 }

@@ -1,5 +1,5 @@
 import type { Schedule, ScheduleKind, TreeRow } from "./types";
-import { visibleRows } from "./scheduleTree";
+import { visibleRows } from "./scheduleTree.ts";
 
 export function validScheduleKind(value: unknown): boolean {
   return value === undefined || value === "plan" || value === "task";

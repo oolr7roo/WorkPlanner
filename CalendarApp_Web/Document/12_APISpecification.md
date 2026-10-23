@@ -1,34 +1,44 @@
 # CalendarApp Web 인터페이스
 
-## 1. 인터페이스 범위
+## 1. 범위와 공통 규칙
 
-| 포함 / 제외 | 내용 | 이유 |
+웹과 MCP는 동일한 공통 일정 서비스 API를 호출한다. PostgreSQL 접근은 repository만 소유한다. 신규 일정 기본 구분은 plan, 레거시 kind 부재는 task다. 현지 날짜는 Asia/Seoul 기준 YYYY-MM-DDTHH:mm:ss이며 명시적 offset 입력은 서버 시간대로 변환한다. offset ISO의 소수 초는 초 단위로 정규화한다. UI 변환·기간 보정은 초안 책임이고 최종 검증은 서비스 책임이다.
+
+## 2. 인터페이스 목록
+
+| API ID | 이름 | 호출 Module | Data | UI 사용 위치 | 상태 |
+| --- | --- | --- | --- | --- | --- |
+| API-001 | localStorage 레거시 읽기·접힘 보존 | BrowserEventStore | DATA-001/003/004 | MOD-003·COMMON-003 | Review |
+| API-002 | crypto.randomUUID | WorkspaceClient·Editor | DATA-005/006 | MOD-001·MOD-002 | Review |
+| API-003 | Calendar SDK props·콜백 | App UI | DATA-001/002 | SCR-001~003·COMMON-002 | Review |
+| API-004 | /api/workplanner GET·POST | WorkspaceClient·MCP | DATA-006/007 | COMMON-001/003·MOD-001~003 | Review |
+| API-005 | local stdio MCP | MCP client | DATA-006 | AI 도구·리소스 | Review |
+
+API-001은 기존 브라우저 원본의 명시적 가져오기 입력이며 일정·색상 자동 쓰기를 하지 않는다. 접힘은 같은 브라우저에만 보존한다. API-002는 요청·체크리스트·프리셋 ID 생성용이며 일정 ID는 서버가 생성한다. API-003의 외부 SDK 계약은 [상세](12_api_spec/API-003_CalendarSDK.md)를 유지한다.
+
+## 3. API-004 계약
+
+GET은 {revision,items,settings,timeZone} snapshot을 반환한다. POST body는 {operation,args,expectedRevision?,requestId?}. context/list/get/previewImport는 조회이며 {revision,timeZone,result}를 반환한다. createTree/update/move/delete/settings/import는 쓰기이며 expectedRevision과 8~128자 영숫자·하이픈·밑줄 requestId가 필수다. 성공은 {revision,items,settings,timeZone,result}다. JSON 요청 상한은 2MiB다.
+
+| operation | args | result |
 | --- | --- | --- |
-| 포함 | 브라우저 저장소·난수 API, 달력 SDK props·콜백 | 애플리케이션과 외부 실행 환경의 경계 |
-| 제외 | App 내부 함수, 일정 REST·GraphQL·WebSocket | 내부 함수 또는 존재하지 않는 계약 |
+| context | {} | 현재 시각·시간대·기본 구분·색상·개수·재시도 규칙 |
+| list | query?,kind?:all/plan/task,parentId?,start?,end?,offset?:0,limit?:100 | 표시 기간·색상이 계산된 items,total,offset,limit; limit 최대500 |
+| get | id | schedule,stored,ancestry,children |
+| previewImport | items,includeSettings?:false,settings? | added,skipped,total,settingsChanged; 변경 없음 |
+| createTree | nodes:[{ref,parentRef? 또는 parentId?,title,start?,end?,kind?,colorMode?,color?,checklist?,allDay?}] | created:{ref:generatedId}; 부모 먼저, 루트 기간 필수, 최대500 |
+| update | id,patch | id; 계층·순서는 수정 불가, 상위 기간 직접 변경 거부 |
+| move | id,parentId:null 또는 ID,beforeId? | id,parentId; 순환 거부 |
+| delete | id | deletedId,childrenPreserved:true; 자식 승격 |
+| settings | settings | settingsSaved:true; 자동 색상만 재계산 |
+| import | previewImport와 같은 args | 미리보기와 같은 결과; 전체 성공 또는 취소 |
 
-## 2. 공통 규칙
+체크리스트는 [{id,text,done}] 전체 교체이며 빈 배열은 비움이다. 일정 최대10000개·계층100단계·일정당 항목500개, 프리셋/단계 각각100개를 검증한다. 데이터베이스 workspace 행 잠금과 revision 검사를 같은 transaction에서 수행하고 응답·요청 fingerprint를 requests에 함께 보존한다. 동일 요청 ID·동일 본문은 원래 응답을 반환하고 다른 본문 재사용은 거부한다.
 
-브라우저 API와 SDK 계약이다. 날짜는 offset 없는 현지 문자열이며 UTC 전환이나 표준 시간대 서버 보정이 없다. 저장은 v2 키를 사용하고 v2가 없으면 v1 데이터를 호환 변환한다. v1 원본은 보존한다.
+오류 응답은 {error:{code,message}}다. 입력400, 인증401, Origin/Host403, 대상404, 메서드405, 충돌409, 상한413, JSON Content-Type415, 저장소503을 구분한다. REVISION_CONFLICT는 초안을 유지하고 최신 내용을 확인한 뒤 재편집한다. 네트워크 응답 유실 재시도는 같은 ID·본문을 사용한다. 화면은 5초 polling·focus·저장 응답으로 갱신하고 열린 초안의 revision은 고정한다.
 
-## 3. 인증 / 권한
+## 4. 인증·API-005
 
-| 구분 | 방식 | 적용 인터페이스 | 확인 필요 사항 |
-| --- | --- | --- | --- |
-| 브라우저 저장소 | 동일 origin 권한, 사용자 로그인 없음 | API-001 | 프로필 접근·기업 정책 |
-| UUID | crypto.randomUUID | API-002 | 지원 브라우저와 안전한 실행 컨텍스트 |
-| SDK | 앱이 props를 제공하고 콜백 수신 | API-003 | 라이브러리 버전별 동작 |
+loopback Host만 허용한다. 웹은 같은 origin, X-Workplanner-Client:web header와 POST Origin 검사를 사용한다. MCP는 .runtime/mcp-connection.json의 실행별 bearer token을 사용한다. CORS·외부 Origin·DB/서버/런타임 파일 노출을 거부한다. 첫 버전 원격 접속·다중 사용자 인증은 범위 밖이다.
 
-## 4. 인터페이스 목록
-
-| API ID | 이름 | 유형 | 용도 | 호출 Module | Data | UI 사용 위치 | 상세 문서 | 상태 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| API-001 | localStorage | browser API | 일정 읽기·쓰기 | BrowserEventStore | DATA-001, DATA-003 | COMMON-003.json#storage-error | [계약](12_api_spec/API-001_LocalStorage.md) | Review |
-| API-002 | crypto.randomUUID | browser API | 새 일정 ID 생성 | EventManagement | DATA-001 | MOD-001.json#save | 호출 입력 없음, UUID 문자열 반환; 저장 시 호출 | Review |
-| API-003 | Calendar SDK | SDK | 보기·선택·이동·리사이즈 | App UI | DATA-001, DATA-002 | SCR-001~003.json#calendar, COMMON-002.json#toolbar | [계약](12_api_spec/API-003_CalendarSDK.md) | Review |
-
-[모듈](10_ModuleMapping.md), [데이터](11_DataRequirements.md). 일정 데이터는 HTTP로 전달되지 않는다.
-
-## 색상 설정 저장 확장
-
-기존 API-001 localStorage 계약에 DATA-004 별도 키를 추가한다. UI는 저장 어댑터 함수를 거치며 프리셋 저장 성공 후에만 화면 설정을 갱신한다. 네트워크·DB 인터페이스는 추가하지 않는다.
+API-005는 공식 SDK의 stdio 서버다. workspace_context, list_schedules, get_schedule, create_schedule_tree, update_schedule, move_schedule, delete_schedule, set_color_settings 8개 도구와 workplanner://context 리소스를 제공한다. 쓰기는 API-004 계약을 따르고 오류는 isError와 구조화 코드·메시지로 반환한다. MCP는 DB·React·localStorage·서버 제어에 직접 접근하지 않는다. [연결 안내](../../mcp/README.md), [데이터](11_DataRequirements.md), [모듈](10_ModuleMapping.md).

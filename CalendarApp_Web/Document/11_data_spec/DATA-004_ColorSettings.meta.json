@@ -13,17 +13,19 @@
   "source_ids": [
     "FR-013",
     "FR-014",
-    "DATA-004"
+    "DATA-004",
+    "API-004",
+    "DATA-001"
   ],
   "owned_ids": [],
   "related_documents": [
     "DOC-CalendarApp_Web-Document-11_DataRequirements"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T07:46:51.275Z",
-    "mtime_ns": 1792655211275766900,
-    "byte_size": 2148,
-    "sha256": "701890df86bb5d88254144018a2011fe4eb082d8757e4b4d9f58c6ef89b0dc82"
+    "modified_at_utc": "2026-10-23T02:58:33.726Z",
+    "mtime_ns": 1792724313726932700,
+    "byte_size": 2161,
+    "sha256": "c7a73a39105425b3558493d660b62680a0f699fc5347c2c0c8f455ac5f78e891"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T07:47:13.720Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.531Z"
 }

@@ -21,3 +21,6 @@ Infrastructure → DatabaseBootstrap → catalog 조회 → 없으면 createdb �
 | DATA-102 | data 또는 data-macos 디렉터리 | PostgreSQL cluster 버전·플랫폼에 종속 | 실제 내용에 따라 민감 정보 가능 | 사용자 테이블·백업 복구·보존 기간 미검증 |
 
 소유권은 Database이며 관리·소비는 Infrastructure다. 물리 업무 스키마·인덱스·migration을 새로 정의하지 않는다. [모듈](10_ModuleMapping.md), [계약](12_APISpecification.md).
+
+
+DATA-103: workplanner.workspace 단일 개인 workspace; revision bigint·payload jsonb(items/settings). 집합 단위 잠금으로 계층 변경의 원자성을 보장한다. DATA-104: workplanner.requests의 requestId·본문 hash·결과 JSON. 재시도는 동일 결과, requestId 재사용 본문 불일치는 충돌이다. 날짜·도메인 정규화는 Web 서비스가 소유한다. 소규모 개인 일정 aggregate 저장으로 시작하며 다중 사용자·대규모 검색 인덱스는 범위 밖이다.

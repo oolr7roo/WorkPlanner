@@ -2,7 +2,7 @@
   "schema_version": 3,
   "screen": {
     "id": "COMMON-003",
-    "name": "브라우저 저장 피드백",
+    "name": "공통 저장 피드백",
     "viewport": [
       1440,
       1000
@@ -15,7 +15,8 @@
       "src/App.tsx",
       "src/styles.css",
       "node_modules/trud-calendar/dist/index.js",
-      "Document/Evidence/ViewSplit/runtime.json"
+      "Document/Evidence/ViewSplit/runtime.json",
+      "Document/Evidence/McpWorkspace/common-geometry.json"
     ],
     "unverified": [
       "공용 WireFrame 렌더러의 시각 충실도는 미검증이다.",
@@ -24,7 +25,7 @@
   },
   "frame": {
     "id": "FRAME-COMMON-003",
-    "name": "브라우저 저장 피드백",
+    "name": "공통 저장 피드백",
     "width": "100%",
     "height": "100%",
     "unit": "%",
@@ -65,22 +66,22 @@
           "weight": "400"
         }
       },
-      "text": "일정은 이 브라우저에 저장됩니다.",
+      "text": "일정과 색상 설정은 공통 저장소에 저장됩니다. Asia/Seoul",
       "events": {
         "on": "display",
         "intent": "사용자에게 현재 일정 보존 범위를 알린다.",
         "bindings": {
           "modules": [
-            "BrowserEventStore"
+            "MOD-WorkspaceClient"
           ],
           "data": [
-            "DATA-001"
+            "DATA-006"
           ],
           "apis": [
-            "API-001"
+            "API-004"
           ],
           "requirements": [
-            "FR-007"
+            "FR-017"
           ]
         }
       },
@@ -124,22 +125,22 @@
           "weight": "400"
         }
       },
-      "text": "브라우저 저장소에 일정을 저장할 수 없습니다.",
+      "text": "공통 저장소에 연결하지 못했습니다. 서버 상태를 확인하고 다시 시도해 주세요.",
       "events": {
         "on": "display",
         "intent": "일정 저장 실패를 사용자에게 알린다.",
         "bindings": {
           "modules": [
-            "BrowserEventStore"
+            "MOD-WorkspaceClient"
           ],
           "data": [
-            "DATA-003"
+            "DATA-006"
           ],
           "apis": [
-            "API-001"
+            "API-004"
           ],
           "requirements": [
-            "FR-008"
+            "FR-017"
           ]
         }
       },
@@ -159,7 +160,7 @@
           "view": "storage-error",
           "dom_index": 212
         },
-        "state_input": "storageError"
+        "state_input": "workspace.error"
       }
     }
   ],
@@ -171,8 +172,8 @@
   },
   "type": "common_area",
   "id": "COMMON-003",
-  "name": "브라우저 저장 피드백",
-  "description": "브라우저 저장 피드백의 공유 의미·계층·동작을 소유하며 배치와 현재 상태는 화면이 공급한다.",
+  "name": "공통 저장 피드백",
+  "description": "서버 저장 범위와 연결·저장 오류를 표시한다.",
   "applies_to": [
     "SCR-001",
     "SCR-002",

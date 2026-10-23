@@ -1,0 +1,182 @@
+{
+  "app-header": {
+    "rect": {
+      "h": 65,
+      "w": 1392,
+      "x": 24,
+      "y": 24
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "WORKPLAN←내 일정 달력+ 일정 추가설정기존 일정 가져오기"
+  },
+  "back-home": {
+    "rect": {
+      "h": 36,
+      "w": 36,
+      "x": 24,
+      "y": 50
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(220, 225, 235)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(35, 48, 74)",
+      "fontSize": "22px",
+      "fontWeight": "400"
+    },
+    "text": "←"
+  },
+  "brand": {
+    "rect": {
+      "h": 18,
+      "w": 197.859375,
+      "x": 24,
+      "y": 24
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(84, 117, 199)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(84, 117, 199)",
+      "fontSize": "12px",
+      "fontWeight": "800"
+    },
+    "text": "WORKPLAN"
+  },
+  "color-settings": {
+    "rect": {
+      "h": 46,
+      "w": 62,
+      "x": 1176.75,
+      "y": 33.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "10px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "700"
+    },
+    "text": "설정"
+  },
+  "header-actions": {
+    "rect": {
+      "h": 46,
+      "w": 368.015625,
+      "x": 1047.984375,
+      "y": 33.5
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "+ 일정 추가설정기존 일정 가져오기"
+  },
+  "import-events": {
+    "rect": {
+      "h": 46,
+      "w": 169.25,
+      "x": 1246.75,
+      "y": 33.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "10px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "700"
+    },
+    "text": "기존 일정 가져오기"
+  },
+  "new-event": {
+    "rect": {
+      "h": 46,
+      "w": 120.765625,
+      "x": 1047.984375,
+      "y": 33.5
+    },
+    "style": {
+      "background_color": "rgb(51, 102, 221)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "10px",
+      "borderWidth": "0px",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "700"
+    },
+    "text": "+ 일정 추가"
+  },
+  "page-title": {
+    "rect": {
+      "h": 42,
+      "w": 151.859375,
+      "x": 70,
+      "y": 47
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "28px",
+      "fontWeight": "400"
+    },
+    "text": "내 일정 달력"
+  },
+  "page-title-row": {
+    "rect": {
+      "h": 42,
+      "w": 197.859375,
+      "x": 24,
+      "y": 47
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "←내 일정 달력"
+  },
+  "storage-note": {
+    "rect": {
+      "h": 19.5,
+      "w": 1388,
+      "x": 26,
+      "y": 919
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(104, 117, 141)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(104, 117, 141)",
+      "fontSize": "13px",
+      "fontWeight": "400"
+    },
+    "text": "일정과 색상 설정은 공통 저장소에 저장됩니다. Asia/Seoul"
+  }
+}

@@ -16,7 +16,9 @@
       "src/styles.css",
       "node_modules/trud-calendar/dist/index.js",
       "Document/Evidence/ViewSplit/runtime.json",
-      "Document/Evidence/ColorPresets/geometry.json"
+      "Document/Evidence/ColorPresets/geometry.json",
+      "Document/Evidence/McpWorkspace/common-geometry.json",
+      "src/features/schedules/schedules.css"
     ],
     "unverified": [
       "공용 WireFrame 렌더러의 시각 충실도는 미검증이다.",
@@ -68,9 +70,8 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
-          "view": "month",
-          "dom_index": 2
+          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "id": "app-header"
         }
       }
     },
@@ -82,7 +83,7 @@
       "rect": {
         "x": 0,
         "y": 0,
-        "w": 12.5,
+        "w": 14.214036,
         "h": 27.692308
       },
       "source_ref": {
@@ -111,9 +112,8 @@
       "text": "WORKPLAN",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
-          "view": "month",
-          "dom_index": 4
+          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "id": "brand"
         }
       }
     },
@@ -125,7 +125,7 @@
       "rect": {
         "x": 0,
         "y": 35.384615,
-        "w": 12.5,
+        "w": 14.214036,
         "h": 64.615385
       },
       "source_ref": {
@@ -153,9 +153,8 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
-          "view": "month",
-          "dom_index": 5
+          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "id": "page-title-row"
         }
       }
     },
@@ -167,7 +166,7 @@
       "rect": {
         "x": 0,
         "y": 7.142857,
-        "w": 20.689655,
+        "w": 18.194741,
         "h": 85.714286
       },
       "source_ref": {
@@ -203,9 +202,8 @@
         "accessible_name": "홈으로 이동",
         "href": "https://home-macmini.tail7073a2.ts.net/",
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
-          "view": "month",
-          "dom_index": 6
+          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "id": "back-home"
         }
       }
     },
@@ -215,9 +213,9 @@
       "name": "page-title",
       "visible": true,
       "rect": {
-        "x": 26.436782,
+        "x": 23.248835,
         "y": 0,
-        "w": 73.563218,
+        "w": 76.751165,
         "h": 100
       },
       "source_ref": {
@@ -246,9 +244,8 @@
       "text": "내 일정 달력",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
-          "view": "month",
-          "dom_index": 7
+          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "id": "page-title"
         }
       }
     },
@@ -260,7 +257,7 @@
       "rect": {
         "x": 0,
         "y": 0,
-        "w": 63.305758,
+        "w": 32.815353,
         "h": 100
       },
       "source_ref": {
@@ -306,8 +303,8 @@
       "test": "new-event",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPresets/geometry.json",
-          "view": "priority"
+          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "id": "new-event"
         }
       }
     },
@@ -319,9 +316,9 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 86.295573,
+        "x": 73.562096,
         "y": 14.615385,
-        "w": 13.704427,
+        "w": 26.437904,
         "h": 70.769231
       },
       "source_ref": {
@@ -333,16 +330,22 @@
         ]
       },
       "style": {
-        "color": "#172033",
+        "color": "rgb(23, 32, 51)",
         "background_color": "rgba(0, 0, 0, 0)",
         "border": {
-          "color": "#172033",
+          "color": "rgb(23, 32, 51)",
           "width": 0,
           "radius": 0
         },
         "typography": {
           "size": 16,
           "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "id": "header-actions"
         }
       }
     },
@@ -355,9 +358,9 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 67.499386,
+        "x": 34.989173,
         "y": 0,
-        "w": 32.500614,
+        "w": 16.847111,
         "h": 100
       },
       "source_ref": {
@@ -378,7 +381,7 @@
         },
         "typography": {
           "size": 16,
-          "weight": "400"
+          "weight": "700"
         }
       },
       "events": {
@@ -396,7 +399,74 @@
           ]
         }
       },
-      "test": "color-settings"
+      "test": "color-settings",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "id": "color-settings"
+        }
+      }
+    },
+    {
+      "id": "import-events",
+      "type": "button",
+      "name": "기존 일정 가져오기",
+      "text": "기존 일정 가져오기",
+      "parent": "header-actions",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 54.010105,
+        "y": 0,
+        "w": 45.989895,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:기존 일정 가져오기",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "브라우저 원본 가져오기 팝업 MOD-003을 연다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-007"
+          ],
+          "apis": [
+            "API-004"
+          ],
+          "requirements": [
+            "FR-019"
+          ]
+        }
+      },
+      "test": "import-events",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "id": "import-events"
+        }
+      }
     }
   ],
   "verification": {

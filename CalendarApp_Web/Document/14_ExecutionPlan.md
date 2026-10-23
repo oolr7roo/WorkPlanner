@@ -23,7 +23,11 @@ web 구현 도메인의 현재 책임·작업 흐름 진입점·검증 마일스
 | 유형 | 대상 | 구현 책임 | 연결 대상 | 2단계 하위문서 | 상태 |
 | --- | --- | --- | --- | --- | --- |
 | Module | MOD-EventManagement | 일정 관리 | SCR-001~003 / MOD-001 | [MOD-EventManagement](14_ExecutionPlan/MOD-EventManagement.md) | Review |
-| Module | MOD-BrowserEventStore | 브라우저 저장소 | SCR-001~003 / MOD-001 | [MOD-BrowserEventStore](14_ExecutionPlan/MOD-BrowserEventStore.md) | Review |
+| Module | MOD-BrowserEventStore | 레거시 읽기·접힘 보존 | SCR-001~003 / MOD-001 | [MOD-BrowserEventStore](14_ExecutionPlan/MOD-BrowserEventStore.md) | Review |
+
+| Module | MOD-ScheduleService | 공통 업무 검증·HTTP | API-004 | [MOD-ScheduleService](14_ExecutionPlan/MOD-ScheduleService.md) | Review |
+| Module | MOD-WorkspaceClient | snapshot·revision·가져오기 UI | MOD-001~003·COMMON-001/003 | [MOD-WorkspaceClient](14_ExecutionPlan/MOD-WorkspaceClient.md) | Review |
+| Module | MOD-MCP | 로컬 stdio 도구·resource | API-005 | [MOD-MCP](14_ExecutionPlan/MOD-MCP.md) | Review |
 
 ## 3. 실행 기준과 문서 간 연결
 
@@ -52,3 +56,12 @@ web 구현 도메인의 현재 책임·작업 흐름 진입점·검증 마일스
 ## 2026-10-21 트리 일정 구현 기준선
 
 숫자 우선순위 대신 parentId/order로 형제 간 배치 순서를 사용한다. SCR-005는 접고 펴는 트리 목록이며 SCR-004도 같은 트리 순서와 접힘 상태를 공유한다. 들여쓰기는 단계당 8px, 최대 24px이다. 제목 클릭은 펼침·접힘, 별도 편집 버튼은 MOD-001을 연다. 부모 대표 기간은 하위 일정 범위이며 삭제 시 자식은 한 단계 위로 보존한다. 기존 v1 데이터는 변경하지 않고 v2로 변환한다.
+
+
+추가 작업 흐름: [MOD-ScheduleService](14_ExecutionPlan/MOD-ScheduleService.md). 계약·DB/서비스→API/Client/MCP→서버/App 조립→실제 통합 검증, SEQUENTIAL/NONE으로 진행한다.
+
+
+추가 작업 흐름: [MOD-WorkspaceClient](14_ExecutionPlan/MOD-WorkspaceClient.md). 계약·DB/서비스→API/Client/MCP→서버/App 조립→실제 통합 검증, SEQUENTIAL/NONE으로 진행한다.
+
+
+추가 작업 흐름: [MOD-MCP](14_ExecutionPlan/MOD-MCP.md). 계약·DB/서비스→API/Client/MCP→서버/App 조립→실제 통합 검증, SEQUENTIAL/NONE으로 진행한다.

@@ -101,3 +101,13 @@ App.tsx에서 신규 빈 checklist, 기존 checklist 전달을 조립하며(편�
 
 
 기본값 조정 검증: TypeScript/Vite 빌드 통과. 격리 origin 127.0.0.1:5180에서 신규·취소 후 재추가·하위 일정의 계획 기본값과 명시적 작업 저장/새로고침/재편집의 작업 유지를 확인했다. [기본 선택 화면](../../Evidence/DefaultPlan/new-default.png). 저장소·기존 구분 해석 source는 수정하지 않았다. 배치·스타일은 불변이며 공용 renderer 전체 시각 검증은 기존 미검증 상태를 유지한다.
+
+
+## 공통 서버 전환 현재 기준
+
+App.tsx 조립·styles.css·COMMON-001/003와 MOD-001/002/새 가져오기 모달의 상태/참조를 동기화한다. 비동기 저장과 오류를 연결하고 서버 저장 안내를 표시한다. 구현→실제 검증→현재 문서 대조→차이 해소를 따른다. 신규 API 계약은 12번 API-004/005와 신규 모듈 Task를 따른다.
+
+
+## 공통 저장소 조립 현재 기준
+
+App.tsx는 useScheduleWorkspace를 한 번 구성하고 일정·색상 Hook에 주입한다. 편집·설정 창을 열 때 revision을 보관해 비동기 save/delete에 전달한다. MOD-003 가져오기 UI는 MOD-WorkspaceClient 소유이며 App은 열기·닫기만 조립한다. COMMON-001 import-events와 COMMON-003 저장 안내를 API-004/FR-017~019로 연결한다. ScheduleEditor·설정 UI의 저장 중 fieldset/닫기 차단, 색상 버튼 disabled 전달과 신규 schedules.css 반응형 버튼 줄바꿈을 조립한다. 선행 모듈 검증: ScheduleRepository→ScheduleService, WorkspaceClient/MCP. 조립 후 실제 MCP→웹 수정→MCP 재조회·가져오기·충돌·모바일을 확인했다. [이번 검증](../../../../Document/Evidence/McpWorkspace/README.md). 공용 뷰어 충실도·참조 열기는 별도 Review다.

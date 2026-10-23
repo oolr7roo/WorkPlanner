@@ -42,6 +42,7 @@ SCR-001의 의미는 기존 전체 달력에서 월 보기로 구체화한다. �
 | --- | --- | --- | --- | --- |
 | MOD-001 | 일정 편집 | 다섯 보기에서 생성·수정·삭제·취소·자동/직접 색상 선택 | [ScheduleEditor](../../src/features/schedules/components/ScheduleEditor.tsx), [스타일](../../src/styles.css) | [MOD-001](09_WireframeMockup/MOD-001.json) |
 | MOD-002 | 단계별 색상 설정 | COMMON-001 설정에서 프리셋 선택·추가·이름·단계 색상·미리보기·저장/취소 | [ScheduleColorSettings](../../src/features/schedules/components/ScheduleColorSettings.tsx) | [MOD-002](09_WireframeMockup/MOD-002.json) |
+| MOD-003 | 기존 일정 가져오기 | 원본 읽기·미리보기·명시적 적용 | [ScheduleImportDialog](../../src/features/schedules/components/ScheduleImportDialog.tsx) | [MOD-003](09_WireframeMockup/MOD-003.json) |
 
 등록·수정은 같은 모달의 상태다. 기본 앱 진입은 월 보기다. 기준 viewport는 1440×1000, 반응형 확인 viewport는 390×844다. SDK 반복 구조는 현재 표본의 실측값이며 임의의 균등 격자가 아니다. 모바일 SDK 열 수는 반응형으로 달라질 수 있다. 전체 렌더 충실도·종일·더 보기 상태는 미검증으로 남긴다. [분리 검증 증거](../../Document/Evidence/ViewSplit/runtime.json), [검증 보고서](../../Document/17_ValidationReport.md).
 

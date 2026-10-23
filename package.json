@@ -8,13 +8,17 @@
     "start": "node server.mjs",
     "stop": "node server.mjs stop",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "mcp": "node mcp/server.mjs"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "pg": "^8.23.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "trud-calendar": "^1.0.1",
-    "trud-calendar-core": "^1.0.1"
+    "trud-calendar-core": "^1.0.1",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
@@ -22,6 +26,9 @@
     "@types/react-dom": "^19.0.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.0",
-    "vite": "^6.0.0"
+    "vite": "^6.4.5"
+  },
+  "engines": {
+    "node": ">=22.18.0"
   }
 }

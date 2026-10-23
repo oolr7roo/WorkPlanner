@@ -20,4 +20,7 @@
 | --- | --- | --- | --- | --- |
 | PostgreSQL psql / createdb | FR-010 | 존재 조회와 생성 | [호출 근거](../../postgresql/manage.mjs) | Review |
 
-일정 repository, 업무 테이블, query API, migration은 소스에 없다. 기존 클러스터에 수동 생성된 사용자 테이블까지 없다고 단정하지 않는다. [SRS](../../Document/8_SoftwareRequirementsSpecification.md).
+승인된 구현으로 ScheduleRepository(database/repository.mjs)와 database/migrations/*.sql을 추가한다. DatabaseBootstrap은 기존 존재 준비만 담당한다. 기존 클러스터에 수동 생성된 사용자 테이블까지 없다고 단정하지 않는다. [SRS](../../Document/8_SoftwareRequirementsSpecification.md).
+
+
+MOD-ScheduleRepository는 FR-017~019의 snapshot/요청 재시도 기록과 transaction을 소유한다. 공개 read/mutate는 서비스가 호출하며 업무 판단은 소유하지 않는다. 업무 스키마는 workplanner로 격리하고 기존 public 사용자 테이블을 수정하지 않는다.

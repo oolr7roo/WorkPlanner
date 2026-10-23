@@ -2,9 +2,11 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { colorAtDepth, validateColorSettings } from "../scheduleColors";
 import type { ColorPreset, ColorSettings } from "../types";
 
-type Props = { initial: ColorSettings; initialError: string; onSave: (settings: ColorSettings) => string; onClose: () => void };
+type Props = { initial: ColorSettings; initialError: string; onSave: (settings: ColorSettings) => Promise<string>; onClose: () => void };
 export function ScheduleColorSettings(props: Props) {
   const [draft, setDraft] = useState(() => structuredClone(props.initial));
+  const [busy, setBusy] = useState(false);
+  const close = () => { if (!busy) props.onClose(); };
   const [error, setError] = useState(props.initialError);
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => { const element = dialog.current!; element.showModal(); return () => element.close(); }, []);
@@ -16,9 +18,12 @@ export function ScheduleColorSettings(props: Props) {
     const next = { id: crypto.randomUUID(), name: `새 프리셋 ${draft.presets.length + 1}`, colors: [...preset.colors] };
     setDraft(current => ({ ...current, activePresetId: next.id, presets: [...current.presets, next] }));
   }
-  function submit(event: FormEvent) {
+  async function submit(event: FormEvent) {
     event.preventDefault();
-    const message = validateColorSettings(draft) || props.onSave(draft);
+    if (busy) return;
+    setBusy(true);
+    const message = validateColorSettings(draft) || await props.onSave(draft);
+    setBusy(false);
     setError(message);
     if (!message) props.onClose();
   }
@@ -26,10 +31,10 @@ export function ScheduleColorSettings(props: Props) {
   const preview: string[] = [];
   for (let depth = 0; depth < preset.colors.length + 1; depth++) preview.push(colorAtDepth(depth, preset.colors, preview[depth - 1]));
   return <dialog ref={dialog} className="editor color-settings" aria-labelledby="color-settings-title"
-    onCancel={event => { event.preventDefault(); props.onClose(); }}
-    onClick={event => { if (event.target === event.currentTarget) { const rect = event.currentTarget.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) props.onClose(); } }}>
-    <div className="editor-header"><h2 id="color-settings-title">단계별 색상 설정</h2><button type="button" className="close-button" onClick={props.onClose} aria-label="설정 닫기">×</button></div>
-    <form onSubmit={submit}>
+    onCancel={event => { event.preventDefault(); close(); }}
+    onClick={event => { if (event.target === event.currentTarget) { const rect = event.currentTarget.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) close(); } }}>
+    <div className="editor-header"><h2 id="color-settings-title">단계별 색상 설정</h2><button type="button" className="close-button" disabled={busy} onClick={close} aria-label="설정 닫기">×</button></div>
+    <form onSubmit={submit} aria-busy={busy}><fieldset className="editor-fields" disabled={busy}>
       <p className="settings-help">새 일정은 단계별 자동 색상을 사용합니다. 저장하면 모든 자동 색상 일정에 일괄 적용되며, 개별 지정한 색상은 유지됩니다.</p>
       <div className="preset-choice"><label>프리셋 선택<select value={draft.activePresetId} onChange={event => setDraft({ ...draft, activePresetId: event.target.value })}>
         {draft.presets.map(item => <option key={item.id} value={item.id}>{item.name || "이름 없는 프리셋"}</option>)}
@@ -44,9 +49,9 @@ export function ScheduleColorSettings(props: Props) {
       <section className="color-preview" aria-label="단계별 색상 미리보기"><h3>트리 미리보기</h3>
         {preview.map((color, index) => <div key={index} style={{ paddingLeft: Math.min(index * 12, 48) }}><span style={{ background: color }} />{index + 1}단계 {index === 0 ? "최상위 일정" : "하위 일정"}<code>{color}</code></div>)}
       </section>
-      <p className="settings-help">설정한 단계보다 깊으면 색상을 순환합니다. 설정은 이 브라우저에 저장되며 저장을 눌러야 반영됩니다.</p>
+      <p className="settings-help">설정한 단계보다 깊으면 색상을 순환합니다. 설정은 공통 저장소에 저장되며 저장을 눌러야 반영됩니다.</p>
       {error && <p className="form-error" role="alert">{error}</p>}
-      <div className="editor-actions"><button type="button" className="cancel-button" onClick={props.onClose}>취소</button><button type="submit" className="save-button">저장하고 일괄 적용</button></div>
-    </form>
+      <div className="editor-actions"><button type="button" className="cancel-button" disabled={busy} onClick={close}>취소</button><button type="submit" className="save-button">저장하고 일괄 적용</button></div>
+    </fieldset></form>
   </dialog>;
 }

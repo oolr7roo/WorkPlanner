@@ -2,3 +2,4 @@
 /dist/
 /postgresql/backups/
 /postgresql/npm-cache/
+/.runtime/

@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-ScheduleService-TASK-001",
+  "document_number": 14,
+  "document_type": "task",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-ScheduleService/TASK-001.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-ScheduleService",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-017",
+    "DATA-001",
+    "API-004",
+    "DATA-103",
+    "API-102",
+    "FR-018",
+    "FR-019"
+  ],
+  "owned_ids": [
+    "MOD-ScheduleService/TASK-001"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-ScheduleService"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-23T02:58:30.299Z",
+    "mtime_ns": 1792724310299467000,
+    "byte_size": 2803,
+    "sha256": "80f8d80584f39bc0dc4082f4fa695924ffa2bcbde52520cfd4a84c5cddf0fa85"
+  },
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.541Z"
+}

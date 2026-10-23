@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-WorkspaceClient",
+  "document_number": 14,
+  "document_type": "execution-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-WorkspaceClient.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-017",
+    "FR-018",
+    "FR-019"
+  ],
+  "owned_ids": [
+    "MOD-WorkspaceClient"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-23T02:58:30.695Z",
+    "mtime_ns": 1792724310695671900,
+    "byte_size": 688,
+    "sha256": "3562feb387060c4cbb6126ecdcf7d614bb2e1bc6e251e00a98d37b4826f30fa9"
+  },
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.517Z"
+}

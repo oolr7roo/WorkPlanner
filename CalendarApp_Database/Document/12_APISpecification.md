@@ -19,3 +19,6 @@ password 파일을 읽어 자식 프로세스 PGPASSWORD로 전달한다. DB 준
 | API-101 | DB catalog / createdb CLI | CLI | calendarapp 존재 확인과 생성 | DatabaseBootstrap | DATA-101, DATA-102 | 없음 | 아래 상세 | Review |
 
 조회 요청은 `psql -h 127.0.0.1 -p <port> -U postgres -d postgres -tAc <조회문>`이다. 반환값이 `1`이 아니면 `createdb -h 127.0.0.1 -p <port> -U postgres calendarapp`을 실행한다. 호출 timeout은 30초다. 생성 오류는 준비 실패로 전달하고 상위에서 시작한 DB를 정지한다. 요청·SQL은 [원본](../../postgresql/manage.mjs)을 따른다. [데이터](11_DataRequirements.md), [운영](../../Document/16_DeploymentOperationsRequirements/Domain/database.md).
+
+
+API-102: ScheduleRepository 공개 read/mutate. mutate는 BEGIN→workspace FOR UPDATE→중복 요청 대조→revision 대조→서비스 순수 변경→payload/revision/요청 결과 INSERT→COMMIT, 실패 ROLLBACK이다. SQL은 고정 문장·파라미터 바인딩만 사용한다. 앱 연결은 전용 role로 workplanner의 SELECT/INSERT/UPDATE 권한만 사용한다.

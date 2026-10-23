@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-MCP",
+  "document_number": 14,
+  "document_type": "execution-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-MCP.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-017",
+    "FR-018",
+    "FR-019"
+  ],
+  "owned_ids": [
+    "MOD-MCP"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-23T02:58:31.060Z",
+    "mtime_ns": 1792724311060271000,
+    "byte_size": 672,
+    "sha256": "d0949f2a4d7917895ee7018fc0620bc902e07bb18887002e723cf5e20acaf6a7"
+  },
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.520Z"
+}

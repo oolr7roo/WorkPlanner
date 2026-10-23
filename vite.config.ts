@@ -10,7 +10,8 @@ export default defineConfig({
   },
   server: {
     allowedHosts: ["home-macmini.tail7073a2.ts.net"],
-    watch: { ignored: ["**/postgresql/**"] },
+    watch: { ignored: ["**/postgresql/**", "**/.runtime/**", "**/Document/**", "**/mcp/**", "**/server/**", "**/database/**"] },
+    fs: { deny: ["**/.git/**", "**/.env*", "**/.runtime/**", "**/postgresql/**", "**/server/**", "**/database/**", "**/mcp/**", "**/server.mjs"] },
   },
   plugins: [
     calendarMonthLabels(),
@@ -30,7 +31,7 @@ export default defineConfig({
             return;
           }
 
-          if (path.split("/").includes("postgresql")) {
+          if (path.split("/").some(part => ["postgresql", ".runtime", "server", "database", "mcp", "server.mjs"].includes(part))) {
             res.statusCode = 404;
             res.end();
             return;

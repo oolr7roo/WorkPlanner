@@ -6,6 +6,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { appRoot, loadConfig } from "./runtime-config.mjs";
 import { startPostgres, stopPostgres } from "./postgresql/manage.mjs";
+import { createWorkspaceRuntime } from "./server/runtime.mjs";
 
 const id = createHash("sha256").update(appRoot.toLowerCase()).digest("hex").slice(0, 16);
 const endpoint = process.platform === "win32"
@@ -120,6 +121,7 @@ async function main() {
   if (await isSupervisorRunning()) throw new Error("CalendarApp is already running.");
   const { webPort, postgresPort } = loadConfig();
   let vite;
+  let workspace;
   let control;
   let postgresStarted = false;
   let shuttingDown;
@@ -129,6 +131,7 @@ async function main() {
     shuttingDown = (async () => {
       const errors = [];
       try { await vite?.close(); } catch (error) { errors.push(error); }
+      try { await workspace?.close(); } catch (error) { errors.push(error); }
       if (postgresStarted) {
         try { stopPostgres(); } catch (error) { errors.push(error); }
       }
@@ -164,9 +167,13 @@ async function main() {
   try {
     startPostgres(postgresPort);
     postgresStarted = true;
+    workspace = await createWorkspaceRuntime({ postgresPort, webPort });
     const { createServer } = await import("vite");
-    vite = await createServer({ server: { host: "127.0.0.1", port: webPort, strictPort: true } });
+    vite = await createServer({ server: { host: "127.0.0.1", port: webPort, strictPort: true }, plugins: [{
+      name: "workplanner-api", configureServer(server) { server.middlewares.use(workspace.middleware); }
+    }] });
     await vite.listen();
+    await workspace.publish();
     control = await listenControl(shutdown);
     console.log(`CalendarApp ready: http://127.0.0.1:${webPort}/`);
   } catch (error) {

@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-WorkspaceClient-TASK-001",
+  "document_number": 14,
+  "document_type": "task",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-WorkspaceClient/TASK-001.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-WorkspaceClient",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-017",
+    "DATA-001",
+    "API-004",
+    "DATA-103",
+    "API-102",
+    "FR-018",
+    "FR-019"
+  ],
+  "owned_ids": [
+    "MOD-WorkspaceClient/TASK-001"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-WorkspaceClient"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-23T02:58:30.879Z",
+    "mtime_ns": 1792724310879106100,
+    "byte_size": 2802,
+    "sha256": "cb88da6e41c4597e89b987083eb71f90ba9d7e171eae1b2dbb9bc7638294c220"
+  },
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.544Z"
+}

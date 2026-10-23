@@ -4,17 +4,17 @@
 
 ## 계획·작업 구현 범위
 
-현재 Write Set: src/features/schedules/types.ts, scheduleKinds.ts, useSchedules.ts, components/ScheduleEditor.tsx, MOD-001.json의 kind-field·kind-field-input. 순수 함수는 kind 검증·부재 기본값·표시 투영, 편집기는 초안, Hook은 저장 검증을 담당한다. 기존 색상·날짜·체크리스트 책임은 유지한다.
+현재 Write Set: src/features/schedules/types.ts, scheduleKinds.ts, useSchedules.ts, components/ScheduleEditor.tsx, MOD-001.json의 kind-field·kind-field-input. 순수 함수는 kind 검증·부재 기본값·표시 투영, 편집기는 초안, Hook은 공통 API 요청을 담당하고 최종 저장 검증은 ScheduleService가 소유한다. 기존 색상·날짜·체크리스트 책임은 유지한다.
 
 ## 소유 범위
 
-src/features/schedules/types.ts, src/features/schedules/useSchedules.ts, src/features/schedules/scheduleTree.ts, src/features/schedules/scheduleDates.ts, src/features/schedules/components/ScheduleEditor.tsx
+src/features/schedules/types.ts, src/features/schedules/scheduleTree.ts, src/features/schedules/scheduleDates.ts, src/features/schedules/components/ScheduleEditor.tsx
 
 MOD-001, DATA-001~003. 숫자 우선순위는 제거하고 parentId/order로 형제 간 순서를 저장한다. 부모 이동 시 자식을 유지하며 순환을 거부한다. 부모 삭제 시 직계 자식을 한 단계 올려 보존한다. 부모 대표 기간은 자식 범위로 계산한다. 리프만 날짜를 직접 수정한다. 기존 일정 수정에서 시작이 현재 종료와 같거나 뒤로 이동하면 변경 직전 초안의 유효한 기간을 유지해 종료도 이동한다. 새 일정 생성·종료 직접 변경은 이 보정 대상이 아니며, 빈 입력·유효하지 않은 기간은 추정하지 않는다. 보정은 메모리 초안에만 적용하고 저장·취소 경계를 유지한다.
 
 ## 실행과 책임 경계
 
-문서 기준 확정 → 구현 → 빌드·격리 브라우저 검증 → 계약 대조 → 차이 해소. 순차 실행한다. UI는 저장소에 직접 접근하지 않으며 업무 함수는 DOM에 의존하지 않는다. scheduleDates.ts의 순수 함수가 시작 변경에 따른 종료를 계산하고 ScheduleEditor.tsx는 기존 일정 수정 입력에만 함수를 적용한다. useSchedules.ts의 저장 단계 검증과 부모 기간 계산은 그대로 유지한다. App은 조합만 소유한다. 다른 Task 소유 파일을 중복 소유하지 않는다.
+문서 기준 확정 → 구현 → 빌드·격리 브라우저 검증 → 계약 대조 → 차이 해소. 순차 실행한다. UI는 저장소에 직접 접근하지 않으며 업무 함수는 DOM에 의존하지 않는다. scheduleDates.ts의 순수 함수가 시작 변경에 따른 종료를 계산하고 ScheduleEditor.tsx는 기존 일정 수정 입력에만 함수를 적용한다. 저장 단계 검증은 ScheduleService, 부모 기간 순수 계산은 scheduleDates.ts가 소유한다. App은 조합만 소유한다. 다른 Task 소유 파일을 중복 소유하지 않는다.
 
 ## 시작·종료 자동 보정의 변경 경계
 
@@ -28,7 +28,7 @@ MOD-001, DATA-001~003. 숫자 우선순위는 제거하고 parentId/order로 형
 
 ## 검증과 리스크
 
-기존 일정 보존, 형제 재정렬·접기·편집, 부모 기간, 보기 전환과 날짜 유지, 간트 잘림·고정 열, 키보드 조작을 확인한다. 운영 origin·DB·서버·외부 모듈은 수정하지 않는다. 적용 가능한 구현 템플릿 없음(Web 등록 원본 누락); 기존 React/TypeScript 구조를 따른다. Git은 첫 커밋이 없는 상태로 시작했고 작업 브랜치만 생성했다.
+기존 일정 보존, 형제 재정렬·접기·편집, 부모 기간, 보기 전환과 날짜 유지, 간트 잘림·고정 열, 키보드 조작을 확인한다. 이 Task는 운영 origin 원본과 DB·서버·외부 모듈을 수정하지 않는다. 서버 변경은 신규 소유 Task만 담당한다. 적용 가능한 구현 템플릿 없음(Web 등록 원본 누락); 기존 React/TypeScript 구조를 따른다. Git은 첫 커밋이 없는 상태로 시작했고 작업 브랜치만 생성했다.
 
 ## 참조
 
@@ -126,3 +126,8 @@ FR-014·015 / DATA-002·005 / API-001. Write Set: types.ts, scheduleChecklist.ts
 
 
 삭제 검증 결과: source 안내 단락과 JSON kind-help를 제거했다. TypeScript/Vite 빌드 통과, 실제 1440×1000 편집창에서 구분 다음에 기간 입력이 바로 이어지고 체크리스트·저장/취소가 유지됨을 확인했다. 구분 변경 취소 후 재열기에서 계획 유지도 확인했다. 실측 좌표로 모달/입력 배치를 동기화했고 JSON 스키마·source·render contract 검사는 오류0·경고0이다. 공용 뷰어 전체 시각 reconciliation은 기존 미검증 상태로 유지한다. [화면 근거](../../Evidence/KindHelpRemoved/editor.png), [배치 근거](../../Evidence/KindHelpRemoved/editor-geometry.json). 관련 Task·배치·문구의 요청 범위 차이는 해소했다.
+
+
+## 공통 서버 전환 현재 기준
+
+useSchedules/색상 Hook의 저장 요청은 WorkspaceClient 공개 계약으로 전달한다. 부모 기간·색상·체크리스트 순수 규칙은 서비스에서도 재사용하며 중복 판정을 새로 만들지 않는다. 구현→실제 검증→현재 문서 대조→차이 해소를 따른다. 신규 API 계약은 12번 API-004/005와 신규 모듈 Task를 따른다.

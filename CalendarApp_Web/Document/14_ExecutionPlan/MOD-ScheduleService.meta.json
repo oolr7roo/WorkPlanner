@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-ScheduleService",
+  "document_number": 14,
+  "document_type": "execution-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/14_ExecutionPlan/MOD-ScheduleService.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-017",
+    "FR-018",
+    "FR-019"
+  ],
+  "owned_ids": [
+    "MOD-ScheduleService"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-23T02:58:30.096Z",
+    "mtime_ns": 1792724310096117300,
+    "byte_size": 712,
+    "sha256": "c9a1f863ba545d08e2209461ba200497ac6a1eb35f29818d21d64d30c9df893c"
+  },
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.514Z"
+}

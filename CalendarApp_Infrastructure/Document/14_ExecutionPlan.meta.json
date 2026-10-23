@@ -25,10 +25,10 @@
     "DOC-CalendarApp_Infrastructure-Document-12_APISpecification"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-05T04:06:47.724478Z",
-    "mtime_ns": 1791173207724478393,
-    "byte_size": 2996,
-    "sha256": "62000203c6ae66fd4985c87ded7e4a4e0f39516145094b1aff19b3e457c82d00"
+    "modified_at_utc": "2026-10-23T02:58:32.373Z",
+    "mtime_ns": 1792724312373161600,
+    "byte_size": 3237,
+    "sha256": "af40d372bbc268f10d9aa9c5557bdec26566d6623785d2dd2441c4c245fd53ff"
   },
-  "metadata_refreshed_at_utc": "2026-10-05T04:10:43.203867Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.507Z"
 }

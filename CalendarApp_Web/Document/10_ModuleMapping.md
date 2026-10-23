@@ -32,7 +32,7 @@ App은 설정·일정 Hook을 조합하고 헤더·팝업을 연결한다. 기�
 
 ## 체크리스트·헤더 색상 책임
 
-FR-014·015: MOD-EventManagement가 일정 초안·검증·저장 요청을 소유한다. ScheduleChecklist와 ScheduleColorControl은 입력/표시만 담당하고 localStorage를 참조하지 않는다. 순수 scheduleChecklist가 항목 형식·중복 id·공백 검사를 담당하며 BrowserEventStore는 호환 읽기와 기존 API-001 쓰기를 소유한다. App은 checklist 초안 전달만 조립한다. 소유 Task는 MOD-EventManagement/TASK-001, 저장은 MOD-BrowserEventStore/TASK-001, App·스타일은 SCR-001/TASK-001, MOD-002 안내는 SCR-001/TASK-003이다.
+FR-014·015: MOD-EventManagement가 일정 초안·검증·저장 요청을 소유한다. ScheduleChecklist와 ScheduleColorControl은 입력/표시만 담당하고 localStorage를 참조하지 않는다. 순수 scheduleChecklist가 항목 형식·중복 id·공백 검사를 담당하며 BrowserEventStore는 레거시 호환 읽기와 접힘 쓰기만 소유한다. 공통 일정·설정 쓰기는 WorkspaceClient→ScheduleService가 담당한다. App은 checklist 초안 전달만 조립한다. 소유 Task는 MOD-EventManagement/TASK-001, 저장은 MOD-BrowserEventStore/TASK-001, App·스타일은 SCR-001/TASK-001, MOD-002 안내는 SCR-001/TASK-003이다.
 
 
 ## 색상 선택 UI 경계
@@ -46,3 +46,15 @@ FR-014의 colorValues는 HEX/RGB/HSV 변환만 소유한다. ScheduleColorPicker
 ## 계획·작업 구분 책임
 
 FR-016의 MOD-001 kind-field 입력·save는 EventManagement가 소유한다. scheduleKinds.ts는 구분 검증·기본값 및 작업 표시 목록/행을 만드는 순수 정책이다. BrowserEventStore는 해당 공개 검증 함수로 kind를 복원하며 UI에 의존하지 않는다. App은 전체 계산 결과와 작업 투영을 각 View에 전달하고 GanttView·CalendarView는 구분을 다시 판정하지 않는다. 전체 계층의 기간·색상 계산은 표시 투영보다 선행한다.
+
+
+## 공통 저장·MCP 소유
+
+공통 ScheduleService는 server/schedules/service.mjs이며 기존 DOM 없는 날짜·트리·색상·체크리스트 정책을 재사용한다. server/schedules/policy.mjs는 DTO 검증/정규화, database/repository.mjs는 DB 트랜잭션, server/http/api.mjs는 HTTP 경계, mcp/server.mjs는 공식 SDK 도구 어댑터다. useScheduleWorkspace는 API 상태/폴링·오류/버전만, 기존 useSchedules와 색상 Hook은 UI 표시·입력 조정만 맡는다. BrowserEventStore는 레거시 읽기·가져오기 및 접힘 상태를 유지한다. App은 조립만 소유한다.
+
+
+| Module ID | 책임 | 공개 인터페이스 | 소유 Task |
+| --- | --- | --- | --- |
+| MOD-ScheduleService | 일정 업무 검증·명령 | read/query/command | MOD-ScheduleService/TASK-001 |
+| MOD-WorkspaceClient | API snapshot·revision·polling·MOD-003 | refresh/command | MOD-WorkspaceClient/TASK-001 |
+| MOD-MCP | 로컬 stdio 도구·리소스 | API-005 | MOD-MCP/TASK-001 |

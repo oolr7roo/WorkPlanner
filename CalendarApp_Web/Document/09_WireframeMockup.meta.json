@@ -21,7 +21,10 @@
     "FR-008",
     "FR-013",
     "FR-014",
-    "DATA-004"
+    "DATA-004",
+    "UF-001",
+    "UF-002",
+    "UF-007"
   ],
   "owned_ids": [
     "COMMON-001",
@@ -42,10 +45,10 @@
     "DOC-Document-17_ValidationReport"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T07:48:04.039Z",
-    "mtime_ns": 1792655284039114800,
-    "byte_size": 5961,
-    "sha256": "9e929133479d22215897324b337642cf3b530ba184690b60ce965b4d068f7cf4"
+    "modified_at_utc": "2026-10-23T02:58:34.316Z",
+    "mtime_ns": 1792724314316288000,
+    "byte_size": 6187,
+    "sha256": "95a509dc3d59e6e495c2972d9f9b6f80ce87d79d588ee4c55cc3736feb2053c3"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T07:48:04.051Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.510Z"
 }

@@ -18,7 +18,9 @@
     "API-202",
     "API-203"
   ],
-  "owned_ids": [],
+  "owned_ids": [
+    "MOD-Supervisor/TASK-003"
+  ],
   "related_documents": [
     "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-Supervisor-TASK-001",
     "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-Supervisor-TASK-002",
@@ -27,10 +29,10 @@
     "DOC-CalendarApp_Infrastructure-Document-12_APISpecification"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-22T03:18:16.911Z",
-    "mtime_ns": 1792639096911017700,
-    "byte_size": 2580,
-    "sha256": "5b327b8f501e0044f9b002ffe63d022b0920f485c263063ccfb3bb4edb3d290a"
+    "modified_at_utc": "2026-10-23T02:58:32.190Z",
+    "mtime_ns": 1792724312190786000,
+    "byte_size": 2860,
+    "sha256": "b2be948e5fc733a247ead2a069d995f6c4073526457f49b5b92467b1eb76c1b4"
   },
-  "metadata_refreshed_at_utc": "2026-10-22T03:18:46.395Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.526Z"
 }

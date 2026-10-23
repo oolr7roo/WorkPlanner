@@ -1,0 +1,200 @@
+{
+  "actions": {
+    "rect": {
+      "h": 44,
+      "w": 454,
+      "x": 493,
+      "y": 553.890625
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "취소미리보기가져오기 적용"
+  },
+  "apply": {
+    "rect": {
+      "h": 44,
+      "w": 133.625,
+      "x": 813.375,
+      "y": 553.890625
+    },
+    "style": {
+      "background_color": "rgb(51, 102, 221)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "8px",
+      "borderWidth": "0px",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "700"
+    },
+    "text": "가져오기 적용"
+  },
+  "cancel": {
+    "rect": {
+      "h": 44,
+      "w": 66,
+      "x": 633.375,
+      "y": 553.890625
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "취소"
+  },
+  "close": {
+    "rect": {
+      "h": 28,
+      "w": 19.625,
+      "x": 927.375,
+      "y": 403.859375
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(107, 114, 128)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(107, 114, 128)",
+      "fontSize": "28px",
+      "fontWeight": "400"
+    },
+    "text": "×"
+  },
+  "dialog": {
+    "rect": {
+      "h": 241.78125,
+      "w": 500,
+      "x": 470,
+      "y": 379.109375
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "16px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "기존 일정 가져오기×이 브라우저의 일정 5개를 공통 저장소로 가져옵니다. 브라우저 원본은 보존됩니다.색상 설정도 가져오기 (공통 설정 교체)추가 0개 · 동일 일정 5개취소미리보기가져오기 적용"
+  },
+  "header": {
+    "rect": {
+      "h": 31.5,
+      "w": 454,
+      "x": 493,
+      "y": 402.109375
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "기존 일정 가져오기×"
+  },
+  "inspect": {
+    "rect": {
+      "h": 44,
+      "w": 98,
+      "x": 707.375,
+      "y": 553.890625
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "미리보기"
+  },
+  "preview": {
+    "rect": {
+      "h": 25.59375,
+      "w": 454,
+      "x": 493,
+      "y": 524.296875
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "추가 0개 · 동일 일정 5개"
+  },
+  "settings": {
+    "rect": {
+      "h": 19.5,
+      "w": 454,
+      "x": 493,
+      "y": 504.796875
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": "색상 설정도 가져오기 (공통 설정 교체)"
+  },
+  "summary": {
+    "rect": {
+      "h": 51.1875,
+      "w": 454,
+      "x": 493,
+      "y": 453.609375
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "이 브라우저의 일정 5개를 공통 저장소로 가져옵니다. 브라우저 원본은 보존됩니다."
+  },
+  "title": {
+    "rect": {
+      "h": 31.5,
+      "w": 182.765625,
+      "x": 493,
+      "y": 402.109375
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "21px",
+      "fontWeight": "400"
+    },
+    "text": "기존 일정 가져오기"
+  }
+}

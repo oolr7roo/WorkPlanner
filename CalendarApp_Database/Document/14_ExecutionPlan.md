@@ -16,6 +16,8 @@ UI가 없는 도메인이므로 해당 없음.
 | --- | --- | --- | --- | --- | --- |
 | Module | MOD-DatabaseBootstrap | 데이터베이스 준비 | 비UI 운영 경계 | [MOD-DatabaseBootstrap](14_ExecutionPlan/MOD-DatabaseBootstrap.md) | Review |
 
+| Module | MOD-ScheduleRepository | 일정 snapshot·revision·요청 기록 | API-102 | [MOD-ScheduleRepository](14_ExecutionPlan/MOD-ScheduleRepository.md) | Review |
+
 ## 3. 실행 기준과 문서 간 연결
 
 - [6_FunctionalRequirements](../../Document/6_FunctionalRequirements.md)
@@ -33,3 +35,6 @@ UI가 없는 도메인이므로 해당 없음.
 | M1 | MOD-DatabaseBootstrap | [MOD-DatabaseBootstrap](14_ExecutionPlan/MOD-DatabaseBootstrap.md) | SEQUENTIAL | NONE | 없음 | Review: 실제 검증 증거 | 현재 구현·정본·Task 연결 일치 |
 
 공용 source 파일·프로세스·클러스터 자원이 겹치므로 병렬 Wave를 확정하지 않는다. 작성 상태는 Review이며 구현이 이미 존재하는 것과 검증·고객 승인 완료를 분리한다. 도메인 간 순서는 Infrastructure 환경 확인→Database 준비 확인→Web 사용 경로 확인이다. 운영 시스템 상태를 바꾸는 실행은 문서 작성 작업에 포함하지 않는다.
+
+
+추가 작업 흐름: [MOD-ScheduleRepository](14_ExecutionPlan/MOD-ScheduleRepository.md). 계약·DB/서비스→API/Client/MCP→서버/App 조립→실제 통합 검증, SEQUENTIAL/NONE으로 진행한다.

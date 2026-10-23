@@ -1,0 +1,640 @@
+{
+  "schema_version": 3,
+  "screen": {
+    "id": "MOD-003",
+    "name": "기존 일정 가져오기",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "unit": "%",
+    "purpose": "브라우저 원본 미리보기·공통 저장소 이전"
+  },
+  "frame": {
+    "id": "FRAME-MOD-003",
+    "name": "기존 일정 가져오기",
+    "width": "100%",
+    "height": "100%",
+    "unit": "%",
+    "layout_unit": "percent",
+    "base_width": 1440,
+    "base_height": 1000
+  },
+  "derivation": {
+    "mode": "implementation-derived",
+    "sources": [
+      "src/features/schedules/components/ScheduleImportDialog.tsx",
+      "src/features/schedules/schedules.css",
+      "src/styles.css",
+      "Document/Evidence/McpWorkspace/import-geometry.json"
+    ],
+    "unverified": [
+      "공용 WireFrame 렌더러 시각 충실도·참조 문서 실제 열기는 미검증이다."
+    ]
+  },
+  "components": [
+    {
+      "id": "backdrop",
+      "type": "panel",
+      "name": "backdrop",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "style": {
+        "background_color": "rgba(18,27,46,.48)"
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      }
+    },
+    {
+      "id": "actions",
+      "type": "panel",
+      "name": "actions",
+      "visible": true,
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 4.6,
+        "y": 72.289001,
+        "w": 90.8,
+        "h": 18.198268
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:editor-actions",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "actions"
+        }
+      }
+    },
+    {
+      "id": "apply",
+      "type": "button",
+      "name": "apply",
+      "visible": true,
+      "parent": "actions",
+      "scope": "parent",
+      "rect": {
+        "x": 70.567181,
+        "y": 0,
+        "w": 29.432819,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "background_color": "rgb(51, 102, 221)",
+        "border": {
+          "color": "rgb(255, 255, 255)",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:가져오기 적용",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "apply"
+        }
+      },
+      "text": "가져오기 적용",
+      "events": {
+        "on": "click",
+        "intent": "미리보기 revision으로 원자적으로 가져온다. 실패 시 원본·서버를 보존한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-007"
+          ],
+          "apis": [
+            "API-004"
+          ],
+          "requirements": [
+            "FR-019"
+          ]
+        }
+      },
+      "states": {
+        "busy": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "id": "cancel",
+      "type": "button",
+      "name": "cancel",
+      "visible": true,
+      "parent": "actions",
+      "scope": "parent",
+      "rect": {
+        "x": 30.919604,
+        "y": 0,
+        "w": 14.537445,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:취소",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "cancel"
+        }
+      },
+      "text": "취소",
+      "events": {
+        "on": "click",
+        "intent": "가져오기를 취소하고 브라우저 원본을 보존한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-007"
+          ],
+          "apis": [
+            "API-004"
+          ],
+          "requirements": [
+            "FR-019"
+          ]
+        }
+      },
+      "states": {
+        "busy": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "id": "close",
+      "type": "button",
+      "name": "close",
+      "visible": true,
+      "parent": "header",
+      "scope": "parent",
+      "rect": {
+        "x": 95.677313,
+        "y": 5.555556,
+        "w": 4.322687,
+        "h": 88.888889
+      },
+      "style": {
+        "color": "rgb(107, 114, 128)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(107, 114, 128)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 28,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:×",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "close"
+        }
+      },
+      "text": "×",
+      "events": {
+        "on": "click",
+        "intent": "가져오기를 취소한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-007"
+          ],
+          "apis": [
+            "API-004"
+          ],
+          "requirements": [
+            "FR-019"
+          ]
+        }
+      },
+      "states": {
+        "busy": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "id": "dialog",
+      "type": "panel",
+      "name": "dialog",
+      "visible": true,
+      "parent": "backdrop",
+      "scope": "parent",
+      "rect": {
+        "x": 32.638889,
+        "y": 37.910938,
+        "w": 34.722222,
+        "h": 24.178125
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 16
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:import-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "dialog"
+        }
+      }
+    },
+    {
+      "id": "header",
+      "type": "panel",
+      "name": "header",
+      "visible": true,
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 4.6,
+        "y": 9.512731,
+        "w": 90.8,
+        "h": 13.028306
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:기존 일정 가져",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "header"
+        }
+      }
+    },
+    {
+      "id": "inspect",
+      "type": "button",
+      "name": "inspect",
+      "visible": true,
+      "parent": "actions",
+      "scope": "parent",
+      "rect": {
+        "x": 47.219163,
+        "y": 0,
+        "w": 21.585903,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:미리보기",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "inspect"
+        }
+      },
+      "text": "미리보기",
+      "events": {
+        "on": "click",
+        "intent": "API로 충돌·형식을 검사하고 추가·동일 개수를 표시한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-007"
+          ],
+          "apis": [
+            "API-004"
+          ],
+          "requirements": [
+            "FR-019"
+          ]
+        }
+      },
+      "states": {
+        "busy": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "id": "preview",
+      "type": "text",
+      "name": "preview",
+      "visible": true,
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 4.6,
+        "y": 60.049115,
+        "w": 90.8,
+        "h": 10.585498
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:result.result.added",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "preview"
+        }
+      },
+      "text": "추가 0개 · 동일 일정 5개"
+    },
+    {
+      "id": "settings",
+      "type": "input",
+      "name": "settings",
+      "visible": true,
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 4.6,
+        "y": 51.983973,
+        "w": 90.8,
+        "h": 8.065142
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(51, 65, 85)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:색상 설정도 가",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "settings"
+        }
+      },
+      "text": "색상 설정도 가져오기 (공통 설정 교체)",
+      "events": {
+        "on": "change",
+        "intent": "공통 색상 설정 교체를 별도 선택하고 이전 미리보기를 무효화한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-007"
+          ],
+          "apis": [
+            "API-004"
+          ],
+          "requirements": [
+            "FR-019"
+          ]
+        }
+      },
+      "states": {
+        "busy": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "id": "summary",
+      "type": "text",
+      "name": "summary",
+      "visible": true,
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 4.6,
+        "y": 30.812977,
+        "w": 90.8,
+        "h": 21.170997
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:이 브라우저의 ",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "summary"
+        }
+      },
+      "text": "이 브라우저의 일정 5개를 공통 저장소로 가져옵니다. 브라우저 원본은 보존됩니다."
+    },
+    {
+      "id": "title",
+      "type": "heading",
+      "name": "title",
+      "visible": true,
+      "parent": "header",
+      "scope": "parent",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 40.256746,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 21,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleImportDialog.tsx",
+        "locator": "text:import-title",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/McpWorkspace/import-geometry.json",
+          "id": "title"
+        }
+      },
+      "text": "기존 일정 가져오기"
+    }
+  ],
+  "verification": {
+    "schema": "valid",
+    "source_alignment": "measured-desktop-dom",
+    "render_fidelity": "unverified",
+    "complete": false
+  }
+}

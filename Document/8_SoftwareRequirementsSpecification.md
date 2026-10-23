@@ -8,8 +8,8 @@
 
 | 구현 도메인 ID | 도메인 | 담당 범위 | 선택 근거 | 상태 |
 | --- | --- | --- | --- | --- |
-| web | Web | 개인 달력과 브라우저 일정 관리 | FR-001~008, FR-013~016 | 확정 |
-| database | Database | 로컬 데이터베이스 존재 확인·생성 | FR-010 | 확정 |
+| web | Web | 개인 달력·공통 일정 서비스·MCP 관리 | FR-001~008, FR-013~019 | 확정 |
+| database | Database | 로컬 데이터베이스 준비 및 공통 일정 저장 | FR-010 | 확정 |
 | infrastructure | Infrastructure | 프로세스·설정·loopback 웹 제공 | FR-009, FR-011, FR-012 | 확정 |
 
 ## 도메인별 구현 범위
@@ -49,15 +49,20 @@
 | infrastructure | database | 데이터베이스 준비 요청 | FR-010, FR-011 | 도메인 12·14번 |
 | database | infrastructure | 존재·준비 결과와 실패 반환 | FR-010 | 도메인 12·14번 |
 
-Web→Database 일정 저장 계약은 존재하지 않는다. database 책임은 파일 경계와 무관하게 같은 DB 관리 파일 안에서 실행되는 논리 책임이다. Unity·Dedicated Server·AI 도메인은 구현 근거가 없어 선택하지 않는다.
+2026-10-23 사용자 승인으로 Web→Database 일정 저장 계약을 추가한다. Web은 일정 서비스·HTTP·로컬 MCP, Database는 트랜잭션·버전·중복 요청 저장, Infrastructure는 연결 준비·실행·종료를 소유한다. database 책임은 파일 경계와 무관하게 같은 DB 관리 파일 안에서 실행되는 논리 책임이다. Unity·Dedicated Server·AI 도메인은 구현 근거가 없어 선택하지 않는다.
 
 ## 단계별 색상 확장 (2026-10-22)
 
-UF-009 → FR-013, UF-002·UF-003 → FR-014를 Web 주 책임으로 확정한다. 기존 NFR-001·002와 동일 브라우저 저장 제약을 적용한다. Database·Infrastructure 변경은 없다.
+UF-009 → FR-013, UF-002·UF-003 → FR-014를 Web 주 책임으로 확정한다. 기존 NFR-001·002를 적용하며 공통 저장소는 Database·Infrastructure와 협력한다.
 
 FR-013·014의 도메인 책임과 품질 조건은 위 통합 구현 요구사항 표를 따른다.
 
 
 ## 2026-10-23 체크리스트와 색상 편집 조정
 
-[기능 요구사항](6_FunctionalRequirements.md)의 FR-014 색상 편집 기준을 따른다. FR-015는 Web이 단독 주 책임이며 NFR-001·002, 기존 SA·CT의 동일 브라우저 보존 조건을 적용한다. 완료 기준은 항목 추가/수정/체크/삭제·저장/취소·기존 데이터 호환이며 다른 구현 도메인과 신규 전송 계약은 없다.
+[기능 요구사항](6_FunctionalRequirements.md)의 FR-014 색상 편집 기준을 따른다. FR-015는 Web이 단독 주 책임이며 NFR-001·002, 공통 서버 보존 조건을 적용한다. 완료 기준은 항목 추가/수정/체크/삭제·저장/취소·기존 데이터 호환이며 공통 저장 전송은 API-004를 사용한다.
+
+
+## 공통 일정·MCP 승인 범위
+
+FR-017~019의 주 책임은 web, 협력은 database/infrastructure다. 기존 FR-002~008·013~016과 DATA-001~005 의미는 유지한다. 첫 연결은 로컬 stdio, 원격 MCP·다중 사용자·공개 API는 제외한다. Node 22.18 이상, 기본 시간대 Asia/Seoul, 날짜 저장은 해당 시간대 현지 문자열이다. 브라우저 원본 이전은 명시적 사용자 동작이며 자동 삭제하지 않는다. 기존 DBBootstrap은 존재 준비만 유지한다.

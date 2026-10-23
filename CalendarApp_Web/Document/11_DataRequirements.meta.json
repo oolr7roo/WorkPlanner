@@ -17,14 +17,25 @@
     "FR-014",
     "FR-015",
     "DATA-005",
-    "FR-016"
+    "FR-016",
+    "DATA-001",
+    "API-004",
+    "API-003",
+    "DATA-002",
+    "DATA-003",
+    "DATA-004",
+    "FR-017",
+    "DATA-006",
+    "DATA-007"
   ],
   "owned_ids": [
     "DATA-001",
     "DATA-002",
     "DATA-003",
     "DATA-004",
-    "DATA-005"
+    "DATA-005",
+    "DATA-006",
+    "DATA-007"
   ],
   "related_documents": [
     "DOC-CalendarApp_Web-Document-11_data_spec-DATA-001_Events",
@@ -34,10 +45,10 @@
     "DOC-CalendarApp_Web-Document-11_data_spec-DATA-005_Checklist"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T00:44:35.153Z",
-    "mtime_ns": 1792716275153163600,
-    "byte_size": 4320,
-    "sha256": "def3a7fca4667cf43381537e0eed0fc9e5bef9e78291f92f9576a71782d91156"
+    "modified_at_utc": "2026-10-23T02:58:28.742Z",
+    "mtime_ns": 1792724308742894700,
+    "byte_size": 6224,
+    "sha256": "0eeb7b577d33787d24c8f7052337bc2e9de004eea03dda517f81b8066de9badd"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T00:44:35.206Z"
+  "metadata_refreshed_at_utc": "2026-10-23T03:00:47.474Z"
 }

@@ -1,30 +1,11 @@
-# API-001 localStorage 계약
+# API-001 레거시 localStorage 계약
 
-BrowserEventStore가 FR-007·FR-008을 위해 getItem/setItem을 사용한다. 네트워크 전송은 없다.
+BrowserEventStore는 FR-019의 명시적 가져오기 입력만 읽는다. 일정·색상의 공통 저장은 [API-004](../12_APISpecification.md)가 소유하며 앱 Hook은 localStorage에 자동 쓰지 않는다.
 
-- 일정 정본: workplan-calendar-events-v2, DATA-001 배열 JSON.
-- v2가 없을 때 읽는 기존 키: workplan-calendar-events-v1. 기존 원본은 변경하지 않는다.
-- 접힘 상태: workplan-calendar-collapsed-v1, 접힌 일정 id 배열 JSON.
-- 복원 실패: 오류를 표시하고 일정 자동 쓰기와 변경 조작을 차단한다. 실패 원본을 빈 배열로 덮어쓰지 않는다.
-- 쓰기 실패: 메모리 변경 유지, 저장 오류 표시. 다음 일정 변경 시 다시 시도한다.
-- 접힘 상태 저장 실패: 화면 상태는 유지하고 별도 경고한다.
+- 일정: workplan-calendar-events-v2가 없으면 workplan-calendar-events-v1을 읽는다. 두 원본 모두 보존한다.
+- 설정: workplan-calendar-color-presets-v1을 읽는다. 없으면 기본값을 미리보기에 제공하며 손상되면 설정 가져오기를 비활성화한다.
+- 형식·중복·고아 부모·순환·체크리스트·kind 오류는 원본을 유지하고 가져오기를 차단한다. kind 부재는 task, colorMode 부재는 manual이다.
+- 공통 저장소 적용은 previewImport 뒤 명시적으로 import한다. ID 충돌은 전체 거부하고 동일 내용은 건너뛴다. 색상 설정 교체는 별도 선택한다.
+- 접힘: workplan-calendar-collapsed-v1은 같은 브라우저의 UI 상태로 읽고 쓴다. 쓰기 실패 시 화면 상태를 유지하고 경고한다.
 
-다중 탭 동시 편집은 마지막 쓰기가 우선하며 병합하지 않는다. 브라우저 origin·프로필을 옮기면 별개 저장소다.
-
-[데이터](../11_data_spec/DATA-001_Events.md), [상위 API](../12_APISpecification.md).
-
-## 단계별 색상 설정
-
-- 키: workplan-calendar-color-presets-v1, DATA-004 설정 JSON. 일정 v2·v1·접힘 키와 분리한다.
-- 누락: 기본 프리셋을 메모리에서 사용하며 자동 쓰지 않는다.
-- 손상·읽기 실패: 기본 표시와 오류를 제공하고 원본을 자동 덮어쓰지 않는다. 복구는 사용자의 설정 저장으로만 수행한다.
-- 쓰기 실패: 활성 설정과 원본은 유지하고 팝업 초안·오류를 유지한다.
-- 기존 일정의 colorMode 부재는 manual로 해석한다. 새 필드가 있으면 auto/manual만 허용한다.
-
-
-## 체크리스트 확장
-
-workplan-calendar-events-v2의 각 일정에 선택적 checklist를 보존한다. 부재는 빈 목록이며 존재하는 잘못된 형식·중복 항목 id는 기존 일정 복원 오류 경로로 거부하고 자동 저장을 차단한다. 수정 저장 시 text를 trim하고 빈 항목은 오류로 안내해 초안을 유지한다. 저장 실패는 기존 일정 Hook의 메모리 유지·오류 안내 정책을 따른다. 색상 설정의 일괄 적용은 자동 일정의 표시색만 재계산하며 개별 지정과 체크리스트를 변경하지 않는다.
-
-
-계획·작업 구분은 [DATA-001](../11_data_spec/DATA-001_Events.md)의 선택적 kind를 v2 배열에서 보존한다. 부재는 task, 유효하지 않은 명시값은 읽기 오류로 차단해 원본을 보존한다. 키 변경과 서버 전송은 없다.
+[데이터](../11_data_spec/DATA-001_Events.md), [현재 API](../12_APISpecification.md). 서버와 브라우저 원본 사이 자동 양방향 동기화는 하지 않는다.
