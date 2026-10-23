@@ -118,3 +118,11 @@ FR-014·015 / DATA-002·005 / API-001. Write Set: types.ts, scheduleChecklist.ts
 
 
 기본값 조정 검증: TypeScript/Vite 빌드 통과. 격리 origin 127.0.0.1:5180에서 신규·취소 후 재추가·하위 일정의 계획 기본값과 명시적 작업 저장/새로고침/재편집의 작업 유지를 확인했다. [기본 선택 화면](../../Evidence/DefaultPlan/new-default.png). 저장소·기존 구분 해석 source는 수정하지 않았다. 배치·스타일은 불변이며 공용 renderer 전체 시각 검증은 기존 미검증 상태를 유지한다.
+
+
+## kind-help 삭제 현재 기준 (2026-10-23)
+
+사용자 요청: MOD-001 kind-help 안내 문구 제거. 수정 대상은 src/features/schedules/components/ScheduleEditor.tsx의 해당 안내 단락, MOD-001.json의 kind-help 및 삭제에 따라 이동하는 편집창 실측 좌표, 이 Task·메타데이터다. Evidence/KindHelpRemoved는 생성 대상이다. 구분 선택·계획 기본값·저장/취소·작업만 표시 정책, CSS/저장/업무 source는 확인만이며 변경하지 않는다. 전체 14_ExecutionPlan 및 2단계·SCR-001 Task는 소유권·순서·스타일 불변으로 확인만이다. 기존 Evidence는 참조 원본으로 보존한다. 실행은 단락 삭제 → 빌드 → 같은 viewport에서 요소/배치 대조 → JSON 갱신/검증이다. 안내 문구와 빈 공간 제거, 구분 입력 및 기간·체크리스트·저장/취소 유지가 완료 기준이다. 기존 dist/index.html·postgresql/supervisor.log는 커밋 제외. start-check master_not_pushed는 직전 local-only 완료 후 미요청 원격 상태이며 필수 반영 누락이 아니다.
+
+
+삭제 검증 결과: source 안내 단락과 JSON kind-help를 제거했다. TypeScript/Vite 빌드 통과, 실제 1440×1000 편집창에서 구분 다음에 기간 입력이 바로 이어지고 체크리스트·저장/취소가 유지됨을 확인했다. 구분 변경 취소 후 재열기에서 계획 유지도 확인했다. 실측 좌표로 모달/입력 배치를 동기화했고 JSON 스키마·source·render contract 검사는 오류0·경고0이다. 공용 뷰어 전체 시각 reconciliation은 기존 미검증 상태로 유지한다. [화면 근거](../../Evidence/KindHelpRemoved/editor.png), [배치 근거](../../Evidence/KindHelpRemoved/editor-geometry.json). 관련 Task·배치·문구의 요청 범위 차이는 해소했다.

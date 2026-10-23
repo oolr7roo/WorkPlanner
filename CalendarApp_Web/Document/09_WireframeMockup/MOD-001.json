@@ -31,7 +31,8 @@
       "src/features/schedules/colorValues.ts",
       "Document/Evidence/ColorPickerDefault/geometry.json",
       "src/features/schedules/scheduleKinds.ts",
-      "Document/Evidence/ScheduleKinds/editor-geometry.json"
+      "Document/Evidence/ScheduleKinds/editor-geometry.json",
+      "Document/Evidence/KindHelpRemoved/editor-geometry.json"
     ],
     "unverified": [
       "모든 단말·공용 뷰어 시각 검증은 미완료이다."
@@ -109,9 +110,9 @@
       "visible": true,
       "rect": {
         "x": 32.638889,
-        "y": 16.25,
+        "y": 19.8,
         "w": 34.722222,
-        "h": 67.5
+        "h": 60.4
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -138,7 +139,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "editor"
         }
       }
@@ -150,9 +151,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 3.407407,
+        "y": 3.807947,
         "w": 90.8,
-        "h": 4.666667
+        "h": 5.215232
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -179,7 +180,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "editor-header"
         }
       }
@@ -221,7 +222,7 @@
       "text": "일정 수정",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "editor-title"
         }
       }
@@ -279,7 +280,7 @@
       "test": "close",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "close"
         }
       }
@@ -291,9 +292,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 11.037037,
+        "y": 12.334437,
         "w": 90.8,
-        "h": 85.555556
+        "h": 83.857616
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -320,7 +321,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "editor-form"
         }
       }
@@ -332,9 +333,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 41.558442,
+        "y": 33.366239,
         "w": 100,
-        "h": 11.861472
+        "h": 13.524186
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -361,7 +362,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "time-fields"
         }
       }
@@ -373,9 +374,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 92.380952,
+        "y": 91.312932,
         "w": 100,
-        "h": 7.619048
+        "h": 8.687068
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -402,7 +403,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "editor-actions"
         }
       }
@@ -416,7 +417,7 @@
         "x": 0,
         "y": 0,
         "w": 100,
-        "h": 11.861472
+        "h": 13.524186
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -444,7 +445,7 @@
       "text": "제목",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "title-field"
         }
       }
@@ -505,7 +506,7 @@
         "required": true,
         "placeholder": "일정 제목",
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "title-field-input"
         }
       }
@@ -547,7 +548,7 @@
       "text": "시작",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "start-field"
         }
       }
@@ -608,7 +609,7 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "start-field-input"
         }
       }
@@ -650,7 +651,7 @@
       "text": "종료",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "end-field"
         }
       }
@@ -711,7 +712,7 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "end-field-input"
         }
       }
@@ -752,7 +753,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "color-field"
         }
       }
@@ -812,7 +813,7 @@
         "mode": "auto",
         "sample_value": "#225588",
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "color-field-input"
         }
       }
@@ -872,7 +873,7 @@
       "test": "cancel",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "cancel"
         }
       }
@@ -940,7 +941,7 @@
       "test": "save",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "save"
         }
       }
@@ -1008,7 +1009,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "delete"
         }
       }
@@ -1118,7 +1119,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "editor-heading"
         }
       }
@@ -1132,9 +1133,9 @@
       "scope": "parent",
       "rect": {
         "x": 0,
-        "y": 56.190476,
+        "y": 50.049358,
         "w": 100,
-        "h": 32.727273
+        "h": 37.314906
       },
       "style": {
         "color": "rgb(23, 32, 51)",
@@ -1159,7 +1160,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "checklist"
         }
       }
@@ -1200,7 +1201,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "checklist-heading"
         }
       }
@@ -1241,7 +1242,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "checklist-title"
         }
       },
@@ -1283,7 +1284,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "checklist-count"
         }
       },
@@ -1325,7 +1326,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "checklist-items"
         },
         "empty_state": "일정에 필요한 할 일을 추가하세요."
@@ -1440,7 +1441,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "checklist-add"
         }
       },
@@ -2290,9 +2291,9 @@
       "test": "kind-field",
       "rect": {
         "x": 0,
-        "y": 14.632035,
+        "y": 16.683119,
         "w": 100,
-        "h": 11.861472
+        "h": 13.524186
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -2317,7 +2318,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "kind-field"
         }
       },
@@ -2360,7 +2361,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
+          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
           "id": "kind-field-input"
         },
         "options": [
@@ -2392,49 +2393,6 @@
           ]
         }
       }
-    },
-    {
-      "id": "kind-help",
-      "type": "text",
-      "name": "kind-help",
-      "parent": "editor-form",
-      "scope": "parent",
-      "visible": true,
-      "test": "kind-help",
-      "rect": {
-        "x": 0,
-        "y": 29.264069,
-        "w": 100,
-        "h": 6.753247
-      },
-      "source_ref": {
-        "adapter": "web-react-source",
-        "document": "src/features/schedules/components/ScheduleEditor.tsx",
-        "locator": "text:간트·월·주·일에는",
-        "style_documents": [
-          "src/styles.css"
-        ]
-      },
-      "style": {
-        "color": "rgb(104, 117, 141)",
-        "background_color": "rgba(0, 0, 0, 0)",
-        "border": {
-          "color": "rgb(104, 117, 141)",
-          "width": 0,
-          "radius": 0
-        },
-        "typography": {
-          "size": 13,
-          "weight": "400"
-        }
-      },
-      "properties": {
-        "capture": {
-          "file": "Document/Evidence/ScheduleKinds/editor-geometry.json",
-          "id": "kind-help"
-        }
-      },
-      "text": "간트·월·주·일에는 작업만 표시됩니다. 계획은 우선순위에서 관리할 수 있습니다."
     }
   ],
   "modal": {
@@ -2486,7 +2444,7 @@
   ],
   "verification": {
     "schema": "valid",
-    "source_alignment": "ScheduleKinds/editor-geometry.json measured desktop; mobile 390x844 verified",
+    "source_alignment": "KindHelpRemoved/editor-geometry.json measured desktop; kind-help removed from implementation and schema",
     "render_fidelity": "unverified",
     "complete": false
   },
