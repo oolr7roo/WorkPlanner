@@ -58,3 +58,7 @@ FR-016의 MOD-001 kind-field 입력·save는 EventManagement가 소유한다. sc
 | MOD-ScheduleService | 일정 업무 검증·명령 | read/query/command | MOD-ScheduleService/TASK-001 |
 | MOD-WorkspaceClient | API snapshot·revision·polling·MOD-003 | refresh/command | MOD-WorkspaceClient/TASK-001 |
 | MOD-MCP | 로컬 stdio 도구·리소스 | API-005 | MOD-MCP/TASK-001 |
+
+## AI 일정 미리보기 책임
+
+ScheduleProposalService(server/schedules/proposals.mjs)는 초안 수명·선택·검증 결과를, ScheduleService의 공유 buildScheduleTree 정책은 생성·계층·날짜 정규화를 소유한다. ScheduleRepository는 proposals와 workspace의 원자적 확정을 소유한다. WorkspaceClient의 useScheduleProposals와 ScheduleProposalDialog는 대기 조회·입력 보존·표시·사용자 확정을 담당한다. App은 대기 버튼과 팝업 조합만 담당한다. API-006/DATA-008/MOD-004의 연결을 따른다.

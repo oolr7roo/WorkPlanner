@@ -3,7 +3,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { callWorkspace } from "./client.mjs";
 
-const server = new McpServer({ name: "workplanner", version: "1.0.0" });
+const server = new McpServer({ name: "workplanner", version: "1.1.0" });
 const write = { expectedRevision: z.number().int().nonnegative().describe("Latest revision from context/list/get. A conflict requires a fresh read."),
   requestId: z.string().min(8).max(128).regex(/^[A-Za-z0-9_-]+$/).describe("Unique operation ID; reuse with identical arguments on retry, preferably UUID.") };
 const checklist = z.array(z.object({ id: z.string(), text: z.string(), done: z.boolean() }));
@@ -27,9 +27,10 @@ register("list_schedules", "Search schedules, including plans by default. Dates 
   query: z.string().optional(), kind: z.enum(["all", "plan", "task"]).optional(), parentId: z.string().nullable().optional(), start: z.string().optional(), end: z.string().optional(), offset: z.number().int().nonnegative().optional(), limit: z.number().int().min(1).max(500).optional()
 }, "list", null, true);
 register("get_schedule", "Get one schedule, stored values, ancestry and direct children with the current revision.", { id: z.string() }, "get", null, true);
-register("create_schedule_tree", "Create 1-500 schedules atomically. Each node has a unique ref. List parents before children and use parentRef for a parent in this request, or parentId for an existing parent. Root start/end are required; children may inherit parent periods. kind defaults to plan; explicitly use task for calendar work. Checklist items require unique IDs. Returns ref-to-generated-ID mapping.", {
+register("propose_schedule_tree", "Submit 1-500 NEW schedules as a pending draft, without registering them. User must open AI registration preview in WorkPlanner to edit/select/register. Each node has a unique ref; parents precede children. Use parentRef for a new parent or parentId for an existing parent. Roots require start/end. kind defaults to plan; task is shown on calendars/Gantt. Returns proposal ID/status; do not report pending as registered.", {
   ...write, nodes: z.array(z.object({ ref: z.string(), parentRef: z.string().optional(), parentId: z.string().nullable().optional(), ...fields })).min(1).max(500)
-}, "createTree");
+}, "proposeTree");
+register("get_schedule_proposal", "Read an AI draft by ID and its pending/applied/discarded status. Only applied means registered; result.created maps submitted refs to schedule IDs. The user confirms in the web app.", { id: z.string() }, "getProposal", null, true);
 register("update_schedule", "Update only supplied fields; unchanged fields are preserved. Parent periods are calculated from descendants. A checklist replaces that schedule's checklist; an empty array clears it. Set colorMode:auto to follow the configured palette.", {
   ...write, id: z.string(), patch: z.object({ ...fields, title: z.string().max(500).optional() }).strict()
 }, "update");

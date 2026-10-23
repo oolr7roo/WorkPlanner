@@ -49,7 +49,10 @@
     "FR-018",
     "FR-019",
     "CT-006",
-    "CT-005"
+    "CT-005",
+    "API-006",
+    "DATA-008",
+    "MOD-004"
   ],
   "owned_ids": [],
   "related_documents": [
@@ -57,10 +60,10 @@
     "DOC-Document-7_SystemConditions"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:13:55.871Z",
-    "mtime_ns": 1792725235871128500,
-    "byte_size": 6697,
-    "sha256": "563a1d0b80afe816882e61af2f0e5587f581050866f099e26662c1b8785bf623"
+    "modified_at_utc": "2026-10-23T06:24:12.398396+00:00",
+    "mtime_ns": 1792736652398395900,
+    "byte_size": 7129,
+    "sha256": "5d646a44224b1f0487090bfb1844fc0cb68980377260fcfdca15d6c51fc33644"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:13:55.907Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.789086+00:00"
 }

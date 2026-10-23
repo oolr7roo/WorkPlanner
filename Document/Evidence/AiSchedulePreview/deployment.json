@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-23T06:44:57.493Z",
+  "ready": true,
+  "operationalRevision": 0,
+  "operationalCount": 0,
+  "operationalFingerprintPreserved": true,
+  "pendingDrafts": 0,
+  "mcpTools": [
+    "workspace_context",
+    "list_schedules",
+    "get_schedule",
+    "propose_schedule_tree",
+    "get_schedule_proposal",
+    "update_schedule",
+    "move_schedule",
+    "delete_schedule",
+    "set_color_settings"
+  ],
+  "backup": "C:/WorkPlanner/.runtime/backups/calendarapp-before-ai-preview-1792737792801.dump"
+}

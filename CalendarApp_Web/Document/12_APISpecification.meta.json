@@ -21,26 +21,29 @@
     "API-003",
     "API-004",
     "DATA-006",
-    "API-005"
+    "API-005",
+    "API-006"
   ],
   "owned_ids": [
     "API-001",
     "API-002",
     "API-003",
     "API-004",
-    "API-005"
+    "API-005",
+    "API-006"
   ],
   "related_documents": [
     "DOC-CalendarApp_Web-Document-12_api_spec-API-001_LocalStorage",
     "DOC-CalendarApp_Web-Document-12_api_spec-API-003_CalendarSDK",
     "DOC-CalendarApp_Web-Document-10_ModuleMapping",
-    "DOC-CalendarApp_Web-Document-11_DataRequirements"
+    "DOC-CalendarApp_Web-Document-11_DataRequirements",
+    "DOC-CalendarApp_Web-Document-12_api_spec-API-006_ScheduleProposals"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:03:16.481Z",
-    "mtime_ns": 1792724596481844300,
-    "byte_size": 4993,
-    "sha256": "c8c56e04c16c5ae6c36a2d94837c90acbcb720bdf5f28bc3a09dbe8491aca9b3"
+    "modified_at_utc": "2026-10-23T06:27:51.311174+00:00",
+    "mtime_ns": 1792736871311173600,
+    "byte_size": 5547,
+    "sha256": "20b56681676193da9d551b3ee7da855a3addf8ca34f8b581374cd58e887567c2"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:16:46.884Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.743908+00:00"
 }

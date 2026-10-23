@@ -80,3 +80,27 @@ export function imported(state, args, timeZone) {
     result: { added: additions.length, skipped, total: items.length, settingsChanged: Boolean(args.includeSettings) } };
 }
 export function newId() { return randomUUID(); }
+
+// Both direct web creation and AI preview use this exact construction policy.
+export function buildScheduleTree(state, nodes, timeZone) {
+  if (!Array.isArray(nodes) || !nodes.length || nodes.length > 500) invalid("한 번에 1~500개 일정을 생성할 수 있습니다.");
+  const items = [...state.items], refs = new Map();
+  const allowed = new Set(["ref", "parentRef", "parentId", "title", "start", "end", "kind", "colorMode", "color", "checklist", "allDay"]);
+  for (const node of nodes) {
+    if (!node || typeof node !== "object" || Array.isArray(node) || Object.keys(node).some(key => !allowed.has(key))) invalid("생성할 일정 형식을 확인해 주세요.");
+    const { ref, parentRef, parentId: providedParent, ...fields } = node;
+    if (typeof ref !== "string" || !ref.trim() || ref.length > 128 || refs.has(ref)) invalid("생성 참조 이름은 고유해야 합니다.");
+    if (parentRef !== undefined && !refs.has(parentRef)) invalid("상위 참조를 먼저 생성해 주세요.");
+    if (parentRef !== undefined && providedParent !== undefined) invalid("parentRef 또는 parentId 중 하나만 지정해 주세요.");
+    const parentId = parentRef !== undefined ? refs.get(parentRef) : providedParent ?? null;
+    const parent = parentId ? effectiveSchedules(items).find(item => item.id === parentId) : undefined;
+    if (parentId !== null && !parent) invalid("상위 일정을 찾을 수 없습니다.");
+    const id = newId();
+    let item;
+    try { item = normalizeItem({ ...fields, id, parentId, order: items.filter(s => s.parentId === parentId).length, start: fields.start ?? parent?.start, end: fields.end ?? parent?.end }, timeZone); }
+    catch (error) { if (error instanceof WorkspaceError) error.nodeRef = ref; throw error; }
+    items.push(item); refs.set(ref, id);
+  }
+  validateTree(items);
+  return { items, additions: items.slice(state.items.length), created: Object.fromEntries(refs) };
+}

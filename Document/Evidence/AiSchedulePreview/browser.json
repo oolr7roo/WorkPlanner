@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-23T06:25:14.776Z",
+  "checks": [
+    "Pending notification appears without automatically interrupting with a dialog",
+    "Parent exclusion cascades; child selection restores required parent",
+    "Edited title/date and selected count require a fresh server preview; parent period recalculates",
+    "Later and page reload preserve the reviewed server draft and selection",
+    "A real workspace conflict keeps edited inputs and requires re-review",
+    "390x844 mobile dialog has no horizontal overflow and exposes confirmation controls",
+    "User confirmation registers only the selected edited tree; exact request replay does not duplicate"
+  ],
+  "geometry": {
+    "width": 960,
+    "height": 573,
+    "scroll": 573,
+    "client": 573,
+    "components": [
+      {
+        "tag": "H2",
+        "text": "AI 일정 등록 미리보기",
+        "x": 263,
+        "y": 236.5,
+        "width": 209.65625,
+        "height": 31.5
+      },
+      {
+        "tag": "proposal-summary",
+        "text": "계획 1개 · 작업 2개 · 선택 3개 Asia/Seoul",
+        "x": 263,
+        "y": 288,
+        "width": 914,
+        "height": 48
+      },
+      {
+        "tag": "proposal-body",
+        "text": "검증용 출시 계획계획2026-10-26 09:00:00 ~ 2026-10-26 17:00:00상세 편집제목구분계획작업시작종료상위의 최종 표시 기간은 선택한 하위 ",
+        "x": 263,
+        "y": 371.5,
+        "width": 914,
+        "height": 344
+      },
+      {
+        "tag": "editor-actions proposal-actions",
+        "text": "초안 폐기나중에미리보기 갱신선택 항목 등록",
+        "x": 263,
+        "y": 719.5,
+        "width": 914,
+        "height": 44
+      }
+    ]
+  },
+  "mobile": {
+    "x": 19,
+    "right": 371,
+    "bottom": 802.25,
+    "actionsBottom": 779.25,
+    "viewportWidth": 390,
+    "viewportHeight": 844,
+    "overflowX": false
+  },
+  "consoleErrors": []
+}

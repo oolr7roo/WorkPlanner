@@ -1,14 +1,17 @@
 import { removeSchedule, siblings } from "../../src/features/schedules/scheduleTree.ts";
 import { WorkspaceError } from "../../database/repository.mjs";
-import { displayed, effectiveSchedules, imported, invalid, newId, normalizeItem, normalizeSettings, validateTree, wallDate } from "./policy.mjs";
+import { buildScheduleTree, displayed, effectiveSchedules, imported, invalid, normalizeItem, normalizeSettings, validateTree, wallDate } from "./policy.mjs";
+import { createProposalService } from "./proposals.mjs";
 
 export function createScheduleService(repository, timeZone = "Asia/Seoul") {
+  const proposals = createProposalService(repository, timeZone);
   const present = state => ({ ...state, timeZone });
   const get = (items, id) => { const item = items.find(s => s.id === id); if (!item) throw new WorkspaceError(404, "NOT_FOUND", "일정을 찾을 수 없습니다."); return item; };
-  const context = () => ({ timeZone, now: new Date().toISOString(), defaultKind: "plan", legacyKind: "task", views: "priority: all; gantt/month/week/day: task", deletePolicy: "preserve children by promotion", dateFormat: "YYYY-MM-DDTHH:mm:ss in timeZone, or ISO with explicit offset", writes: "Read revision before changing. Reuse requestId AND identical body when retrying. Conflict requires fresh read and a new requestId." });
+  const context = () => ({ timeZone, now: new Date().toISOString(), defaultKind: "plan", legacyKind: "task", views: "priority: all; gantt/month/week/day: task", deletePolicy: "preserve children by promotion", dateFormat: "YYYY-MM-DDTHH:mm:ss in timeZone, or ISO with explicit offset", writes: "Read revision before changing. Reuse requestId AND identical body when retrying. Conflict requires fresh read and a new requestId.", creationPolicy: "AI: propose_schedule_tree submits a pending draft; user reviews and registers in the web app. get_schedule_proposal checks status. Submitting is not registration." });
   return {
     async read() { return present(await repository.read()); },
     async query(operation, args = {}) {
+      if (["listProposals", "getProposal"].includes(operation)) return proposals.query(operation, args);
       const state = await repository.read(), items = displayed(state);
       let result;
       if (operation === "context") result = { ...context(), activeColorSettings: state.settings, count: state.items.length };
@@ -31,24 +34,12 @@ export function createScheduleService(repository, timeZone = "Asia/Seoul") {
       return { revision: state.revision, timeZone, result };
     },
     async command(command) {
+      if (["proposeTree", "reviewProposal", "applyProposal", "discardProposal"].includes(command.operation)) return proposals.command(command);
       const response = await repository.mutate(command, state => {
         const args = command.args ?? {}; let result = {};
         if (command.operation === "createTree") {
-          if (!Array.isArray(args.nodes) || !args.nodes.length || args.nodes.length > 500) invalid("한 번에 1~500개 일정을 생성할 수 있습니다.");
-          const refs = new Map();
-          for (const node of args.nodes) {
-            if (!node || typeof node !== "object" || Array.isArray(node)) invalid("생성할 일정 형식을 확인해 주세요.");
-            const { ref, parentRef, parentId: providedParent, ...fields } = node;
-            if (typeof ref !== "string" || !ref || refs.has(ref)) invalid("생성 참조 이름은 고유해야 합니다.");
-            if (parentRef !== undefined && !refs.has(parentRef)) invalid("상위 참조를 먼저 생성해 주세요.");
-            if (parentRef !== undefined && providedParent !== undefined) invalid("parentRef 또는 parentId 중 하나만 지정해 주세요.");
-            const parentId = parentRef !== undefined ? refs.get(parentRef) : providedParent ?? null;
-            const parent = parentId ? get(effectiveSchedules(state.items), parentId) : undefined;
-            const id = newId();
-            const item = normalizeItem({ ...fields, id, parentId, order: siblings(state.items, parentId).length, start: fields.start ?? parent?.start, end: fields.end ?? parent?.end }, timeZone);
-            state.items.push(item); refs.set(ref, id);
-          }
-          result = { created: Object.fromEntries(refs) };
+          const tree = buildScheduleTree(state, args.nodes, timeZone);
+          state.items = tree.items; result = { created: tree.created };
         } else if (command.operation === "update") {
           const item = get(state.items, args.id), patch = args.patch;
           if (!patch || typeof patch !== "object" || Array.isArray(patch) || Object.keys(patch).some(k => !["title", "start", "end", "kind", "color", "colorMode", "checklist", "allDay"].includes(k))) invalid("수정할 필드를 확인해 주세요. 계층·순서는 move를 사용하세요.");

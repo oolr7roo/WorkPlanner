@@ -27,3 +27,7 @@ Web DATA-001~007·API-004/005, Database DATA-103/104·API-102. 입력 JSON 검�
 ## 7. 완료 기준·실제 대조
 
 실제 격리 PostgreSQL과 공식 MCP SDK client의 8개 도구·resource, atomic tree·revision 충돌·동일 재시도·실패 rollback·삭제 자식 승격·권한 거부가 통과했다. 웹에서 MCP 생성 일정을 수정하고 MCP로 제목·체크리스트 재조회, 기존5개 preview/import·동일5개 skip, 충돌 초안 유지까지 확인했다. TypeScript·Vite6.4.5 빌드와 의존성 audit0건을 확인했다. 코드 경계와 위 계약을 대조해 필수 기능 차이를 해소했다. 공용 WireFrame 시각/참조 문서 열기·macOS·원격·전체 제품 QA는 별도 Review 범위다. [실행 근거](../../../../Document/Evidence/McpWorkspace/README.md).
+
+## AI 초안 서비스 기준선
+
+[API-006](../../12_api_spec/API-006_ScheduleProposals.md). Write Set에 server/schedules/proposals.mjs를 추가한다. 생성 순수 정책을 ScheduleService와 공유하고 초안 선택·검증·수명을 분리한다. HTTP 인증 경계는 웹 확정과 MCP 제출을 구분한다. version/revision/재시도/rollback과 미리보기·저장 일치를 검증한다.

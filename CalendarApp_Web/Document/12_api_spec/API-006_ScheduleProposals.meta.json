@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-12_api_spec-API-006_ScheduleProposals",
+  "document_number": 12,
+  "document_type": "api-detail",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/12_api_spec/API-006_ScheduleProposals.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-12_APISpecification",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "API-006",
+    "DATA-008",
+    "FR-018",
+    "MOD-004"
+  ],
+  "owned_ids": [
+    "API-006"
+  ],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-11_DataRequirements",
+    "DOC-CalendarApp_Web-Document-12_APISpecification"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-23T06:08:59.045387+00:00",
+    "mtime_ns": 1792735739045386600,
+    "byte_size": 4177,
+    "sha256": "f62e14c44099b73a24535254340573d1e255128f60ccd2756e0e7cc7a2088353"
+  },
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.746825+00:00"
+}

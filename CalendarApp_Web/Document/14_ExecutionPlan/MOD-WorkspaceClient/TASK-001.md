@@ -27,3 +27,7 @@ Web DATA-001~007·API-004/005, Database DATA-103/104·API-102. 입력 JSON 검�
 ## 7. 완료 기준·실제 대조
 
 실제 격리 PostgreSQL과 공식 MCP SDK client의 8개 도구·resource, atomic tree·revision 충돌·동일 재시도·실패 rollback·삭제 자식 승격·권한 거부가 통과했다. 웹에서 MCP 생성 일정을 수정하고 MCP로 제목·체크리스트 재조회, 기존5개 preview/import·동일5개 skip, 충돌 초안 유지까지 확인했다. TypeScript·Vite6.4.5 빌드와 의존성 audit0건을 확인했다. 코드 경계와 위 계약을 대조해 필수 기능 차이를 해소했다. 공용 WireFrame 시각/참조 문서 열기·macOS·원격·전체 제품 QA는 별도 Review 범위다. [실행 근거](../../../../Document/Evidence/McpWorkspace/README.md).
+
+## AI 초안 UI 기준선
+
+[API-006](../../12_api_spec/API-006_ScheduleProposals.md). 신규 useScheduleProposals.ts, components/ScheduleProposalDialog.tsx, proposalTypes.ts 및 MOD-004.json을 소유한다. 목록 폴링·포커스 복귀, 편집본 보존·선택 계층·서버 미리보기·사용자 확정·폐기·오류를 담당한다. 제목/구분/날짜/색상/체크리스트 입력은 일정 저장을 직접 실행하지 않는다. PC/모바일·키보드·긴 목록·충돌·동일 요청 재시도를 검증한다.

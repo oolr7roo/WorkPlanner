@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-23T06:31:49.681Z",
+  "checks": [
+    "Pending draft survives a real isolated API server restart",
+    "Invalid field identifies its row without losing input; nested picker Escape preserves preview",
+    "Manual color, default palette restoration and checklist edit/done survive server preview",
+    "25-node mobile list scrolls independently; actions remain on screen, IDs unique and focus stays in dialog",
+    "Successful apply with lost HTTP response is recovered by status lookup without duplicate registration"
+  ],
+  "geometry": {
+    "dialog": {
+      "left": 19,
+      "right": 371,
+      "bottom": 826
+    },
+    "actionsBottom": 803,
+    "viewportHeight": 844,
+    "scrollHeight": 3937,
+    "clientHeight": 478,
+    "checkboxWidth": 18
+  }
+}

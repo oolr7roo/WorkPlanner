@@ -18,10 +18,10 @@
     "DOC-CalendarApp_Infrastructure-Document-14_ExecutionPlan-MOD-Supervisor"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:03:16.392Z",
-    "mtime_ns": 1792724596392769800,
-    "byte_size": 1790,
-    "sha256": "83ccc381865fe0fe5e5f4efeaaf4df3ef40989ad9731d8b2d874c8a1ba4a5cce"
+    "modified_at_utc": "2026-10-23T06:09:01.410440+00:00",
+    "mtime_ns": 1792735741410440000,
+    "byte_size": 2127,
+    "sha256": "39aa5b120bb04409f7b254a53313ed8df064bde39b49a1336325ad8a87529fe3"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:16:48.267Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.728755+00:00"
 }

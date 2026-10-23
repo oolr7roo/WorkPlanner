@@ -17,7 +17,8 @@
     "DATA-103",
     "API-102",
     "FR-018",
-    "FR-019"
+    "FR-019",
+    "API-006"
   ],
   "owned_ids": [
     "MOD-ScheduleService/TASK-001"
@@ -26,10 +27,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-ScheduleService"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:03:16.515Z",
-    "mtime_ns": 1792724596515644700,
-    "byte_size": 2803,
-    "sha256": "80f8d80584f39bc0dc4082f4fa695924ffa2bcbde52520cfd4a84c5cddf0fa85"
+    "modified_at_utc": "2026-10-23T06:08:59.851633+00:00",
+    "mtime_ns": 1792735739851633300,
+    "byte_size": 3213,
+    "sha256": "bf2ec4fa9f490704ec57639ba09d7303fb7759b3824e9c484817e42c2ae1b719"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:16:47.978Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.768832+00:00"
 }

@@ -39,11 +39,13 @@ export function createApiMiddleware(service, { token, webPort }) {
       catch { throw new WorkspaceError(400, "INVALID_JSON", "JSON 형식을 확인해 주세요."); }
       if (!command || typeof command !== "object" || Array.isArray(command) || typeof command.operation !== "string"
         || !command.args || typeof command.args !== "object" || Array.isArray(command.args)) throw new WorkspaceError(400, "INVALID_COMMAND", "operation과 args 객체가 필요합니다.");
-      const query = ["context", "list", "get", "previewImport"].includes(command.operation);
+      if (["createTree", "import", "reviewProposal", "applyProposal", "discardProposal"].includes(command.operation) && (!browser || bearer))
+        throw new WorkspaceError(403, "WEB_CONFIRMATION_REQUIRED", "AI 신규 일정은 초안으로 제출한 다음 웹 미리보기에서 확인·등록해 주세요.");
+      const query = ["context", "list", "get", "previewImport", "listProposals", "getProposal"].includes(command.operation);
       return send(200, query ? await service.query(command.operation, command.args) : await service.command(command));
     } catch (error) {
       if (!(error instanceof WorkspaceError)) console.error("Workspace request failed:", error.code ?? error.name);
-      send(error.status ?? 503, { error: { code: error.code ?? "UNAVAILABLE", message: error instanceof WorkspaceError ? error.message : "공통 저장소에 연결할 수 없습니다. 서버 상태를 확인해 주세요." } });
+      send(error.status ?? 503, { error: { code: error.code ?? "UNAVAILABLE", message: error instanceof WorkspaceError ? error.message : "공통 저장소에 연결할 수 없습니다. 서버 상태를 확인해 주세요.", ...(error.nodeRef ? { ref: error.nodeRef } : {}) } });
     }
   };
 }

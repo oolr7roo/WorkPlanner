@@ -28,7 +28,10 @@
     "UF-009",
     "FR-017",
     "UF-011",
-    "FR-019"
+    "FR-019",
+    "API-006",
+    "DATA-008",
+    "MOD-004"
   ],
   "owned_ids": [
     "COMMON-001",
@@ -41,7 +44,8 @@
     "SCR-004",
     "SCR-005",
     "MOD-002",
-    "MOD-003"
+    "MOD-003",
+    "MOD-004"
   ],
   "related_documents": [
     "DOC-Document-5_UserFlow",
@@ -50,10 +54,10 @@
     "DOC-Document-17_ValidationReport"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:13:55.872Z",
-    "mtime_ns": 1792725235872634300,
-    "byte_size": 6389,
-    "sha256": "771448a7998727a1626c822dec188bedda1df64d445eda3cb5a1e6590b7af323"
+    "modified_at_utc": "2026-10-23T06:27:52.199627+00:00",
+    "mtime_ns": 1792736872199626800,
+    "byte_size": 6880,
+    "sha256": "918596175c055450271308a399fa1b0f5d0401cf3eb8c30aad2e1bd9cd38c59b"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:13:55.965Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.732895+00:00"
 }

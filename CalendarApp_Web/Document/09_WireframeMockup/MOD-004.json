@@ -1,0 +1,1295 @@
+{
+  "schema_version": 3,
+  "screen": {
+    "id": "MOD-004",
+    "name": "AI 일정 등록 미리보기",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "unit": "%",
+    "purpose": "AI 신규 초안을 확인·편집·선택하고 사용자 확정으로 등록한다."
+  },
+  "frame": {
+    "id": "FRAME-MOD-004",
+    "name": "AI 일정 등록 미리보기",
+    "width": "100%",
+    "height": "100%",
+    "unit": "%",
+    "layout_unit": "percent",
+    "base_width": 1440,
+    "base_height": 1000
+  },
+  "derivation": {
+    "mode": "implementation-derived",
+    "sources": [
+      "src/features/schedules/components/ScheduleProposalDialog.tsx",
+      "src/features/schedules/useScheduleProposals.ts",
+      "src/styles.css",
+      "Document/Evidence/AiSchedulePreview/geometry.json"
+    ],
+    "unverified": [
+      "공용 WireFrame renderer 전체 시각 충실도·참조 문서 열기는 별도 미검증이다."
+    ]
+  },
+  "components": [
+    {
+      "id": "backdrop",
+      "type": "panel",
+      "name": "backdrop",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "background_color": "rgba(18,27,46,.48)"
+      }
+    },
+    {
+      "id": "dialog",
+      "type": "panel",
+      "name": "dialog",
+      "visible": true,
+      "rect": {
+        "x": 16.666667,
+        "y": 9.55,
+        "w": 66.666667,
+        "h": 80.9
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 16
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "dialog"
+        }
+      }
+    },
+    {
+      "id": "header",
+      "type": "panel",
+      "name": "header",
+      "visible": true,
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 2.395833,
+        "y": 2.843016,
+        "w": 95.208333,
+        "h": 3.893696
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "header"
+        }
+      }
+    },
+    {
+      "id": "title",
+      "type": "heading",
+      "name": "title",
+      "visible": true,
+      "text": "AI 일정 등록 미리보기",
+      "parent": "header",
+      "scope": "parent",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 22.938321,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 21,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "title"
+        }
+      }
+    },
+    {
+      "id": "close",
+      "type": "button",
+      "name": "close",
+      "visible": true,
+      "text": "×",
+      "parent": "header",
+      "scope": "parent",
+      "rect": {
+        "x": 97.852845,
+        "y": 5.555556,
+        "w": 2.147155,
+        "h": 88.888889
+      },
+      "style": {
+        "color": "rgb(107, 114, 128)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(107, 114, 128)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 28,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "close"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "등록하지 않고 초안을 보관한 채 닫는다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "summary",
+      "type": "text",
+      "name": "summary",
+      "visible": true,
+      "text": "계획 1개 · 작업 2개 · 선택 3개 Asia/Seoul",
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 2.395833,
+        "y": 9.2089,
+        "w": 95.208333,
+        "h": 5.933251
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "600"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "summary"
+        }
+      }
+    },
+    {
+      "id": "help",
+      "type": "text",
+      "name": "help",
+      "visible": true,
+      "text": "작업만 달력·간트에 표시됩니다. 하위 선택 시 상위도 선택되며, 상위 해제 시 하위도 제외됩니다.",
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 2.395833,
+        "y": 15.142151,
+        "w": 95.208333,
+        "h": 2.410383
+      },
+      "style": {
+        "color": "rgb(104, 117, 141)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(104, 117, 141)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "help"
+        }
+      }
+    },
+    {
+      "id": "body",
+      "type": "vscroll",
+      "name": "body",
+      "visible": true,
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 2.395833,
+        "y": 19.530284,
+        "w": 95.208333,
+        "h": 71.693449
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "body"
+        }
+      }
+    },
+    {
+      "id": "node",
+      "type": "panel",
+      "name": "node",
+      "visible": true,
+      "parent": "body",
+      "scope": "parent",
+      "rect": {
+        "x": 1.750547,
+        "y": 21.724138,
+        "w": 97.811816,
+        "h": 91.12069
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(203, 213, 225)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "node"
+        },
+        "repeat_template": "draft.nodes의 계층별 반복 항목; 현재 두 번째 항목의 편집 상태를 실측했다."
+      }
+    },
+    {
+      "id": "select",
+      "type": "checkbox",
+      "name": "select",
+      "visible": true,
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 1.454139,
+        "y": 3.027436,
+        "w": 2.013423,
+        "h": 3.405866
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "select"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "등록 대상을 선택·해제하고 부모·하위 선택 규칙을 적용한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "node-title",
+      "type": "text",
+      "name": "node-title",
+      "visible": true,
+      "text": "기획 검토",
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 6.823266,
+        "y": 2.459792,
+        "w": 81.064737,
+        "h": 4.541154
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "node-title"
+        }
+      }
+    },
+    {
+      "id": "node-kind",
+      "type": "text",
+      "name": "node-kind",
+      "visible": true,
+      "text": "작업 · 달력 표시",
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 88.782858,
+        "y": 3.027436,
+        "w": 9.763003,
+        "h": 3.405866
+      },
+      "style": {
+        "color": "rgb(71, 85, 105)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(71, 85, 105)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "node-kind"
+        }
+      }
+    },
+    {
+      "id": "period",
+      "type": "text",
+      "name": "period",
+      "visible": true,
+      "text": "2026-10-29 09:00:00 ~ 2026-10-29 18:00:00",
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 1.454139,
+        "y": 7.000946,
+        "w": 97.091723,
+        "h": 3.405866
+      },
+      "style": {
+        "color": "rgb(100, 116, 139)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(100, 116, 139)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "period"
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "type": "button",
+      "name": "detail",
+      "visible": true,
+      "text": "상세 편집",
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 1.454139,
+        "y": 10.406812,
+        "w": 97.091723,
+        "h": 6.433302
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "detail"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "항목의 편집 영역을 펼치거나 접는다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "title-input",
+      "type": "input",
+      "name": "title-input",
+      "visible": true,
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 1.454139,
+        "y": 23.746452,
+        "w": 97.091723,
+        "h": 7.94702
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "title-input"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "제목 초안을 바꾸고 최종 미리보기를 무효화한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "kind-input",
+      "type": "select",
+      "name": "kind-input",
+      "visible": true,
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 1.454139,
+        "y": 38.599811,
+        "w": 97.091723,
+        "h": 7.94702
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "kind-input"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "계획 또는 작업을 선택하고 미리보기 갱신을 요구한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "start-input",
+      "type": "input",
+      "name": "start-input",
+      "visible": true,
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 1.454139,
+        "y": 53.453169,
+        "w": 47.87472,
+        "h": 7.94702
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "start-input"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "시작 초안을 편집한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "end-input",
+      "type": "input",
+      "name": "end-input",
+      "visible": true,
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 50.671141,
+        "y": 53.453169,
+        "w": 47.87472,
+        "h": 7.94702
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "end-input"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "종료 초안을 편집한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "color",
+      "type": "button",
+      "name": "color",
+      "visible": true,
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 10.360738,
+        "y": 63.670766,
+        "w": 3.355705,
+        "h": 5.676443
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(22, 132, 91)",
+        "border": {
+          "color": "rgb(255, 255, 255)",
+          "width": 3,
+          "radius": 50
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "color"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "색상창에서 개별 지정 또는 기본값 복귀를 선택한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "checklist",
+      "type": "list",
+      "name": "checklist",
+      "visible": true,
+      "parent": "node",
+      "scope": "parent",
+      "rect": {
+        "x": 1.454139,
+        "y": 71.617786,
+        "w": 97.091723,
+        "h": 25.922422
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(226, 232, 240) rgb(23, 32, 51) rgb(23, 32, 51)",
+          "width": 1,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "checklist"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "체크항목·완료 상태를 편집하고 미리보기를 갱신한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "actions",
+      "type": "panel",
+      "name": "actions",
+      "visible": true,
+      "parent": "dialog",
+      "scope": "parent",
+      "rect": {
+        "x": 2.395833,
+        "y": 91.718171,
+        "w": 95.208333,
+        "h": 5.438813
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "actions"
+        }
+      }
+    },
+    {
+      "id": "discard",
+      "type": "button",
+      "name": "discard",
+      "visible": true,
+      "text": "초안 폐기",
+      "parent": "actions",
+      "scope": "parent",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 11.118709,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(180, 35, 52)",
+        "background_color": "rgb(255, 240, 241)",
+        "border": {
+          "color": "rgb(180, 35, 52)",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "discard"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "폐기를 재확인한 뒤 초안만 discarded로 처리한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "later",
+      "type": "button",
+      "name": "later",
+      "visible": true,
+      "text": "나중에",
+      "parent": "actions",
+      "scope": "parent",
+      "rect": {
+        "x": 59.204048,
+        "y": 0,
+        "w": 8.971554,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "later"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "초안을 서버에 보관하고 닫는다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "review",
+      "type": "button",
+      "name": "review",
+      "visible": true,
+      "text": "미리보기 갱신",
+      "parent": "actions",
+      "scope": "parent",
+      "rect": {
+        "x": 69.050875,
+        "y": 0,
+        "w": 14.838621,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "review"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "현재 편집·선택을 서버에서 검증하고 표시 미리보기를 갱신한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    },
+    {
+      "id": "apply",
+      "type": "button",
+      "name": "apply",
+      "visible": true,
+      "text": "선택 항목 등록",
+      "parent": "actions",
+      "scope": "parent",
+      "rect": {
+        "x": 84.76477,
+        "y": 0,
+        "w": 15.23523,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "background_color": "rgb(51, 102, 221)",
+        "border": {
+          "color": "rgb(255, 255, 255)",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleProposalDialog.tsx",
+        "locator": "text:proposal-dialog",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "apply"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "검증한 버전의 선택 항목을 원자적으로 등록한다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      }
+    }
+  ],
+  "verification": {
+    "schema": "unverified",
+    "source_alignment": "measured-desktop-dom",
+    "render_fidelity": "unverified",
+    "complete": false
+  }
+}

@@ -61,3 +61,7 @@ SCR-001의 의미는 기존 전체 달력에서 월 보기로 구체화한다. �
 - 미리보기: [와이어프레임](../../public/wireframes/index.html). 표본 데이터로만 동작하며 실제 앱 데이터에 저장하지 않는다.
 
 공통 화면·새 보기의 문서 기준선은 SCR-001/TASK-001, 팝업 기준선은 MOD-EventManagement/TASK-001이 소유한다. 새 기능의 실제 구현 연결은 Review다.
+
+## AI 등록 미리보기
+
+COMMON-001의 AI 등록 대기 버튼에서 신규 [MOD-004](09_WireframeMockup/MOD-004.json)를 연다. Source Entry는 src/features/schedules/components/ScheduleProposalDialog.tsx이며 소유 Task는 [WorkspaceClient](14_ExecutionPlan/MOD-WorkspaceClient/TASK-001.md)다. 목록·초안 트리·선택·편집·재검증·확정·폐기 상태를 분리한다. 초안은 DATA-008/API-006을 참조한다. 상위 조립은 SCR-001/TASK-001이 소유한다.

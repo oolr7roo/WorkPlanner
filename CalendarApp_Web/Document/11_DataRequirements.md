@@ -65,3 +65,7 @@ FR-017~019 / DATA-001~007 / API-004·005. 서버의 단일 개인 일정 workspa
 브라우저 v1/v2 일정·프리셋은 읽기 전용 이전 원본이다. import preview는 ID 충돌과 잘못된 계층·날짜를 차단한다. 기존 동일 ID 내용이 같은 경우만 건너뛰며 다른 내용은 거부한다. 색상 설정 교체는 미리보기에서 별도 선택한다. 적용은 원자적이며 실패 시 서버 집합과 브라우저 원본 모두 불변이다. 접힘·선택 상태는 로컬에 남긴다. 서버 연결 실패 시 로컬 저장으로 우회하지 않는다.
 
 DATA-006은 공통 workspace snapshot(revision/items/settings/timeZone), DATA-007은 브라우저 가져오기 미리보기다. 일정·설정 원본과 UI 초안/표시 결과를 구분한다.
+
+## DATA-008 AI 등록 초안
+
+[API-006](12_api_spec/API-006_ScheduleProposals.md). id/version/status, 불변 original, 편집 draft(nodes/selectedRefs), preview(baseRevision/additions/rows/created), result를 PostgreSQL proposals에 보존한다. 초안 버전과 일정 revision은 별개다. 대기 목록은 id/version/status/title/count/createdAt만 제공한다. 실제 일정에 포함되지 않아 달력에 미리 표시되지 않는다. 웹 편집 중 미저장 입력은 React 상태이며 폴링이 이를 덮어쓰지 않는다. 확정 일정의 ID는 서버 검증 미리보기에서 고정된다.

@@ -27,3 +27,7 @@ Web DATA-001~007·API-004/005, Database DATA-103/104·API-102. 입력 JSON 검�
 ## 7. 완료 기준·실제 대조
 
 실제 격리 PostgreSQL과 공식 MCP SDK client의 8개 도구·resource, atomic tree·revision 충돌·동일 재시도·실패 rollback·삭제 자식 승격·권한 거부가 통과했다. 웹에서 MCP 생성 일정을 수정하고 MCP로 제목·체크리스트 재조회, 기존5개 preview/import·동일5개 skip, 충돌 초안 유지까지 확인했다. TypeScript·Vite6.4.5 빌드와 의존성 audit0건을 확인했다. 코드 경계와 위 계약을 대조해 필수 기능 차이를 해소했다. 공용 WireFrame 시각/참조 문서 열기·macOS·원격·전체 제품 QA는 별도 Review 범위다. [실행 근거](../../../../Document/Evidence/McpWorkspace/README.md).
+
+## AI 신규 등록 미리보기 기준선
+
+API-006을 기준으로 propose_schedule_tree/get_schedule_proposal을 연결하고 즉시 생성 도구를 제거한다. 서버 재연결 필요를 안내한다. 초안 제출은 일정 생성 완료가 아니며 pending/applied/discarded를 구분한다. 기존 조회·수정·이동·삭제·설정 계약을 유지한다. 검증은 격리 DB와 실제 SDK 클라이언트에서 수행한다.

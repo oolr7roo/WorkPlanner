@@ -16,7 +16,10 @@
     "DATA-004",
     "API-001",
     "API-004",
-    "API-005"
+    "API-005",
+    "API-006",
+    "DATA-008",
+    "MOD-004"
   ],
   "owned_ids": [
     "MOD-ScheduleService",
@@ -39,10 +42,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-SCR-003"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:13:55.877Z",
-    "mtime_ns": 1792725235877156000,
-    "byte_size": 5714,
-    "sha256": "60b83fa85f4ed3f5341d5f726e40be681dbca0ecb38293e7dcbe893bb74d45da"
+    "modified_at_utc": "2026-10-23T06:24:14.062739+00:00",
+    "mtime_ns": 1792736654062739300,
+    "byte_size": 6117,
+    "sha256": "5fc84d89b74d2b5a62de6b44cc719b084d0a67aa86cbe690cb009d71720cce8b"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:13:55.953Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.753074+00:00"
 }

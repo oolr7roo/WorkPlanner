@@ -64,3 +64,7 @@ web 구현 도메인의 현재 책임·작업 흐름 진입점·검증 마일스
 
 
 추가 작업 흐름: [MOD-MCP](14_ExecutionPlan/MOD-MCP.md). 계약·DB/서비스→API/Client/MCP→서버/App 조립→실제 통합 검증, SEQUENTIAL/NONE으로 진행한다.
+
+## AI 신규 일정 등록 미리보기
+
+FR-018/UF-010, API-006/DATA-008/MOD-004. MOD-ScheduleService → MOD-MCP·MOD-WorkspaceClient → SCR-001 조립으로 진행한다. Database MOD-ScheduleRepository/TASK-001과 Infrastructure MOD-Supervisor/TASK-003이 저장·권한을 협력한다. 상태는 실제 격리 검증 후 기록하며 공용 WireFrame 전체 시각 충실도와 구분한다.

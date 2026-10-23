@@ -17,7 +17,9 @@
     "DATA-103",
     "API-102",
     "FR-018",
-    "FR-019"
+    "FR-019",
+    "API-006",
+    "MOD-004"
   ],
   "owned_ids": [
     "MOD-WorkspaceClient/TASK-001"
@@ -26,10 +28,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-WorkspaceClient"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:03:16.524Z",
-    "mtime_ns": 1792724596524198600,
-    "byte_size": 2802,
-    "sha256": "cb88da6e41c4597e89b987083eb71f90ba9d7e171eae1b2dbb9bc7638294c220"
+    "modified_at_utc": "2026-10-23T06:09:00.261201+00:00",
+    "mtime_ns": 1792735740261201100,
+    "byte_size": 3340,
+    "sha256": "ff9ff37378f4422e6898d3c305b84dd9f33240b432ab8dc94e2828e3a39c3dbf"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:16:48.047Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.775894+00:00"
 }

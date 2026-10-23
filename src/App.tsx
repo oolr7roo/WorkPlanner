@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useScheduleWorkspace } from "./features/schedules/useScheduleWorkspace";
 import { ScheduleImportDialog } from "./features/schedules/components/ScheduleImportDialog";
+import { ScheduleProposalDialog } from "./features/schedules/components/ScheduleProposalDialog";
+import { useScheduleProposals } from "./features/schedules/useScheduleProposals";
 import { CalendarToolbar } from "./components/CalendarToolbar";
 import { useSchedules } from "./features/schedules/useSchedules";
 import { useScheduleTree } from "./features/schedules/useScheduleTree";
@@ -19,6 +21,8 @@ import "./features/schedules/gantt.css";
 type EditorState = { revision: number; id: string | null; parentId: string | null; draft: ScheduleDraft };
 export default function App() {
   const workspace = useScheduleWorkspace();
+  const proposals = useScheduleProposals();
+  const [proposalOpen, setProposalOpen] = useState(false);
   const colorSettings = useScheduleColorSettings(workspace);
   const schedules = useSchedules(workspace, colorSettings.colors);
   const tree = useScheduleTree(schedules.effective);
@@ -45,7 +49,7 @@ export default function App() {
     <header className="app-header"><div><p className="eyebrow">WORKPLAN</p><div className="page-title-row">
       <a className="home-link" href="https://home-macmini.tail7073a2.ts.net/" aria-label="홈으로 이동">←</a><h1>{title}</h1>
     </div></div><div className="header-actions"><button className="new-event" type="button" disabled={schedules.blocked} onClick={() => openNew()}>+ 일정 추가</button>
-      <button className="settings-button" type="button" disabled={schedules.blocked} onClick={() => setSettingsRevision(workspace.revision)}>설정</button><button type="button" className="settings-button" disabled={schedules.blocked} onClick={() => setImportOpen(true)}>기존 일정 가져오기</button></div></header>
+      <button className="settings-button" type="button" disabled={schedules.blocked} onClick={() => setSettingsRevision(workspace.revision)}>설정</button><button type="button" className="settings-button" disabled={schedules.blocked} onClick={() => setImportOpen(true)}>기존 일정 가져오기</button><button type="button" className="settings-button" disabled={schedules.blocked} onClick={() => setProposalOpen(true)}>AI 등록 대기 {proposals.items.length}건</button></div></header>
     <main className={`calendar-panel ${view === "priority" || view === "gantt" ? "custom-panel" : ""}`}>
       {view === "priority" || view === "gantt" ? <>
         <CalendarToolbar view={view} label={view === "priority" ? "전체 일정" : `${date.replaceAll("-", ".")} – ${addDays(date, 13).replaceAll("-", ".")}`}
@@ -56,6 +60,7 @@ export default function App() {
         toolbar={props => <CalendarToolbar {...props} view={view} label={props.formattedDate} onViewChange={setView} />} />}
     </main>
     <p className="storage-note">일정과 색상 설정은 공통 저장소에 저장됩니다. {workspace.revision < 0 ? "연결 중…" : workspace.timeZone}</p>
+    {proposals.notice && <p className="storage-note" role="status">{proposals.notice}</p>}
     {workspace.error && <p className="storage-error" role="alert">{workspace.error} <button type="button" onClick={() => void workspace.refresh()}>다시 연결</button></p>}
     {tree.error && <p className="storage-error" role="alert">{tree.error}</p>}
     {editor && <ScheduleEditor initial={editor.draft} editing={Boolean(editor.id)} parentTitle={schedules.items.find(item => item.id === editor.parentId)?.title}
@@ -63,5 +68,6 @@ export default function App() {
       onSave={draft => schedules.save(draft, editor.id, editor.parentId, editor.revision)} onDelete={() => editor.id ? schedules.remove(editor.id, editor.revision) : Promise.resolve("")} onClose={() => setEditor(null)} />}
     {settingsRevision !== null && <ScheduleColorSettings initial={colorSettings.settings} initialError={colorSettings.error} onSave={next => colorSettings.save(next, settingsRevision)} onClose={() => setSettingsRevision(null)} />}
     {importOpen && <ScheduleImportDialog workspace={workspace} onClose={() => setImportOpen(false)} />}
+    {proposalOpen && <ScheduleProposalDialog proposals={proposals} workspace={workspace} onClose={() => setProposalOpen(false)} />}
   </div>;
 }

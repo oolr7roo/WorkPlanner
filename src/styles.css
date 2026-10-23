@@ -224,3 +224,26 @@ h1 { margin: 0; font-size: 28px; letter-spacing: -0.04em; }
   .date-controls strong { margin-left: 4px; font-size: 14px; }
   .time-fields { grid-template-columns: 1fr; }
 }
+dialog.editor.proposal-dialog { width: min(960px, calc(100vw - 24px)); max-height: calc(100dvh - 36px); overflow: hidden; }
+dialog.editor.proposal-dialog[open] { display: flex; flex-direction: column; }
+.proposal-dialog > :not(.proposal-body):not(.proposal-list) { flex-shrink: 0; }
+.proposal-list, .proposal-body { flex: 1 1 auto; overflow-y: auto; min-height: 0; max-height: 58dvh; padding: 4px; }
+.proposal-entry { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; padding: 14px; margin: 8px 0; border: 1px solid #cbd5e1; border-radius: 10px; background: #f8fafc; text-align: left; }
+.proposal-summary { display: flex; flex-wrap: wrap; gap: 12px; padding: 12px 0; font-weight: 600; }
+.proposal-summary span, .proposal-period { color: #64748b; font-size: 12px; }
+.proposal-node { border: 1px solid #cbd5e1; border-radius: 10px; padding: 12px; margin-top: 10px; background: white; }
+.proposal-node-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; overflow-wrap: anywhere; }
+.proposal-node-heading strong { flex: 1; min-width: 120px; }
+.editor.proposal-dialog .proposal-node-heading input[type="checkbox"] { width: 18px; height: 18px; min-height: 18px; padding: 0; margin: 0; flex: 0 0 18px; }
+.proposal-node-heading > span:last-child { font-size: 12px; color: #475569; }
+.proposal-color { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+.proposal-excluded { background: #f1f5f9; }
+.proposal-node[aria-invalid="true"] { border-color: #dc2626; }
+.proposal-fields { display: grid; gap: 12px; border: 0; padding: 12px 0 0; min-width: 0; }
+.proposal-fields label { display: grid; gap: 5px; }
+.proposal-fields input, .proposal-fields select { min-width: 0; max-width: 100%; }
+.proposal-color-field { display: flex; align-items: center; gap: 10px; }
+.proposal-notice { padding: 8px; color: #854d0e; background: #fef9c3; border-radius: 6px; }
+.proposal-actions { flex-wrap: wrap; }
+.proposal-node summary { cursor: pointer; padding: 5px 0; }
+@media (max-width: 600px) { .proposal-actions button { flex: 1 1 40%; } .proposal-dialog .time-fields { grid-template-columns: 1fr; } }

@@ -22,3 +22,7 @@ password 파일을 읽어 자식 프로세스 PGPASSWORD로 전달한다. DB 준
 
 
 API-102: ScheduleRepository 공개 read/mutate. mutate는 BEGIN→workspace FOR UPDATE→중복 요청 대조→revision 대조→서비스 순수 변경→payload/revision/요청 결과 INSERT→COMMIT, 실패 ROLLBACK이다. SQL은 고정 문장·파라미터 바인딩만 사용한다. 앱 연결은 전용 role로 workplanner의 SELECT/INSERT/UPDATE 권한만 사용한다.
+
+## AI 초안 저장 계약
+
+repository.proposals(id?)는 대기 요약/단일 초안을 조회한다. proposalCommand(command, apply)는 서버 서비스의 검증 콜백과 transaction·중복 요청·version/revision 원자성을 연결한다. 신규 002-schedule-proposals.sql은 기존 테이블·데이터를 덮지 않고 반복 실행 가능하다. 앱 역할은 새 테이블 SELECT/INSERT/UPDATE만 부여한다.

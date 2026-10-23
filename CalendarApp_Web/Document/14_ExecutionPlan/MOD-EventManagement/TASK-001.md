@@ -131,3 +131,7 @@ FR-014·015 / DATA-002·005 / API-001. Write Set: types.ts, scheduleChecklist.ts
 ## 공통 서버 전환 현재 기준
 
 useSchedules/색상 Hook의 저장 요청은 WorkspaceClient 공개 계약으로 전달한다. 부모 기간·색상·체크리스트 순수 규칙은 서비스에서도 재사용하며 중복 판정을 새로 만들지 않는다. 구현→실제 검증→현재 문서 대조→차이 해소를 따른다. 신규 API 계약은 12번 API-004/005와 신규 모듈 Task를 따른다.
+
+## AI 초안의 체크리스트 재사용
+
+ScheduleChecklist.tsx에 선택적 titleId를 받아 여러 초안 항목의 접근성 제목 ID가 중복되지 않도록 한다. 기존 편집기의 기본 ID와 항목 ID·배열·입력 콜백은 유지한다. 신규 초안 UI·상태·서버 요청은 WorkspaceClient/TASK-001이 소유한다.

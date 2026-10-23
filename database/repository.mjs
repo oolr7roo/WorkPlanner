@@ -21,6 +21,7 @@ export async function migrate(pool, initial) {
     await client.query("BEGIN");
     await client.query("SELECT pg_advisory_xact_lock(824763190)");
     await client.query(await readFile(new URL("./migrations/001-workspace.sql", import.meta.url), "utf8"));
+    await client.query(await readFile(new URL("./migrations/002-schedule-proposals.sql", import.meta.url), "utf8"));
     await client.query("INSERT INTO workplanner.workspace(id,payload) VALUES(1,$1) ON CONFLICT(id) DO NOTHING", [JSON.stringify(initial)]);
     await client.query("COMMIT");
   } catch (error) { await client.query("ROLLBACK"); throw error; }
@@ -28,7 +29,54 @@ export async function migrate(pool, initial) {
 }
 export function createRepository(pool) {
   const snapshot = row => ({ revision: Number(row.revision), ...row.payload });
+  const proposalSnapshot = row => ({ id: row.id, version: Number(row.version), status: row.status, ...row.payload });
   return {
+    async proposals(id) {
+      if (id !== undefined) {
+        const result = await pool.query("SELECT * FROM workplanner.proposals WHERE id=$1", [id]);
+        if (!result.rows.length) throw new WorkspaceError(404, "NOT_FOUND", "AI 등록 초안을 찾을 수 없습니다.");
+        return proposalSnapshot(result.rows[0]);
+      }
+      const result = await pool.query("SELECT id,version,status,payload->'draft'->'nodes' AS nodes,created_at FROM workplanner.proposals WHERE status='pending' ORDER BY created_at DESC LIMIT 100");
+      return result.rows.map(row => ({ id: row.id, version: Number(row.version), status: row.status, title: row.nodes[0]?.title ?? "AI 일정 초안", count: row.nodes.length, createdAt: row.created_at }));
+    },
+    async proposalCommand(command, apply) {
+      if (typeof command.requestId !== "string" || !Number.isSafeInteger(command.expectedRevision) || command.expectedRevision < 0 || !/^[a-zA-Z0-9_-]{8,128}$/.test(command.requestId))
+        throw new WorkspaceError(400, "INVALID_COMMAND", "수정 버전과 고유 요청 ID가 필요합니다.");
+      const fingerprint = createHash("sha256").update(canonical(command)).digest("hex");
+      const client = await pool.connect();
+      try {
+        await client.query("BEGIN");
+        const locked = await client.query("SELECT revision,payload FROM workplanner.workspace WHERE id=1 FOR UPDATE");
+        const previous = await client.query("SELECT fingerprint,response FROM workplanner.requests WHERE id=$1", [command.requestId]);
+        if (previous.rows.length) {
+          if (previous.rows[0].fingerprint !== fingerprint) throw new WorkspaceError(409, "REQUEST_REUSED", "동일 요청 ID에 다른 내용이 전달되었습니다.");
+          await client.query("COMMIT"); return previous.rows[0].response;
+        }
+        const current = snapshot(locked.rows[0]);
+        if (current.revision !== command.expectedRevision) throw new WorkspaceError(409, "REVISION_CONFLICT", "일정이 변경되었습니다. 편집 내용은 유지됩니다. 미리보기를 다시 확인해 주세요.");
+        let existing;
+        if (command.args?.id !== undefined) {
+          const found = await client.query("SELECT * FROM workplanner.proposals WHERE id=$1 FOR UPDATE", [command.args.id]);
+          if (!found.rows.length) throw new WorkspaceError(404, "NOT_FOUND", "AI 등록 초안을 찾을 수 없습니다.");
+          existing = proposalSnapshot(found.rows[0]);
+        } else {
+          const count = await client.query("SELECT count(*) FROM workplanner.proposals WHERE status='pending'");
+          if (Number(count.rows[0].count) >= 100) throw new WorkspaceError(400, "PROPOSAL_LIMIT", "대기 중인 AI 초안은 100개까지 지원합니다. 기존 초안을 먼저 처리해 주세요.");
+        }
+        const { proposal, workspace } = await apply(structuredClone(current), existing);
+        const { id, version, status, ...payload } = proposal;
+        await client.query("INSERT INTO workplanner.proposals(id,version,status,payload) VALUES($1,$2,$3,$4) ON CONFLICT(id) DO UPDATE SET version=EXCLUDED.version,status=EXCLUDED.status,payload=EXCLUDED.payload,updated_at=now()", [id, version, status, JSON.stringify(payload)]);
+        let response = { revision: current.revision, proposal };
+        if (workspace) {
+          response = { ...response, revision: current.revision + 1, ...workspace };
+          await client.query("UPDATE workplanner.workspace SET payload=$1,revision=$2,updated_at=now() WHERE id=1", [JSON.stringify({ items: workspace.items, settings: workspace.settings }), response.revision]);
+        }
+        await client.query("INSERT INTO workplanner.requests(id,fingerprint,response) VALUES($1,$2,$3)", [command.requestId, fingerprint, JSON.stringify(response)]);
+        await client.query("COMMIT"); return response;
+      } catch (error) { await client.query("ROLLBACK"); throw error; }
+      finally { client.release(); }
+    },
     async read() {
       const result = await pool.query("SELECT revision,payload FROM workplanner.workspace WHERE id=1");
       if (!result.rows.length) throw new WorkspaceError(503, "NOT_READY", "공통 저장소가 준비되지 않았습니다.");

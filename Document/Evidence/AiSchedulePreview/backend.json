@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-23T06:25:07.584Z",
+  "scope": "isolated PostgreSQL 55439 and web 5179; no operational data",
+  "checks": [
+    "MCP exposes nine tools with proposal submission and status, without immediate creation",
+    "Submission persists a pending draft, changes no schedule/revision, and retries idempotently",
+    "Bearer direct creation/import/review/apply/discard bypasses are rejected",
+    "Invalid tree/selection roll back without a draft version or schedule change",
+    "User editing preserves original, selection recalculates parent period, stale draft versions conflict",
+    "Workspace conflict leaves pending inputs intact and requires a fresh preview",
+    "Real SQL failure rolls back proposal completion, inserted schedules, revision and request response",
+    "Concurrent confirmation creates one exact preview tree, preserving IDs/title/checklist",
+    "Discard changes neither schedules nor workspace revision"
+  ],
+  "pendingBrowserProposal": "09e422c3-ef39-4a0f-84bb-7a918811f1a3"
+}

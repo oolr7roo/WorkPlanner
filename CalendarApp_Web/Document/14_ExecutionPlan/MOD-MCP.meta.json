@@ -13,7 +13,8 @@
   "source_ids": [
     "FR-017",
     "FR-018",
-    "FR-019"
+    "FR-019",
+    "API-006"
   ],
   "owned_ids": [
     "MOD-MCP"
@@ -22,10 +23,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:03:16.507Z",
-    "mtime_ns": 1792724596507136700,
-    "byte_size": 672,
-    "sha256": "d0949f2a4d7917895ee7018fc0620bc902e07bb18887002e723cf5e20acaf6a7"
+    "modified_at_utc": "2026-10-23T06:24:12.798723+00:00",
+    "mtime_ns": 1792736652798723300,
+    "byte_size": 999,
+    "sha256": "69693c8a7fcf969bcc9778de21701dce03e9f984fb066946cb65935389d972fb"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:16:47.546Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.759947+00:00"
 }

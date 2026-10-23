@@ -75,10 +75,10 @@
   ],
   "related_documents": [],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:13:55.867Z",
-    "mtime_ns": 1792725235867606500,
-    "byte_size": 6948,
-    "sha256": "37a71d8d2b00b73d3966a8cb5fed24930d81dd509304d4bcbc29a68a7a86c161"
+    "modified_at_utc": "2026-10-23T06:24:12.000824+00:00",
+    "mtime_ns": 1792736652000824500,
+    "byte_size": 7542,
+    "sha256": "0699be3d5ba3b7463799f4ee96d2a28ab572bf2f004736326ae75278c1d96b03"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:13:55.900Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.785491+00:00"
 }

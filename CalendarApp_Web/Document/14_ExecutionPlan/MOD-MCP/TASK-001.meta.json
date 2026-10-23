@@ -17,7 +17,8 @@
     "DATA-103",
     "API-102",
     "FR-018",
-    "FR-019"
+    "FR-019",
+    "API-006"
   ],
   "owned_ids": [
     "MOD-MCP/TASK-001"
@@ -26,10 +27,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-MCP"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:03:16.511Z",
-    "mtime_ns": 1792724596511446600,
-    "byte_size": 2703,
-    "sha256": "ed6cff5dda6725ce66a9e5f6ff2d680bd54e294bb414118e86be55c8dd5f8c49"
+    "modified_at_utc": "2026-10-23T06:08:59.443756+00:00",
+    "mtime_ns": 1792735739443755900,
+    "byte_size": 3149,
+    "sha256": "1c9ba9d7ccf5cfbbaeb5729e126363cb3faa093b9d20049921c3b43760bc1349"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:16:48.121Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.762562+00:00"
 }

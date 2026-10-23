@@ -25,7 +25,10 @@
     "FR-015",
     "DATA-005",
     "FR-016",
-    "API-005"
+    "API-005",
+    "API-006",
+    "DATA-008",
+    "MOD-004"
   ],
   "owned_ids": [
     "EventManagement",
@@ -38,10 +41,10 @@
     "DOC-Document-8_SoftwareRequirementsSpecification"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:03:16.466Z",
-    "mtime_ns": 1792724596466194300,
-    "byte_size": 6040,
-    "sha256": "b97756fc13ae0c09d6e2cbba5254cda0d71a2ff428676c009e91692638a6b35b"
+    "modified_at_utc": "2026-10-23T06:24:09.902083+00:00",
+    "mtime_ns": 1792736649902082800,
+    "byte_size": 6610,
+    "sha256": "f09f551a1a7d6942823cd4f675e797a43fb0f1f001a2bc9aa3165660efe3fab6"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:16:46.957Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.736545+00:00"
 }

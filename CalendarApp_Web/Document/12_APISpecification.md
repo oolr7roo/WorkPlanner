@@ -41,4 +41,8 @@ GET은 {revision,items,settings,timeZone} snapshot을 반환한다. POST body는
 
 loopback Host만 허용한다. 웹은 같은 origin, X-Workplanner-Client:web header와 POST Origin 검사를 사용한다. MCP는 .runtime/mcp-connection.json의 실행별 bearer token을 사용한다. CORS·외부 Origin·DB/서버/런타임 파일 노출을 거부한다. 첫 버전 원격 접속·다중 사용자 인증은 범위 밖이다.
 
-API-005는 공식 SDK의 stdio 서버다. workspace_context, list_schedules, get_schedule, create_schedule_tree, update_schedule, move_schedule, delete_schedule, set_color_settings 8개 도구와 workplanner://context 리소스를 제공한다. 쓰기는 API-004 계약을 따르고 오류는 isError와 구조화 코드·메시지로 반환한다. MCP는 DB·React·localStorage·서버 제어에 직접 접근하지 않는다. [연결 안내](../../mcp/README.md), [데이터](11_DataRequirements.md), [모듈](10_ModuleMapping.md).
+API-005는 공식 SDK의 stdio 서버다. workspace_context, list_schedules, get_schedule, propose_schedule_tree, get_schedule_proposal, update_schedule, move_schedule, delete_schedule, set_color_settings 9개 도구와 workplanner://context 리소스를 제공한다. 쓰기는 API-004 계약을 따르고 오류는 isError와 구조화 코드·메시지로 반환한다. MCP는 DB·React·localStorage·서버 제어에 직접 접근하지 않는다. [연결 안내](../../mcp/README.md), [데이터](11_DataRequirements.md), [모듈](10_ModuleMapping.md).
+
+## API-006 AI 신규 등록 미리보기
+
+[AI 초안 계약](12_api_spec/API-006_ScheduleProposals.md). MCP 신규 생성은 propose_schedule_tree로 pending 초안을 제출하고 get_schedule_proposal로 결과를 조회한다. create_schedule_tree는 제거되어 MCP 재연결이 필요하다. 총9개 도구이며 다른 기존 도구는 유지한다. 웹은 listProposals/getProposal/reviewProposal/applyProposal/discardProposal을 사용한다. 미리보기·확정 버전과 재시도 계약은 API-006을 따른다.

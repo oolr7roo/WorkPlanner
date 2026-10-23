@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { ChecklistItem } from "../types";
 
-type Props = { items: ChecklistItem[]; onChange: (items: ChecklistItem[]) => void };
-export function ScheduleChecklist({ items, onChange }: Props) {
+type Props = { items: ChecklistItem[]; onChange: (items: ChecklistItem[]) => void; titleId?: string };
+export function ScheduleChecklist({ items, onChange, titleId = "checklist-title" }: Props) {
   const [focusId, setFocusId] = useState<string | null>(null);
   const inputs = useRef(new Map<string, HTMLInputElement>());
   const addButton = useRef<HTMLButtonElement>(null);
@@ -20,8 +20,8 @@ export function ScheduleChecklist({ items, onChange }: Props) {
     onChange(items.filter((_, position) => position !== index));
     if (next) setFocusId(next.id); else { setFocusId(null); addButton.current?.focus(); }
   }
-  return <section className="schedule-checklist" aria-labelledby="checklist-title">
-    <div className="checklist-heading"><h3 id="checklist-title">체크리스트</h3><span aria-live="polite">{items.filter(item => item.done).length}/{items.length} 완료</span></div>
+  return <section className="schedule-checklist" aria-labelledby={titleId}>
+    <div className="checklist-heading"><h3 id={titleId}>체크리스트</h3><span aria-live="polite">{items.filter(item => item.done).length}/{items.length} 완료</span></div>
     {items.length === 0 && <p className="checklist-empty">일정에 필요한 할 일을 추가하세요.</p>}
     <ul>{items.map((item, index) => <li key={item.id} className={item.done ? "checklist-item is-done" : "checklist-item"}>
       <input type="checkbox" checked={item.done} aria-label={`${index + 1}번 항목 완료`} onChange={event => update(item.id, { done: event.target.checked })} />

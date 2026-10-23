@@ -24,3 +24,7 @@ Infrastructure → DatabaseBootstrap → catalog 조회 → 없으면 createdb �
 
 
 DATA-103: workplanner.workspace 단일 개인 workspace; revision bigint·payload jsonb(items/settings). 집합 단위 잠금으로 계층 변경의 원자성을 보장한다. DATA-104: workplanner.requests의 requestId·본문 hash·결과 JSON. 재시도는 동일 결과, requestId 재사용 본문 불일치는 충돌이다. 날짜·도메인 정규화는 Web 서비스가 소유한다. 소규모 개인 일정 aggregate 저장으로 시작하며 다중 사용자·대규모 검색 인덱스는 범위 밖이다.
+
+## AI 초안 보존 확장
+
+Web DATA-008/API-006의 원본·편집본·확정 미리보기를 workplanner.proposals에 보관한다. 초안의 version과 pending/applied/discarded를 workspace revision과 분리한다. request fingerprint와 응답은 기존 requests를 공유한다. workspace → proposal 순서로 잠그고 확정 시 일정·초안 상태·응답을 한 transaction으로 저장한다. 완료 기록 자동 삭제는 하지 않는다.

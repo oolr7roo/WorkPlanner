@@ -16,7 +16,9 @@
     "API-101",
     "DATA-102",
     "DATA-103",
-    "DATA-104"
+    "DATA-104",
+    "API-006",
+    "DATA-008"
   ],
   "owned_ids": [
     "DATA-101",
@@ -29,10 +31,10 @@
     "DOC-CalendarApp_Database-Document-12_APISpecification"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:03:16.317Z",
-    "mtime_ns": 1792724596317593600,
-    "byte_size": 2202,
-    "sha256": "03446850a8936ca0046ec6ec608060d7f58821d9dc2016f2c955d5bc1f152658"
+    "modified_at_utc": "2026-10-23T06:24:10.738273+00:00",
+    "mtime_ns": 1792736650738273000,
+    "byte_size": 2664,
+    "sha256": "3ebf78de15467a90515d0c2752b93a1e9f3ed5f826181e49b589b4f2adc02b6e"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:16:47.176Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.718834+00:00"
 }

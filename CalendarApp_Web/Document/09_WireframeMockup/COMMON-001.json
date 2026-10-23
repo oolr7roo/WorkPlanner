@@ -70,7 +70,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
           "id": "app-header"
         }
       }
@@ -112,7 +112,7 @@
       "text": "WORKPLAN",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
           "id": "brand"
         }
       }
@@ -153,7 +153,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
           "id": "page-title-row"
         }
       }
@@ -202,7 +202,7 @@
         "accessible_name": "홈으로 이동",
         "href": "https://home-macmini.tail7073a2.ts.net/",
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
           "id": "back-home"
         }
       }
@@ -244,7 +244,7 @@
       "text": "내 일정 달력",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
           "id": "page-title"
         }
       }
@@ -257,7 +257,7 @@
       "rect": {
         "x": 0,
         "y": 0,
-        "w": 32.815353,
+        "w": 22.855369,
         "h": 100
       },
       "source_ref": {
@@ -303,7 +303,7 @@
       "test": "new-event",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
           "id": "new-event"
         }
       }
@@ -316,9 +316,9 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 73.562096,
+        "x": 62.040903,
         "y": 14.615385,
-        "w": 26.437904,
+        "w": 37.959097,
         "h": 70.769231
       },
       "source_ref": {
@@ -344,7 +344,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
           "id": "header-actions"
         }
       }
@@ -358,9 +358,9 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 34.989173,
+        "x": 24.3694,
         "y": 0,
-        "w": 16.847111,
+        "w": 11.733743,
         "h": 100
       },
       "source_ref": {
@@ -402,7 +402,7 @@
       "test": "color-settings",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
           "id": "color-settings"
         }
       }
@@ -416,9 +416,9 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 54.010105,
+        "x": 37.617175,
         "y": 0,
-        "w": 45.989895,
+        "w": 32.031227,
         "h": 100
       },
       "source_ref": {
@@ -463,8 +463,69 @@
       "test": "import-events",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/common-geometry.json",
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
           "id": "import-events"
+        }
+      }
+    },
+    {
+      "id": "ai-proposals",
+      "type": "button",
+      "name": "ai-proposals",
+      "parent": "header-actions",
+      "scope": "parent",
+      "visible": true,
+      "text": "AI 등록 대기 1건",
+      "rect": {
+        "x": 71.162433,
+        "y": 0,
+        "w": 28.837567,
+        "h": 100
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/App.tsx",
+        "locator": "text:AI 등록 대기",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "events": {
+        "on": "click",
+        "intent": "AI 등록 대기 목록과 미리보기 MOD-004를 연다.",
+        "bindings": {
+          "modules": [
+            "MOD-WorkspaceClient"
+          ],
+          "data": [
+            "DATA-008"
+          ],
+          "apis": [
+            "API-006"
+          ],
+          "requirements": [
+            "FR-018"
+          ]
+        }
+      },
+      "test": "ai-proposals",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/AiSchedulePreview/geometry.json",
+          "id": "ai-proposals"
         }
       }
     }

@@ -1,0 +1,654 @@
+{
+  "viewport": [
+    1440,
+    1000
+  ],
+  "capture": {
+    "app-header": {
+      "x": 24,
+      "y": 24,
+      "width": 1392,
+      "height": 65,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "brand": {
+      "x": 24,
+      "y": 24,
+      "width": 197.859375,
+      "height": 18,
+      "style": {
+        "color": "rgb(84, 117, 199)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(84, 117, 199)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "800"
+        }
+      }
+    },
+    "page-title-row": {
+      "x": 24,
+      "y": 47,
+      "width": 197.859375,
+      "height": 42,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "back-home": {
+      "x": 24,
+      "y": 50,
+      "width": 36,
+      "height": 36,
+      "style": {
+        "color": "rgb(35, 48, 74)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(220, 225, 235)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 22,
+          "weight": "400"
+        }
+      }
+    },
+    "page-title": {
+      "x": 70,
+      "y": 47,
+      "width": 151.859375,
+      "height": 42,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 28,
+          "weight": "400"
+        }
+      }
+    },
+    "new-event": {
+      "x": 887.609375,
+      "y": 33.5,
+      "width": 120.765625,
+      "height": 46,
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "background_color": "rgb(51, 102, 221)",
+        "border": {
+          "color": "rgb(255, 255, 255)",
+          "width": 0,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      }
+    },
+    "header-actions": {
+      "x": 887.609375,
+      "y": 33.5,
+      "width": 528.390625,
+      "height": 46,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "color-settings": {
+      "x": 1016.375,
+      "y": 33.5,
+      "width": 62,
+      "height": 46,
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      }
+    },
+    "import-events": {
+      "x": 1086.375,
+      "y": 33.5,
+      "width": 169.25,
+      "height": 46,
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      }
+    },
+    "ai-proposals": {
+      "x": 1263.625,
+      "y": 33.5,
+      "width": 152.375,
+      "height": 46,
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      }
+    },
+    "dialog": {
+      "x": 240,
+      "y": 95.5,
+      "width": 960,
+      "height": 809,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 16
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "header": {
+      "x": 263,
+      "y": 118.5,
+      "width": 914,
+      "height": 31.5,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "title": {
+      "x": 263,
+      "y": 118.5,
+      "width": 209.65625,
+      "height": 31.5,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 21,
+          "weight": "400"
+        }
+      }
+    },
+    "close": {
+      "x": 1157.375,
+      "y": 120.25,
+      "width": 19.625,
+      "height": 28,
+      "style": {
+        "color": "rgb(107, 114, 128)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(107, 114, 128)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 28,
+          "weight": "400"
+        }
+      }
+    },
+    "summary": {
+      "x": 263,
+      "y": 170,
+      "width": 914,
+      "height": 48,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "600"
+        }
+      }
+    },
+    "help": {
+      "x": 263,
+      "y": 218,
+      "width": 914,
+      "height": 19.5,
+      "style": {
+        "color": "rgb(104, 117, 141)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(104, 117, 141)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      }
+    },
+    "body": {
+      "x": 263,
+      "y": 253.5,
+      "width": 914,
+      "height": 580,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "actions": {
+      "x": 263,
+      "y": 837.5,
+      "width": 914,
+      "height": 44,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "discard": {
+      "x": 263,
+      "y": 837.5,
+      "width": 101.625,
+      "height": 44,
+      "style": {
+        "color": "rgb(180, 35, 52)",
+        "background_color": "rgb(255, 240, 241)",
+        "border": {
+          "color": "rgb(180, 35, 52)",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "apply": {
+      "x": 1037.75,
+      "y": 837.5,
+      "width": 139.25,
+      "height": 44,
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "background_color": "rgb(51, 102, 221)",
+        "border": {
+          "color": "rgb(255, 255, 255)",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      }
+    },
+    "later": {
+      "x": 804.125,
+      "y": 837.5,
+      "width": 82,
+      "height": 44,
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "review": {
+      "x": 894.125,
+      "y": 837.5,
+      "width": 135.625,
+      "height": 44,
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "node": {
+      "x": 279,
+      "y": 379.5,
+      "width": 894,
+      "height": 528.5,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(203, 213, 225)",
+          "width": 1,
+          "radius": 10
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "select": {
+      "x": 292,
+      "y": 395.5,
+      "width": 18,
+      "height": 18,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "node-title": {
+      "x": 340,
+      "y": 392.5,
+      "width": 724.71875,
+      "height": 24,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      }
+    },
+    "node-kind": {
+      "x": 1072.71875,
+      "y": 395.5,
+      "width": 87.28125,
+      "height": 18,
+      "style": {
+        "color": "rgb(71, 85, 105)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(71, 85, 105)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      }
+    },
+    "period": {
+      "x": 292,
+      "y": 416.5,
+      "width": 868,
+      "height": 18,
+      "style": {
+        "color": "rgb(100, 116, 139)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(100, 116, 139)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      }
+    },
+    "detail": {
+      "x": 292,
+      "y": 434.5,
+      "width": 868,
+      "height": 34,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "title-input": {
+      "x": 292,
+      "y": 505,
+      "width": 868,
+      "height": 42,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      }
+    },
+    "kind-input": {
+      "x": 292,
+      "y": 583.5,
+      "width": 868,
+      "height": 42,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      }
+    },
+    "start-input": {
+      "x": 292,
+      "y": 662,
+      "width": 428,
+      "height": 42,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      }
+    },
+    "end-input": {
+      "x": 732,
+      "y": 662,
+      "width": 428,
+      "height": 42,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      }
+    },
+    "color": {
+      "x": 371.625,
+      "y": 716,
+      "width": 30,
+      "height": 30,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(22, 132, 91)",
+        "border": {
+          "color": "rgb(255, 255, 255)",
+          "width": 3,
+          "radius": 50
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    "checklist": {
+      "x": 292,
+      "y": 758,
+      "width": 868,
+      "height": 137,
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(226, 232, 240) rgb(23, 32, 51) rgb(23, 32, 51)",
+          "width": 1,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    }
+  }
+}

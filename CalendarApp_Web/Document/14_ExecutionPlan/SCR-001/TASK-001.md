@@ -111,3 +111,7 @@ App.tsx 조립·styles.css·COMMON-001/003와 MOD-001/002/새 가져오기 모�
 ## 공통 저장소 조립 현재 기준
 
 App.tsx는 useScheduleWorkspace를 한 번 구성하고 일정·색상 Hook에 주입한다. 편집·설정 창을 열 때 revision을 보관해 비동기 save/delete에 전달한다. MOD-003 가져오기 UI는 MOD-WorkspaceClient 소유이며 App은 열기·닫기만 조립한다. COMMON-001 import-events와 COMMON-003 저장 안내를 API-004/FR-017~019로 연결한다. ScheduleEditor·설정 UI의 저장 중 fieldset/닫기 차단, 색상 버튼 disabled 전달과 신규 schedules.css 반응형 버튼 줄바꿈을 조립한다. 선행 모듈 검증: ScheduleRepository→ScheduleService, WorkspaceClient/MCP. 조립 후 실제 MCP→웹 수정→MCP 재조회·가져오기·충돌·모바일을 확인했다. [이번 검증](../../../../Document/Evidence/McpWorkspace/README.md). 공용 뷰어 충실도·참조 열기는 별도 Review다.
+
+## AI 등록 대기 조립 기준선
+
+FR-018 / API-006. App.tsx·styles.css·COMMON-001.json에 대기 건수와 ScheduleProposalDialog를 조합한다. 초안 Hook이 목록·편집 상태를 소유하며 App은 업무 검증과 DB 접근을 하지 않는다. MOD-004 의미·초안 UI는 WorkspaceClient/TASK-001 소유이다.

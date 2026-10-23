@@ -13,7 +13,8 @@
   "source_ids": [
     "FR-017",
     "FR-018",
-    "FR-019"
+    "FR-019",
+    "API-006"
   ],
   "owned_ids": [
     "MOD-ScheduleService"
@@ -22,10 +23,10 @@
     "DOC-CalendarApp_Web-Document-14_ExecutionPlan"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T03:03:16.513Z",
-    "mtime_ns": 1792724596513546400,
-    "byte_size": 712,
-    "sha256": "c9a1f863ba545d08e2209461ba200497ac6a1eb35f29818d21d64d30c9df893c"
+    "modified_at_utc": "2026-10-23T06:24:13.238044+00:00",
+    "mtime_ns": 1792736653238043700,
+    "byte_size": 1039,
+    "sha256": "3d083338f9e9d0d563704839a6b5cad587506879d0ffa9ce6491714f2d4312fe"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T03:16:47.394Z"
+  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.765569+00:00"
 }

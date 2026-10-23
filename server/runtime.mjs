@@ -38,7 +38,7 @@ export async function createWorkspaceRuntime({ postgresPort, webPort }) {
         if (role.rows.length && (role.rows[0].rolsuper || role.rows[0].rolcreatedb || role.rows[0].rolcreaterole || !role.rows[0].rolcanlogin)) throw new Error("Existing workplanner_app role has unexpected privileges");
         if (!role.rows.length) await admin.query(`CREATE ROLE workplanner_app LOGIN PASSWORD '${appPassword}'`);
         await admin.query("GRANT USAGE ON SCHEMA workplanner TO workplanner_app");
-        await admin.query("GRANT SELECT,INSERT,UPDATE ON workplanner.workspace,workplanner.requests TO workplanner_app");
+        await admin.query("GRANT SELECT,INSERT,UPDATE ON workplanner.workspace,workplanner.requests,workplanner.proposals TO workplanner_app");
       } finally { await admin.end(); }
       pool = createPool({ host: "127.0.0.1", port: postgresPort, database: "calendarapp", user: "workplanner_app", password: appPassword });
     }
