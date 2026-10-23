@@ -1,0 +1,684 @@
+[
+  {
+    "aria": null,
+    "cls": "editor",
+    "id": "",
+    "rect": {
+      "h": 467.5,
+      "w": 500,
+      "x": 470,
+      "y": 266.25
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "16px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "DIALOG",
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상일정 수정×제목시작종료체크리스트0/1 완료삭제+ 항목 추가삭제취소저장"
+  },
+  {
+    "aria": null,
+    "cls": "editor-header",
+    "id": "",
+    "rect": {
+      "h": 31.5,
+      "w": 454,
+      "x": 493,
+      "y": 289.25
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "DIV",
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상일정 수정×"
+  },
+  {
+    "aria": null,
+    "cls": "editor-heading",
+    "id": "",
+    "rect": {
+      "h": 31.5,
+      "w": 131.390625,
+      "x": 493,
+      "y": 289.25
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "DIV",
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상일정 수정"
+  },
+  {
+    "aria": null,
+    "cls": "editor-color-control",
+    "id": "",
+    "rect": {
+      "h": 30,
+      "w": 30,
+      "x": 493,
+      "y": 290
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "DIV",
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상"
+  },
+  {
+    "aria": "일정 색상 선택",
+    "cls": "header-color-button",
+    "id": "",
+    "rect": {
+      "h": 30,
+      "w": 30,
+      "x": 493,
+      "y": 290
+    },
+    "style": {
+      "background_color": "rgb(34, 85, 136)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "50%",
+      "borderWidth": "3px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON",
+    "text": ""
+  },
+  {
+    "aria": null,
+    "cls": "schedule-color-picker",
+    "id": "",
+    "rect": {
+      "h": 456.5,
+      "w": 280,
+      "x": 493,
+      "y": 328
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "12px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "DIALOG",
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상"
+  },
+  {
+    "aria": null,
+    "cls": "picker-heading",
+    "id": "",
+    "rect": {
+      "h": 33,
+      "w": 254,
+      "x": 506,
+      "y": 341
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "DIV",
+    "text": "색상 선택×"
+  },
+  {
+    "aria": null,
+    "cls": "",
+    "id": "color-picker-title",
+    "rect": {
+      "h": 21,
+      "w": 60.921875,
+      "x": 506,
+      "y": 347
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "14px",
+      "fontWeight": "400"
+    },
+    "tag": "H3",
+    "text": "색상 선택"
+  },
+  {
+    "aria": "색상 선택 닫기",
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 33,
+      "w": 19.421875,
+      "x": 740.578125,
+      "y": 341
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "22px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON",
+    "text": "×"
+  },
+  {
+    "aria": "채도와 명도 선택",
+    "cls": "picker-plane",
+    "id": "",
+    "rect": {
+      "h": 140,
+      "w": 254,
+      "x": 506,
+      "y": 382
+    },
+    "style": {
+      "background_color": "rgb(0, 128, 255)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "4px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "DIV",
+    "text": ""
+  },
+  {
+    "aria": null,
+    "cls": "picker-cursor",
+    "id": "",
+    "rect": {
+      "h": 12,
+      "w": 12,
+      "x": 690.5,
+      "y": 441.328125
+    },
+    "style": {
+      "background_color": "rgb(34, 85, 136)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "50%",
+      "borderWidth": "2px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "aria": null,
+    "cls": "picker-help",
+    "id": "color-picker-help",
+    "rect": {
+      "h": 15,
+      "w": 254,
+      "x": 506,
+      "y": 528
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "10px",
+      "fontWeight": "400"
+    },
+    "tag": "P",
+    "text": "방향키로 채도·명도 조절 · Shift로 크게 조절"
+  },
+  {
+    "aria": "색상 각도",
+    "cls": "picker-hue",
+    "id": "",
+    "rect": {
+      "h": 16,
+      "w": 254,
+      "x": 506,
+      "y": 551
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "8px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "INPUT",
+    "text": ""
+  },
+  {
+    "aria": null,
+    "cls": "picker-preview",
+    "id": "",
+    "rect": {
+      "h": 18,
+      "w": 254,
+      "x": 506,
+      "y": 577
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "12px",
+      "fontWeight": "400"
+    },
+    "tag": "DIV",
+    "text": "#225588"
+  },
+  {
+    "aria": null,
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 18,
+      "w": 18,
+      "x": 506,
+      "y": 577
+    },
+    "style": {
+      "background_color": "rgb(34, 85, 136)",
+      "borderColor": "rgb(203, 213, 225)",
+      "borderRadius": "50%",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "12px",
+      "fontWeight": "400"
+    },
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "aria": null,
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 18,
+      "w": 46.9375,
+      "x": 532,
+      "y": 577
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "12px",
+      "fontWeight": "400"
+    },
+    "tag": "OUTPUT",
+    "text": "#225588"
+  },
+  {
+    "aria": null,
+    "cls": "picker-rgb",
+    "id": "",
+    "rect": {
+      "h": 60.5,
+      "w": 254,
+      "x": 506,
+      "y": 605
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "DIV",
+    "text": "RGB"
+  },
+  {
+    "aria": null,
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 60.5,
+      "w": 79.328125,
+      "x": 506,
+      "y": 605
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "tag": "LABEL",
+    "text": "R"
+  },
+  {
+    "aria": "R",
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 34,
+      "w": 79.328125,
+      "x": 506,
+      "y": 631.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "tag": "INPUT",
+    "text": ""
+  },
+  {
+    "aria": null,
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 60.5,
+      "w": 79.328125,
+      "x": 593.328125,
+      "y": 605
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "tag": "LABEL",
+    "text": "G"
+  },
+  {
+    "aria": "G",
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 34,
+      "w": 79.328125,
+      "x": 593.328125,
+      "y": 631.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "tag": "INPUT",
+    "text": ""
+  },
+  {
+    "aria": null,
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 60.5,
+      "w": 79.34375,
+      "x": 680.65625,
+      "y": 605
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "tag": "LABEL",
+    "text": "B"
+  },
+  {
+    "aria": "B",
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 34,
+      "w": 79.34375,
+      "x": 680.65625,
+      "y": 631.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "tag": "INPUT",
+    "text": ""
+  },
+  {
+    "aria": null,
+    "cls": "picker-actions",
+    "id": "",
+    "rect": {
+      "h": 38,
+      "w": 254,
+      "x": 506,
+      "y": 677.5
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "DIV",
+    "text": "취소선택"
+  },
+  {
+    "aria": null,
+    "cls": "cancel-button",
+    "id": "",
+    "rect": {
+      "h": 38,
+      "w": 62,
+      "x": 630,
+      "y": 677.5
+    },
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "6px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON",
+    "text": "취소"
+  },
+  {
+    "aria": null,
+    "cls": "save-button",
+    "id": "",
+    "rect": {
+      "h": 38,
+      "w": 60,
+      "x": 700,
+      "y": 677.5
+    },
+    "style": {
+      "background_color": "rgb(51, 102, 221)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "6px",
+      "borderWidth": "0px",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "700"
+    },
+    "tag": "BUTTON",
+    "text": "선택"
+  },
+  {
+    "aria": "기본값",
+    "cls": "picker-default",
+    "id": "",
+    "rect": {
+      "h": 44,
+      "w": 254,
+      "x": 506,
+      "y": 727.5
+    },
+    "style": {
+      "background_color": "rgb(248, 250, 252)",
+      "borderColor": "rgb(203, 213, 225)",
+      "borderRadius": "7px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON",
+    "text": "기본값단계별 색상"
+  },
+  {
+    "aria": null,
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 18,
+      "w": 18,
+      "x": 562.5625,
+      "y": 740.5
+    },
+    "style": {
+      "background_color": "rgb(34, 85, 136)",
+      "borderColor": "rgb(203, 213, 225)",
+      "borderRadius": "50%",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "tag": "SPAN",
+    "text": ""
+  },
+  {
+    "aria": null,
+    "cls": "",
+    "id": "",
+    "rect": {
+      "h": 16.5,
+      "w": 58.875,
+      "x": 644.5625,
+      "y": 741.25
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "11px",
+      "fontWeight": "400"
+    },
+    "tag": "SMALL",
+    "text": "단계별 색상"
+  },
+  {
+    "aria": null,
+    "cls": "",
+    "id": "editor-title",
+    "rect": {
+      "h": 31.5,
+      "w": 91.390625,
+      "x": 533,
+      "y": 289.25
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "21px",
+      "fontWeight": "400"
+    },
+    "tag": "H2",
+    "text": "일정 수정"
+  },
+  {
+    "aria": "닫기",
+    "cls": "close-button",
+    "id": "",
+    "rect": {
+      "h": 28,
+      "w": 19.625,
+      "x": 927.375,
+      "y": 291
+    },
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(107, 114, 128)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(107, 114, 128)",
+      "fontSize": "28px",
+      "fontWeight": "400"
+    },
+    "tag": "BUTTON",
+    "text": "×"
+  }
+]

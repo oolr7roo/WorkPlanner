@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "name": "HEX accepts upper case",
+      "status": "passed"
+    },
+    {
+      "name": "invalid legacy color fallback",
+      "status": "passed"
+    },
+    {
+      "name": "RGB bounds",
+      "status": "passed"
+    },
+    {
+      "name": "nonfinite channel fallback",
+      "status": "passed"
+    },
+    {
+      "name": "black finite HSV",
+      "status": "passed"
+    },
+    {
+      "name": "gray saturation",
+      "status": "passed"
+    },
+    {
+      "name": "hue 0",
+      "status": "passed"
+    },
+    {
+      "name": "hue 60",
+      "status": "passed"
+    },
+    {
+      "name": "hue 120",
+      "status": "passed"
+    },
+    {
+      "name": "hue 180",
+      "status": "passed"
+    },
+    {
+      "name": "hue 240",
+      "status": "passed"
+    },
+    {
+      "name": "hue 300",
+      "status": "passed"
+    },
+    {
+      "name": "hue 360",
+      "status": "passed"
+    },
+    {
+      "name": "hue -120",
+      "status": "passed"
+    },
+    {
+      "name": "percent bounds",
+      "status": "passed"
+    },
+    {
+      "name": "4096 RGB colors roundtrip",
+      "status": "passed"
+    }
+  ],
+  "roundtrip_colors": 4096
+}

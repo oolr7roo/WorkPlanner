@@ -73,3 +73,16 @@ FR-014·015 / DATA-002·005 / API-001. Write Set: types.ts, scheduleChecklist.ts
 
 
 2026-10-23 범위 검증: 정책·저장 경계 20건 및 실제 격리 UI의 저장/취소/재접속·개별/자동 색상·일괄 적용·날짜 보정·다섯 보기·모바일/긴 목록을 확인했다. 색상 선택창 Escape의 일정 초안 손실 경로를 UI 경계에서 해소했다. MOD-001·002의 source/계층/좌표와 대조했다. [검증 보고서](../../Evidence/EditorChecklist/README.md). 전체 renderer 충실도·실제 quota 오류 UI·전체 접근성은 미검증이며 Review를 유지한다.
+
+
+## 색상 선택창 기본값 버튼
+
+2026-10-23 사용자 요청: 색상 선택창 맨 아래 기본값 버튼으로 해당 일정의 단계별 자동 색상을 다시 따른다. FR-014·DATA-002/004의 기존 의미를 유지한다. 브라우저 native picker에는 앱 버튼을 추가할 수 없어 전용 선택창으로 대체한다. Write Set: ScheduleColorControl.tsx, ScheduleColorPicker.tsx, colorValues.ts, ScheduleEditor.tsx, MOD-001.json 및 소유 Task·메타데이터·검증 증거. UI는 선택 중 로컬 색상을 보관하고 선택 버튼에서만 개별 색상을 초안에 반영한다. 기본값은 onRestore를 호출해 auto 초안을 반영하고 선택창을 닫는다. 일정의 최종 저장/취소 경계는 유지한다. 공통 설정·저장 형식·체크리스트는 변경하지 않는다. 색상 변환은 DOM/React와 분리된 순수 함수, 선택창은 표시·포인터/RGB/키보드 입력, 부모 편집기는 초안만 조립한다. 별도 라이브러리·외부 패키지 없이 기존 React/TypeScript 사용. SEQUENTIAL/NONE: 기준 확정 → 변환 검증 → UI → 중첩 dialog 통합 → 실제 화면/정본 대조. 자동값의 고정 복사 여부, 선택창 Escape·배경 취소 시 일정 초안 손실, RGB 값 범위·검정/회색 변환, 작은 화면 잘림·포커스를 검증한다. 직전 커밋은 local-only 검증 완료이며 start-check의 master_not_pushed는 필수 원격 누락이 아닌 미요청 원격 상태로 판정한다.
+
+
+### 색상 선택창 기본값 구현 결과 (2026-10-23)
+
+- 앱 전용 색상창 하단 기본값으로 자동 모드를 복원한다. 선택창 내부 변경과 일정 초안 저장 책임을 분리했다.
+- RGB 개별 지정, 기본값 후 저장·취소, 새로고침 유지, 단계별 프리셋 변경 추종, Escape·닫기·배경 클릭 초안 보존 및 모바일 배치를 검증했다.
+- TypeScript/Vite 빌드, 순수 변환 16개 검사(4096 RGB 왕복 포함), MOD-001 스키마·소스 연결 검사가 통과했다. 공용 뷰어 시각 검증은 미완료다.
+- 검증 근거: [색상창 기본값 검증](../../Evidence/ColorPickerDefault/README.md).

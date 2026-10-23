@@ -11,7 +11,6 @@ export function ScheduleEditor(props: Props) {
   const [error, setError] = useState("");
   const [confirmDelete, setConfirmDelete] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
-  const colorPickerOpen = useRef(false);
   useEffect(() => { const element = dialog.current!; element.showModal(); return () => element.close(); }, []);
   function submit(event: FormEvent) { event.preventDefault(); const error = props.onSave(draft); setError(error); if (!error) props.onClose(); }
   function changeStart(start: string) {
@@ -21,14 +20,11 @@ export function ScheduleEditor(props: Props) {
   }
   return <dialog ref={dialog} className="editor" aria-labelledby="editor-title" onCancel={event => {
     event.preventDefault();
-    // Chromium also dispatches dialog cancel when Escape dismisses its color picker.
-    if (colorPickerOpen.current) { colorPickerOpen.current = false; return; }
     props.onClose();
   }}
     onClick={event => { if (event.target === event.currentTarget) { const rect = event.currentTarget.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) props.onClose(); } }}>
     <div className="editor-header"><div className="editor-heading">
-      <ScheduleColorControl color={draft.colorMode === "auto" ? props.automaticColor : draft.color} mode={draft.colorMode ?? "manual"}
-        onPickerOpen={() => { colorPickerOpen.current = true; }} onPickerBlur={() => { colorPickerOpen.current = false; }}
+      <ScheduleColorControl color={draft.colorMode === "auto" ? props.automaticColor : draft.color} automaticColor={props.automaticColor} mode={draft.colorMode ?? "manual"}
         onChoose={color => setDraft(current => ({ ...current, color, colorMode: "manual" }))}
         onRestore={() => setDraft(current => ({ ...current, color: props.automaticColor, colorMode: "auto" }))} />
       <h2 id="editor-title">{props.editing ? "일정 수정" : props.parentTitle ? "하위 일정 추가" : "새 일정"}</h2></div><button type="button" className="close-button" onClick={props.onClose} aria-label="닫기">×</button></div>

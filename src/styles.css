@@ -159,11 +159,26 @@ h1 { margin: 0; font-size: 28px; letter-spacing: -0.04em; }
 .time-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .editor-heading { display: flex; align-items: center; gap: 10px; min-width: 0; flex-wrap: wrap; }
 .editor-color-control { display: flex; align-items: center; gap: 6px; }
-.header-color-input { width: 32px; height: 32px; padding: 2px; border: 1px solid #d5dce8; border-radius: 50%; cursor: pointer; background: white; }
-.header-color-input::-webkit-color-swatch-wrapper { padding: 0; }
-.header-color-input::-webkit-color-swatch { border: 0; border-radius: 50%; }
-.header-color-input::-moz-color-swatch { border: 0; border-radius: 50%; }
-.restore-auto-color { border: 0; padding: 4px; background: transparent; color: #3366dd; font-size: 11px; text-decoration: underline; }
+.header-color-button { width: 30px; height: 30px; flex-shrink: 0; padding: 0; border: 3px solid white; outline: 1px solid #cbd5e1; border-radius: 50%; }
+.header-color-button:focus-visible { outline: 2px solid #3366dd; outline-offset: 2px; }
+.schedule-color-picker { position: fixed; inset: auto; margin: 0; width: min(280px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); overflow-y: auto; padding: 12px; border: 1px solid #d5dce8; border-radius: 12px; background: white; color: #172033; box-shadow: 0 8px 32px #17203333; }
+.schedule-color-picker::backdrop { background: transparent; }
+.picker-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.picker-heading h3 { margin: 0; font-size: 14px; }
+.picker-heading button { border: 0; background: none; color: #64748b; font-size: 22px; padding: 0 2px; }
+.picker-plane { position: relative; height: 140px; background-image: linear-gradient(to top, black, transparent), linear-gradient(to right, white, transparent); border-radius: 4px; touch-action: none; cursor: crosshair; }
+.picker-plane:focus-visible { outline: 2px solid #3366dd; outline-offset: 2px; }
+.picker-cursor { position: absolute; width: 12px; height: 12px; transform: translate(-50%, -50%); border: 2px solid white; border-radius: 50%; box-shadow: 0 0 0 1px #172033; pointer-events: none; }
+.picker-help { margin: 6px 0; font-size: 10px; color: #64748b; }
+.editor input.picker-hue { display: block; width: 100%; min-height: 16px; height: 16px; margin: 8px 0; padding: 0; border: 0; appearance: none; border-radius: 8px; background: linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red); }
+.picker-preview { display: flex; align-items: center; gap: 8px; margin: 10px 0; font-size: 12px; }
+.picker-preview span, .picker-default span { display: inline-block; width: 18px; height: 18px; border: 1px solid #cbd5e1; border-radius: 50%; }
+.picker-rgb { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.editor .picker-rgb input { min-width: 0; min-height: 34px; padding: 6px; font-size: 13px; }
+.picker-actions { display: flex; justify-content: flex-end; gap: 8px; margin: 12px 0; }
+.picker-actions button { padding: 6px 14px; border-radius: 6px; border-width: 1px; }
+.picker-default { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 9px; border: 1px solid #cbd5e1; border-radius: 7px; background: #f8fafc; color: #172033; }
+.picker-default small { font-size: 11px; color: #64748b; }
 .schedule-checklist { min-width: 0; border-top: 1px solid #e2e8f0; padding-top: 14px; }
 .checklist-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .checklist-heading h3 { margin: 0; font-size: 15px; }

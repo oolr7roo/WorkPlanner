@@ -1,11 +1,16 @@
+import { useRef, useState } from "react";
 import type { ColorMode } from "../types";
+import { ScheduleColorPicker } from "./ScheduleColorPicker";
 
-type Props = { color: string; mode: ColorMode; onChoose: (color: string) => void; onRestore: () => void; onPickerOpen: () => void; onPickerBlur: () => void };
-export function ScheduleColorControl({ color, mode, onChoose, onRestore, onPickerOpen, onPickerBlur }: Props) {
+type Props = { color: string; automaticColor: string; mode: ColorMode; onChoose: (color: string) => void; onRestore: () => void };
+export function ScheduleColorControl({ color, automaticColor, mode, onChoose, onRestore }: Props) {
+  const [open, setOpen] = useState(false);
+  const button = useRef<HTMLButtonElement>(null);
   return <div className="editor-color-control">
-    <input className="header-color-input" type="color" aria-label="일정 색상 선택" title={mode === "auto" ? "자동 색상 · 선택하여 개별 지정" : "개별 지정 색상"}
-      value={color} onClick={onPickerOpen} onBlur={onPickerBlur}
-      onChange={event => { if (event.target.value.toLowerCase() !== color.toLowerCase()) onChoose(event.target.value); }} />
-    {mode === "manual" && <button className="restore-auto-color" type="button" onClick={onRestore}>자동 색상으로 복원</button>}
+    <button ref={button} className="header-color-button" type="button" aria-label="일정 색상 선택" aria-haspopup="dialog" aria-expanded={open}
+      title={mode === "auto" ? "자동 색상 · 선택하여 개별 지정" : "개별 지정 색상"} style={{ backgroundColor: color }} onClick={event => { event.stopPropagation(); setOpen(true); }} />
+    {open && <ScheduleColorPicker anchor={button.current!} color={color} automaticColor={automaticColor} onClose={() => setOpen(false)}
+      onChoose={next => { if (next.toLowerCase() !== color.toLowerCase()) onChoose(next); setOpen(false); }}
+      onDefault={() => { onRestore(); setOpen(false); }} />}
   </div>;
 }

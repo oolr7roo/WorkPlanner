@@ -26,7 +26,10 @@
       "Document/Evidence/ColorPresets/editor-geometry.json",
       "src/features/schedules/components/ScheduleColorControl.tsx",
       "src/features/schedules/components/ScheduleChecklist.tsx",
-      "Document/Evidence/EditorChecklist/editor-geometry.json"
+      "Document/Evidence/EditorChecklist/editor-geometry.json",
+      "src/features/schedules/components/ScheduleColorPicker.tsx",
+      "src/features/schedules/colorValues.ts",
+      "Document/Evidence/ColorPickerDefault/geometry.json"
     ],
     "unverified": [
       "모든 단말·공용 뷰어 시각 검증은 미완료이다."
@@ -104,9 +107,9 @@
       "visible": true,
       "rect": {
         "x": 32.638889,
-        "y": 24,
+        "y": 24.025,
         "w": 34.722222,
-        "h": 52
+        "h": 51.95
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -133,7 +136,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "editor"
         }
       }
@@ -145,9 +148,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 4.423077,
+        "y": 4.427334,
         "w": 90.8,
-        "h": 6.153846
+        "h": 6.063523
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -174,7 +177,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "editor-header"
         }
       }
@@ -185,10 +188,10 @@
       "name": "editor-title",
       "visible": true,
       "rect": {
-        "x": 62.410026,
-        "y": 0.78125,
-        "w": 37.589974,
-        "h": 98.4375
+        "x": 30.443572,
+        "y": 0,
+        "w": 69.556428,
+        "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -216,7 +219,7 @@
       "text": "일정 수정",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "editor-title"
         }
       }
@@ -228,9 +231,9 @@
       "visible": true,
       "rect": {
         "x": 95.677313,
-        "y": 6.25,
+        "y": 5.555556,
         "w": 4.322687,
-        "h": 87.5
+        "h": 88.888889
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -274,7 +277,7 @@
       "test": "close",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "close"
         }
       }
@@ -286,9 +289,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 14.423077,
+        "y": 14.340712,
         "w": 90.8,
-        "h": 81.153846
+        "h": 81.231954
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -315,7 +318,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "editor-form"
         }
       }
@@ -356,7 +359,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "time-fields"
         }
       }
@@ -397,7 +400,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "editor-actions"
         }
       }
@@ -439,7 +442,7 @@
       "text": "제목",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "title-field"
         }
       }
@@ -500,7 +503,7 @@
         "required": true,
         "placeholder": "일정 제목",
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "title-field-input"
         }
       }
@@ -542,7 +545,7 @@
       "text": "시작",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "start-field"
         }
       }
@@ -603,7 +606,7 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "start-field-input"
         }
       }
@@ -645,7 +648,7 @@
       "text": "종료",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "end-field"
         }
       }
@@ -706,7 +709,7 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "end-field-input"
         }
       }
@@ -718,9 +721,9 @@
       "visible": true,
       "rect": {
         "x": 0,
-        "y": 0,
-        "w": 58.296915,
-        "h": 100
+        "y": 2.380952,
+        "w": 22.832679,
+        "h": 95.238095
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -747,36 +750,36 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "color-field"
         }
       }
     },
     {
       "id": "color-field-input",
-      "type": "input",
+      "type": "button",
       "name": "color-field-input",
       "visible": true,
       "rect": {
         "x": 0,
         "y": 0,
-        "w": 22.577445,
+        "w": 100,
         "h": 100
       },
       "source_ref": {
         "adapter": "web-react-source",
         "document": "src/features/schedules/components/ScheduleColorControl.tsx",
-        "locator": "text:header-color-input",
+        "locator": "text:header-color-button",
         "style_documents": [
           "src/styles.css"
         ]
       },
       "style": {
         "color": "rgb(23, 32, 51)",
-        "background_color": "rgb(255, 255, 255)",
+        "background_color": "rgb(34, 85, 136)",
         "border": {
-          "color": "rgb(213, 220, 232)",
-          "width": 1,
+          "color": "rgb(255, 255, 255)",
+          "width": 3,
           "radius": 50
         },
         "typography": {
@@ -787,8 +790,8 @@
       "parent": "color-field",
       "scope": "parent",
       "events": {
-        "on": "change",
-        "intent": "색상 선택창을 열거나 취소한 것만으로 모드를 변경하지 않는다. 실제 색상 변경 시 개별 지정 초안으로 전환한다.",
+        "on": "click",
+        "intent": "앱 색상 선택창을 연다. 열기만으로 개별 지정 모드로 변경하지 않는다.",
         "bindings": {
           "modules": [
             "EventManagement"
@@ -803,10 +806,13 @@
       },
       "test": "color-field-input",
       "properties": {
-        "input_type": "color",
         "accessible_name": "일정 색상 선택",
-        "mode": "manual",
-        "sample_value": "#884422"
+        "mode": "auto",
+        "sample_value": "#225588",
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "color-field-input"
+        }
       }
     },
     {
@@ -864,7 +870,7 @@
       "test": "cancel",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "cancel"
         }
       }
@@ -931,7 +937,7 @@
       "test": "save",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "save"
         }
       }
@@ -999,7 +1005,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "delete"
         }
       }
@@ -1082,7 +1088,7 @@
       "rect": {
         "x": 0,
         "y": 0,
-        "w": 53.551762,
+        "w": 28.940666,
         "h": 100
       },
       "style": {
@@ -1108,74 +1114,8 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "editor-heading"
-        }
-      }
-    },
-    {
-      "id": "restore-auto-color",
-      "type": "button",
-      "name": "자동 색상으로 복원",
-      "visible": true,
-      "parent": "color-field",
-      "scope": "parent",
-      "rect": {
-        "x": 26.810715,
-        "y": 11.71875,
-        "w": 73.189285,
-        "h": 76.5625
-      },
-      "style": {
-        "color": "rgb(51, 102, 221)",
-        "background_color": "rgba(0, 0, 0, 0)",
-        "border": {
-          "color": "rgb(51, 102, 221)",
-          "width": 0,
-          "radius": 0
-        },
-        "typography": {
-          "size": 11,
-          "weight": "400"
-        }
-      },
-      "source_ref": {
-        "adapter": "web-react-source",
-        "document": "src/features/schedules/components/ScheduleColorControl.tsx",
-        "locator": "text:자동 색상으로 복원",
-        "style_documents": [
-          "src/styles.css"
-        ]
-      },
-      "properties": {
-        "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
-          "id": "restore-auto-color"
-        }
-      },
-      "text": "자동 색상으로 복원",
-      "events": {
-        "on": "click",
-        "intent": "현재 초안을 단계별 자동 색상으로 복원한다. 저장 전에는 일정 정본을 변경하지 않는다.",
-        "bindings": {
-          "modules": [
-            "MOD-EventManagement"
-          ],
-          "data": [
-            "DATA-002",
-            "DATA-004"
-          ],
-          "requirements": [
-            "FR-014"
-          ]
-        }
-      },
-      "states": {
-        "auto": {
-          "visible": false
-        },
-        "manual": {
-          "visible": true
         }
       }
     },
@@ -1215,7 +1155,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "checklist"
         }
       }
@@ -1256,7 +1196,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "checklist-heading"
         }
       }
@@ -1297,7 +1237,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "checklist-title"
         }
       },
@@ -1339,7 +1279,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "checklist-count"
         }
       },
@@ -1381,7 +1321,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "checklist-items"
         },
         "empty_state": "일정에 필요한 할 일을 추가하세요."
@@ -1496,7 +1436,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/EditorChecklist/editor-geometry.json",
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
           "id": "checklist-add"
         }
       },
@@ -1514,6 +1454,824 @@
           ],
           "requirements": [
             "FR-015"
+          ]
+        }
+      }
+    },
+    {
+      "id": "color-picker",
+      "type": "panel",
+      "name": "color-picker",
+      "parent": "color-field",
+      "scope": "frame",
+      "visible": false,
+      "rect": {
+        "x": 34.236111,
+        "y": 30.2,
+        "w": 19.444444,
+        "h": 45.65
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:schedule-color-picker",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 12
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "color-picker"
+        }
+      },
+      "states": {
+        "closed": {
+          "visible": false
+        },
+        "open": {
+          "visible": true
+        }
+      }
+    },
+    {
+      "id": "picker-heading",
+      "type": "header",
+      "name": "picker-heading",
+      "parent": "color-picker",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 4.642857,
+        "y": 2.847755,
+        "w": 90.714286,
+        "h": 7.228916
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:picker-heading",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-heading"
+        }
+      }
+    },
+    {
+      "id": "picker-title",
+      "type": "heading",
+      "name": "picker-title",
+      "parent": "picker-heading",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 18.181818,
+        "w": 23.98499,
+        "h": 63.636364
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:picker-title",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 14,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-title"
+        }
+      },
+      "text": "색상 선택"
+    },
+    {
+      "id": "picker-close",
+      "type": "button",
+      "name": "picker-close",
+      "parent": "picker-heading",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 92.353593,
+        "y": 0,
+        "w": 7.646407,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:색상 선택 닫기",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(100, 116, 139)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(100, 116, 139)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 22,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-close"
+        }
+      },
+      "text": "×",
+      "events": {
+        "on": "click",
+        "intent": "색상 선택 중 변경을 버리고 색상창만 닫는다. 일정 초안은 유지한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
+          ]
+        }
+      }
+    },
+    {
+      "id": "picker-plane",
+      "type": "panel",
+      "name": "picker-plane",
+      "parent": "color-picker",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 4.642857,
+        "y": 11.829135,
+        "w": 90.714286,
+        "h": 30.668127
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:picker-plane",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(0, 128, 255)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 4
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-plane"
+        }
+      },
+      "events": {
+        "on": "input/pointer/keydown",
+        "intent": "선택창 내부 색상 초안만 조절한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
+          ]
+        }
+      }
+    },
+    {
+      "id": "picker-help",
+      "type": "text",
+      "name": "picker-help",
+      "parent": "color-picker",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 4.642857,
+        "y": 43.81161,
+        "w": 90.714286,
+        "h": 3.285871
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:picker-help",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(100, 116, 139)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(100, 116, 139)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 10,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-help"
+        }
+      },
+      "text": "방향키로 채도·명도 조절 · Shift로 크게 조절"
+    },
+    {
+      "id": "picker-hue",
+      "type": "input",
+      "name": "picker-hue",
+      "parent": "color-picker",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 4.642857,
+        "y": 48.849945,
+        "w": 90.714286,
+        "h": 3.504929
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:picker-hue",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 8
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-hue"
+        },
+        "input_type": "range"
+      },
+      "events": {
+        "on": "input/pointer/keydown",
+        "intent": "선택창 내부 색상 초안만 조절한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
+          ]
+        }
+      }
+    },
+    {
+      "id": "picker-preview",
+      "type": "panel",
+      "name": "picker-preview",
+      "parent": "color-picker",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 4.642857,
+        "y": 54.545455,
+        "w": 90.714286,
+        "h": 3.943045
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:picker-preview",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 12,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-preview"
+        }
+      }
+    },
+    {
+      "id": "picker-rgb",
+      "type": "panel",
+      "name": "picker-rgb",
+      "parent": "color-picker",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 4.642857,
+        "y": 60.67908,
+        "w": 90.714286,
+        "h": 13.253012
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:picker-rgb",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-rgb"
+        }
+      }
+    },
+    {
+      "id": "picker-r",
+      "type": "input",
+      "name": "picker-r",
+      "parent": "picker-rgb",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 43.801653,
+        "w": 31.231545,
+        "h": 56.198347
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:channel.toUpperCase()",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-r"
+        },
+        "input_type": "number"
+      },
+      "events": {
+        "on": "input/pointer/keydown",
+        "intent": "선택창 내부 색상 초안만 조절한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
+          ]
+        }
+      }
+    },
+    {
+      "id": "picker-g",
+      "type": "input",
+      "name": "picker-g",
+      "parent": "picker-rgb",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 34.381152,
+        "y": 43.801653,
+        "w": 31.231545,
+        "h": 56.198347
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:channel.toUpperCase()",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-g"
+        },
+        "input_type": "number"
+      },
+      "events": {
+        "on": "input/pointer/keydown",
+        "intent": "선택창 내부 색상 초안만 조절한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
+          ]
+        }
+      }
+    },
+    {
+      "id": "picker-b",
+      "type": "input",
+      "name": "picker-b",
+      "parent": "picker-rgb",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 68.762303,
+        "y": 43.801653,
+        "w": 31.237697,
+        "h": 56.198347
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:channel.toUpperCase()",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-b"
+        },
+        "input_type": "number"
+      },
+      "events": {
+        "on": "input/pointer/keydown",
+        "intent": "선택창 내부 색상 초안만 조절한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
+          ]
+        }
+      }
+    },
+    {
+      "id": "picker-actions",
+      "type": "toolbar",
+      "name": "picker-actions",
+      "parent": "color-picker",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 4.642857,
+        "y": 76.560789,
+        "w": 90.714286,
+        "h": 8.324206
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:picker-actions",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-actions"
+        }
+      }
+    },
+    {
+      "id": "picker-cancel",
+      "type": "button",
+      "name": "picker-cancel",
+      "parent": "picker-actions",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 48.818898,
+        "y": 0,
+        "w": 24.409449,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:취소",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 6
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-cancel"
+        }
+      },
+      "text": "취소",
+      "events": {
+        "on": "click",
+        "intent": "색상 선택 중 변경을 버리고 색상창만 닫는다. 일정 초안은 유지한다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
+          ]
+        }
+      }
+    },
+    {
+      "id": "picker-choose",
+      "type": "button",
+      "name": "picker-choose",
+      "parent": "picker-actions",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 76.377953,
+        "y": 0,
+        "w": 23.622047,
+        "h": 100
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:선택",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "background_color": "rgb(51, 102, 221)",
+        "border": {
+          "color": "rgb(255, 255, 255)",
+          "width": 0,
+          "radius": 6
+        },
+        "typography": {
+          "size": 16,
+          "weight": "700"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-choose"
+        }
+      },
+      "text": "선택",
+      "events": {
+        "on": "click",
+        "intent": "색상 초안을 적용한다. 실제 색상이 달라진 경우 개별 지정 모드로 변경하며 색상창만 닫는다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
+          ]
+        }
+      }
+    },
+    {
+      "id": "picker-default",
+      "type": "button",
+      "name": "picker-default",
+      "parent": "color-picker",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 4.642857,
+        "y": 87.513691,
+        "w": 90.714286,
+        "h": 9.638554
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleColorPicker.tsx",
+        "locator": "text:picker-default",
+        "style_documents": [
+          "src/styles.css"
+        ]
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(248, 250, 252)",
+        "border": {
+          "color": "rgb(203, 213, 225)",
+          "width": 1,
+          "radius": 7
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "id": "picker-default"
+        }
+      },
+      "text": "기본값",
+      "events": {
+        "on": "click",
+        "intent": "초안을 현재 단계별 자동 색상으로 복원하고 색상창만 닫는다. 이후 설정 변경을 계속 따른다. 일정 저장 전에는 정본을 변경하지 않는다.",
+        "bindings": {
+          "modules": [
+            "MOD-EventManagement"
+          ],
+          "data": [
+            "DATA-002",
+            "DATA-004"
+          ],
+          "requirements": [
+            "FR-014"
           ]
         }
       }
@@ -1556,11 +2314,15 @@
     {
       "id": "color-picker-cancel",
       "description": "색상 선택창 Escape는 해당 선택창만 닫아 편집 초안을 보존한다. 선택창이 닫힌 뒤 Escape는 일정 편집 전체를 취소한다."
+    },
+    {
+      "id": "picker-default",
+      "description": "기본값은 색상창 맨 아래에 있으며 단계별 자동 모드로 복원한다. 선택창 취소·닫기·Escape·배경 클릭은 색상창만 닫고 일정 초안을 보존한다."
     }
   ],
   "verification": {
     "schema": "valid",
-    "source_alignment": "measured-desktop-dom; EditorChecklist/editor-geometry.json",
+    "source_alignment": "measured-desktop-dom; ColorPickerDefault/geometry.json; mobile viewport 390x844 verified",
     "render_fidelity": "unverified",
     "complete": false
   },

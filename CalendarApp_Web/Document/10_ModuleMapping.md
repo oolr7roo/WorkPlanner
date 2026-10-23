@@ -33,3 +33,11 @@ App은 설정·일정 Hook을 조합하고 헤더·팝업을 연결한다. 기�
 ## 체크리스트·헤더 색상 책임
 
 FR-014·015: MOD-EventManagement가 일정 초안·검증·저장 요청을 소유한다. ScheduleChecklist와 ScheduleColorControl은 입력/표시만 담당하고 localStorage를 참조하지 않는다. 순수 scheduleChecklist가 항목 형식·중복 id·공백 검사를 담당하며 BrowserEventStore는 호환 읽기와 기존 API-001 쓰기를 소유한다. App은 checklist 초안 전달만 조립한다. 소유 Task는 MOD-EventManagement/TASK-001, 저장은 MOD-BrowserEventStore/TASK-001, App·스타일은 SCR-001/TASK-001, MOD-002 안내는 SCR-001/TASK-003이다.
+
+
+## 색상 선택 UI 경계
+
+FR-014의 colorValues는 HEX/RGB/HSV 변환만 소유한다. ScheduleColorPicker는 중첩 선택창 초안·입력을, ScheduleColorControl은 열기와 선택/기본값 콜백 연결을 담당한다. ScheduleEditor는 기존 onRestore에서 colorMode=auto를 반영한다. 설정 저장·단계별 계산·체크리스트·localStorage에는 새 책임을 추가하지 않는다. 소유는 MOD-EventManagement/TASK-001, 스타일 조립은 SCR-001/TASK-001이다.
+
+
+- 색상창 기본값 구현·검증 완료(2026-10-23): [검증 기록](Evidence/ColorPickerDefault/README.md). RGB/HSV 변환과 UI 초안·일정 초안 책임을 분리했으며 기존 자동색상 설정과 저장 계약을 유지한다.

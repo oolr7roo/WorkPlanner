@@ -1,0 +1,822 @@
+[
+  {
+    "id": "editor",
+    "rect": {
+      "h": 519.5,
+      "w": 500,
+      "x": 470,
+      "y": 240.25
+    },
+    "selector": ".editor",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "16px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상일정 수정×제목시작종료체크리스트0/2 완료삭제삭제+ 항목 추가삭제취소저장"
+  },
+  {
+    "id": "editor-header",
+    "rect": {
+      "h": 31.5,
+      "w": 454,
+      "x": 493,
+      "y": 263.25
+    },
+    "selector": ".editor-header",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상일정 수정×"
+  },
+  {
+    "id": "editor-heading",
+    "rect": {
+      "h": 31.5,
+      "w": 131.390625,
+      "x": 493,
+      "y": 263.25
+    },
+    "selector": ".editor-heading",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상일정 수정"
+  },
+  {
+    "id": "editor-title",
+    "rect": {
+      "h": 31.5,
+      "w": 91.390625,
+      "x": 533,
+      "y": 263.25
+    },
+    "selector": "#editor-title",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "21px",
+      "fontWeight": "400"
+    },
+    "text": "일정 수정"
+  },
+  {
+    "id": "close",
+    "rect": {
+      "h": 28,
+      "w": 19.625,
+      "x": 927.375,
+      "y": 265
+    },
+    "selector": ".close-button",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(107, 114, 128)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(107, 114, 128)",
+      "fontSize": "28px",
+      "fontWeight": "400"
+    },
+    "text": "×"
+  },
+  {
+    "id": "editor-form",
+    "rect": {
+      "h": 422,
+      "w": 454,
+      "x": 493,
+      "y": 314.75
+    },
+    "selector": ".editor>form",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "제목시작종료체크리스트0/2 완료삭제삭제+ 항목 추가삭제취소저장"
+  },
+  {
+    "id": "time-fields",
+    "rect": {
+      "h": 68.5,
+      "w": 454,
+      "x": 493,
+      "y": 399.25
+    },
+    "selector": ".time-fields",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "시작종료"
+  },
+  {
+    "id": "editor-actions",
+    "rect": {
+      "h": 44,
+      "w": 454,
+      "x": 493,
+      "y": 692.75
+    },
+    "selector": ".editor-actions",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "삭제취소저장"
+  },
+  {
+    "id": "title-field",
+    "rect": {
+      "h": 68.5,
+      "w": 454,
+      "x": 493,
+      "y": 314.75
+    },
+    "selector": ".editor>form>label",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": "제목"
+  },
+  {
+    "id": "title-field-input",
+    "rect": {
+      "h": 42,
+      "w": 454,
+      "x": 493,
+      "y": 341.25
+    },
+    "selector": ".editor>form>label>input",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": ""
+  },
+  {
+    "id": "start-field",
+    "rect": {
+      "h": 68.5,
+      "w": 221,
+      "x": 493,
+      "y": 399.25
+    },
+    "selector": ".time-fields>label:first-child",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": "시작"
+  },
+  {
+    "id": "start-field-input",
+    "rect": {
+      "h": 42,
+      "w": 221,
+      "x": 493,
+      "y": 425.75
+    },
+    "selector": ".time-fields>label:first-child>input",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": ""
+  },
+  {
+    "id": "end-field",
+    "rect": {
+      "h": 68.5,
+      "w": 221,
+      "x": 726,
+      "y": 399.25
+    },
+    "selector": ".time-fields>label:last-child",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(51, 65, 85)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": "종료"
+  },
+  {
+    "id": "end-field-input",
+    "rect": {
+      "h": 42,
+      "w": 221,
+      "x": 726,
+      "y": 425.75
+    },
+    "selector": ".time-fields>label:last-child>input",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": ""
+  },
+  {
+    "id": "color-field",
+    "rect": {
+      "h": 30,
+      "w": 30,
+      "x": 493,
+      "y": 264
+    },
+    "selector": ".editor-color-control",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상"
+  },
+  {
+    "id": "color-field-input",
+    "rect": {
+      "h": 30,
+      "w": 30,
+      "x": 493,
+      "y": 264
+    },
+    "selector": ".header-color-button",
+    "style": {
+      "background_color": "rgb(34, 85, 136)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "50%",
+      "borderWidth": "3px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": ""
+  },
+  {
+    "id": "cancel",
+    "rect": {
+      "h": 44,
+      "w": 66,
+      "x": 809,
+      "y": 692.75
+    },
+    "selector": ".editor-actions>.cancel-button",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "취소"
+  },
+  {
+    "id": "save",
+    "rect": {
+      "h": 44,
+      "w": 64,
+      "x": 883,
+      "y": 692.75
+    },
+    "selector": ".editor-actions>.save-button",
+    "style": {
+      "background_color": "rgb(51, 102, 221)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "8px",
+      "borderWidth": "0px",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "700"
+    },
+    "text": "저장"
+  },
+  {
+    "id": "delete",
+    "rect": {
+      "h": 44,
+      "w": 64,
+      "x": 493,
+      "y": 692.75
+    },
+    "selector": ".editor-actions>.delete-button",
+    "style": {
+      "background_color": "rgb(255, 240, 241)",
+      "borderColor": "rgb(180, 35, 52)",
+      "borderRadius": "8px",
+      "borderWidth": "0px",
+      "color": "rgb(180, 35, 52)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "삭제"
+  },
+  {
+    "id": "checklist",
+    "rect": {
+      "h": 189,
+      "w": 454,
+      "x": 493,
+      "y": 483.75
+    },
+    "selector": ".schedule-checklist",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(226, 232, 240) rgb(23, 32, 51) rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "1px 0px 0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "체크리스트0/2 완료삭제삭제+ 항목 추가"
+  },
+  {
+    "id": "checklist-heading",
+    "rect": {
+      "h": 22.5,
+      "w": 454,
+      "x": 493,
+      "y": 498.75
+    },
+    "selector": ".checklist-heading",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "체크리스트0/2 완료"
+  },
+  {
+    "id": "checklist-title",
+    "rect": {
+      "h": 22.5,
+      "w": 75,
+      "x": 493,
+      "y": 498.75
+    },
+    "selector": "#checklist-title",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "15px",
+      "fontWeight": "400"
+    },
+    "text": "체크리스트"
+  },
+  {
+    "id": "checklist-count",
+    "rect": {
+      "h": 18,
+      "w": 46.203125,
+      "x": 900.796875,
+      "y": 501
+    },
+    "selector": ".checklist-heading>span",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "12px",
+      "fontWeight": "400"
+    },
+    "text": "0/2 완료"
+  },
+  {
+    "id": "checklist-items",
+    "rect": {
+      "h": 96,
+      "w": 454,
+      "x": 493,
+      "y": 531.25
+    },
+    "selector": ".schedule-checklist ul",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "삭제삭제"
+  },
+  {
+    "id": "checklist-add",
+    "rect": {
+      "h": 35.5,
+      "w": 92.25,
+      "x": 493,
+      "y": 637.25
+    },
+    "selector": ".checklist-add",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "13px",
+      "fontWeight": "400"
+    },
+    "text": "+ 항목 추가"
+  },
+  {
+    "id": "color-picker",
+    "rect": {
+      "h": 456.5,
+      "w": 280,
+      "x": 493,
+      "y": 302
+    },
+    "selector": ".schedule-color-picker",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "12px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "색상 선택×방향키로 채도·명도 조절 · Shift로 크게 조절#225588RGB취소선택기본값단계별 색상"
+  },
+  {
+    "id": "picker-heading",
+    "rect": {
+      "h": 33,
+      "w": 254,
+      "x": 506,
+      "y": 315
+    },
+    "selector": ".picker-heading",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "색상 선택×"
+  },
+  {
+    "id": "picker-title",
+    "rect": {
+      "h": 21,
+      "w": 60.921875,
+      "x": 506,
+      "y": 321
+    },
+    "selector": "#color-picker-title",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "14px",
+      "fontWeight": "400"
+    },
+    "text": "색상 선택"
+  },
+  {
+    "id": "picker-close",
+    "rect": {
+      "h": 33,
+      "w": 19.421875,
+      "x": 740.578125,
+      "y": 315
+    },
+    "selector": ".picker-heading button",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "22px",
+      "fontWeight": "400"
+    },
+    "text": "×"
+  },
+  {
+    "id": "picker-plane",
+    "rect": {
+      "h": 140,
+      "w": 254,
+      "x": 506,
+      "y": 356
+    },
+    "selector": ".picker-plane",
+    "style": {
+      "background_color": "rgb(0, 128, 255)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "4px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": ""
+  },
+  {
+    "id": "picker-help",
+    "rect": {
+      "h": 15,
+      "w": 254,
+      "x": 506,
+      "y": 502
+    },
+    "selector": ".picker-help",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(100, 116, 139)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(100, 116, 139)",
+      "fontSize": "10px",
+      "fontWeight": "400"
+    },
+    "text": "방향키로 채도·명도 조절 · Shift로 크게 조절"
+  },
+  {
+    "id": "picker-hue",
+    "rect": {
+      "h": 16,
+      "w": 254,
+      "x": 506,
+      "y": 525
+    },
+    "selector": ".picker-hue",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "8px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": ""
+  },
+  {
+    "id": "picker-preview",
+    "rect": {
+      "h": 18,
+      "w": 254,
+      "x": 506,
+      "y": 551
+    },
+    "selector": ".picker-preview",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "12px",
+      "fontWeight": "400"
+    },
+    "text": "#225588"
+  },
+  {
+    "id": "picker-rgb",
+    "rect": {
+      "h": 60.5,
+      "w": 254,
+      "x": 506,
+      "y": 579
+    },
+    "selector": ".picker-rgb",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "RGB"
+  },
+  {
+    "id": "picker-r",
+    "rect": {
+      "h": 34,
+      "w": 79.328125,
+      "x": 506,
+      "y": 605.5
+    },
+    "selector": ".picker-rgb input[aria-label=\"R\"]",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": ""
+  },
+  {
+    "id": "picker-g",
+    "rect": {
+      "h": 34,
+      "w": 79.328125,
+      "x": 593.328125,
+      "y": 605.5
+    },
+    "selector": ".picker-rgb input[aria-label=\"G\"]",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": ""
+  },
+  {
+    "id": "picker-b",
+    "rect": {
+      "h": 34,
+      "w": 79.34375,
+      "x": 680.65625,
+      "y": 605.5
+    },
+    "selector": ".picker-rgb input[aria-label=\"B\"]",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "8px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "13px",
+      "fontWeight": "700"
+    },
+    "text": ""
+  },
+  {
+    "id": "picker-actions",
+    "rect": {
+      "h": 38,
+      "w": 254,
+      "x": 506,
+      "y": 651.5
+    },
+    "selector": ".picker-actions",
+    "style": {
+      "background_color": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(23, 32, 51)",
+      "borderRadius": "0px",
+      "borderWidth": "0px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "취소선택"
+  },
+  {
+    "id": "picker-cancel",
+    "rect": {
+      "h": 38,
+      "w": 62,
+      "x": 630,
+      "y": 651.5
+    },
+    "selector": ".picker-actions .cancel-button",
+    "style": {
+      "background_color": "rgb(255, 255, 255)",
+      "borderColor": "rgb(213, 220, 232)",
+      "borderRadius": "6px",
+      "borderWidth": "1px",
+      "color": "rgb(51, 65, 85)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "취소"
+  },
+  {
+    "id": "picker-choose",
+    "rect": {
+      "h": 38,
+      "w": 60,
+      "x": 700,
+      "y": 651.5
+    },
+    "selector": ".picker-actions .save-button",
+    "style": {
+      "background_color": "rgb(51, 102, 221)",
+      "borderColor": "rgb(255, 255, 255)",
+      "borderRadius": "6px",
+      "borderWidth": "0px",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "fontWeight": "700"
+    },
+    "text": "선택"
+  },
+  {
+    "id": "picker-default",
+    "rect": {
+      "h": 44,
+      "w": 254,
+      "x": 506,
+      "y": 701.5
+    },
+    "selector": ".picker-default",
+    "style": {
+      "background_color": "rgb(248, 250, 252)",
+      "borderColor": "rgb(203, 213, 225)",
+      "borderRadius": "7px",
+      "borderWidth": "1px",
+      "color": "rgb(23, 32, 51)",
+      "fontSize": "16px",
+      "fontWeight": "400"
+    },
+    "text": "기본값단계별 색상"
+  }
+]

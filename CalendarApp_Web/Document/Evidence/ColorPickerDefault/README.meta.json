@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "project_id": "CalendarApp",
+  "document_id": "DOC-CalendarApp_Web-Document-Evidence-ColorPickerDefault-README",
+  "document_number": 17,
+  "document_type": "validation-evidence",
+  "scope": "implementation-domain",
+  "implementation_domain_id": "web",
+  "markdown_path": "CalendarApp_Web/Document/Evidence/ColorPickerDefault/README.md",
+  "parent_document_id": "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement-TASK-001",
+  "status": "Review",
+  "metadata_state": "needs-review",
+  "source_ids": [
+    "FR-014",
+    "DATA-002",
+    "DATA-004"
+  ],
+  "owned_ids": [],
+  "related_documents": [
+    "DOC-CalendarApp_Web-Document-14_ExecutionPlan-MOD-EventManagement-TASK-001"
+  ],
+  "source_fingerprint": {
+    "modified_at_utc": "2026-10-23T00:21:28.197Z",
+    "mtime_ns": 1792714888197596400,
+    "byte_size": 2631,
+    "sha256": "a3ce511b3bf26df32901a80c9d5de5e522c46c37df8a4581f9e04d8797e33f4a"
+  },
+  "metadata_refreshed_at_utc": "2026-10-23T00:21:28.217Z"
+}
