@@ -6,13 +6,16 @@ import { ScheduleDragHandle, DRAG_TYPE } from "../components/ScheduleDragHandle"
 import { ScheduleTreeLabel } from "../components/ScheduleTreeLabel";
 
 export type TreeViewProps = { items: Schedule[]; rows: TreeRow[]; collapsed: Set<string>; selected: string | null; onToggle: (id: string) => void; onEdit: (id: string) => void; onAddChild: (id: string) => void; disabled: boolean };
-export function PriorityTreeView(props: TreeViewProps & { onMove: (id: string, target: string) => void }) {
+export function PriorityTreeView(props: TreeViewProps & { onMove: (id: string, target: string) => void; loading: boolean; loadError: string; onRetry: () => Promise<void> }) {
   const [notice, setNotice] = useState("");
   const selectedAncestors = props.rows.find(row => row.schedule.id === props.selected)?.ancestry ?? [];
   return <section className="priority-view" aria-label="일정 우선순위 목록">
     <div className="view-guide"><strong>위에 있을수록 높은 우선순위</strong><p id="reorder-help">같은 부모 아래에서 ⋮⋮를 끌어 이동하세요. 키보드: Space → 방향키 → Enter, Esc 취소.</p></div>
     <p className="sr-only" role="status">{notice}</p>
-    {!props.rows.length ? <p className="empty-state">등록된 일정이 없습니다. 일정 추가로 첫 일정을 만들어 보세요.</p> :
+    {props.loading ? (props.loadError
+      ? <p className="empty-state" role="alert">{props.loadError} <button type="button" onClick={() => void props.onRetry()}>다시 연결</button></p>
+      : <p className="empty-state" role="status">공통 저장소에서 일정을 불러오는 중입니다.</p>
+    ) : !props.rows.length ? <p className="empty-state">등록된 일정이 없습니다. 일정 추가로 첫 일정을 만들어 보세요.</p> :
       <div className="schedule-table"><div className="priority-table-head"><span>이동</span><span>일정 · 하위 일정</span><span>기간</span></div>
         {props.rows.map(row => <div key={row.schedule.id} className={`priority-row ${props.selected === row.schedule.id || row.ancestry.includes(props.selected ?? "") || selectedAncestors.includes(row.schedule.id) ? "branch-highlight" : ""}`}
           onDragOver={event => { if (!props.disabled && event.dataTransfer.types.includes(DRAG_TYPE)) event.preventDefault(); }}

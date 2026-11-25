@@ -1,8 +1,9 @@
 import { timingSafeEqual } from "node:crypto";
 import { WorkspaceError } from "../../database/repository.mjs";
 
-export function createApiMiddleware(service, { token, webPort }) {
+export function createApiMiddleware(service, { token, webPort, tailnetOrigin, tailnetLogin }) {
   const hosts = new Set([`127.0.0.1:${webPort}`, `localhost:${webPort}`, `[::1]:${webPort}`]);
+  const loopbackAddresses = new Set(["127.0.0.1", "::1", "::ffff:127.0.0.1"]);
   const sameToken = header => {
     const candidate = Buffer.from(header?.startsWith("Bearer ") ? header.slice(7) : "");
     const expected = Buffer.from(token);
@@ -16,13 +17,23 @@ export function createApiMiddleware(service, { token, webPort }) {
     const send = (status, body) => { res.statusCode = status; res.end(JSON.stringify(body)); };
     try {
       const host = req.headers.host ?? "";
-      if (!hosts.has(host)) throw new WorkspaceError(403, "LOCAL_ONLY", "공통 일정 API는 로컬 주소에서만 사용할 수 있습니다.");
+      const forwardedHost = req.headers["x-forwarded-host"];
+      const forwardedProto = req.headers["x-forwarded-proto"];
+      const login = req.headers["tailscale-user-login"];
+      const proxied = [forwardedHost, forwardedProto, login, req.headers["x-forwarded-for"]].some(value => value !== undefined);
+      const loopback = loopbackAddresses.has(req.socket.remoteAddress);
+      const local = loopback && !proxied && hosts.has(host);
+      const tailnet = loopback && tailnetOrigin && tailnetLogin && forwardedProto === "https" &&
+        (host === tailnetOrigin.host || hosts.has(host)) &&
+        (forwardedHost ?? host) === tailnetOrigin.host && login === tailnetLogin;
+      if (!local && !tailnet) throw new WorkspaceError(403, "ACCESS_DENIED", "이 기기에서는 공통 일정에 접근할 수 없습니다.");
       const origin = req.headers.origin;
-      if (origin && origin !== `http://${host}`) throw new WorkspaceError(403, "ORIGIN_DENIED", "다른 origin의 요청을 허용하지 않습니다.");
-      const bearer = sameToken(req.headers.authorization);
+      const expectedOrigin = local ? `http://${host}` : tailnetOrigin.origin;
+      if (origin !== undefined && origin !== expectedOrigin) throw new WorkspaceError(403, "ORIGIN_DENIED", "다른 origin의 요청을 허용하지 않습니다.");
+      const bearer = local && sameToken(req.headers.authorization);
       const browser = req.headers["x-workplanner-client"] === "web"
         && (!req.headers["sec-fetch-site"] || req.headers["sec-fetch-site"] === "same-origin")
-        && (req.method === "GET" || origin === `http://${host}`);
+        && (req.method === "GET" || origin === expectedOrigin);
       if (!bearer && !browser) throw new WorkspaceError(401, "UNAUTHORIZED", "로컬 MCP 연결 또는 동일 화면에서 요청해 주세요.");
       if ((req.url ?? "").split("?")[0] !== "/api/workplanner") throw new WorkspaceError(404, "NOT_FOUND", "API 경로를 확인해 주세요.");
       if (req.method === "GET") return send(200, await service.read());

@@ -1576,6 +1576,13 @@
         "empty": {
           "visible": true
         }
+      },
+      "properties": {
+        "loading_until": "첫 공통 저장소 응답까지 연결 중을 표시한다.",
+        "load_error_action": "다시 연결 버튼은 공통 저장소를 다시 조회한다.",
+        "empty_after_success": true,
+        "loading_text": "공통 저장소에서 일정을 불러오는 중입니다.",
+        "load_error_text": "공통 저장소에 연결하지 못했습니다. 서버 상태를 확인하고 다시 시도해 주세요."
       }
     },
     {

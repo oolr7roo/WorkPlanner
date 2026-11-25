@@ -8,6 +8,16 @@ import { createScheduleService } from "./schedules/service.mjs";
 import { createApiMiddleware } from "./http/api.mjs";
 
 export async function createWorkspaceRuntime({ postgresPort, webPort }) {
+  const originSetting = process.env.WORKPLANNER_TAILNET_ORIGIN;
+  const tailnetLogin = process.env.WORKPLANNER_TAILNET_LOGIN;
+  if (Boolean(originSetting) !== Boolean(tailnetLogin)) {
+    throw new Error("Set both WORKPLANNER_TAILNET_ORIGIN and WORKPLANNER_TAILNET_LOGIN");
+  }
+  const tailnetOrigin = originSetting ? new URL(originSetting) : undefined;
+  if (tailnetOrigin && (tailnetOrigin.protocol !== "https:" || !tailnetOrigin.hostname.endsWith(".ts.net") ||
+      tailnetOrigin.href !== tailnetOrigin.origin + "/" || tailnetLogin !== tailnetLogin.trim())) {
+    throw new Error("Set a Tailscale Serve HTTPS origin and its permitted login");
+  }
   const timeZone = process.env.WORKPLANNER_TIME_ZONE ?? "Asia/Seoul";
   new Intl.DateTimeFormat("en", { timeZone }).format();
   process.env.TZ = timeZone;
@@ -49,7 +59,7 @@ export async function createWorkspaceRuntime({ postgresPort, webPort }) {
     let published = false;
     return {
       service,
-      middleware: createApiMiddleware(service, { token, webPort }),
+      middleware: createApiMiddleware(service, { token, webPort, tailnetOrigin, tailnetLogin }),
       async publish() {
         const temp = `${connectionPath}.${process.pid}.tmp`;
         await writeFile(temp, JSON.stringify({ url: `http://127.0.0.1:${webPort}/api/workplanner`, token, timeZone }), { mode: 0o600 });

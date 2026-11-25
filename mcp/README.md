@@ -38,6 +38,12 @@ MCP 클라이언트의 stdio 서버 설정에 아래 항목을 추가한다. 예
 
 WORKPLANNER_TIME_ZONE(기본 Asia/Seoul)은 초기 구축 시 설정하고 기존 데이터가 있는 서버에서 임의 변경하지 않는다. WORKPLANNER_DATABASE_URL, WORKPLANNER_RUNTIME_DIR, WORKPLANNER_ADMIN_PASSWORD_FILE, WORKPLANNER_CONNECTION_FILE은 격리 검증·운영 구성을 위한 선택 값이며 비밀 값을 출력하지 않는다.
 
+### Mac과 아이폰에서 공통 저장소 사용
+
+Tailscale Serve에서 CalendarApp의 기존 HTTPS 주소를 루프백 웹 포트로 연결한다. 서버 실행 환경에 해당 주소를 `WORKPLANNER_TAILNET_ORIGIN`으로, Mac과 아이폰에서 사용하는 Tailscale 로그인 이름을 `WORKPLANNER_TAILNET_LOGIN`으로 설정한다. 두 값은 함께 설정한다.
+
+두 기기에서 같은 HTTPS 주소를 연다. 저장소를 전환한 뒤에는 기존 일정이 남은 브라우저에서 **기존 일정 가져오기**를 열고 미리보기의 추가·중복 건수를 확인한 다음 적용한다. 브라우저 저장 데이터는 가져오기 원본으로 보존된다.
+
 공통 계약: [웹 API](../CalendarApp_Web/Document/12_APISpecification.md). 실제 검증: [보고서](../Document/Evidence/McpWorkspace/README.md).
 
 ## AI 신규 등록 미리보기 (1.1)

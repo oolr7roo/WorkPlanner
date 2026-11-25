@@ -54,14 +54,15 @@ export default function App() {
       {view === "priority" || view === "gantt" ? <>
         <CalendarToolbar view={view} label={view === "priority" ? "전체 일정" : `${date.replaceAll("-", ".")} – ${addDays(date, 13).replaceAll("-", ".")}`}
           onViewChange={setView} onToday={() => setDate(localInputDate(new Date()).slice(0, 10))} onPrev={() => setDate(addDays(date, -14))} onNext={() => setDate(addDays(date, 14))} />
-        {view === "priority" ? <PriorityTreeView {...treeProps} onMove={schedules.reorder} /> : <GanttView {...treeProps} items={taskSchedules(schedules.effective)} rows={taskRows(schedules.effective, tree.collapsed)} date={date} />}
+        {view === "priority" ? <PriorityTreeView {...treeProps} onMove={schedules.reorder}
+          loading={workspace.revision < 0} loadError={workspace.error} onRetry={workspace.refresh} /> : <GanttView {...treeProps} items={taskSchedules(schedules.effective)} rows={taskRows(schedules.effective, tree.collapsed)} date={date} />}
       </> : <CalendarView events={taskSchedules(schedules.effective)} view={view} date={date} onDateChange={setDate} onViewChange={setView} onEdit={openEdit}
         onNew={(start, end) => openNew(start, end)} onMove={schedules.moveTime} disabled={schedules.blocked}
         toolbar={props => <CalendarToolbar {...props} view={view} label={props.formattedDate} onViewChange={setView} />} />}
     </main>
     <p className="storage-note">일정과 색상 설정은 공통 저장소에 저장됩니다. {workspace.revision < 0 ? "연결 중…" : workspace.timeZone}</p>
     {proposals.notice && <p className="storage-note" role="status">{proposals.notice}</p>}
-    {workspace.error && <p className="storage-error" role="alert">{workspace.error} <button type="button" onClick={() => void workspace.refresh()}>다시 연결</button></p>}
+    {workspace.error && !(view === "priority" && workspace.revision < 0) && <p className="storage-error" role="alert">{workspace.error} <button type="button" onClick={() => void workspace.refresh()}>다시 연결</button></p>}
     {tree.error && <p className="storage-error" role="alert">{tree.error}</p>}
     {editor && <ScheduleEditor initial={editor.draft} editing={Boolean(editor.id)} parentTitle={schedules.items.find(item => item.id === editor.parentId)?.title}
       hasChildren={schedules.items.some(item => item.parentId === editor.id && editor.id !== null)} automaticColor={schedules.automaticColor(editor.parentId)}
