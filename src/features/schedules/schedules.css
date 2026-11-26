@@ -9,6 +9,13 @@
 .priority-table-head { position: sticky; top: 0; z-index: 3; padding: 12px 0; background: #f7f9fd; border-bottom: 1px solid #e6e9f0; color: #68758d; font-size: 12px; }
 .priority-table-head > span:first-child { text-align: center; }
 .priority-row { min-height: 52px; border-bottom: 1px solid #edf0f5; }
+.priority-row:focus-visible { outline: 2px solid #3366dd; outline-offset: -2px; }
+.priority-row .tree-title, .priority-row .schedule-period { -webkit-touch-callout: none; user-select: none; }
+.priority-context-menu { position: fixed; z-index: 10; display: grid; min-width: 128px; padding: 4px; border: 1px solid #dce1eb; border-radius: 8px; background: #fff; box-shadow: 0 6px 18px #17203326; }
+.priority-context-menu button { min-height: 44px; padding: 6px 12px; border: 0; border-radius: 5px; background: #fff; color: #23304a; text-align: left; }
+.priority-context-menu button:hover, .priority-context-menu button:focus-visible { background: #e7eeff; }
+.priority-copy-notice { position: fixed; z-index: 10; right: 16px; bottom: 16px; margin: 0; padding: 10px 14px; border: 1px solid #dce1eb; border-radius: 8px; background: #fff; color: #23304a; }
+.priority-delete-dialog { overflow-wrap: anywhere; }
 .branch-highlight { background: #f0f5ff; }
 .tree-label { display: flex; align-items: center; min-width: 0; height: 52px; gap: 4px; }
 .tree-title { display: flex; align-items: center; gap: 7px; flex: 1; min-width: 0; height: 36px; border: 0; background: transparent; text-align: left; color: #23304a; padding: 0 4px; }

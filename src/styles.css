@@ -116,6 +116,36 @@ h1 { margin: 0; font-size: 28px; letter-spacing: -0.04em; }
 .view-controls button.active { background: #e7eeff; border-color: #8ba8f1; color: #1c4ab5; font-weight: 800; }
 .date-controls button:hover, .view-controls button:hover { background: #f2f5fc; }
 
+.calendar-week-dates { display: none; }
+
+@container (width < 1024px) {
+  .calendar-week-dates {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 4px;
+    padding: 6px 8px;
+    border-bottom: 1px solid #e6e9f0;
+  }
+
+  .calendar-week-dates button {
+    display: grid;
+    place-content: center;
+    min-height: 44px;
+    border: 1px solid #dce1eb;
+    border-radius: 8px;
+    background: white;
+    color: #23304a;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .calendar-week-dates button[aria-pressed="true"] {
+    border-color: #8ba8f1;
+    background: #e7eeff;
+    color: #1c4ab5;
+  }
+}
+
 .storage-note { margin: 12px 2px 0; color: #68758d; font-size: 13px; }
 .storage-error, .form-error { color: #b42334; font-size: 13px; }
 

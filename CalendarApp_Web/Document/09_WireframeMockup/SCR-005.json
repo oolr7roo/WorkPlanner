@@ -360,8 +360,16 @@
       },
       "events": {
         "on": "drop",
-        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
-      }
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다. 우클릭, Shift+F10 또는 행 본문의 터치 길게 누르기로 일정 컨텍스트 메뉴를 연다."
+      },
+      "design_links": [
+        {
+          "root": "document",
+          "path": "09_WireframeMockup.md",
+          "anchor": "2026-11-25-우선순위-행-컨텍스트-메뉴",
+          "label": "우선순위 행 메뉴"
+        }
+      ]
     },
     {
       "id": "drag-event-1",
@@ -534,8 +542,16 @@
       },
       "events": {
         "on": "drop",
-        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
-      }
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다. 우클릭, Shift+F10 또는 행 본문의 터치 길게 누르기로 일정 컨텍스트 메뉴를 연다."
+      },
+      "design_links": [
+        {
+          "root": "document",
+          "path": "09_WireframeMockup.md",
+          "anchor": "2026-11-25-우선순위-행-컨텍스트-메뉴",
+          "label": "우선순위 행 메뉴"
+        }
+      ]
     },
     {
       "id": "drag-event-2",
@@ -708,8 +724,16 @@
       },
       "events": {
         "on": "drop",
-        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
-      }
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다. 우클릭, Shift+F10 또는 행 본문의 터치 길게 누르기로 일정 컨텍스트 메뉴를 연다."
+      },
+      "design_links": [
+        {
+          "root": "document",
+          "path": "09_WireframeMockup.md",
+          "anchor": "2026-11-25-우선순위-행-컨텍스트-메뉴",
+          "label": "우선순위 행 메뉴"
+        }
+      ]
     },
     {
       "id": "drag-event-3",
@@ -882,8 +906,16 @@
       },
       "events": {
         "on": "drop",
-        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
-      }
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다. 우클릭, Shift+F10 또는 행 본문의 터치 길게 누르기로 일정 컨텍스트 메뉴를 연다."
+      },
+      "design_links": [
+        {
+          "root": "document",
+          "path": "09_WireframeMockup.md",
+          "anchor": "2026-11-25-우선순위-행-컨텍스트-메뉴",
+          "label": "우선순위 행 메뉴"
+        }
+      ]
     },
     {
       "id": "drag-event-4",
@@ -1056,8 +1088,16 @@
       },
       "events": {
         "on": "drop",
-        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
-      }
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다. 우클릭, Shift+F10 또는 행 본문의 터치 길게 누르기로 일정 컨텍스트 메뉴를 연다."
+      },
+      "design_links": [
+        {
+          "root": "document",
+          "path": "09_WireframeMockup.md",
+          "anchor": "2026-11-25-우선순위-행-컨텍스트-메뉴",
+          "label": "우선순위 행 메뉴"
+        }
+      ]
     },
     {
       "id": "drag-event-5",
@@ -1230,8 +1270,16 @@
       },
       "events": {
         "on": "drop",
-        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
-      }
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다. 우클릭, Shift+F10 또는 행 본문의 터치 길게 누르기로 일정 컨텍스트 메뉴를 연다."
+      },
+      "design_links": [
+        {
+          "root": "document",
+          "path": "09_WireframeMockup.md",
+          "anchor": "2026-11-25-우선순위-행-컨텍스트-메뉴",
+          "label": "우선순위 행 메뉴"
+        }
+      ]
     },
     {
       "id": "drag-event-6",
@@ -1404,8 +1452,16 @@
       },
       "events": {
         "on": "drop",
-        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다."
-      }
+        "intent": "같은 부모 안에서 드롭 위치로 순서를 변경한다. 다른 부모로 드롭하면 유지하고 안내한다. 우클릭, Shift+F10 또는 행 본문의 터치 길게 누르기로 일정 컨텍스트 메뉴를 연다."
+      },
+      "design_links": [
+        {
+          "root": "document",
+          "path": "09_WireframeMockup.md",
+          "anchor": "2026-11-25-우선순위-행-컨텍스트-메뉴",
+          "label": "우선순위 행 메뉴"
+        }
+      ]
     },
     {
       "id": "drag-event-7",
@@ -1936,7 +1992,27 @@
     "edit": "별도 편집 버튼 또는 간트 막대로 MOD-001 열기",
     "parent_period": "하위 시작 최솟값~종료 최댓값",
     "delete": "자식은 한 단계 위로 보존",
-    "shared_collapsed_state": true
+    "shared_collapsed_state": true,
+    "context_menu": {
+      "opens_with": [
+        "contextmenu",
+        "Shift+F10",
+        "touch hold"
+      ],
+      "touch_hold_ms": 600,
+      "touch_cancel_distance_css_px": 10,
+      "touch_excluded_controls": [
+        "정렬 핸들",
+        "하위 일정 추가",
+        "편집"
+      ],
+      "items": [
+        "키 복사",
+        "삭제"
+      ],
+      "copy_key": "CalendarApp_Web/Document/09_WireframeMockup/SCR-005.json#priority-row-event-1",
+      "delete_requires_confirmation": true
+    }
   },
   "behaviors": [
     {

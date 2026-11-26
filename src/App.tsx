@@ -54,7 +54,7 @@ export default function App() {
       {view === "priority" || view === "gantt" ? <>
         <CalendarToolbar view={view} label={view === "priority" ? "전체 일정" : `${date.replaceAll("-", ".")} – ${addDays(date, 13).replaceAll("-", ".")}`}
           onViewChange={setView} onToday={() => setDate(localInputDate(new Date()).slice(0, 10))} onPrev={() => setDate(addDays(date, -14))} onNext={() => setDate(addDays(date, 14))} />
-        {view === "priority" ? <PriorityTreeView {...treeProps} onMove={schedules.reorder}
+        {view === "priority" ? <PriorityTreeView {...treeProps} onMove={schedules.reorder} onDelete={schedules.remove} revision={workspace.revision}
           loading={workspace.revision < 0} loadError={workspace.error} onRetry={workspace.refresh} /> : <GanttView {...treeProps} items={taskSchedules(schedules.effective)} rows={taskRows(schedules.effective, tree.collapsed)} date={date} />}
       </> : <CalendarView events={taskSchedules(schedules.effective)} view={view} date={date} onDateChange={setDate} onViewChange={setView} onEdit={openEdit}
         onNew={(start, end) => openNew(start, end)} onMove={schedules.moveTime} disabled={schedules.blocked}

@@ -14788,7 +14788,7 @@
     },
     {
       "id": "responsive",
-      "description": "모바일은 같은 component 정체성의 Runtime 캡처로 대조한다. SDK 열 수·크기는 반응형이며 데스크톱 좌표를 모바일에 적용하지 않는다."
+      "description": "좁은 화면의 주 보기에서는 이번 주 날짜 버튼 7개를 표시한다. 날짜를 누르면 같은 주 보기에서 선택한 날짜로 이동하고 선택 상태를 알린다. 모바일 캡처는 데스크톱 배치와 구분한다."
     },
     {
       "id": "schedule-kind-visibility",
