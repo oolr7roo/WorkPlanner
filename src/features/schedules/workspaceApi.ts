@@ -3,11 +3,12 @@ export type WorkspaceSnapshot = { revision: number; items: Schedule[]; settings:
 export class WorkspaceApiError extends Error {
   constructor(message: string, public code?: string, public ref?: string) { super(message); }
 }
-export async function workspaceRequest<T>(body?: object): Promise<T> {
+export async function workspaceRequest<T>(body?: object, lifetime?: AbortSignal): Promise<T> {
+  const timeout = AbortSignal.timeout(15000);
   const response = await fetch("/api/workplanner", {
     method: body ? "POST" : "GET", credentials: "same-origin",
     headers: { "X-Workplanner-Client": "web", ...(body ? { "Content-Type": "application/json" } : {}) },
-    body: body ? JSON.stringify(body) : undefined, signal: AbortSignal.timeout(15000),
+    body: body ? JSON.stringify(body) : undefined, signal: lifetime ? AbortSignal.any([timeout, lifetime]) : timeout,
   });
   const value = await response.json();
   if (!response.ok) throw new WorkspaceApiError(value.error?.message ?? "공통 저장소 요청에 실패했습니다.", value.error?.code, value.error?.ref);

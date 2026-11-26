@@ -10,9 +10,10 @@ export function ScheduleColorPicker(props: Props) {
     const element = dialog.current!;
     element.showModal();
     const anchor = props.anchor.getBoundingClientRect(), rect = element.getBoundingClientRect();
-    const top = anchor.bottom + 8 + rect.height <= window.innerHeight - 12 ? anchor.bottom + 8 : Math.max(12, anchor.top - rect.height - 8);
-    element.style.left = `${Math.max(12, Math.min(anchor.left, window.innerWidth - rect.width - 12))}px`;
-    element.style.top = `${Math.min(top, Math.max(12, window.innerHeight - rect.height - 12))}px`;
+    const viewport = element.ownerDocument.documentElement;
+    const top = anchor.bottom + 8 + rect.height <= viewport.clientHeight - 12 ? anchor.bottom + 8 : Math.max(12, anchor.top - rect.height - 8);
+    element.style.left = `${Math.max(12, Math.min(anchor.left, viewport.clientWidth - rect.width - 12))}px`;
+    element.style.top = `${Math.min(top, Math.max(12, viewport.clientHeight - rect.height - 12))}px`;
     return () => element.close();
   }, [props.anchor]);
   function pickPoint(event: PointerEvent<HTMLDivElement>) {

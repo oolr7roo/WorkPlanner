@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { workspaceRequest, WorkspaceApiError } from "../workspaceApi";
 import type { ProposalNode, ScheduleProposal } from "../proposalTypes";
 import type { ScheduleWorkspace } from "../useScheduleWorkspace";
 import type { ScheduleProposals } from "../useScheduleProposals";
@@ -23,7 +22,7 @@ export function ScheduleProposalDialog({ proposals, workspace, onClose }: { prop
     if (busyRef.current) return;
     busyRef.current = true; setBusy(true); setError("");
     try {
-      const value = await workspaceRequest<{ revision: number; result: ScheduleProposal }>({ operation: "getProposal", args: { id } });
+      const value = await proposals.get(id);
       setProposal(value.result); setNodes(structuredClone(value.result.draft.nodes)); setSelected([...value.result.draft.selectedRefs]);
       setRevision(value.revision); setDirty(value.result.preview.baseRevision !== value.revision); setConfirmDiscard(false);
     } catch (cause) { setError(cause instanceof Error ? cause.message : "초안을 불러오지 못했습니다."); }
@@ -55,10 +54,10 @@ export function ScheduleProposalDialog({ proposals, workspace, onClose }: { prop
       if (operation !== "reviewProposal") { await workspace.refresh(); onClose(); }
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "처리하지 못했습니다.");
-      setErrorRef(cause instanceof WorkspaceApiError ? cause.ref : undefined);
+      setErrorRef(cause instanceof Error && "ref" in cause && typeof cause.ref === "string" ? cause.ref : undefined);
       // Refresh only server metadata; never replace the user's editable nodes/selection.
       try {
-        const latest = await workspaceRequest<{ revision: number; result: ScheduleProposal }>({ operation: "getProposal", args: { id: proposal.id } });
+        const latest = await proposals.get(proposal.id);
         setRevision(latest.revision);
         // A completed request with a lost response is recovered by replaying its exact request.
         if (latest.result.status !== "pending") {

@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { readSchedules } from "../scheduleStorage";
 import { readColorSettings } from "../scheduleColorStorage";
 import type { ScheduleWorkspace } from "../useScheduleWorkspace";
-import { workspaceRequest } from "../workspaceApi";
 export function ScheduleImportDialog({ workspace, onClose }: { workspace: ScheduleWorkspace; onClose: () => void }) {
   const [legacy] = useState(readSchedules);
   const [colors] = useState(readColorSettings);
@@ -16,7 +15,7 @@ export function ScheduleImportDialog({ workspace, onClose }: { workspace: Schedu
   async function inspect() {
     setBusy(true); setPreview(null);
     try {
-      const result = await workspaceRequest<{ revision: number; result: { added: number; skipped: number } }>({ operation: "previewImport", args });
+      const result = await workspace.previewImport(args);
       setPreview({ revision: result.revision, message: `추가 ${result.result.added}개 · 동일 일정 ${result.result.skipped}개` }); setError("");
     } catch (cause) { setError(cause instanceof Error ? cause.message : "미리보기에 실패했습니다."); }
     finally { setBusy(false); }

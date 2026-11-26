@@ -55,8 +55,9 @@ export function PriorityTreeView(props: TreeViewProps & { onMove: (id: string, t
     const element = menuElement.current;
     if (!menu || !element) return;
     const margin = 8;
-    element.style.left = `${Math.max(margin, Math.min(menu.x, window.innerWidth - element.offsetWidth - margin))}px`;
-    element.style.top = `${Math.max(margin, Math.min(menu.y, window.innerHeight - element.offsetHeight - margin))}px`;
+    const viewport = element.ownerDocument.documentElement;
+    element.style.left = `${Math.max(margin, Math.min(menu.x, viewport.clientWidth - element.offsetWidth - margin))}px`;
+    element.style.top = `${Math.max(margin, Math.min(menu.y, viewport.clientHeight - element.offsetHeight - margin))}px`;
     element.querySelector("button")?.focus();
   }, [menu]);
 
