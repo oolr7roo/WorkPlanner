@@ -71,3 +71,16 @@ dialog.editor::backdrop { background: rgba(18, 27, 46, .48); }
 
 .import-dialog .editor-actions { flex-wrap: wrap; }
 .import-dialog .editor-actions button { white-space: nowrap; flex-shrink: 0; }
+
+.workplan-calendar { min-width: 0; }
+.workplan-calendar .grid > :has(> button.truncate) { min-width: 0; }
+.workplan-calendar .truncate {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.calendar-event-details .editor-header { align-items: flex-start; }
+.calendar-event-details h2 { min-width: 0; overflow-wrap: anywhere; white-space: normal; }
+.calendar-event-details .close-button { flex-shrink: 0; }
+.calendar-event-period { margin: 0 0 16px; color: #64748b; font-size: 13px; }

@@ -8,5 +8,5 @@ export default function App() {
   const [feature] = useState(installScheduleFeature);
   useEffect(() => connectWorkPlan(ui.service, feature), [ui, feature]);
   const Screen = ui.Screen;
-  return <Screen hierarchy={false} />;
+  return <Screen hierarchy />;
 }

@@ -1,0 +1,55 @@
+{
+  "viewport": {
+    "desktop": [
+      1440,
+      1000
+    ],
+    "mobile": [
+      390,
+      844
+    ]
+  },
+  "month": {
+    "sample": {
+      "x": 1220.421875,
+      "y": 353,
+      "width": 190.5625,
+      "height": 28
+    },
+    "date_deduplication": true,
+    "empty_date_exclusion": true,
+    "keyboard_details": true
+  },
+  "week": {
+    "sample": {
+      "x": 1227.5625,
+      "y": 244,
+      "width": 185.4375,
+      "height": 28
+    },
+    "secondDepthOnly": true,
+    "perDateDeduplicated": true
+  },
+  "day": {
+    "sample": {
+      "x": 91,
+      "y": 244,
+      "width": 1322,
+      "height": 28
+    },
+    "thirdDepthTask": true,
+    "fullTitle": true,
+    "existingEditor": true,
+    "desktopDialog": {
+      "x": 470,
+      "y": 364.25,
+      "width": 500,
+      "height": 271.5
+    }
+  },
+  "mobile": {
+    "width": 390,
+    "ellipsis": true,
+    "wrapped": true
+  }
+}

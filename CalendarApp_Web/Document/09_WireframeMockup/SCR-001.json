@@ -21,15 +21,19 @@
       "Document/Evidence/ViewSplit/runtime.json",
       "src/features/schedules/components/MonthDayNumber.tsx",
       "build/calendarMonthLabels.ts",
-      "Document/Evidence/MonthDateNumbers/label-geometry.json"
+      "Document/Evidence/MonthDateNumbers/label-geometry.json",
+      "src/features/schedules/views/CalendarView.tsx",
+      "src/features/schedules/calendarScheduleItems.ts",
+      "src/features/schedules/schedules.css",
+      "Document/Evidence/CalendarDepth/8444-verification.json"
     ],
     "unverified": [
-      "모든 단말·공용 뷰어 시각 검증은 미완료이다."
+      "공용 8444 Chromium의 실제 동작과 대표 항목을 검증했다. 아카이브된 그리드 배치 전체와 공용 와이어프레임 뷰어의 시각 일치는 미검증이다."
     ],
     "design_basis": {
-      "date": "2026-10-21",
-      "source": "2026-10-08 사용자 요청",
-      "scope": "공유 툴바에 우선순위·간트차트 보기가 추가됨. 기존 달력 본문 유지.",
+      "date": "2026-11-26",
+      "source": "공용 WorkPlan 사용자 승인",
+      "scope": "실제 작업이 있는 날짜에만 1단계 주제를 한 번 표시한다. 중복 제거 키는 날짜와 주제 ID다. 상위 전체 기간으로 띠를 그리지 않는다. 제목 말줄임과 전체 제목 상세.",
       "implementation_status": "runtime-implemented-review"
     }
   },
@@ -2213,17 +2217,17 @@
       "id": "month-event-001",
       "name": "month-event-001",
       "type": "button",
-      "parent": "month-container-012",
-      "scope": "parent",
+      "parent": "calendar",
+      "scope": "frame",
       "rect": {
-        "x": 0,
-        "y": 0,
-        "w": 100,
-        "h": 100
+        "x": 84.751519,
+        "y": 35.3,
+        "w": 13.233507,
+        "h": 2.8
       },
       "style": {
-        "color": "rgb(10, 10, 10)",
-        "background_color": "rgba(51, 102, 221, 0.125)",
+        "color": "rgb(255, 255, 255)",
+        "background_color": "rgb(51, 102, 221)",
         "border": {
           "color": "rgb(10, 10, 10) rgb(10, 10, 10) rgb(10, 10, 10) rgb(51, 102, 221)",
           "width": 0,
@@ -2245,19 +2249,22 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ViewSplit/runtime.json",
+          "file": "Document/Evidence/CalendarDepth/8444-verification.json",
           "view": "month",
-          "dom_index": 70
+          "element": "sample"
         },
-        "dom_classes": "w-full text-left text-[10px] @[640px]:text-xs truncate px-1 @[640px]:px-1.5 py-0 @[640px]:py-0.5 transition-opacity hover:opacity-80 rounded-l-sm rounded-r-sm text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "display_role": "작업 날짜 요약",
+        "max_lines": 1,
+        "overflow": "ellipsis",
+        "full_title": "1단계 주제 예시"
       },
-      "text": "문서 검증 일정 오전 9:00",
+      "text": "1단계 주제 예시",
       "test": "month-event-001",
       "events": {
         "on": "click",
-        "intent": "선택한 일정을 MOD-001 수정 상태로 연다.",
-        "result": "MOD-001",
+        "intent": "줄인 제목을 클릭하거나 키보드로 선택하면 일정 상세를 열어 전체 제목을 표시한다. 상세에서 일정 편집을 선택한 경우에만 MOD-001을 연다.",
+        "result": "calendar-event-details",
         "bindings": {
           "modules": [
             "EventManagement"
@@ -2360,14 +2367,16 @@
           "dom_index": 73
         },
         "dom_classes": "w-full text-left text-[10px] @[640px]:text-xs truncate px-1 @[640px]:px-1.5 py-0 @[640px]:py-0.5 transition-opacity hover:opacity-80 rounded-l-sm rounded-r-sm text-[var(--trc-foreground)]",
-        "sample_geometry": true
+        "sample_geometry": true,
+        "max_lines": 1,
+        "overflow": "ellipsis"
       },
       "text": "겹치는 일정 오전 9:30",
       "test": "month-event-002",
       "events": {
         "on": "click",
-        "intent": "선택한 일정을 MOD-001 수정 상태로 연다.",
-        "result": "MOD-001",
+        "intent": "줄인 제목을 클릭하거나 키보드로 선택하면 일정 상세를 열어 전체 제목을 표시한다. 상세에서 일정 편집을 선택한 경우에만 MOD-001을 연다.",
+        "result": "calendar-event-details",
         "bindings": {
           "modules": [
             "EventManagement"
@@ -7741,12 +7750,185 @@
         "aria_current": null
       },
       "text": "7"
+    },
+    {
+      "id": "calendar-event-details",
+      "type": "panel",
+      "name": "일정 상세",
+      "parent": "calendar",
+      "scope": "frame",
+      "visible": false,
+      "rect": {
+        "x": 32.638889,
+        "y": 36.425,
+        "w": 34.722222,
+        "h": 27.15
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/views/CalendarView.tsx",
+        "locator": "text:calendar-event-details",
+        "style_documents": [
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/CalendarDepth/8444-verification.json",
+          "view": "day",
+          "element": "desktopDialog"
+        },
+        "role": "dialog",
+        "trigger": "일정 표시 항목 선택",
+        "state": "선택 시 표시",
+        "sample_geometry": true
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(226, 232, 240)",
+          "width": 0,
+          "radius": 14
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      }
+    },
+    {
+      "id": "calendar-detail-title",
+      "type": "heading",
+      "name": "calendar-detail-title",
+      "text": "관련 자료를 정리한 뒤 조건별 비용을 계산하고 비교표에 근거와 결과를 정리합니다. 검토 기준과 다음 작업도 함께 기록합니다.",
+      "parent": "calendar-event-details",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 5,
+        "y": 8,
+        "w": 85,
+        "h": 53
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/views/CalendarView.tsx",
+        "locator": "text:calendar-event-title",
+        "style_documents": [
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "properties": {
+        "sample_geometry": true,
+        "wrap": true
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(226, 232, 240)",
+          "width": 0,
+          "radius": 14
+        },
+        "typography": {
+          "size": 21,
+          "weight": "700"
+        }
+      }
+    },
+    {
+      "id": "calendar-detail-close",
+      "type": "button",
+      "name": "calendar-detail-close",
+      "text": "닫기",
+      "parent": "calendar-event-details",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 89,
+        "y": 7,
+        "w": 7,
+        "h": 13
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/views/CalendarView.tsx",
+        "locator": "text:상세 닫기",
+        "style_documents": [
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "properties": {
+        "sample_geometry": true
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(226, 232, 240)",
+          "width": 0,
+          "radius": 14
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "상세만 닫고 달력의 현재 보기와 날짜를 유지한다."
+      }
+    },
+    {
+      "id": "calendar-detail-edit",
+      "type": "button",
+      "name": "calendar-detail-edit",
+      "text": "일정 편집",
+      "parent": "calendar-event-details",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 69,
+        "y": 78,
+        "w": 26,
+        "h": 14
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/views/CalendarView.tsx",
+        "locator": "text:>일정 편집</button>",
+        "style_documents": [
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "properties": {
+        "sample_geometry": true
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(226, 232, 240)",
+          "width": 0,
+          "radius": 14
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "events": {
+        "on": "click",
+        "intent": "실제 원본 일정의 편집 모달을 연다.",
+        "result": "MOD-001"
+      }
     }
   ],
   "verification": {
     "schema": "valid",
-    "source_alignment": "existing-source-preserved; new design not implemented",
-    "render_fidelity": "pending",
+    "source_alignment": "공용 HTTPS 8444에서 확인한 보기별 항목과 1440×1000 대표 좌표",
+    "render_fidelity": "공용 브라우저 1440×1000 및 390×844에서 검증. 와이어프레임 뷰어 전체 시각 검증은 별도.",
     "complete": false
   },
   "composition": {
@@ -7839,7 +8021,11 @@
     },
     {
       "id": "schedule-kind-visibility",
-      "description": "전체 계층에서 기간·색상을 계산한 뒤 작업만 표시한다. 구분 부재는 작업이다. 계획은 숨기며 저장 집합은 유지한다."
+      "description": "실제 작업이 있는 날짜에만 1단계 주제를 한 번 표시한다. 중복 제거 키는 날짜와 주제 ID다. 상위 전체 기간으로 띠를 그리지 않는다. 부모가 없는 단독 작업은 기존과 같이 표시한다."
+    },
+    {
+      "id": "calendar-full-title",
+      "description": "달력 제목은 한 줄이며 넘치면 말줄임표를 표시한다. 상세창에서는 줄바꿈한 전체 제목을 표시하며 닫기 또는 Escape로 원래 보기로 돌아간다."
     }
   ]
 }
