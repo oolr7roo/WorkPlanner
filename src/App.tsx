@@ -5,8 +5,9 @@ import { ScheduleProposalDialog } from "./features/schedules/components/Schedule
 import { useScheduleProposals } from "./features/schedules/useScheduleProposals";
 import { CalendarToolbar } from "./components/CalendarToolbar";
 import { useSchedules } from "./features/schedules/useSchedules";
+import { siblings } from "./features/schedules/scheduleTree";
 import { useScheduleTree } from "./features/schedules/useScheduleTree";
-import { addDays, defaultDraft, localInputDate } from "./features/schedules/scheduleDates";
+import { addDays, defaultDraft, effectiveSchedules, localInputDate } from "./features/schedules/scheduleDates";
 import { ScheduleEditor } from "./features/schedules/components/ScheduleEditor";
 import { ScheduleColorSettings } from "./features/schedules/components/ScheduleColorSettings";
 import { useScheduleColorSettings } from "./features/schedules/useScheduleColorSettings";
@@ -18,7 +19,7 @@ import type { AppView, ScheduleDraft } from "./features/schedules/types";
 import "./features/schedules/schedules.css";
 import "./features/schedules/gantt.css";
 
-type EditorState = { revision: number; id: string | null; parentId: string | null; draft: ScheduleDraft };
+type EditorState = { revision: number; id: string | null; parentId: string | null; draft: ScheduleDraft; returnToId?: string };
 export default function App() {
   const workspace = useScheduleWorkspace();
   const proposals = useScheduleProposals();
@@ -31,16 +32,34 @@ export default function App() {
   const [editor, setEditor] = useState<EditorState | null>(null);
   const [settingsRevision, setSettingsRevision] = useState<number | null>(null);
   const [importOpen, setImportOpen] = useState(false);
-  function openNew(start?: string, end?: string, parentId: string | null = null) {
+  function openNew(start?: string, end?: string, parentId: string | null = null, returnToId?: string) {
     if (schedules.blocked) return;
-    const parent = schedules.effective.find(item => item.id === parentId);
+    const snapshot = workspace.getSnapshot();
+    const parent = effectiveSchedules(snapshot.items).find(item => item.id === parentId);
+    if (parentId && !parent) return;
     if (parentId) tree.expand(parentId);
-    setEditor({ revision: workspace.revision, id: null, parentId, draft: { ...defaultDraft(start ?? parent?.start, end), kind: "plan", colorMode: "auto", color: schedules.automaticColor(parentId), checklist: [] } });
+    setEditor({
+      revision: snapshot.revision, id: null, parentId, returnToId,
+      draft: { ...defaultDraft(start ?? parent?.start, end), kind: "plan", colorMode: "auto", color: schedules.automaticColor(parentId), checklist: [] },
+    });
+  }
+  function editState(id: string): EditorState | null {
+    const snapshot = workspace.getSnapshot();
+    const item = effectiveSchedules(snapshot.items).find(schedule => schedule.id === id);
+    if (!item) return null;
+    return {
+      revision: snapshot.revision, id, parentId: item.parentId,
+      draft: {
+        title: item.title, start: item.start.slice(0, 16), end: item.end.slice(0, 16),
+        kind: scheduleKind(item), color: item.color ?? "#3366dd", colorMode: item.colorMode ?? "manual",
+        checklist: item.checklist, completed: item.completed,
+      },
+    };
   }
   function openEdit(id: string) {
     if (schedules.blocked) return;
-    const item = schedules.effective.find(item => item.id === id);
-    if (item) setEditor({ revision: workspace.revision, id, parentId: item.parentId, draft: { title: item.title, start: item.start.slice(0, 16), end: item.end.slice(0, 16), kind: scheduleKind(item), color: item.color ?? "#3366dd", colorMode: item.colorMode ?? "manual", checklist: item.checklist } });
+    const next = editState(id);
+    if (next) setEditor(next);
   }
   const treeProps = { items: schedules.effective, rows: tree.rows, collapsed: tree.collapsed, selected: tree.selected,
     onToggle: tree.toggle, onEdit: openEdit, onAddChild: (id: string) => openNew(undefined, undefined, id), disabled: schedules.blocked };
@@ -64,9 +83,14 @@ export default function App() {
     {proposals.notice && <p className="storage-note" role="status">{proposals.notice}</p>}
     {workspace.error && !(view === "priority" && workspace.revision < 0) && <p className="storage-error" role="alert">{workspace.error} <button type="button" onClick={() => void workspace.refresh()}>다시 연결</button></p>}
     {tree.error && <p className="storage-error" role="alert">{tree.error}</p>}
-    {editor && <ScheduleEditor initial={editor.draft} editing={Boolean(editor.id)} parentTitle={schedules.items.find(item => item.id === editor.parentId)?.title}
-      hasChildren={schedules.items.some(item => item.parentId === editor.id && editor.id !== null)} automaticColor={schedules.automaticColor(editor.parentId)}
-      onSave={draft => schedules.save(draft, editor.id, editor.parentId, editor.revision)} onDelete={() => editor.id ? schedules.remove(editor.id, editor.revision) : Promise.resolve("")} onClose={() => setEditor(null)} />}
+    {editor && <ScheduleEditor key={editor.id ?? `new:${editor.parentId ?? "root"}`} initial={editor.draft} editing={Boolean(editor.id)}
+      parentTitle={schedules.items.find(item => item.id === editor.parentId)?.title}
+      children={editor.id ? siblings(schedules.effective, editor.id) : []}
+      automaticColor={schedules.automaticColor(editor.parentId)}
+      onAddChild={editor.id ? () => openNew(undefined, undefined, editor.id, editor.id ?? undefined) : undefined}
+      onSave={(draft, completions) => schedules.save(draft, editor.id, editor.parentId, editor.revision, completions)}
+      onDelete={() => editor.id ? schedules.remove(editor.id, editor.revision) : Promise.resolve("")}
+      onClose={() => setEditor(editor.returnToId ? editState(editor.returnToId) : null)} />}
     {settingsRevision !== null && <ScheduleColorSettings initial={colorSettings.settings} initialError={colorSettings.error} onSave={next => colorSettings.save(next, settingsRevision)} onClose={() => setSettingsRevision(null)} />}
     {importOpen && <ScheduleImportDialog workspace={workspace} onClose={() => setImportOpen(false)} />}
     {proposalOpen && <ScheduleProposalDialog proposals={proposals} workspace={workspace} onClose={() => setProposalOpen(false)} />}

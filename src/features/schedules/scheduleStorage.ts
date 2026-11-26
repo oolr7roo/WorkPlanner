@@ -18,6 +18,7 @@ export function readSchedules(): { items: Schedule[]; error: string } {
         || typeof item.start !== "string" || typeof item.end !== "string"
         || !validScheduleKind(item.kind)
         || (item.colorMode !== undefined && item.colorMode !== "auto" && item.colorMode !== "manual")
+        || (item.completed !== undefined && typeof item.completed !== "boolean")
         || validateChecklist(item.checklist)
         || !Number.isFinite(Date.parse(item.start)) || !Number.isFinite(Date.parse(item.end)) || Date.parse(item.end) <= Date.parse(item.start)) throw new Error("Invalid schedule");
       ids.add(item.id);

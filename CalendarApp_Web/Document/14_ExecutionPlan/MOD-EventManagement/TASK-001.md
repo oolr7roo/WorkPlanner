@@ -6,6 +6,14 @@
 
 현재 Write Set: src/features/schedules/types.ts, scheduleKinds.ts, useSchedules.ts, components/ScheduleEditor.tsx, MOD-001.json의 kind-field·kind-field-input. 순수 함수는 kind 검증·부재 기본값·표시 투영, 편집기는 초안, Hook은 공통 API 요청을 담당하고 최종 저장 검증은 ScheduleService가 소유한다. 기존 색상·날짜·체크리스트 책임은 유지한다.
 
+## 편집 팝업 하위 일정 추가·완료 연동 (2026-11-26)
+
+- 범위: 편집 중인 부모에서 기존 하위 일정 폼을 열고, 저장 또는 취소 후 부모로 복귀한다. 미저장 변경이 있으면 화면 전환 전에 저장 또는 취소를 안내한다.
+- 상태 책임: 일정에 선택적으로 저장하는 completed가 완료 상태를 소유한다. 하위 일정 체크 행은 직접 자식 ID로 생성하며 하위 일정 자체의 완료 입력과 양방향으로 연결한다. 수동 체크리스트 내용과 완료 여부는 기존 값으로 보존한다.
+- 저장 책임: 서버는 부모 변경과 자식 완료 변경을 같은 revision과 트랜잭션으로 확인한다. 팝업에서 취소하면 대기 중인 수정이 저장되지 않는다. 부모 기간은 기존 일정 트리에서 계산한다.
+- 검증 기준: 공용 HTTPS 8444에서 추가·저장·취소, 양방향 체크·해제, 수동 항목 보존, 부모 기간 갱신과 새로고침 확인.
+- 실제 검증: 공용 HTTPS 8444의 Chromium 1440×1000와 390×844에서 하위 일정 추가·저장·취소, 양쪽 완료 체크·해제, 새로고침, 수동 체크리스트 보존과 부모 기간 갱신을 확인했다. 임시 검증 일정은 제거했다. TypeScript 검사·Vite 빌드와 서버의 직계 자식 검증도 통과했다.
+
 ## 소유 범위
 
 src/features/schedules/types.ts, src/features/schedules/scheduleTree.ts, src/features/schedules/scheduleDates.ts, src/features/schedules/components/ScheduleEditor.tsx

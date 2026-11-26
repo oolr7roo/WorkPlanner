@@ -8,12 +8,12 @@
       1000
     ],
     "unit": "%",
-    "purpose": "새 일정 또는 기존 일정 편집",
+    "purpose": "새 일정, 하위 일정 추가 또는 기존 일정·직계 하위 일정 완료 상태 편집",
     "entry": "SCR-001~005의 일정 추가 또는 일정 선택",
     "exit": {
-      "save": "호출한 보기 상태 SCR-001~005",
+      "save": "팝업에서 하위 일정을 추가했으면 부모 편집. 그 외에는 호출한 보기.",
       "delete": "호출한 보기 상태 SCR-001~005",
-      "cancel": "호출한 보기 상태 SCR-001~005"
+      "cancel": "팝업에서 하위 일정을 추가했으면 부모 편집. 그 외에는 호출한 보기."
     }
   },
   "derivation": {
@@ -34,15 +34,16 @@
       "Document/Evidence/ScheduleKinds/editor-geometry.json",
       "Document/Evidence/KindHelpRemoved/editor-geometry.json",
       "Document/Evidence/McpWorkspace/editor-geometry.json",
-      "src/features/schedules/schedules.css"
+      "src/features/schedules/schedules.css",
+      "Document/Evidence/ChildScheduleCompletion/editor-geometry.json"
     ],
     "unverified": [
-      "모든 단말·공용 뷰어 시각 검증은 미완료이다."
+      "공용 8444의 Chromium 1440×1000 및 390×844를 확인했다. 다른 브라우저와 기기의 시각 검증은 미완료다."
     ],
     "design_basis": {
-      "date": "2026-10-21",
-      "source": "2026-10-08 사용자 요청",
-      "scope": "트리 일정 편집, 부모 기간 자동 계산, 삭제 시 자식 보존",
+      "date": "2026-11-26",
+      "source": "공용 WorkPlan 편집 팝업 사용자 승인",
+      "scope": "직계 일정 추가·부모 복귀와 완료 양방향 연동, 수동 체크리스트 보존",
       "implementation_status": "runtime-implemented-review"
     }
   },
@@ -112,9 +113,9 @@
       "visible": true,
       "rect": {
         "x": 32.638889,
-        "y": 22.4,
+        "y": 10.475,
         "w": 34.722222,
-        "h": 55.2
+        "h": 79.05
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -141,7 +142,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "editor"
         }
       }
@@ -153,9 +154,9 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 4.166667,
+        "y": 2.909551,
         "w": 90.8,
-        "h": 5.706522
+        "h": 3.98482
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -182,7 +183,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "editor-header"
         }
       }
@@ -193,10 +194,10 @@
       "name": "editor-title",
       "visible": true,
       "rect": {
-        "x": 30.443572,
-        "y": 0,
-        "w": 69.556428,
-        "h": 100
+        "x": 33.844527,
+        "y": 0.0,
+        "w": 66.155473,
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -224,7 +225,7 @@
       "text": "일정 수정",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "editor-title"
         }
       }
@@ -235,9 +236,9 @@
       "name": "close",
       "visible": true,
       "rect": {
-        "x": 95.677313,
+        "x": 96.520512,
         "y": 5.555556,
-        "w": 4.322687,
+        "w": 3.479488,
         "h": 88.888889
       },
       "source_ref": {
@@ -282,7 +283,7 @@
       "test": "close",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "close"
         }
       }
@@ -294,16 +295,17 @@
       "visible": true,
       "rect": {
         "x": 4.6,
-        "y": 13.496377,
+        "y": 9.424415,
         "w": 90.8,
-        "h": 82.336957
+        "h": 87.666034
       },
       "source_ref": {
         "adapter": "web-react-source",
         "document": "src/features/schedules/components/ScheduleEditor.tsx",
-        "locator": "type:form",
+        "locator": "text:editor-fields",
         "style_documents": [
-          "src/styles.css"
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
         ]
       },
       "style": {
@@ -323,7 +325,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "editor-form"
         }
       }
@@ -334,10 +336,10 @@
       "name": "time-fields",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 37.183718,
-        "w": 100,
-        "h": 15.071507
+        "x": 0.0,
+        "y": 31.818182,
+        "w": 100.0,
+        "h": 9.88456
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -364,7 +366,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "time-fields"
         }
       }
@@ -375,10 +377,10 @@
       "name": "editor-actions",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 90.319032,
-        "w": 100,
-        "h": 9.680968
+        "x": 0.0,
+        "y": 93.650794,
+        "w": 100.0,
+        "h": 6.349206
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -405,7 +407,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "editor-actions"
         }
       }
@@ -416,10 +418,10 @@
       "name": "title-field",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "w": 100,
-        "h": 15.071507
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 9.88456
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -447,7 +449,7 @@
       "text": "제목",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "title-field"
         }
       }
@@ -458,9 +460,9 @@
       "name": "title-field-input",
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 0.0,
         "y": 38.686131,
-        "w": 100,
+        "w": 100.0,
         "h": 61.313869
       },
       "source_ref": {
@@ -508,7 +510,7 @@
         "required": true,
         "placeholder": "일정 제목",
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "title-field-input"
         }
       }
@@ -519,10 +521,10 @@
       "name": "start-field",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
+        "x": 0.0,
+        "y": 0.0,
         "w": 48.678414,
-        "h": 100
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -550,7 +552,7 @@
       "text": "시작",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "start-field"
         }
       }
@@ -561,9 +563,9 @@
       "name": "start-field-input",
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 0.0,
         "y": 38.686131,
-        "w": 100,
+        "w": 100.0,
         "h": 61.313869
       },
       "source_ref": {
@@ -611,8 +613,13 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "start-field-input"
+        }
+      },
+      "states": {
+        "editing_parent": {
+          "enabled": false
         }
       }
     },
@@ -623,9 +630,9 @@
       "visible": true,
       "rect": {
         "x": 51.321586,
-        "y": 0,
+        "y": 0.0,
         "w": 48.678414,
-        "h": 100
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -653,7 +660,7 @@
       "text": "종료",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "end-field"
         }
       }
@@ -664,9 +671,9 @@
       "name": "end-field-input",
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 0.0,
         "y": 38.686131,
-        "w": 100,
+        "w": 100.0,
         "h": 61.313869
       },
       "source_ref": {
@@ -714,8 +721,13 @@
         "required": true,
         "placeholder": "",
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "end-field-input"
+        }
+      },
+      "states": {
+        "editing_parent": {
+          "enabled": false
         }
       }
     },
@@ -725,9 +737,9 @@
       "name": "color-field",
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 0.0,
         "y": 2.380952,
-        "w": 22.832679,
+        "w": 25.383395,
         "h": 95.238095
       },
       "source_ref": {
@@ -755,7 +767,7 @@
       "scope": "parent",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "color-field"
         }
       }
@@ -766,10 +778,10 @@
       "name": "color-field-input",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "w": 100,
-        "h": 100
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -815,7 +827,7 @@
         "mode": "auto",
         "sample_value": "#225588",
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "color-field-input"
         }
       }
@@ -826,10 +838,10 @@
       "name": "cancel",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": -126.136364,
-        "w": 20.319383,
-        "h": 80.681818
+        "x": 71.503304,
+        "y": 0.0,
+        "w": 13.587555,
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -848,7 +860,7 @@
           "radius": 8
         },
         "typography": {
-          "size": 13,
+          "size": 16,
           "weight": "400"
         }
       },
@@ -875,7 +887,7 @@
       "test": "cancel",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "cancel"
         }
       }
@@ -886,10 +898,10 @@
       "name": "save",
       "visible": true,
       "rect": {
-        "x": 85.903084,
-        "y": 0,
-        "w": 14.096916,
-        "h": 100
+        "x": 86.852974,
+        "y": 0.0,
+        "w": 13.147026,
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -946,7 +958,7 @@
       "test": "save",
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "save"
         }
       },
@@ -962,10 +974,10 @@
       "name": "delete",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 0,
-        "w": 14.096916,
-        "h": 100
+        "x": 0.0,
+        "y": 0.0,
+        "w": 13.147026,
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -1028,7 +1040,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "delete"
         }
       }
@@ -1110,10 +1122,10 @@
       "parent": "editor-header",
       "scope": "parent",
       "rect": {
-        "x": 0,
-        "y": 0,
-        "w": 28.940666,
-        "h": 100
+        "x": 0.0,
+        "y": 0.0,
+        "w": 26.032489,
+        "h": 100.0
       },
       "style": {
         "color": "rgb(23, 32, 51)",
@@ -1138,7 +1150,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "editor-heading"
         }
       }
@@ -1151,10 +1163,10 @@
       "parent": "editor-form",
       "scope": "parent",
       "rect": {
-        "x": 0,
-        "y": 50.049358,
-        "w": 100,
-        "h": 37.314906
+        "x": 0.0,
+        "y": 52.380952,
+        "w": 100.0,
+        "h": 38.383838
       },
       "style": {
         "color": "rgb(23, 32, 51)",
@@ -1179,7 +1191,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "checklist"
         }
       }
@@ -1192,10 +1204,10 @@
       "parent": "checklist",
       "scope": "parent",
       "rect": {
-        "x": 0,
-        "y": 7.936508,
-        "w": 100,
-        "h": 11.904762
+        "x": 0.0,
+        "y": 5.639098,
+        "w": 100.0,
+        "h": 8.458647
       },
       "style": {
         "color": "rgb(23, 32, 51)",
@@ -1220,7 +1232,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "checklist-heading"
         }
       }
@@ -1233,10 +1245,10 @@
       "parent": "checklist-heading",
       "scope": "parent",
       "rect": {
-        "x": 0,
-        "y": 0,
-        "w": 16.519824,
-        "h": 100
+        "x": 0.0,
+        "y": 0.0,
+        "w": 14.289648,
+        "h": 100.0
       },
       "style": {
         "color": "rgb(23, 32, 51)",
@@ -1261,7 +1273,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "checklist-title"
         }
       },
@@ -1275,10 +1287,10 @@
       "parent": "checklist-heading",
       "scope": "parent",
       "rect": {
-        "x": 89.8231,
-        "y": 10,
-        "w": 10.1769,
-        "h": 80
+        "x": 91.041437,
+        "y": 10.0,
+        "w": 8.958563,
+        "h": 80.0
       },
       "style": {
         "color": "rgb(100, 116, 139)",
@@ -1303,11 +1315,11 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "checklist-count"
         }
       },
-      "text": "1/2 완료"
+      "text": "2/2 완료"
     },
     {
       "id": "checklist-items",
@@ -1317,10 +1329,10 @@
       "parent": "checklist",
       "scope": "parent",
       "rect": {
-        "x": 0,
-        "y": 25.132275,
-        "w": 100,
-        "h": 50.793651
+        "x": 0.0,
+        "y": 66.353383,
+        "w": 100.0,
+        "h": 16.541353
       },
       "style": {
         "color": "rgb(23, 32, 51)",
@@ -1345,14 +1357,14 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "checklist-items"
         },
         "empty_state": "일정에 필요한 할 일을 추가하세요."
       },
       "repeat": {
         "direction": "vertical",
-        "item_extent": 45.83333333333333,
+        "item_extent": 100.0,
         "gap": 8.333333333333332,
         "template_source_ref": {
           "adapter": "web-react-source",
@@ -1367,7 +1379,7 @@
             "key": "done",
             "type": "input",
             "rect": {
-              "x": 0,
+              "x": 0.0,
               "y": 29.545455,
               "w": 3.964758,
               "h": 40.909091
@@ -1378,18 +1390,18 @@
             "type": "input",
             "rect": {
               "x": 5.726872,
-              "y": 0,
-              "w": 85.462555,
-              "h": 100
+              "y": 0.0,
+              "w": 86.174972,
+              "h": 100.0
             }
           },
           {
             "key": "remove",
             "type": "button",
             "rect": {
-              "x": 92.951542,
+              "x": 93.663959,
               "y": 11.363636,
-              "w": 7.048458,
+              "w": 6.336041,
               "h": 77.272727
             }
           }
@@ -1397,12 +1409,7 @@
         "sample_data": [
           {
             "done": true,
-            "text": "자료 준비",
-            "remove": "삭제"
-          },
-          {
-            "done": false,
-            "text": "결과 확인",
+            "text": "보존할 기존 수동 항목",
             "remove": "삭제"
           }
         ]
@@ -1432,10 +1439,10 @@
       "parent": "checklist",
       "scope": "parent",
       "rect": {
-        "x": 0,
-        "y": 81.216931,
-        "w": 20.319383,
-        "h": 18.783069
+        "x": 0.0,
+        "y": 86.654135,
+        "w": 17.817318,
+        "h": 13.345865
       },
       "style": {
         "color": "rgb(51, 65, 85)",
@@ -1460,7 +1467,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/KindHelpRemoved/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "checklist-add"
         }
       },
@@ -1491,7 +1498,7 @@
       "visible": false,
       "rect": {
         "x": 34.236111,
-        "y": 30.2,
+        "y": 16.65,
         "w": 19.444444,
         "h": 45.65
       },
@@ -1518,7 +1525,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "color-picker"
         }
       },
@@ -1567,7 +1574,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-heading"
         }
       }
@@ -1580,9 +1587,9 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 0,
+        "x": 0.0,
         "y": 18.181818,
-        "w": 23.98499,
+        "w": 20.521654,
         "h": 63.636364
       },
       "source_ref": {
@@ -1608,7 +1615,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-title"
         }
       },
@@ -1622,10 +1629,10 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 92.353593,
-        "y": 0,
-        "w": 7.646407,
-        "h": 100
+        "x": 93.534695,
+        "y": 0.0,
+        "w": 6.465305,
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -1650,7 +1657,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-close"
         }
       },
@@ -1708,7 +1715,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-plane"
         }
       },
@@ -1765,7 +1772,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-help"
         }
       },
@@ -1807,7 +1814,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-hue"
         },
         "input_type": "range"
@@ -1865,7 +1872,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-preview"
         }
       }
@@ -1906,7 +1913,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-rgb"
         }
       }
@@ -1919,10 +1926,10 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 0,
-        "y": 43.801653,
+        "x": 0.0,
+        "y": 0.0,
         "w": 31.231545,
-        "h": 56.198347
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -1947,7 +1954,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-r"
         },
         "input_type": "number"
@@ -1978,9 +1985,9 @@
       "visible": true,
       "rect": {
         "x": 34.381152,
-        "y": 43.801653,
+        "y": 0.0,
         "w": 31.231545,
-        "h": 56.198347
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -2005,7 +2012,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-g"
         },
         "input_type": "number"
@@ -2036,9 +2043,9 @@
       "visible": true,
       "rect": {
         "x": 68.762303,
-        "y": 43.801653,
+        "y": 0.0,
         "w": 31.237697,
-        "h": 56.198347
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -2063,7 +2070,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-b"
         },
         "input_type": "number"
@@ -2121,7 +2128,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-actions"
         }
       }
@@ -2134,10 +2141,10 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 48.818898,
-        "y": 0,
-        "w": 24.409449,
-        "h": 100
+        "x": 52.214567,
+        "y": 0.0,
+        "w": 22.711614,
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -2162,7 +2169,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-cancel"
         }
       },
@@ -2192,10 +2199,10 @@
       "scope": "parent",
       "visible": true,
       "rect": {
-        "x": 76.377953,
-        "y": 0,
-        "w": 23.622047,
-        "h": 100
+        "x": 78.075787,
+        "y": 0.0,
+        "w": 21.924213,
+        "h": 100.0
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -2220,7 +2227,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-choose"
         }
       },
@@ -2278,7 +2285,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/ColorPickerDefault/geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "picker-default"
         }
       },
@@ -2309,10 +2316,10 @@
       "visible": true,
       "test": "kind-field",
       "rect": {
-        "x": 0,
-        "y": 18.591859,
-        "w": 100,
-        "h": 15.071507
+        "x": 0.0,
+        "y": 12.193362,
+        "w": 100.0,
+        "h": 9.88456
       },
       "source_ref": {
         "adapter": "web-react-source",
@@ -2337,7 +2344,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "kind-field"
         }
       },
@@ -2352,9 +2359,9 @@
       "visible": true,
       "test": "kind-field-input",
       "rect": {
-        "x": 0,
+        "x": 0.0,
         "y": 38.686131,
-        "w": 100,
+        "w": 100.0,
         "h": 61.313869
       },
       "source_ref": {
@@ -2380,7 +2387,7 @@
       },
       "properties": {
         "capture": {
-          "file": "Document/Evidence/McpWorkspace/editor-geometry.json",
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
           "id": "kind-field-input"
         },
         "options": [
@@ -2412,10 +2419,591 @@
           ]
         }
       }
+    },
+    {
+      "id": "parent-period-message",
+      "type": "text",
+      "name": "상위 일정의 기간은 하위 일정의 시작·종료에 맞춰 자동 계산됩니다.",
+      "parent": "editor-form",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 24.386724,
+        "w": 100.0,
+        "h": 2.813853
+      },
+      "style": {
+        "color": "rgb(104, 117, 141)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:상위 일정의 기간은 하위 일정의",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "text": "상위 일정의 기간은 하위 일정의 시작·종료에 맞춰 자동 계산됩니다.",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "parent-period-message"
+        }
+      }
+    },
+    {
+      "id": "editor-completion",
+      "type": "label",
+      "name": "일정 완료",
+      "parent": "editor-form",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 44.011544,
+        "w": 100.0,
+        "h": 6.060606
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:editor-completion",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "text": "일정 완료",
+      "states": {
+        "new": {
+          "visible": false
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "editor-completion"
+        }
+      }
+    },
+    {
+      "id": "editor-completion-input",
+      "type": "checkbox",
+      "name": "editor-completion-input",
+      "parent": "editor-completion",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 3.964758,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleEditor.tsx",
+        "locator": "text:checked={draft.completed}",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "properties": {
+        "accessible_name": "일정 완료",
+        "sample_value": false,
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "editor-completion-input"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "현재 일정의 완료 상태를 초안에서 변경한다. 저장하면 상위의 연결 체크 항목에 반영되고 취소하면 변경을 버린다."
+      }
+    },
+    {
+      "id": "linked-checklist",
+      "type": "panel",
+      "name": "linked-checklist",
+      "parent": "checklist",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 18.609023,
+        "w": 100.0,
+        "h": 43.984962
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:className=\"linked-checklist\"",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "states": {
+        "new": {
+          "visible": false
+        }
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "linked-checklist"
+        }
+      }
+    },
+    {
+      "id": "linked-checklist-heading",
+      "type": "panel",
+      "name": "linked-checklist-heading",
+      "parent": "linked-checklist",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 30.34188
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:linked-checklist-heading",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "linked-checklist-heading"
+        }
+      }
+    },
+    {
+      "id": "linked-checklist-title",
+      "type": "heading",
+      "name": "하위 일정",
+      "parent": "linked-checklist-heading",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 22.535211,
+        "w": 10.66217,
+        "h": 54.929577
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:>하위 일정</h4>",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "text": "하위 일정",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "linked-checklist-title"
+        }
+      }
+    },
+    {
+      "id": "add-child",
+      "type": "button",
+      "name": "하위 일정 추가",
+      "parent": "linked-checklist-heading",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 78.785793,
+        "y": 0.0,
+        "w": 21.214207,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:>하위 일정 추가</button>",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "text": "하위 일정 추가",
+      "events": {
+        "on": "click",
+        "intent": "저장된 현재 일정 아래에 새 하위 일정 입력창을 연다. 변경을 저장하지 않은 상태이면 안내를 표시한다. 하위 일정 저장·취소 후 부모 편집으로 돌아온다."
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "add-child"
+        }
+      }
+    },
+    {
+      "id": "linked-checklist-items",
+      "type": "list",
+      "name": "linked-checklist-items",
+      "parent": "linked-checklist",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 38.888889,
+        "w": 100.0,
+        "h": 35.897436
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:children.map",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "properties": {
+        "empty_state": "하위 일정이 없습니다.",
+        "item_identity": "직계 하위 일정의 ID",
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "linked-checklist-items"
+        }
+      }
+    },
+    {
+      "id": "linked-checklist-item",
+      "type": "panel",
+      "name": "linked-checklist-item",
+      "parent": "linked-checklist-items",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 100.0,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 16,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:linked-checklist-item",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "linked-checklist-item"
+        }
+      }
+    },
+    {
+      "id": "linked-checklist-input",
+      "type": "checkbox",
+      "name": "linked-checklist-input",
+      "parent": "linked-checklist-item",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 3.964758,
+        "h": 100.0
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgb(255, 255, 255)",
+        "border": {
+          "color": "rgb(213, 220, 232)",
+          "width": 1,
+          "radius": 8
+        },
+        "typography": {
+          "size": 13,
+          "weight": "700"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:checked={checked}",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "properties": {
+        "accessible_name": "하위 일정 완료: 하위 일정 예시",
+        "sample_value": true,
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "linked-checklist-input"
+        }
+      },
+      "events": {
+        "on": "change",
+        "intent": "직계 자식의 완료 상태 변경을 부모 편집 초안에 기록한다. 저장할 때 자식 일정에 반영한다."
+      }
+    },
+    {
+      "id": "linked-checklist-item-text",
+      "type": "text",
+      "name": "하위 일정 예시",
+      "parent": "linked-checklist-item",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 5.726872,
+        "y": 8.184524,
+        "w": 32.523403,
+        "h": 83.59375
+      },
+      "style": {
+        "color": "rgb(51, 65, 85)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:child.title}<small>",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "text": "하위 일정 예시",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "linked-checklist-item-text"
+        }
+      }
+    },
+    {
+      "id": "linked-checklist-item-period",
+      "type": "text",
+      "name": "12-06 09:00 – 12-06 11:00",
+      "parent": "linked-checklist-item-text",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 55.540721,
+        "w": 100.0,
+        "h": 44.459279
+      },
+      "style": {
+        "color": "rgb(100, 116, 139)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 10.4,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:formatPeriod(child)",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "text": "12-06 09:00 – 12-06 11:00",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "linked-checklist-item-period"
+        }
+      }
+    },
+    {
+      "id": "manual-checklist-title",
+      "type": "heading",
+      "name": "직접 추가한 항목",
+      "parent": "linked-checklist",
+      "scope": "parent",
+      "visible": true,
+      "rect": {
+        "x": 0.0,
+        "y": 83.333333,
+        "w": 100.0,
+        "h": 16.666667
+      },
+      "style": {
+        "color": "rgb(23, 32, 51)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "border": {
+          "color": "rgb(23, 32, 51)",
+          "width": 0,
+          "radius": 0
+        },
+        "typography": {
+          "size": 13,
+          "weight": "400"
+        }
+      },
+      "source_ref": {
+        "adapter": "web-react-source",
+        "document": "src/features/schedules/components/ScheduleChecklist.tsx",
+        "locator": "text:직접 추가한 항목",
+        "style_documents": [
+          "src/styles.css",
+          "src/features/schedules/schedules.css"
+        ]
+      },
+      "text": "직접 추가한 항목",
+      "properties": {
+        "capture": {
+          "file": "Document/Evidence/ChildScheduleCompletion/editor-geometry.json",
+          "id": "manual-checklist-title"
+        }
+      }
     }
   ],
   "modal": {
-    "title": "새 일정 / 일정 수정",
+    "title": "새 일정 / 일정 수정 / 하위 일정 추가",
     "backdrop": true,
     "close_on_cancel": true
   },
@@ -2438,7 +3026,7 @@
     },
     {
       "id": "caller-return",
-      "description": "저장·취소·닫기 후 월·주·일·간트차트·우선순위 중 호출한 화면으로 복귀한다."
+      "description": "부모 편집에서 열린 하위 일정 입력의 저장·취소 후 부모 편집으로 돌아간다. 나머지 경우에는 월·주·일·간트차트·우선순위 중 호출한 보기로 복귀한다."
     },
     {
       "id": "automatic-color",
@@ -2446,7 +3034,7 @@
     },
     {
       "id": "checklist-draft",
-      "description": "목록을 복제해 편집하며 저장하면 반영하고 취소·닫기·Escape는 초안 전체를 버린다. 체크리스트는 일정 계층/기간과 독립적이다."
+      "description": "수동 체크리스트와 직계 하위 일정 완료 변경은 초안으로 관리하며 저장할 때 함께 반영한다. 취소·닫기·Escape는 초안을 버린다."
     },
     {
       "id": "color-picker-cancel",
@@ -2459,12 +3047,16 @@
     {
       "id": "schedule-kind",
       "description": "새 일정의 기본 구분은 계획이다. 구분이 없는 기존 일정은 작업으로 유지한다. 계획·작업은 계층과 독립적이며 간트·월·주·일에는 작업만, 우선순위에는 전체를 표시한다."
+    },
+    {
+      "id": "linked-child-completion",
+      "description": "부모에 표시되는 모든 직계 하위 일정은 자식 ID를 기준으로 현재 완료 상태를 읽는다. 부모의 연결 항목과 자식 편집의 일정 완료 입력은 같은 저장값을 변경한다."
     }
   ],
   "verification": {
     "schema": "valid",
-    "source_alignment": "KindHelpRemoved/editor-geometry.json measured desktop; kind-help removed from implementation and schema",
-    "render_fidelity": "unverified",
+    "source_alignment": "공용 HTTPS 8444에서 렌더링한 팝업의 1440×1000 실제 요소 좌표",
+    "render_fidelity": "공용 Chromium에서 팝업 동작 및 390×844 레이아웃 검증. 와이어프레임 뷰어의 별도 시각 검증은 미완료.",
     "complete": false
   },
   "limitations": [
@@ -2473,6 +3065,7 @@
   ],
   "tree_policy": {
     "parent_period": "하위 일정이 있는 경우 시작·종료 입력 비활성. 제목·색상은 수정 가능.",
-    "delete": "삭제 확인 후 직계 자식을 한 단계 올려 보존한다."
+    "delete": "삭제 확인 후 직계 자식을 한 단계 올려 보존한다.",
+    "completion": "부모의 체크리스트에 직계 하위 일정 전부를 표시하고, 체크 변경은 해당 자식의 완료 상태를 저장한다."
   }
 }

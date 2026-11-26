@@ -40,10 +40,10 @@
     "DOC-CalendarApp_Web-Document-12_api_spec-API-006_ScheduleProposals"
   ],
   "source_fingerprint": {
-    "modified_at_utc": "2026-10-23T06:27:51.311174+00:00",
-    "mtime_ns": 1792736871311173600,
-    "byte_size": 5547,
-    "sha256": "20b56681676193da9d551b3ee7da855a3addf8ca34f8b581374cd58e887567c2"
+    "modified_at_utc": "2026-11-26T02:36:39.087115Z",
+    "mtime_ns": 1795660599087115835,
+    "byte_size": 6060,
+    "sha256": "616c7d6f4d4792777e13e2c638419b5ac98d5ad3d468cf102b0216da3c973253"
   },
-  "metadata_refreshed_at_utc": "2026-10-23T06:48:51.743908+00:00"
+  "metadata_refreshed_at_utc": "2026-11-26T02:36:39.087513Z"
 }

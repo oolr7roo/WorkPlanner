@@ -24,6 +24,8 @@ export function wallDate(value, timeZone) {
 }
 export function normalizeItem(input, timeZone, legacy = false) {
   if (!input || typeof input !== "object" || Array.isArray(input)) invalid("일정 형식을 확인해 주세요.");
+  const { completed, ...fields } = input;
+  if (completed !== undefined && typeof completed !== "boolean") invalid("완료 상태를 확인해 주세요.");
   const kind = input.kind ?? (legacy ? "task" : "plan"), colorMode = input.colorMode ?? (legacy ? "manual" : "auto");
   if (input.allDay !== undefined && typeof input.allDay !== "boolean") invalid("allDay는 boolean이어야 합니다.");
   if (input.colorMode === null || input.kind === null || !["plan", "task"].includes(kind) || !["auto", "manual"].includes(colorMode)) invalid("일정 구분과 색상 모드를 확인해 주세요.");
@@ -38,7 +40,7 @@ export function normalizeItem(input, timeZone, legacy = false) {
   if (typeof input.id !== "string" || !input.id.trim() || input.id.length > 128) invalid("일정 ID를 확인해 주세요.");
   if (input.parentId !== null && typeof input.parentId !== "string") invalid("상위 일정 ID를 확인해 주세요.");
   if (!Number.isSafeInteger(input.order) || input.order < 0) invalid("일정 순서를 확인해 주세요.");
-  return { ...input, kind, colorMode, title: input.title.trim(), start, end, color, checklist: normalizeChecklist(input.checklist) };
+  return { ...fields, ...(completed ? { completed } : {}), kind, colorMode, title: input.title.trim(), start, end, color, checklist: normalizeChecklist(input.checklist) };
 }
 export function validateTree(items) {
   if (items.length > 10000) invalid("일정은 10000개까지 지원합니다.");
@@ -85,7 +87,7 @@ export function newId() { return randomUUID(); }
 export function buildScheduleTree(state, nodes, timeZone) {
   if (!Array.isArray(nodes) || !nodes.length || nodes.length > 500) invalid("한 번에 1~500개 일정을 생성할 수 있습니다.");
   const items = [...state.items], refs = new Map();
-  const allowed = new Set(["ref", "parentRef", "parentId", "title", "start", "end", "kind", "colorMode", "color", "checklist", "allDay"]);
+  const allowed = new Set(["ref", "parentRef", "parentId", "title", "start", "end", "kind", "colorMode", "color", "checklist", "allDay", "completed"]);
   for (const node of nodes) {
     if (!node || typeof node !== "object" || Array.isArray(node) || Object.keys(node).some(key => !allowed.has(key))) invalid("생성할 일정 형식을 확인해 주세요.");
     const { ref, parentRef, parentId: providedParent, ...fields } = node;

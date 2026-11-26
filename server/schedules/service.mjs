@@ -3,6 +3,19 @@ import { WorkspaceError } from "../../database/repository.mjs";
 import { buildScheduleTree, displayed, effectiveSchedules, imported, invalid, normalizeItem, normalizeSettings, validateTree, wallDate } from "./policy.mjs";
 import { createProposalService } from "./proposals.mjs";
 
+function childCompletionChanges(items, parentId, changes = []) {
+  if (!Array.isArray(changes) || changes.length > items.length) invalid("하위 일정 완료 상태를 확인해 주세요.");
+  const childIds = new Set(items.filter(item => item.parentId === parentId).map(item => item.id));
+  const values = new Map();
+  for (const change of changes) {
+    if (!change || !childIds.has(change.id) || typeof change.completed !== "boolean" || values.has(change.id)) {
+      invalid("직계 하위 일정의 완료 상태만 한 번씩 변경할 수 있습니다.");
+    }
+    values.set(change.id, change.completed);
+  }
+  return values;
+}
+
 export function createScheduleService(repository, timeZone = "Asia/Seoul") {
   const proposals = createProposalService(repository, timeZone);
   const present = state => ({ ...state, timeZone });
@@ -42,7 +55,7 @@ export function createScheduleService(repository, timeZone = "Asia/Seoul") {
           state.items = tree.items; result = { created: tree.created };
         } else if (command.operation === "update") {
           const item = get(state.items, args.id), patch = args.patch;
-          if (!patch || typeof patch !== "object" || Array.isArray(patch) || Object.keys(patch).some(k => !["title", "start", "end", "kind", "color", "colorMode", "checklist", "allDay"].includes(k))) invalid("수정할 필드를 확인해 주세요. 계층·순서는 move를 사용하세요.");
+          if (!patch || typeof patch !== "object" || Array.isArray(patch) || Object.keys(patch).some(k => !["title", "start", "end", "kind", "color", "colorMode", "checklist", "allDay", "completed"].includes(k))) invalid("수정할 필드를 확인해 주세요. 계층·순서는 move를 사용하세요.");
           const changes = { ...patch };
           if (state.items.some(s => s.parentId === item.id)) {
             const effective = get(effectiveSchedules(state.items), item.id);
@@ -51,8 +64,15 @@ export function createScheduleService(repository, timeZone = "Asia/Seoul") {
               delete changes[key];
             }
           }
+          const completions = childCompletionChanges(state.items, item.id, args.childCompletions);
           const updated = normalizeItem({ ...item, ...changes }, timeZone);
-          state.items = state.items.map(s => s.id === item.id ? updated : s); result = { id: item.id };
+          state.items = state.items.map(schedule => {
+            if (schedule.id === item.id) return updated;
+            if (!completions.has(schedule.id)) return schedule;
+            const { completed, ...fields } = schedule;
+            return completions.get(schedule.id) ? { ...fields, completed: true } : fields;
+          });
+          result = { id: item.id };
         } else if (command.operation === "move") {
           const item = get(state.items, args.id);
           if (args.parentId !== null) get(state.items, args.parentId);

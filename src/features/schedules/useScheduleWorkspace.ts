@@ -34,6 +34,6 @@ export function useScheduleWorkspace() {
       setError(message); return message;
     } finally { setPending(value => value - 1); }
   }
-  return { ...snapshot, error, busy: pending > 0, blocked: snapshot.revision < 0 || Boolean(error), refresh, command };
+  return { ...snapshot, getSnapshot: () => current.current, error, busy: pending > 0, blocked: snapshot.revision < 0 || Boolean(error), refresh, command };
 }
 export type ScheduleWorkspace = ReturnType<typeof useScheduleWorkspace>;

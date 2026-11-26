@@ -43,6 +43,24 @@ dialog.editor::backdrop { background: rgba(18, 27, 46, .48); }
 .editor input:disabled { background: #f3f5f9; color: #68758d; }
 
 .editor-fields { border: 0; padding: 0; margin: 0; min-width: 0; display: grid; gap: 16px; }
+.editor .editor-completion, .editor .linked-checklist-item label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.editor .editor-completion input, .editor .linked-checklist-item input {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  flex: 0 0 18px;
+  margin: 0;
+  accent-color: #3366dd;
+}
+.linked-checklist { margin-top: 12px; }
+.linked-checklist-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.linked-checklist h4 { margin: 0; font-size: 13px; }
+.linked-checklist-item span { min-width: 0; overflow-wrap: anywhere; }
+.linked-checklist-item small { display: block; color: #64748b; }
 .import-dialog > p { line-height: 1.6; }
 .import-dialog > label { display: flex; align-items: center; gap: 8px; }
 .import-dialog input[type="checkbox"] { width: auto; }

@@ -27,13 +27,13 @@ GET은 {revision,items,settings,timeZone} snapshot을 반환한다. POST body는
 | get | id | schedule,stored,ancestry,children |
 | previewImport | items,includeSettings?:false,settings? | added,skipped,total,settingsChanged; 변경 없음 |
 | createTree | nodes:[{ref,parentRef? 또는 parentId?,title,start?,end?,kind?,colorMode?,color?,checklist?,allDay?}] | created:{ref:generatedId}; 부모 먼저, 루트 기간 필수, 최대500 |
-| update | id,patch | id; 계층·순서는 수정 불가, 상위 기간 직접 변경 거부 |
+| update | id,patch,childCompletions? | id; 직계 하위 일정 완료 변경을 같은 저장에서 반영, 계층·순서는 수정 불가, 상위 기간 직접 변경 거부 |
 | move | id,parentId:null 또는 ID,beforeId? | id,parentId; 순환 거부 |
 | delete | id | deletedId,childrenPreserved:true; 자식 승격 |
 | settings | settings | settingsSaved:true; 자동 색상만 재계산 |
 | import | previewImport와 같은 args | 미리보기와 같은 결과; 전체 성공 또는 취소 |
 
-체크리스트는 [{id,text,done}] 전체 교체이며 빈 배열은 비움이다. 일정 최대10000개·계층100단계·일정당 항목500개, 프리셋/단계 각각100개를 검증한다. 데이터베이스 workspace 행 잠금과 revision 검사를 같은 transaction에서 수행하고 응답·요청 fingerprint를 requests에 함께 보존한다. 동일 요청 ID·동일 본문은 원래 응답을 반환하고 다른 본문 재사용은 거부한다.
+수동 체크리스트는 [{id,text,done}] 전체 교체이며 빈 배열은 비움이다. 일정 자체의 완료 상태는 patch.completed(boolean)로 변경하며 저장값이 없으면 미완료로 해석한다. childCompletions의 각 항목은 {id,completed}이고 id는 수정 대상의 직계 자식이어야 하며 중복할 수 없다. 부모와 지정한 자식의 변경은 동일한 revision 검사와 트랜잭션으로 적용된다. 부모 화면에 보이는 하위 일정 체크 항목은 자식 일정의 완료 상태를 읽어 구성한다. 일정 최대10000개·계층100단계·일정당 항목500개, 프리셋/단계 각각100개를 검증한다. 데이터베이스 workspace 행 잠금과 revision 검사를 같은 transaction에서 수행하고 응답·요청 fingerprint를 requests에 함께 보존한다. 동일 요청 ID·동일 본문은 원래 응답을 반환하고 다른 본문 재사용은 거부한다.
 
 오류 응답은 {error:{code,message}}다. 입력400, 인증401, Origin/Host403, 대상404, 메서드405, 충돌409, 상한413, JSON Content-Type415, 저장소503을 구분한다. REVISION_CONFLICT는 초안을 유지하고 최신 내용을 확인한 뒤 재편집한다. 네트워크 응답 유실 재시도는 같은 ID·본문을 사용한다. 화면은 5초 polling·focus·저장 응답으로 갱신하고 열린 초안의 revision은 고정한다.
 
