@@ -2007,10 +2007,10 @@
         "편집"
       ],
       "items": [
-        "키 복사",
+        "일정 ID 복사",
         "삭제"
       ],
-      "copy_key": "CalendarApp_Web/Document/09_WireframeMockup/SCR-005.json#priority-row-event-1",
+      "copy_key": "selected_row.schedule.id",
       "delete_requires_confirmation": true
     }
   },

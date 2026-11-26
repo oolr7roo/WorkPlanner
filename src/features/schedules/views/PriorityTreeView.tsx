@@ -6,7 +6,6 @@ import { ScheduleDragHandle, DRAG_TYPE } from "../components/ScheduleDragHandle"
 import { ScheduleTreeLabel } from "../components/ScheduleTreeLabel";
 
 export type TreeViewProps = { items: Schedule[]; rows: TreeRow[]; collapsed: Set<string>; selected: string | null; onToggle: (id: string) => void; onEdit: (id: string) => void; onAddChild: (id: string) => void; disabled: boolean };
-const COPY_KEY = "CalendarApp_Web/Document/09_WireframeMockup/SCR-005.json#priority-row-event-1";
 const TOUCH_EXCLUDED = ".drag-control, .row-actions";
 const HOLD_MS = 600;
 const CANCEL_DISTANCE = 10;
@@ -102,13 +101,13 @@ export function PriorityTreeView(props: TreeViewProps & { onMove: (id: string, t
     }
   }
 
-  async function copyKey() {
+  async function copyScheduleId(id: string) {
     closeMenu(true);
     try {
-      await navigator.clipboard.writeText(COPY_KEY);
-      setCopyNotice("일정 키를 복사했습니다.");
+      await navigator.clipboard.writeText(id);
+      setCopyNotice("일정 ID를 복사했습니다.");
     } catch {
-      setCopyNotice("일정 키를 복사하지 못했습니다.");
+      setCopyNotice("일정 ID를 복사하지 못했습니다.");
     }
   }
 
@@ -190,7 +189,7 @@ export function PriorityTreeView(props: TreeViewProps & { onMove: (id: string, t
           buttons[(index + step + buttons.length) % buttons.length]?.focus();
         }
       }}>
-      <button type="button" role="menuitem" tabIndex={-1} onClick={copyKey}>키 복사</button>
+      <button type="button" role="menuitem" tabIndex={-1} onClick={() => void copyScheduleId(menu.schedule.id)}>일정 ID 복사</button>
       <button type="button" role="menuitem" tabIndex={-1} disabled={props.disabled} onClick={() => {
         setDeleteError("");
         setDeletion(menu);
